@@ -4,30 +4,30 @@ const Y = "#FFB300";
 const B = "#1668F5";
 
 const PRODUCTS = [
-  { id:1, title:"Anker 65W USB-C Charger",   price:27.99,  rating:4.7, reviews:18423,
-    summary:"Compact 65W USB-C charger with PowerIQ 3.0. Charges MacBook, iPhone and Android at full speed. Foldable plug, great for travel.",
-    img:"https://picsum.photos/seed/anker65/400/430",   badge:"Amazon's Choice", cat:"Electronics" },
-  { id:2, title:"Logitech MX Master 3S",      price:89.99,  rating:4.8, reviews:32110,
-    summary:"Ultra-fast MagSpeed scrolling, 8K DPI tracking. Connects to 3 devices simultaneously. Works on any surface including glass.",
-    img:"https://picsum.photos/seed/mxmouse3/400/430",  badge:"Best Seller",     cat:"Electronics" },
-  { id:3, title:"Sony WH-1000XM5",            price:279.99, rating:4.6, reviews:45230,
-    summary:"Industry-leading noise cancellation, 30hr battery, multipoint Bluetooth. Lightweight foldable design perfect for commuting.",
-    img:"https://picsum.photos/seed/sonywh5/400/430",   badge:"Top Rated",       cat:"Audio"       },
-  { id:4, title:"Kindle Paperwhite 16GB",     price:149.99, rating:4.7, reviews:89012,
-    summary:"6.8\" glare-free display with adjustable warm light. Waterproof, 3-month battery life. Holds thousands of books.",
-    img:"https://picsum.photos/seed/kindle16/400/430",  badge:"Amazon's Choice", cat:"Devices"     },
-  { id:5, title:"Instant Pot Duo 7-in-1",     price:79.99,  rating:4.7, reviews:120340,
-    summary:"Pressure cooker, slow cooker, rice cooker, steamer, sauté, yogurt maker, and food warmer all in one 6-quart pot.",
-    img:"https://picsum.photos/seed/ipot71/400/430",    badge:"Best Seller",     cat:"Kitchen"     },
-  { id:6, title:"Hydro Flask 32oz Bottle",    price:44.95,  rating:4.8, reviews:67890,
-    summary:"TempShield double-wall insulation keeps drinks cold 24hrs, hot 12hrs. BPA-free, dishwasher safe. Leak-proof cap.",
-    img:"https://picsum.photos/seed/hydflask2/400/430", badge:null,              cat:"Sports"      },
-  { id:7, title:"Govee LED Strip 32.8ft",     price:34.99,  rating:4.4, reviews:28900,
-    summary:"16 million colors, music sync, app and voice controlled. Works with Alexa & Google Home. Cuttable and connectable.",
-    img:"https://picsum.photos/seed/goveestrip/400/430",badge:null,              cat:"Smart Home"  },
-  { id:8, title:"Apple AirTag 4-Pack",        price:99.00,  rating:4.6, reviews:55120,
-    summary:"Precision Finding with Ultra Wideband chip. One-tap setup, water resistant. 1-year replaceable battery life.",
-    img:"https://picsum.photos/seed/airtag4pk/400/430", badge:"Amazon's Choice", cat:"Electronics" },
+  { id:1, title:"Urbane Home Silicone Collapsible Popcorn Bowl",
+    price:599,  rating:4.4, reviews:1280,
+    summary:"Microwave-safe collapsible silicone bowl perfect for popcorn. Space-saving design folds flat for easy storage. BPA-free, heat-resistant up to 230°C.",
+    img:"https://picsum.photos/seed/popcornbowl/400/430",
+    badge:"Amazon's Choice", cat:"Kitchen",
+    amazonUrl:"https://www.amazon.in/Urbane-Home-Silicone-Microwave-Collapsible/dp/B0D9M72ZDV/" },
+  { id:2, title:"Fulminare LED Desk Lamp with USB Charging Port",
+    price:1299, rating:4.3, reviews:876,
+    summary:"Dimmable LED desk lamp with 3 colour modes and touch control. Built-in USB charging port. Eye-caring technology ideal for study and work.",
+    img:"https://picsum.photos/seed/desklamp/400/430",
+    badge:"Sponsored",      cat:"Home & Office",
+    amazonUrl:"https://www.amazon.in/Fulminare-Plastic-Dimmable-Charging-Pawnwhite/dp/B0D29CLX4Z/" },
+  { id:3, title:"Shuttle Art Eternal Inkless Pencil (2-Pack)",
+    price:449,  rating:4.2, reviews:543,
+    summary:"Permanent inkless pencil that never needs sharpening. Writes on any paper, lasts a lifetime. Eco-friendly alternative to regular pencils.",
+    img:"https://picsum.photos/seed/inklesspencil/400/430",
+    badge:null,             cat:"Stationery",
+    amazonUrl:"https://www.amazon.in/SHUTTLE-ART-Permanent-Sharpening-Everlasting/dp/B0DGGSH492/" },
+  { id:4, title:"AERLANG Percussion Massage Gun",
+    price:2999, rating:4.5, reviews:2341,
+    summary:"Deep tissue percussion massager with multiple speed settings. Relieves muscle soreness and stiffness. Quiet motor, long battery life.",
+    img:"https://picsum.photos/seed/massagegun/400/430",
+    badge:"Sponsored",      cat:"Health & Wellness",
+    amazonUrl:"https://www.amazon.in/AERLANG-Massage-Percussion-Massager-Settings/dp/B0FJRWBFTT/" },
 ];
 
 const EXIT = {
@@ -266,7 +266,7 @@ export default function App() {
   const buildCartUrl = () => {
     const params = cartRef.current.map((p, i) =>
       `ASIN.${i+1}=PLACEHOLDER&Quantity.${i+1}=1`).join("&");
-    return `https://www.amazon.com/gp/aws/cart/add.html?${params}&tag=yourtag-20`;
+    return `https://www.amazon.in/gp/aws/cart/add.html?${params}&tag=yourtag-21`;
   };
 
   return (
@@ -415,7 +415,7 @@ export default function App() {
                         <span style={{ color:"#C8C8C8", fontSize:12 }}>({p.reviews.toLocaleString()})</span>
                       </div>
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:30,
-                        color:B, marginBottom:8, letterSpacing:-0.5 }}>${p.price.toFixed(2)}</div>
+                        color:B, marginBottom:8, letterSpacing:-0.5 }}>₹{p.price.toLocaleString('en-IN')}</div>
                       <p style={{ color:"#999", fontSize:12.5, lineHeight:1.55 }}>{p.summary}</p>
                     </div>
                   ) : (
@@ -509,7 +509,7 @@ export default function App() {
                       objectFit:"cover", border:"1px solid #F0F0F0" }}/>
                     <div style={{ flex:1 }}>
                       <div style={{ color:"#111", fontSize:13, fontWeight:600, marginBottom:4, lineHeight:1.3 }}>{p.title}</div>
-                      <div style={{ color:B, fontWeight:800, fontSize:15 }}>${p.price.toFixed(2)}</div>
+                      <div style={{ color:B, fontWeight:800, fontSize:15 }}>₹{p.price.toLocaleString('en-IN')}</div>
                     </div>
                     <button onClick={() => saveCart(cart.filter(x => x.id !== p.id))}
                       style={{ background:"#F5F5F5", border:"none", color:"#BBB",
