@@ -188,11 +188,6 @@ export default function App() {
   const [legalModal,  setLegalModal]  = useState(null);
 
   const { mainCats, singletonCats } = useMemo(() => computeCategories(productsData), []);
-  const categoryList = useMemo(() => {
-    const list = ["All Categories", ...mainCats];
-    if (singletonCats.length > 0) list.push("Uncategorized");
-    return list;
-  }, [mainCats, singletonCats]);
 
   // Apply filters → produce the actual stack
   const filteredProducts = useMemo(() => {
@@ -200,10 +195,9 @@ export default function App() {
     return productsData.filter(p => {
       if (p.price < range.min || p.price > range.max) return false;
       if (filterCat === "All Categories") return true;
-      if (filterCat === "Uncategorized")  return singletonCats.includes(p.cat);
       return p.cat === filterCat;
     });
-  }, [filterCat, filterPrice, singletonCats]);
+  }, [filterCat, filterPrice]);
 
   const [stack, setStack] = useState(() => shuffle(filteredProducts));
   const [cart,  setCart]  = useState(() => {
@@ -456,7 +450,17 @@ export default function App() {
             border:"1px solid #E5E5E5", background:"#FAFAFA", fontSize:12, color:"#333",
             fontFamily:"'Barlow',sans-serif", fontWeight:600, cursor:"pointer",
           }}>
-          {categoryList.map(c => <option key={c} value={c}>{c}</option>)}
+          <option value="All Categories">All Categories</option>
+          {mainCats.length > 0 && (
+            <optgroup label="Categories">
+              {mainCats.map(c => <option key={c} value={c}>{c}</option>)}
+            </optgroup>
+          )}
+          {singletonCats.length > 0 && (
+            <optgroup label={mainCats.length > 0 ? "Other" : "Categories"}>
+              {singletonCats.map(c => <option key={c} value={c}>{c}</option>)}
+            </optgroup>
+          )}
         </select>
         <select
           value={filterPrice}
@@ -472,7 +476,7 @@ export default function App() {
 
       {/* ── CARD AREA ── */}
       <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
-        padding:"16px 18px 6px", minHeight:0 }}>
+        padding:"16px 18px 6px", minHeight:0, overflow:"hidden" }}>
         {stack.length === 0 ? (
           <div style={{ textAlign:"center" }}>
             <div style={{ fontSize:52, marginBottom:16 }}>🎉</div>
@@ -498,7 +502,8 @@ export default function App() {
         ) : (
           <div style={{
             width:"100%", maxWidth:380, position:"relative",
-            aspectRatio:"3 / 4", overflow:"visible"
+            aspectRatio:"3 / 4", maxHeight:"100%",
+            overflow:"visible"
           }}>
             {[...visibleCards].reverse().map((p) => {
               const index     = visibleCards.indexOf(p);
