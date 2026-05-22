@@ -741,7 +741,7 @@ export default function App() {
 
         {/* DOWN HINT — sits inside card area so swiped cards fly over it */}
         {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, bottom:24,
+          <div style={{ position:"absolute", left:0, right:0, bottom:12,
             textAlign:"center", fontSize:7.5, color:"#D8D8D8",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
@@ -751,28 +751,8 @@ export default function App() {
         )}
       </div>
 
-      {/* INSTRUCTIONS BUTTON */}
-      {stack.length > 0 && (
-        <div style={{ textAlign:"center", padding:"4px 0 14px" }}>
-          <button onClick={() => setShowHowTo(true)} style={{
-            background:"none", border:"1px solid #EEE", borderRadius:10,
-            padding:"2px 8px", fontSize:8, color:"#AAA", letterSpacing:0.3,
-            fontWeight:700, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
-            display:"inline-flex", alignItems:"center", gap:5,
-          }}>
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-              stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="11" x2="12" y2="17"/>
-              <circle cx="12" cy="7.5" r="0.6" fill="#AAA"/>
-            </svg>
-            INSTRUCTIONS
-          </button>
-        </div>
-      )}
-
-      {/* ── CART BUTTON + LEGAL LINKS ── */}
-      <div style={{ padding:"4px 16px 8px" }}>
+      {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
+      <div style={{ padding:"8px 16px 10px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
@@ -785,7 +765,27 @@ export default function App() {
             ? `VIEW CART — ${cart.length} ITEM${cart.length!==1?"S":""}`
             : "CART IS EMPTY"}
         </button>
-        <div style={{ textAlign:"center", marginTop:6 }}>
+
+        {stack.length > 0 && (
+          <div style={{ textAlign:"center", marginTop:10 }}>
+            <button onClick={() => setShowHowTo(true)} style={{
+              background:"none", border:"1px solid #EEE", borderRadius:10,
+              padding:"3px 10px", fontSize:8, color:"#AAA", letterSpacing:0.3,
+              fontWeight:700, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+              display:"inline-flex", alignItems:"center", gap:5,
+            }}>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="11" x2="12" y2="17"/>
+                <circle cx="12" cy="7.5" r="0.6" fill="#AAA"/>
+              </svg>
+              INSTRUCTIONS
+            </button>
+          </div>
+        )}
+
+        <div style={{ textAlign:"center", marginTop:8 }}>
           <button onClick={() => setLegalModal("privacy")} style={{
             background:"none", border:"none", color:"#999", fontSize:10.5,
             cursor:"pointer", padding:"0 6px",
