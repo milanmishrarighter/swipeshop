@@ -398,8 +398,8 @@ export default function App() {
       };
     }
 
-    const scale  = 1 - (vi + 1) * 0.025;
-    const peekUp = (vi + 1) * 6;
+    const scale  = 1 - (vi + 1) * 0.044;
+    const peekUp = (vi + 1) * 18;
     return {
       transform:  `translateY(-${peekUp}px) scale(${scale})`,
       transition: exitingId ? "transform 0.4s ease" : "none",
@@ -528,28 +528,29 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* LEFT: SKIP icon */}
+          {/* LEFT: SKIP icon — tiny, grey */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
             aria-label="Skip"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"6px", opacity:0.55, transition:"opacity 0.15s, transform 0.15s",
+              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
+              gap:2, transition:"transform 0.15s",
             }}
-            onMouseEnter={e => { e.currentTarget.style.opacity=1; e.currentTarget.style.transform="scale(1.15)"; }}
-            onMouseLeave={e => { e.currentTarget.style.opacity=0.55; e.currentTarget.style.transform="scale(1)"; }}
+            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.2)"; }}
+            onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
-              stroke="#D0021B" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="9" y1="9" x2="15" y2="15"/>
-              <line x1="15" y1="9" x2="9" y2="15"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="5" x2="19" y2="19"/>
+              <line x1="19" y1="5" x2="5" y2="19"/>
             </svg>
+            <span style={{ fontSize:9, color:"#CCC", fontWeight:700, letterSpacing:0.3 }}>← SKIP</span>
           </button>
 
           <div style={{
             width:"100%",
-            maxWidth:"min(300px, calc((100dvh - 280px) * 0.75))",
+            maxWidth:"min(360px, calc((100dvh - 240px) * 0.75))",
             aspectRatio:"3 / 4",
             position:"relative",
             overflow:"visible",
@@ -656,21 +657,25 @@ export default function App() {
             })}
           </div>
 
-          {/* RIGHT: ADD icon */}
+          {/* RIGHT: ADD-TO-CART icon — tiny, grey */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("right", stack[0]); }}
             aria-label="Add to cart"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"6px", opacity:0.65, transition:"opacity 0.15s, transform 0.15s",
+              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
+              gap:2, transition:"transform 0.15s",
             }}
-            onMouseEnter={e => { e.currentTarget.style.opacity=1; e.currentTarget.style.transform="scale(1.15)"; }}
-            onMouseLeave={e => { e.currentTarget.style.opacity=0.65; e.currentTarget.style.transform="scale(1)"; }}
+            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.2)"; }}
+            onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="#00A550"
-              stroke="#00A550" strokeWidth="1.8" strokeLinejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="#BBB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
+            <span style={{ fontSize:9, color:"#CCC", fontWeight:700, letterSpacing:0.3 }}>ADD →</span>
           </button>
           </>
         )}
@@ -678,9 +683,9 @@ export default function App() {
 
       {/* SWIPE HINT */}
       {stack.length > 0 && (
-        <div style={{ textAlign:"center", fontSize:10, color:"#BBB", letterSpacing:0.5,
-          fontWeight:600, padding:"2px 0" }}>
-          ↑ SWIPE UP TO OPEN AMAZON · ↓ REPORT
+        <div style={{ textAlign:"center", fontSize:9, color:"#CCC", letterSpacing:0.4,
+          fontWeight:700, padding:"2px 0" }}>
+          ↑ AMAZON  ·  ↓ REPORT
         </div>
       )}
 
