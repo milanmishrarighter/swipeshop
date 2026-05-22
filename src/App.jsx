@@ -73,8 +73,7 @@ const EXIT = {
 const OVERLAYS = {
   right:{ label:"ADD TO CART",    color:"#00A550", bg:"rgba(0,165,80,0.09)"   },
   left: { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
-  up:   { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
-  down: { label:"REPORT",         color:"#FF6900", bg:"rgba(255,105,0,0.09)"  },
+  down: { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
 };
 
 function Stars({ rating }) {
@@ -276,11 +275,9 @@ export default function App() {
       else flash("Already in cart");
     } else if (dir === "left") {
       flash("Skipped");
-    } else if (dir === "up") {
+    } else if (dir === "down") {
       openAmazon(product.amazonUrl, product.asin);
       flash("Opening Amazon...");
-    } else {
-      flash("🚩 Reported");
     }
 
     setTimeout(() => {
@@ -301,8 +298,7 @@ export default function App() {
       else if (dx < -78) doSwipe("left",  product);
       else { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); }
     } else {
-      if      (dy >  78) doSwipe("down", product);
-      else if (dy < -78) doSwipe("up",   product);
+      if (dy > 78) doSwipe("down", product);   // Down = Amazon. Up does nothing.
       else { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); }
     }
   }, [doSwipe]);
@@ -352,7 +348,7 @@ export default function App() {
     const { x, y } = offset;
     if (Math.abs(x) < 25 && Math.abs(y) < 25) return null;
     if (Math.abs(x) > Math.abs(y)) return x > 0 ? "right" : "left";
-    return y > 0 ? "down" : "up";
+    return y > 0 ? "down" : null;   // Up does nothing
   };
   const swipeDir = draggingId ? getSwipeDir() : null;
 
@@ -444,9 +440,9 @@ export default function App() {
           style={{ background:"none", border:"none", cursor:"pointer", position:"relative", padding:8 }}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 01-8 0"/>
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
           </svg>
           {cart.length > 0 && (
             <div style={{ position:"absolute", top:3, right:3, background:Y, color:"#000",
@@ -528,24 +524,24 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* LEFT: SKIP — tiny, grey, just icon + arrow */}
+          {/* LEFT: SKIP — tiny, grey, icon stacked above arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
             aria-label="Skip"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"4px", display:"flex", alignItems:"center", gap:2,
-              transition:"transform 0.15s",
+              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
+              gap:3, transition:"transform 0.15s", width:24,
             }}
             onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <span style={{ fontSize:10, color:"#CCC", lineHeight:1 }}>←</span>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
-              stroke="#BBB" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="5" x2="19" y2="19"/>
               <line x1="19" y1="5" x2="5" y2="19"/>
             </svg>
+            <span style={{ fontSize:13, color:"#CCC", lineHeight:1, fontWeight:600 }}>←</span>
           </button>
 
           <div style={{
@@ -657,25 +653,25 @@ export default function App() {
             })}
           </div>
 
-          {/* RIGHT: ADD-TO-CART — tiny, grey, just icon + arrow */}
+          {/* RIGHT: ADD-TO-CART — tiny, grey, icon stacked above arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("right", stack[0]); }}
             aria-label="Add to cart"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"4px", display:"flex", alignItems:"center", gap:2,
-              transition:"transform 0.15s",
+              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
+              gap:3, transition:"transform 0.15s", width:24,
             }}
             onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
               stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <path d="M16 10a4 4 0 01-8 0"/>
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
             </svg>
-            <span style={{ fontSize:10, color:"#CCC", lineHeight:1 }}>→</span>
+            <span style={{ fontSize:13, color:"#CCC", lineHeight:1, fontWeight:600 }}>→</span>
           </button>
           </>
         )}
@@ -685,7 +681,7 @@ export default function App() {
       {stack.length > 0 && (
         <div style={{ textAlign:"center", fontSize:9, color:"#CCC", letterSpacing:0.4,
           fontWeight:700, padding:"2px 0" }}>
-          ↑ AMAZON  ·  ↓ REPORT
+          SWIPE DOWN ↓ FOR AMAZON
         </div>
       )}
 
