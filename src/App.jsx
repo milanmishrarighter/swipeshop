@@ -21,6 +21,32 @@ const withAffiliate = (url) => {
   return url + (url.includes('?') ? '&' : '?') + `tag=${AFFILIATE_TAG}`;
 };
 
+// Tries to open in Amazon app on mobile, falls back to web on desktop
+const openAmazon = (amazonUrl, asin) => {
+  const url = withAffiliate(amazonUrl || `https://www.amazon.in/dp/${asin}/`);
+  const ua  = navigator.userAgent || "";
+  const isAndroid = /Android/i.test(ua);
+  const isIOS     = /iPad|iPhone|iPod/i.test(ua);
+
+  if (isAndroid && asin) {
+    // Android intent — opens Amazon app if installed, falls back to web
+    const intent =
+      `intent://www.amazon.in/dp/${asin}/?tag=${AFFILIATE_TAG}` +
+      `#Intent;scheme=https;package=in.amazon.mShop.android.shopping;` +
+      `S.browser_fallback_url=${encodeURIComponent(url)};end`;
+    window.location.href = intent;
+    return;
+  }
+  if (isIOS && asin) {
+    // iOS — Amazon registers universal links for amazon.in domains
+    // window.open in a new tab tends to bypass universal links, so use location
+    window.location.href = url;
+    return;
+  }
+  // Desktop — open in new tab
+  window.open(url, "_blank");
+};
+
 const PRICE_RANGES = [
   { label: "Any Price",        min: 0,    max: Infinity },
   { label: "Under ₹500",       min: 0,    max: 500 },
@@ -47,8 +73,8 @@ const EXIT = {
 const OVERLAYS = {
   right:{ label:"ADD TO CART",    color:"#00A550", bg:"rgba(0,165,80,0.09)"   },
   left: { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
-  up:   { label:"REPORT",         color:"#FF6900", bg:"rgba(255,105,0,0.09)"  },
-  down: { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
+  up:   { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
+  down: { label:"REPORT",         color:"#FF6900", bg:"rgba(255,105,0,0.09)"  },
 };
 
 function Stars({ rating }) {
@@ -250,8 +276,8 @@ export default function App() {
       else flash("Already in cart");
     } else if (dir === "left") {
       flash("Skipped");
-    } else if (dir === "down") {
-      window.open(withAffiliate(product.amazonUrl), "_blank");
+    } else if (dir === "up") {
+      openAmazon(product.amazonUrl, product.asin);
       flash("Opening Amazon...");
     } else {
       flash("🚩 Reported");
@@ -372,8 +398,8 @@ export default function App() {
       };
     }
 
-    const scale  = 1 - (vi + 1) * 0.044;
-    const peekUp = (vi + 1) * 22;
+    const scale  = 1 - (vi + 1) * 0.025;
+    const peekUp = (vi + 1) * 6;
     return {
       transform:  `translateY(-${peekUp}px) scale(${scale})`,
       transition: exitingId ? "transform 0.4s ease" : "none",
@@ -390,7 +416,7 @@ export default function App() {
 
   return (
     <div style={{
-      background:"#fff", minHeight:"100vh", maxWidth:430,
+      background:"#fff", height:"100dvh", maxWidth:430,
       margin:"0 auto", display:"flex", flexDirection:"column",
       fontFamily:"'Barlow',sans-serif", userSelect:"none",
       position:"relative", overflow:"hidden",
@@ -398,7 +424,7 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap');
         *{box-sizing:border-box;margin:0;padding:0;}
-        body{background:#fff;}
+        html, body { background:#fff; height:100%; overflow:hidden; overscroll-behavior:none; touch-action:manipulation; }
         button:focus{outline:none;}
         select{ -webkit-appearance:none; -moz-appearance:none; appearance:none;
                 background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23999' d='M6 8L0 0h12z'/></svg>");
@@ -474,18 +500,19 @@ export default function App() {
         </select>
       </div>
 
-      {/* ── CARD AREA ── */}
+      {/* ── CARD AREA WITH SIDE ICONS ── */}
       <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
-        padding:"10px 14px 4px", minHeight:0, overflow:"hidden" }}>
+        gap:6, padding:"8px 8px 4px", minHeight:0, overflow:"hidden",
+        touchAction:"none" }}>
         {stack.length === 0 ? (
           <div style={{ textAlign:"center" }}>
-            <div style={{ fontSize:52, marginBottom:16 }}>🎉</div>
-            <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26, color:"#111", marginBottom:8 }}>
+            <div style={{ fontSize:48, marginBottom:12 }}>🎉</div>
+            <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, color:"#111", marginBottom:6 }}>
               {filterCat === "All Categories" && filterPrice === 0
                 ? "YOU'VE SEEN IT ALL"
                 : "NO PRODUCTS MATCH"}
             </div>
-            <div style={{ fontSize:14, color:"#AAA", marginBottom:24 }}>
+            <div style={{ fontSize:13, color:"#AAA", marginBottom:18 }}>
               {filterCat === "All Categories" && filterPrice === 0
                 ? "Check your cart for saved items"
                 : "Try adjusting your filters"}
@@ -500,12 +527,33 @@ export default function App() {
             }}>RESET</button>
           </div>
         ) : (
+          <>
+          {/* LEFT: SKIP icon */}
+          <button
+            onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
+            aria-label="Skip"
+            style={{
+              flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
+              padding:"6px", opacity:0.55, transition:"opacity 0.15s, transform 0.15s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.opacity=1; e.currentTarget.style.transform="scale(1.15)"; }}
+            onMouseLeave={e => { e.currentTarget.style.opacity=0.55; e.currentTarget.style.transform="scale(1)"; }}
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+              stroke="#D0021B" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+            </svg>
+          </button>
+
           <div style={{
             width:"100%",
-            maxWidth:"min(360px, calc((100vh - 360px) * 0.75))",
+            maxWidth:"min(300px, calc((100dvh - 280px) * 0.75))",
             aspectRatio:"3 / 4",
             position:"relative",
             overflow:"visible",
+            touchAction:"none",
           }}>
             {[...visibleCards].reverse().map((p) => {
               const index     = visibleCards.indexOf(p);
@@ -607,41 +655,42 @@ export default function App() {
               );
             })}
           </div>
+
+          {/* RIGHT: ADD icon */}
+          <button
+            onClick={() => { if (stack[0] && !isExiting.current) doSwipe("right", stack[0]); }}
+            aria-label="Add to cart"
+            style={{
+              flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
+              padding:"6px", opacity:0.65, transition:"opacity 0.15s, transform 0.15s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.opacity=1; e.currentTarget.style.transform="scale(1.15)"; }}
+            onMouseLeave={e => { e.currentTarget.style.opacity=0.65; e.currentTarget.style.transform="scale(1)"; }}
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#00A550"
+              stroke="#00A550" strokeWidth="1.8" strokeLinejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          </>
         )}
       </div>
 
-      {/* ── ACTION BUTTONS ── */}
-      <div style={{ display:"flex", justifyContent:"center", alignItems:"center", gap:18, padding:"4px 0 8px" }}>
-        {[
-          { label:"Skip",   icon:"✕", color:"#D0021B", bg:"#FEF2F2", dir:"left"  },
-          { label:"Amazon", icon:"↓", color:B,         bg:"#EEF3FF", dir:"down"  },
-          { label:"Report", icon:"↑", color:"#FF6900", bg:"#FFF4ED", dir:"up"    },
-          { label:"Add",    icon:"♥", color:"#00A550", bg:"#EFFAF4", dir:"right" },
-        ].map(({ label, icon, color, bg, dir:d }) => (
-          <div key={label} style={{ textAlign:"center" }}>
-            <button
-              onClick={() => { if (stack[0] && !isExiting.current) doSwipe(d, stack[0]); }}
-              style={{ width:52, height:52, borderRadius:"50%", border:`2px solid ${color}`,
-                background:bg, color, fontSize:20, cursor:"pointer",
-                display:"flex", alignItems:"center", justifyContent:"center",
-                marginBottom:5, transition:"transform 0.15s, box-shadow 0.15s",
-                boxShadow:"0 2px 8px rgba(0,0,0,0.06)"
-              }}
-              onMouseEnter={e => { e.currentTarget.style.transform="scale(1.12)"; e.currentTarget.style.boxShadow=`0 6px 18px ${color}44`; }}
-              onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; e.currentTarget.style.boxShadow="0 2px 8px rgba(0,0,0,0.06)"; }}
-            >{icon}</button>
-            <div style={{ color:"#C8C8C8", fontSize:10, letterSpacing:0.5, fontWeight:600 }}>{label.toUpperCase()}</div>
-          </div>
-        ))}
-      </div>
+      {/* SWIPE HINT */}
+      {stack.length > 0 && (
+        <div style={{ textAlign:"center", fontSize:10, color:"#BBB", letterSpacing:0.5,
+          fontWeight:600, padding:"2px 0" }}>
+          ↑ SWIPE UP TO OPEN AMAZON · ↓ REPORT
+        </div>
+      )}
 
-      {/* ── CART BUTTON ── */}
-      <div style={{ padding:"4px 20px 14px" }}>
+      {/* ── CART BUTTON + LEGAL LINKS ── */}
+      <div style={{ padding:"4px 16px 8px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
-          border:"none", borderRadius:12, padding:"14px 0", width:"100%",
-          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:18,
+          border:"none", borderRadius:12, padding:"12px 0", width:"100%",
+          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
           boxShadow: cart.length > 0 ? "0 4px 20px rgba(255,179,0,0.28)" : "none"
         }}>
@@ -649,23 +698,16 @@ export default function App() {
             ? `VIEW CART — ${cart.length} ITEM${cart.length!==1?"S":""}`
             : "CART IS EMPTY"}
         </button>
-      </div>
-
-      {/* ── FOOTER ── */}
-      <div style={{ borderTop:"1px solid #F2F2F2", padding:"6px 16px 10px",
-        textAlign:"center", color:"#AAA", fontSize:11, lineHeight:1.5 }}>
-        <div style={{ marginBottom:4 }}>
+        <div style={{ textAlign:"center", marginTop:6 }}>
           <button onClick={() => setLegalModal("privacy")} style={{
-            background:"none", border:"none", color:"#777", fontSize:11,
-            cursor:"pointer", padding:"0 8px", borderRight:"1px solid #DDD",
+            background:"none", border:"none", color:"#999", fontSize:10.5,
+            cursor:"pointer", padding:"0 6px",
           }}>Privacy</button>
+          <span style={{color:"#DDD", fontSize:10}}>·</span>
           <button onClick={() => setLegalModal("terms")} style={{
-            background:"none", border:"none", color:"#777", fontSize:11,
-            cursor:"pointer", padding:"0 8px",
+            background:"none", border:"none", color:"#999", fontSize:10.5,
+            cursor:"pointer", padding:"0 6px",
           }}>Terms</button>
-        </div>
-        <div style={{ color:"#BBB", fontSize:10 }}>
-          SwipeShop is a participant in the Amazon Associates Program. We may earn from qualifying purchases.
         </div>
       </div>
 
