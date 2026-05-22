@@ -476,7 +476,7 @@ export default function App() {
 
       {/* ── CARD AREA ── */}
       <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
-        padding:"16px 18px 6px", minHeight:0, overflow:"hidden" }}>
+        padding:"10px 14px 4px", minHeight:0, overflow:"hidden" }}>
         {stack.length === 0 ? (
           <div style={{ textAlign:"center" }}>
             <div style={{ fontSize:52, marginBottom:16 }}>🎉</div>
@@ -501,9 +501,11 @@ export default function App() {
           </div>
         ) : (
           <div style={{
-            width:"100%", maxWidth:380, position:"relative",
-            aspectRatio:"3 / 4", maxHeight:"100%",
-            overflow:"visible"
+            width:"100%",
+            maxWidth:"min(360px, calc((100vh - 360px) * 0.75))",
+            aspectRatio:"3 / 4",
+            position:"relative",
+            overflow:"visible",
           }}>
             {[...visibleCards].reverse().map((p) => {
               const index     = visibleCards.indexOf(p);
@@ -650,8 +652,8 @@ export default function App() {
       </div>
 
       {/* ── FOOTER ── */}
-      <div style={{ borderTop:"1px solid #F2F2F2", padding:"10px 16px 16px",
-        textAlign:"center", color:"#AAA", fontSize:11, lineHeight:1.6 }}>
+      <div style={{ borderTop:"1px solid #F2F2F2", padding:"6px 16px 10px",
+        textAlign:"center", color:"#AAA", fontSize:11, lineHeight:1.5 }}>
         <div style={{ marginBottom:4 }}>
           <button onClick={() => setLegalModal("privacy")} style={{
             background:"none", border:"none", color:"#777", fontSize:11,
