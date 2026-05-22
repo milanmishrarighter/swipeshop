@@ -741,8 +741,8 @@ export default function App() {
 
         {/* DOWN HINT — sits inside card area so swiped cards fly over it */}
         {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, bottom:6,
-            textAlign:"center", fontSize:9, color:"#999",
+          <div style={{ position:"absolute", left:0, right:0, bottom:24,
+            textAlign:"center", fontSize:7.5, color:"#999",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
           }}>
@@ -751,14 +751,14 @@ export default function App() {
         )}
       </div>
 
-      {/* HOW-TO BUTTON (replaces the old hint text) */}
+      {/* INSTRUCTIONS BUTTON */}
       {stack.length > 0 && (
         <div style={{ textAlign:"center", padding:"2px 0 0" }}>
           <button onClick={() => setShowHowTo(true)} style={{
-            background:"none", border:"1px solid #E5E5E5", borderRadius:12,
-            padding:"3px 12px", fontSize:9, color:"#999", letterSpacing:0.4,
+            background:"none", border:"1px solid #EEE", borderRadius:10,
+            padding:"2px 8px", fontSize:8, color:"#AAA", letterSpacing:0.3,
             fontWeight:700, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
-          }}>HOW TO SWIPE</button>
+          }}>INSTRUCTIONS</button>
         </div>
       )}
 
