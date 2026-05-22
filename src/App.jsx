@@ -528,24 +528,24 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* LEFT: SKIP icon — tiny, grey */}
+          {/* LEFT: SKIP — tiny, grey, just icon + arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
             aria-label="Skip"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
-              gap:2, transition:"transform 0.15s",
+              padding:"4px", display:"flex", alignItems:"center", gap:2,
+              transition:"transform 0.15s",
             }}
-            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.2)"; }}
+            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <span style={{ fontSize:10, color:"#CCC", lineHeight:1 }}>←</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+              stroke="#BBB" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="5" x2="19" y2="19"/>
               <line x1="19" y1="5" x2="5" y2="19"/>
             </svg>
-            <span style={{ fontSize:9, color:"#CCC", fontWeight:700, letterSpacing:0.3 }}>← SKIP</span>
           </button>
 
           <div style={{
@@ -585,7 +585,7 @@ export default function App() {
                   }}
                 >
                   {/* Image — uses contain so square Amazon images aren't cropped */}
-                  <div style={{ flex:"0 0 62%", position:"relative", background:"#fff",
+                  <div style={{ flex:"0 0 50%", position:"relative", background:"#fff",
                     overflow:"hidden", borderBottom:"1px solid #F4F4F4" }}>
                     <img
                       src={p.img} alt={p.title} draggable={false}
@@ -642,7 +642,7 @@ export default function App() {
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26,
                         color:B, marginBottom:6, letterSpacing:-0.5 }}>₹{p.price.toLocaleString('en-IN')}</div>
                       <p style={{ color:"#999", fontSize:12, lineHeight:1.5,
-                        display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
+                        display:"-webkit-box", WebkitLineClamp:4, WebkitBoxOrient:"vertical",
                         overflow:"hidden",
                       }}>{p.summary}</p>
                     </div>
@@ -657,25 +657,25 @@ export default function App() {
             })}
           </div>
 
-          {/* RIGHT: ADD-TO-CART icon — tiny, grey */}
+          {/* RIGHT: ADD-TO-CART — tiny, grey, just icon + arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("right", stack[0]); }}
             aria-label="Add to cart"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
-              gap:2, transition:"transform 0.15s",
+              padding:"4px", display:"flex", alignItems:"center", gap:2,
+              transition:"transform 0.15s",
             }}
-            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.2)"; }}
+            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="#BBB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+              stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
               <line x1="3" y1="6" x2="21" y2="6"/>
               <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
-            <span style={{ fontSize:9, color:"#CCC", fontWeight:700, letterSpacing:0.3 }}>ADD →</span>
+            <span style={{ fontSize:10, color:"#CCC", lineHeight:1 }}>→</span>
           </button>
           </>
         )}
