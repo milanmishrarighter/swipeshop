@@ -206,11 +206,74 @@ function LegalModal({ kind, onClose }) {
   );
 }
 
+function HowToModal({ onClose }) {
+  const rows = [
+    { color:"#D0021B", bg:"#FEF2F2", arrow:"←", label:"SKIP",
+      svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="#D0021B" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="9" y1="9" x2="15" y2="15"/>
+          <line x1="15" y1="9" x2="9" y2="15"/>
+        </svg>) },
+    { color:"#00A550", bg:"#EFFAF4", arrow:"→", label:"ADD TO CART",
+      svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="#00A550" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="9" cy="21" r="1.4"/>
+          <circle cx="20" cy="21" r="1.4"/>
+          <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+        </svg>) },
+    { color:"#1668F5", bg:"#EEF3FF", arrow:"↓", label:"GO TO PRODUCT PAGE",
+      svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="#1668F5" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 5v14"/>
+          <path d="M19 12l-7 7-7-7"/>
+        </svg>) },
+  ];
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
+        display:"flex", alignItems:"center", justifyContent:"center", padding:"16px" }}
+      onClick={onClose}>
+      <div onClick={e => e.stopPropagation()} style={{
+        background:"#fff", borderRadius:20, width:"100%", maxWidth:340,
+        padding:"22px 22px 18px", boxShadow:"0 8px 40px rgba(0,0,0,0.18)",
+        fontFamily:"'Barlow',sans-serif",
+      }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:18 }}>
+          <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:22, color:"#111", letterSpacing:-0.5 }}>
+            HOW TO SWIPE
+          </span>
+          <button onClick={onClose} style={{
+            background:"#F5F5F5", border:"none", color:"#666", width:28, height:28,
+            borderRadius:"50%", cursor:"pointer", fontSize:12, fontWeight:700 }}>✕</button>
+        </div>
+
+        {rows.map((r, i) => (
+          <div key={i} style={{
+            display:"flex", alignItems:"center", gap:14,
+            padding:"10px 12px", marginBottom:8, background:r.bg, borderRadius:12,
+          }}>
+            <div style={{ flex:"0 0 auto" }}>{r.svg}</div>
+            <div style={{ flex:1 }}>
+              <div style={{ fontSize:11, color:"#999", fontWeight:700, letterSpacing:0.4, marginBottom:2 }}>
+                SWIPE {r.arrow}
+              </div>
+              <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:16, color:r.color, letterSpacing:-0.2 }}>
+                {r.label}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── Main App ─────────────────────────────────────────────────────────────────
 export default function App() {
   const [filterCat,   setFilterCat]   = useState("All Categories");
   const [filterPrice, setFilterPrice] = useState(0);
   const [legalModal,  setLegalModal]  = useState(null);
+  const [showHowTo,   setShowHowTo]   = useState(false);
 
   const { mainCats, singletonCats } = useMemo(() => computeCategories(productsData), []);
 
@@ -499,7 +562,7 @@ export default function App() {
       {/* ── CARD AREA WITH SIDE ICONS ── */}
       <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
         gap:6, padding:"8px 8px 4px", minHeight:0, overflow:"hidden",
-        touchAction:"none" }}>
+        touchAction:"none", position:"relative" }}>
         {stack.length === 0 ? (
           <div style={{ textAlign:"center" }}>
             <div style={{ fontSize:48, marginBottom:12 }}>🎉</div>
@@ -537,11 +600,11 @@ export default function App() {
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              stroke="#999" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="5" x2="19" y2="19"/>
               <line x1="19" y1="5" x2="5" y2="19"/>
             </svg>
-            <span style={{ fontSize:13, color:"#CCC", lineHeight:1, fontWeight:600 }}>←</span>
+            <span style={{ fontSize:13, color:"#999", lineHeight:1, fontWeight:600 }}>←</span>
           </button>
 
           <div style={{
@@ -666,22 +729,36 @@ export default function App() {
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="9" cy="21" r="1"/>
               <circle cx="20" cy="21" r="1"/>
               <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
             </svg>
-            <span style={{ fontSize:13, color:"#CCC", lineHeight:1, fontWeight:600 }}>→</span>
+            <span style={{ fontSize:13, color:"#999", lineHeight:1, fontWeight:600 }}>→</span>
           </button>
           </>
         )}
+
+        {/* DOWN HINT — sits inside card area so swiped cards fly over it */}
+        {stack.length > 0 && (
+          <div style={{ position:"absolute", left:0, right:0, bottom:6,
+            textAlign:"center", fontSize:9, color:"#999",
+            letterSpacing:0.4, fontWeight:700, zIndex:1,
+            pointerEvents:"none",
+          }}>
+            GO TO PRODUCT PAGE ↓
+          </div>
+        )}
       </div>
 
-      {/* SWIPE HINT */}
+      {/* HOW-TO BUTTON (replaces the old hint text) */}
       {stack.length > 0 && (
-        <div style={{ textAlign:"center", fontSize:9, color:"#CCC", letterSpacing:0.4,
-          fontWeight:700, padding:"2px 0" }}>
-          SWIPE DOWN ↓ FOR AMAZON
+        <div style={{ textAlign:"center", padding:"2px 0 0" }}>
+          <button onClick={() => setShowHowTo(true)} style={{
+            background:"none", border:"1px solid #E5E5E5", borderRadius:12,
+            padding:"3px 12px", fontSize:9, color:"#999", letterSpacing:0.4,
+            fontWeight:700, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+          }}>HOW TO SWIPE</button>
         </div>
       )}
 
@@ -781,6 +858,7 @@ export default function App() {
       )}
 
       {legalModal && <LegalModal kind={legalModal} onClose={() => setLegalModal(null)} />}
+      {showHowTo  && <HowToModal onClose={() => setShowHowTo(false)} />}
       <Toast msg={toast.msg} on={toast.on} />
     </div>
   );
