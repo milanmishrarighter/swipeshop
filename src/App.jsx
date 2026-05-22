@@ -600,11 +600,11 @@ export default function App() {
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#999" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              stroke="#D8D8D8" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="5" x2="19" y2="19"/>
               <line x1="19" y1="5" x2="5" y2="19"/>
             </svg>
-            <span style={{ fontSize:13, color:"#999", lineHeight:1, fontWeight:600 }}>←</span>
+            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600 }}>←</span>
           </button>
 
           <div style={{
@@ -729,12 +729,12 @@ export default function App() {
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              stroke="#D8D8D8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="9" cy="21" r="1"/>
               <circle cx="20" cy="21" r="1"/>
               <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
             </svg>
-            <span style={{ fontSize:13, color:"#999", lineHeight:1, fontWeight:600 }}>→</span>
+            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600 }}>→</span>
           </button>
           </>
         )}
@@ -742,7 +742,7 @@ export default function App() {
         {/* DOWN HINT — sits inside card area so swiped cards fly over it */}
         {stack.length > 0 && (
           <div style={{ position:"absolute", left:0, right:0, bottom:24,
-            textAlign:"center", fontSize:7.5, color:"#999",
+            textAlign:"center", fontSize:7.5, color:"#D8D8D8",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
           }}>
@@ -753,12 +753,21 @@ export default function App() {
 
       {/* INSTRUCTIONS BUTTON */}
       {stack.length > 0 && (
-        <div style={{ textAlign:"center", padding:"2px 0 0" }}>
+        <div style={{ textAlign:"center", padding:"4px 0 14px" }}>
           <button onClick={() => setShowHowTo(true)} style={{
             background:"none", border:"1px solid #EEE", borderRadius:10,
             padding:"2px 8px", fontSize:8, color:"#AAA", letterSpacing:0.3,
             fontWeight:700, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
-          }}>INSTRUCTIONS</button>
+            display:"inline-flex", alignItems:"center", gap:5,
+          }}>
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+              stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="11" x2="12" y2="17"/>
+              <circle cx="12" cy="7.5" r="0.6" fill="#AAA"/>
+            </svg>
+            INSTRUCTIONS
+          </button>
         </div>
       )}
 
