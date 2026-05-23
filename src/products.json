@@ -362,5 +362,18 @@
     "badge": "Amazon's Choice",
     "cat": "Resistance Bands",
     "amazonUrl": "https://www.amazon.in/dp/B099KQ5WLQ/"
+  },
+  {
+    "id": 1779557777584,
+    "asin": "B07FQS78ZQ",
+    "title": "Skinn Raw: Fresh, Woody, Spicy Perfume",
+    "price": 1543,
+    "rating": 4.3,
+    "reviews": 3091,
+    "summary": "Skinn Raw is a fresh, woody, and spicy perfume designed to evoke the revitalizing sensation of rain on a summer day. It blends crisp citrus notes with warm patchouli and gaiac wood, offering a balanced and enduring fragrance.",
+    "img": "/images/B07FQS78ZQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B07FQS78ZQ/"
   }
 ]
