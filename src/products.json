@@ -505,5 +505,18 @@
     "badge": "Amazon's Choice",
     "cat": "Mechanical Pencils",
     "amazonUrl": "https://www.amazon.in/dp/B0CFDTW992/"
+  },
+  {
+    "id": 1779558252715,
+    "asin": "B01N7Z9QHC",
+    "title": "Pinzo Neon Sticky Notes with Tabs",
+    "price": 297,
+    "rating": 4.2,
+    "reviews": 2875,
+    "summary": "This product offers four pads of self-stick notes and eight sets of arrow flags, all contained within a convenient plastic case. The bright neon colors ensure your important reminders and page markers are easily visible. These notes adhere reliably to most surfaces, aiding organization.",
+    "img": "/images/B01N7Z9QHC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Self-Stick Notes",
+    "amazonUrl": "https://www.amazon.in/dp/B01N7Z9QHC/"
   }
 ]
