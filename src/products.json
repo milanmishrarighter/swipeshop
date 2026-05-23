@@ -141,5 +141,18 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Foot Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B07PJK8XM2/"
+  },
+  {
+    "id": 1779555428174,
+    "asin": "B09652M86B",
+    "title": "Agaro TENS Muscle Therapy Massager",
+    "price": 1719,
+    "rating": 4.4,
+    "reviews": 3523,
+    "summary": "The Agaro TENS Muscle Therapy Massager is a handheld device designed to relax muscles and alleviate discomfort. It utilizes TENS technology to gently stimulate nerves, offering 24 massage modes and adjustable intensity for personalized relief from everyday strain or fatigue. This compact, rechargeable unit helps muscles feel more comfortable with regular use.",
+    "img": "/images/B09652M86B.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Handheld Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B09652M86B/"
   }
 ]
