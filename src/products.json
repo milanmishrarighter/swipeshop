@@ -258,5 +258,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cleaning Cloths",
     "amazonUrl": "https://www.amazon.in/dp/B0FS215N87/"
+  },
+  {
+    "id": 1779557206451,
+    "asin": "B0DQL52MRL",
+    "title": "Nuuk Cloth Lint Remover",
+    "price": 1103,
+    "rating": 4.4,
+    "reviews": 411,
+    "summary": "The Nuuk Lint Remover is an electric shaver designed to gently remove lint, fuzz, and pills from all fabric types. Its dual-speed motor and precision blades ensure smooth, snag-free results, helping to refresh and extend the life of your garments. This compact device also features quiet operation and a long-lasting battery, making it convenient for both home and travel use.",
+    "img": "/images/B0DQL52MRL.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Lint Shavers",
+    "amazonUrl": "https://www.amazon.in/dp/B0DQL52MRL/"
   }
 ]
