@@ -219,5 +219,18 @@
     "badge": "Amazon's Choice",
     "cat": "Tyre Inflators",
     "amazonUrl": "https://www.amazon.in/dp/B0877GBDQD/"
+  },
+  {
+    "id": 1779556817585,
+    "asin": "B0CXD7B5XT",
+    "title": "Car Interior Cleaning Brush Set",
+    "price": 199,
+    "rating": 4.2,
+    "reviews": 1877,
+    "summary": "This car interior cleaning brush set includes two microfiber brushes designed for effective dust removal. Their soft, shed-resistant bristles and ergonomic handles allow for thorough cleaning of various surfaces, including AC vents, without causing scratches. The set helps maintain a consistently clean and pristine car interior.",
+    "img": "/images/B0CXD7B5XT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Brushes & Dusters",
+    "amazonUrl": "https://www.amazon.in/dp/B0CXD7B5XT/"
   }
 ]
