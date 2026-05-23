@@ -557,5 +557,18 @@
     "badge": "Amazon's Choice",
     "cat": "Chewing & Bubble Gum",
     "amazonUrl": "https://www.amazon.in/dp/B00YOBAVNW/"
+  },
+  {
+    "id": 1779558355610,
+    "asin": "B08KLG1KSY",
+    "title": "Wild Acacia Edible Gum",
+    "price": 381,
+    "rating": 4.1,
+    "reviews": 761,
+    "summary": "Wild Acacia Edible Gum is pure, wild-harvested gum arabic from natural forest environments. This clean, chemical-free gum is traditionally used in Ayurveda to support immunity and overall stamina. It also offers soluble fiber, aiding digestion and providing sustained energy.",
+    "img": "/images/B08KLG1KSY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chewing & Bubble Gum",
+    "amazonUrl": "https://www.amazon.in/dp/B08KLG1KSY/"
   }
 ]
