@@ -1,44 +1,5 @@
 [
   {
-    "id": 1,
-    "asin": "B0D9M72ZDV",
-    "title": "Urbane Home Silicone Collapsible Popcorn Bowl",
-    "price": 599,
-    "rating": 4.4,
-    "reviews": 1280,
-    "summary": "Microwave-safe collapsible silicone bowl perfect for popcorn. Space-saving design folds flat for easy storage. BPA-free, heat-resistant up to 230°C.",
-    "img": "https://picsum.photos/seed/popcornbowl/400/430",
-    "badge": "Amazon's Choice",
-    "cat": "Kitchen",
-    "amazonUrl": "https://www.amazon.in/Urbane-Home-Silicone-Microwave-Collapsible/dp/B0D9M72ZDV/"
-  },
-  {
-    "id": 2,
-    "asin": "B0D29CLX4Z",
-    "title": "Fulminare LED Desk Lamp with USB Charging Port",
-    "price": 1299,
-    "rating": 4.3,
-    "reviews": 876,
-    "summary": "Dimmable LED desk lamp with 3 colour modes and touch control. Built-in USB charging port. Eye-caring technology ideal for study and work.",
-    "img": "https://picsum.photos/seed/desklamp/400/430",
-    "badge": null,
-    "cat": "Home & Office",
-    "amazonUrl": "https://www.amazon.in/Fulminare-Plastic-Dimmable-Charging-Pawnwhite/dp/B0D29CLX4Z/"
-  },
-  {
-    "id": 3,
-    "asin": "B0DGGSH492",
-    "title": "Shuttle Art Eternal Inkless Pencil (2-Pack)",
-    "price": 449,
-    "rating": 4.2,
-    "reviews": 543,
-    "summary": "Permanent inkless pencil that never needs sharpening. Writes on any paper, lasts a lifetime. Eco-friendly alternative to regular pencils.",
-    "img": "https://picsum.photos/seed/inklesspencil/400/430",
-    "badge": null,
-    "cat": "Stationery",
-    "amazonUrl": "https://www.amazon.in/SHUTTLE-ART-Permanent-Sharpening-Everlasting/dp/B0DGGSH492/"
-  },
-  {
     "id": 4,
     "asin": "B0FJRWBFTT",
     "title": "AERLANG Percussion Massage Gun",
