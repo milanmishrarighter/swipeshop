@@ -50,5 +50,18 @@
     "badge": "Amazon's Choice",
     "cat": "Snap-On Neck Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B077G1HNHV/"
+  },
+  {
+    "id": 1779516997379,
+    "asin": "B0DRCWBXPQ",
+    "title": "Shiatsu Foot Massager with Heat",
+    "price": 2499,
+    "rating": 4.2,
+    "reviews": 560,
+    "summary": "Relax your feet anywhere. Portable Shiatsu massage with heat for daily relief.",
+    "img": "/images/B0DRCWBXPQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Foot Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B0DRCWBXPQ/"
   }
 ]
