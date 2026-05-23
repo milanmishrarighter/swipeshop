@@ -180,5 +180,18 @@
     "badge": "Amazon's Choice",
     "cat": "Waste & Recycling",
     "amazonUrl": "https://www.amazon.in/dp/B0DDXTW5V6/"
+  },
+  {
+    "id": 1779555753531,
+    "asin": "B0FS7N1DX1",
+    "title": "Heavy-Duty Tubeless Puncture Repair Kit",
+    "price": 309,
+    "rating": 4.4,
+    "reviews": 897,
+    "summary": "This Heavy-Duty Tubeless Puncture Repair Kit provides the essential tools for fixing flat tubeless tires. It offers a reliable and convenient solution for on-the-spot repairs, helping you quickly get back on the road. The kit includes durable tools and high-grip plugs to ensure secure, lasting seals.",
+    "img": "/images/B0FS7N1DX1.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Puncture Repair Kits",
+    "amazonUrl": "https://www.amazon.in/dp/B0FS7N1DX1/"
   }
 ]
