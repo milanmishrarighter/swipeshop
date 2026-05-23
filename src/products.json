@@ -284,5 +284,18 @@
     "badge": "Amazon's Choice",
     "cat": "Vertical Steamers",
     "amazonUrl": "https://www.amazon.in/dp/B0FV34C51P/"
+  },
+  {
+    "id": 1779557348676,
+    "asin": "B0FR94CZKJ",
+    "title": "Shine Car Duster with Wax Coating",
+    "price": 779,
+    "rating": 4.3,
+    "reviews": 2320,
+    "summary": "The Shine Car Duster with Wax Coating offers a simple way to remove dust and dirt from your vehicle. Its unique wax coating effectively lifts grime, leaving a clean, polished finish without water or sprays. This duster provides a quick, scratch-free solution for maintaining your car's appearance.",
+    "img": "/images/B0FR94CZKJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Brushes & Dusters",
+    "amazonUrl": "https://www.amazon.in/dp/B0FR94CZKJ/"
   }
 ]
