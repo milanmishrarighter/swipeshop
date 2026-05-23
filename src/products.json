@@ -453,5 +453,18 @@
     "badge": "Amazon's Choice",
     "cat": "Grooming Sets & Kits",
     "amazonUrl": "https://www.amazon.in/dp/B0G2S8C4VQ/"
+  },
+  {
+    "id": 1779558135563,
+    "asin": "B0D816QSDV",
+    "title": "Flair Move Gel Pen, Blue, Set of 10",
+    "price": 100,
+    "rating": 4.4,
+    "reviews": 1512,
+    "summary": "This set of ten blue Flair Move gel pens provides a smooth and consistent writing experience. Their ergonomic grip allows for comfortable handling, ensuring clear lines without skipping or smearing. These pens are suitable for various tasks, from note-taking to journaling.",
+    "img": "/images/B0D816QSDV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Drawing Media",
+    "amazonUrl": "https://www.amazon.in/dp/B0D816QSDV/"
   }
 ]
