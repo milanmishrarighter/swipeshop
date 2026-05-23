@@ -102,5 +102,18 @@
     "badge": "Amazon's Choice",
     "cat": "Desk Lights",
     "amazonUrl": "https://www.amazon.in/dp/B016VYAWA6/"
+  },
+  {
+    "id": 1779518016592,
+    "asin": "B0FR9KHQZM",
+    "title": "Study Lamp with Pen Holder",
+    "price": 499,
+    "rating": 4.4,
+    "reviews": 12793,
+    "summary": "This study lamp offers adjustable LED lighting with three color modes and touch brightness control, designed to reduce eye strain during extended use. Its flexible gooseneck and integrated pen holder provide practical organization and directed illumination for any workspace.",
+    "img": "/images/B0FR9KHQZM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Table Lamps",
+    "amazonUrl": "https://www.amazon.in/dp/B0FR9KHQZM/"
   }
 ]
