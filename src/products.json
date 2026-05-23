@@ -115,5 +115,18 @@
     "badge": "Amazon's Choice",
     "cat": "Table Lamps",
     "amazonUrl": "https://www.amazon.in/dp/B0FR9KHQZM/"
+  },
+  {
+    "id": 1779518074335,
+    "asin": "B09JYMV72F",
+    "title": "Acrylic Memo Cube Pad",
+    "price": 142,
+    "rating": 4.4,
+    "reviews": 691,
+    "summary": "This acrylic memo cube provides 700 sheets for conveniently jotting down notes and reminders. Its sturdy holder ensures easy access to papers, making it a practical tool for executives, students, or home use. The design facilitates quick note-taking, enhancing productivity in various settings.",
+    "img": "/images/B09JYMV72F.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Notepads & Memo Books",
+    "amazonUrl": "https://www.amazon.in/dp/B09JYMV72F/"
   }
 ]
