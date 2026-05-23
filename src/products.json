@@ -570,5 +570,18 @@
     "badge": "Amazon's Choice",
     "cat": "Chewing & Bubble Gum",
     "amazonUrl": "https://www.amazon.in/dp/B08KLG1KSY/"
+  },
+  {
+    "id": 1779558372046,
+    "asin": "B09TWG2QPC",
+    "title": "Gud Gum: Natural, Plastic-Free Chewing Gum",
+    "price": 360,
+    "rating": 3.5,
+    "reviews": 656,
+    "summary": "Gud Gum offers a natural, plastic-free chewing gum made from biodegradable tree sap, not synthetic plastic. This eco-friendly choice supports a sustainable lifestyle while providing a healthy, sugar-free chew that is vegan and allergen-free.",
+    "img": "/images/B09TWG2QPC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chewing & Bubble Gum",
+    "amazonUrl": "https://www.amazon.in/dp/B09TWG2QPC/"
   }
 ]
