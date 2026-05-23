@@ -306,6 +306,13 @@ function HowToModal({ onClose }) {
           <path d="M12 5v14"/>
           <path d="M19 12l-7 7-7-7"/>
         </svg>) },
+    { color:"#8B5CF6", bg:"#F4F0FF", arrow:"TAP", label:"VIEW FULL DETAILS",
+      svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="#8B5CF6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 11.2c0-2.2 1.5-3.2 3-3.2s3 1 3 3-3 3-3 5"/>
+          <circle cx="12" cy="18" r="0.8" fill="#8B5CF6"/>
+          <circle cx="12" cy="12" r="10"/>
+        </svg>) },
   ];
   return (
     <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
@@ -333,7 +340,7 @@ function HowToModal({ onClose }) {
             <div style={{ flex:"0 0 auto" }}>{r.svg}</div>
             <div style={{ flex:1 }}>
               <div style={{ fontSize:11, color:"#999", fontWeight:700, letterSpacing:0.4, marginBottom:2 }}>
-                SWIPE {r.arrow}
+                {r.arrow === "TAP" ? "TAP CARD" : `SWIPE ${r.arrow}`}
               </div>
               <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:16, color:r.color, letterSpacing:-0.2 }}>
                 {r.label}
