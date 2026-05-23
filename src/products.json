@@ -336,5 +336,18 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Heating Pads",
     "amazonUrl": "https://www.amazon.in/dp/B0GL7ZBRWG/"
+  },
+  {
+    "id": 1779557661953,
+    "asin": "B0B4SSD3K3",
+    "title": "Kohler Mist Rainduet Multifunction Shower",
+    "price": 1599,
+    "rating": 4.2,
+    "reviews": 869,
+    "summary": "The Kohler Mist Rainduet is an overhead shower offering five distinct spray settings, including a gentle mist and a powerful massage. This durable fixture allows you to customize your showering experience for relaxation or thorough rinsing. It also features a pause mode for water conservation during your routine.",
+    "img": "/images/B0B4SSD3K3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Overhead Showers",
+    "amazonUrl": "https://www.amazon.in/dp/B0B4SSD3K3/"
   }
 ]
