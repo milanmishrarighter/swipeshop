@@ -492,5 +492,18 @@
     "badge": "Amazon's Choice",
     "cat": "Calligraphy Pens",
     "amazonUrl": "https://www.amazon.in/dp/B0DGGSH492/"
+  },
+  {
+    "id": 1779558236666,
+    "asin": "B0CFDTW992",
+    "title": "BRUSTRO Mechanical Pencil Set, 0.7mm",
+    "price": 157,
+    "rating": 4.4,
+    "reviews": 3445,
+    "summary": "This BRUSTRO Mechanical Pencil Set provides reliable 0.7mm pencils for precise writing and drawing. It includes HB and 2B leads, along with spare erasers, ensuring you have the necessary supplies for various tasks. The design supports continuous use and comfortable handling, making it suitable for detailed work and everyday needs.",
+    "img": "/images/B0CFDTW992.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mechanical Pencils",
+    "amazonUrl": "https://www.amazon.in/dp/B0CFDTW992/"
   }
 ]
