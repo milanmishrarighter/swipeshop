@@ -63,5 +63,18 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Foot Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B0DRCWBXPQ/"
+  },
+  {
+    "id": 1779517102630,
+    "asin": "B0BDZPWY73",
+    "title": "Sifoz Posture Corrector Back Support Belt",
+    "price": 499,
+    "rating": 3.8,
+    "reviews": 11351,
+    "summary": "Improve posture, relieve pain. Comfortable support for a straighter, more confident you.",
+    "img": "/images/B0BDZPWY73.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Back Braces",
+    "amazonUrl": "https://www.amazon.in/dp/B0BDZPWY73/"
   }
 ]
