@@ -676,11 +676,6 @@ export default function App() {
 
                     {(isTop || isLeaving) && (
                       <>
-                        {p.badge && (
-                          <div style={{ position:"absolute", top:10, left:10, background:Y, color:"#000",
-                            padding:"3px 10px", borderRadius:4, fontSize:10, fontWeight:800, letterSpacing:0.6
-                          }}>{p.badge.toUpperCase()}</div>
-                        )}
                         <div style={{ position:"absolute", top:10, right:10, background:"rgba(255,255,255,0.92)",
                           color:"#777", padding:"3px 10px", borderRadius:4, fontSize:10, fontWeight:600,
                           maxWidth:"60%", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap"
