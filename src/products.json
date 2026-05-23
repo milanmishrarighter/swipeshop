@@ -37,5 +37,18 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Massage Cushions",
     "amazonUrl": "https://www.amazon.in/dp/B06XF471D3/"
+  },
+  {
+    "id": 1779516874213,
+    "asin": "B077G1HNHV",
+    "title": "Dr Physio Electric Shiatsu Neck Massager",
+    "price": 1999,
+    "rating": 3.9,
+    "reviews": 5801,
+    "summary": "Relieve tight muscles and improve flexibility with soothing heat and deep shiatsu kneading. Enjoy targeted relief for your neck and shoulders.",
+    "img": "/images/B077G1HNHV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Snap-On Neck Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B077G1HNHV/"
   }
 ]
