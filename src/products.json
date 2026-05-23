@@ -24,5 +24,18 @@
     "badge": "Amazon's Choice",
     "cat": "Unpopped",
     "amazonUrl": "https://www.amazon.in/dp/B0CCVX45T5/"
+  },
+  {
+    "id": 1779516694134,
+    "asin": "B06XF471D3",
+    "title": "Dr Physio Shiatsu Full Body Neck Massager",
+    "price": 2061,
+    "rating": 4,
+    "reviews": 5596,
+    "summary": "Relieve aches and muscle tension with deep-kneading shiatsu massage. Automatic node rotation targets knots effectively.",
+    "img": "/images/B06XF471D3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Massage Cushions",
+    "amazonUrl": "https://www.amazon.in/dp/B06XF471D3/"
   }
 ]
