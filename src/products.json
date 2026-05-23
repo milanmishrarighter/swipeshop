@@ -167,5 +167,18 @@
     "badge": "Amazon's Choice",
     "cat": "Car Vacuums",
     "amazonUrl": "https://www.amazon.in/dp/B0D1K91D1Z/"
+  },
+  {
+    "id": 1779555636941,
+    "asin": "B0DDXTW5V6",
+    "title": "Portable Stick-On Car Trash Bags",
+    "price": 279,
+    "rating": 4.3,
+    "reviews": 102,
+    "summary": "These portable stick-on trash bags offer a convenient way to manage waste in your car. They adhere easily to surfaces without leaving residue, providing a discreet and leakproof solution for both wet and dry refuse. This product helps maintain a clean and organized vehicle interior.",
+    "img": "/images/B0DDXTW5V6.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Waste & Recycling",
+    "amazonUrl": "https://www.amazon.in/dp/B0DDXTW5V6/"
   }
 ]
