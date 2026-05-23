@@ -1,5 +1,4 @@
 [
-
   {
     "id": 1779257896374,
     "asin": "B0CCVX45T5",
@@ -129,5 +128,18 @@
     "badge": "Amazon's Choice",
     "cat": "Notepads & Memo Books",
     "amazonUrl": "https://www.amazon.in/dp/B00UGZWM2I/"
+  },
+  {
+    "id": 1779555339066,
+    "asin": "B07PJK8XM2",
+    "title": "Grand Shiatsu Foot Massager",
+    "price": 4999,
+    "rating": 3.9,
+    "reviews": 5479,
+    "summary": "The Grand Shiatsu Foot Massager provides kneading and rolling massage with optional heat therapy. It aims to improve blood circulation, relax muscles, and relieve tension in your feet and ankles. This device offers a convenient way to experience a professional-quality foot massage at home.",
+    "img": "/images/B07PJK8XM2.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Foot Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B07PJK8XM2/"
   }
 ]
