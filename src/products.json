@@ -427,5 +427,18 @@
     "badge": "Amazon's Choice",
     "cat": "Vegetable Snacks",
     "amazonUrl": "https://www.amazon.in/dp/B0G59MC2XP/"
+  },
+  {
+    "id": 1779558055215,
+    "asin": "B0G6DVB6DG",
+    "title": "Philips 9-in-1 Grooming Kit",
+    "price": 1699,
+    "rating": 4.2,
+    "reviews": 36162,
+    "summary": "The Philips 9-in-1 Grooming Kit offers a versatile solution for personal care. This kit includes nine tools to precisely trim facial hair, clip hair, and groom the body with comfort. Its rounded blade tips ensure a gentle experience, preventing nicks and cuts.",
+    "img": "/images/B0G6DVB6DG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Beard & Moustache Trimmers",
+    "amazonUrl": "https://www.amazon.in/dp/B0G6DVB6DG/"
   }
 ]
