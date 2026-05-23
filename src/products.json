@@ -466,5 +466,18 @@
     "badge": "Amazon's Choice",
     "cat": "Drawing Media",
     "amazonUrl": "https://www.amazon.in/dp/B0D816QSDV/"
+  },
+  {
+    "id": 1779558180217,
+    "asin": "B00N1U7JXM",
+    "title": "Post-it Cube, 3x3, Assorted Colors",
+    "price": 155,
+    "rating": 4.4,
+    "reviews": 10236,
+    "summary": "This Post-it Cube offers 3x3 inch paper notes in assorted colors. It provides a convenient way to capture thoughts and reminders, with the benefit of color-coding for enhanced organization. The reliable adhesive ensures notes stay in place and remove cleanly.",
+    "img": "/images/B00N1U7JXM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Notepads & Memo Books",
+    "amazonUrl": "https://www.amazon.in/dp/B00N1U7JXM/"
   }
 ]
