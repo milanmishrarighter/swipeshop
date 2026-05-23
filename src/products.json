@@ -245,5 +245,18 @@
     "badge": "Amazon's Choice",
     "cat": "Transparent Tape",
     "amazonUrl": "https://www.amazon.in/dp/B0FJLQL4TW/"
+  },
+  {
+    "id": 1779557087713,
+    "asin": "B0FS215N87",
+    "title": "ShineXPro Reusable Microfiber Cleaning Cloths",
+    "price": 499,
+    "rating": 4.4,
+    "reviews": 811,
+    "summary": "ShineXPro Reusable Microfiber Cleaning Cloths are designed for effective cleaning across various surfaces. These cloths absorb spills and dust efficiently, providing a streak-free finish without leaving lint or scratches. They are also washable and reusable, offering a practical and environmentally conscious cleaning solution.",
+    "img": "/images/B0FS215N87.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cleaning Cloths",
+    "amazonUrl": "https://www.amazon.in/dp/B0FS215N87/"
   }
 ]
