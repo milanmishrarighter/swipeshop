@@ -544,5 +544,18 @@
     "badge": "Amazon's Choice",
     "cat": "Desk Supplies Organisers",
     "amazonUrl": "https://www.amazon.in/dp/B0FJM311NX/"
+  },
+  {
+    "id": 1779558342036,
+    "asin": "B00YOBAVNW",
+    "title": "Lotte Xylitol Lime Mint Gum",
+    "price": 400,
+    "rating": 4.2,
+    "reviews": 121,
+    "summary": "Lotte Xylitol Lime Mint Gum offers a refreshing lime and mint flavor. This gum contains xylitol, fukuronori extract, and calcium hydrogen phosphate, which contribute to strong, healthy teeth.",
+    "img": "/images/B00YOBAVNW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chewing & Bubble Gum",
+    "amazonUrl": "https://www.amazon.in/dp/B00YOBAVNW/"
   }
 ]
