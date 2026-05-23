@@ -479,5 +479,18 @@
     "badge": "Amazon's Choice",
     "cat": "Notepads & Memo Books",
     "amazonUrl": "https://www.amazon.in/dp/B00N1U7JXM/"
+  },
+  {
+    "id": 1779558213851,
+    "asin": "B0DGGSH492",
+    "title": "Eternal Inkless Pencil, Grey",
+    "price": 139,
+    "rating": 3.2,
+    "reviews": 461,
+    "summary": "The Eternal Inkless Pencil provides a consistent, smooth writing experience without the need for sharpening or ink. Its durable graphite tip offers extended use, making it an eco-friendly and convenient tool for calligraphy and sketching. This pencil ensures clean lines and lasting creations.",
+    "img": "/images/B0DGGSH492.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Calligraphy Pens",
+    "amazonUrl": "https://www.amazon.in/dp/B0DGGSH492/"
   }
 ]
