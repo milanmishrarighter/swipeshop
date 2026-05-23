@@ -76,5 +76,18 @@
     "badge": "Amazon's Choice",
     "cat": "Back Braces",
     "amazonUrl": "https://www.amazon.in/dp/B0BDZPWY73/"
+  },
+  {
+    "id": 1779517357226,
+    "asin": "B0CHBFV2RG",
+    "title": "Wakefit Orthopedic Memory Foam Cervical",
+    "price": 675,
+    "rating": 3.9,
+    "reviews": 1803,
+    "summary": "This contoured memory foam pillow supports the natural flow of your Neck for Better Sleep Posture!",
+    "img": "/images/B0CHBFV2RG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Specialty Medical Pillows",
+    "amazonUrl": "https://www.amazon.in/dp/B0CHBFV2RG/"
   }
 ]
