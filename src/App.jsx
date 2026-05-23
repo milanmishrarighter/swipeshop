@@ -424,7 +424,10 @@ export default function App() {
 
   const getSwipeDir = () => {
     const { x, y } = offset;
-    if (Math.abs(x) < 18 && Math.abs(y) < 18) return null;  // lower visual threshold too
+    // Overlay only appears once the user is ~70% committed to the swipe.
+    // This prevents flicker when speed-swiping through cards.
+    const OVERLAY_AT = SWIPE_THRESHOLD * 0.7;
+    if (Math.abs(x) < OVERLAY_AT && Math.abs(y) < OVERLAY_AT) return null;
     if (Math.abs(x) > Math.abs(y)) return x > 0 ? "right" : "left";
     return y > 0 ? "down" : "up";
   };
