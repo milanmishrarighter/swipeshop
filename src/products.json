@@ -375,5 +375,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B07FQS78ZQ/"
+  },
+  {
+    "id": 1779557886216,
+    "asin": "B09ZV233RH",
+    "title": "Revive Scalp and Body Massager",
+    "price": 999,
+    "rating": 4,
+    "reviews": 2544,
+    "summary": "The Revive Scalp and Body Massager is a handheld electric device designed to provide soothing relief. Its rotating silicone bristles gently massage the scalp and body, promoting relaxation and improved circulation. This versatile tool can help alleviate tension and contribute to overall well-being.",
+    "img": "/images/B09ZV233RH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Handheld Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B09ZV233RH/"
   }
 ]
