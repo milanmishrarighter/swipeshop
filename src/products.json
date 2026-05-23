@@ -232,5 +232,18 @@
     "badge": "Amazon's Choice",
     "cat": "Brushes & Dusters",
     "amazonUrl": "https://www.amazon.in/dp/B0CXD7B5XT/"
+  },
+  {
+    "id": 1779556884595,
+    "asin": "B0FJLQL4TW",
+    "title": "Strong Grip Double-Sided Tape",
+    "price": 200,
+    "rating": 4.3,
+    "reviews": 2352,
+    "summary": "Strong Grip Double-Sided Tape offers a clear, strong adhesive for secure mounting without nails or drilling. This versatile tape adheres to various smooth surfaces and removes cleanly, leaving no residue behind. It provides a convenient, damage-free solution for many household tasks.",
+    "img": "/images/B0FJLQL4TW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Transparent Tape",
+    "amazonUrl": "https://www.amazon.in/dp/B0FJLQL4TW/"
   }
 ]
