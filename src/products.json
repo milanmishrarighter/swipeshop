@@ -271,5 +271,18 @@
     "badge": "Amazon's Choice",
     "cat": "Lint Shavers",
     "amazonUrl": "https://www.amazon.in/dp/B0DQL52MRL/"
+  },
+  {
+    "id": 1779557278996,
+    "asin": "B0FV34C51P",
+    "title": "Strom Go Travel Garment Steamer",
+    "price": 2899,
+    "rating": 4.3,
+    "reviews": 846,
+    "summary": "The Strom Go Travel Garment Steamer is a super compact and lightweight device designed for wrinkle removal on the go. It provides 20g/min of steam with a 30-second heat-up time, offering quick and effective steaming both vertically and horizontally. This steamer helps keep your clothes fresh and presentable while traveling.",
+    "img": "/images/B0FV34C51P.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vertical Steamers",
+    "amazonUrl": "https://www.amazon.in/dp/B0FV34C51P/"
   }
 ]
