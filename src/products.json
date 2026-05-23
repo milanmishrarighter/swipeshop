@@ -310,5 +310,18 @@
     "badge": "Amazon's Choice",
     "cat": "Microfibre",
     "amazonUrl": "https://www.amazon.in/dp/B09RWTYMCF/"
+  },
+  {
+    "id": 1779557510059,
+    "asin": "B0F13YTLQ4",
+    "title": "Deep Tissue Percussion Massage Gun",
+    "price": 1799,
+    "rating": 4.3,
+    "reviews": 7589,
+    "summary": "This deep tissue percussion massage gun provides targeted relief for muscle pain and aids in toning. It features a speed regulator for customized intensity and includes four detachable heads for various massage applications. This device offers a controlled massage experience to support muscle recovery.",
+    "img": "/images/B0F13YTLQ4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Handheld Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B0F13YTLQ4/"
   }
 ]
