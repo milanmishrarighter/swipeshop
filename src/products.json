@@ -89,5 +89,18 @@
     "badge": "Amazon's Choice",
     "cat": "Specialty Medical Pillows",
     "amazonUrl": "https://www.amazon.in/dp/B0CHBFV2RG/"
+  },
+  {
+    "id": 1779517822405,
+    "asin": "B016VYAWA6",
+    "title": "Philips Air Desk Light",
+    "price": 799,
+    "rating": 4.3,
+    "reviews": 13674,
+    "summary": "The Philips Air Desk Light provides 250 lumens of cool daylight, offering focused illumination for various tasks. Its LED design helps reduce eye strain and fatigue.",
+    "img": "/images/B016VYAWA6.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B016VYAWA6/"
   }
 ]
