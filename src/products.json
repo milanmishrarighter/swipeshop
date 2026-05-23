@@ -531,5 +531,18 @@
     "badge": "Amazon's Choice",
     "cat": "Appointment Books & Planners",
     "amazonUrl": "https://www.amazon.in/dp/B0DKP5964W/"
+  },
+  {
+    "id": 1779558299618,
+    "asin": "B0FJM311NX",
+    "title": "White Desk Organizer with Drawers",
+    "price": 199,
+    "rating": 4.1,
+    "reviews": 2348,
+    "summary": "This white desk organizer offers five compartments and two drawers to neatly store various office supplies, from pens to sticky notes. Its durable plastic construction ensures lasting use, helping to keep your workspace tidy and functional. This versatile organizer is suitable for any desk or vanity.",
+    "img": "/images/B0FJM311NX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Supplies Organisers",
+    "amazonUrl": "https://www.amazon.in/dp/B0FJM311NX/"
   }
 ]
