@@ -216,6 +216,74 @@ function LegalModal({ kind, onClose }) {
   );
 }
 
+function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
+        display:"flex", alignItems:"flex-end", justifyContent:"center" }}
+      onClick={onClose}>
+      <div onClick={e => e.stopPropagation()} style={{
+        background:"#fff", borderRadius:"22px 22px 0 0", maxHeight:"88vh", width:"100%",
+        maxWidth:430, overflow:"auto", boxShadow:"0 -8px 40px rgba(0,0,0,0.12)",
+        fontFamily:"'Barlow',sans-serif",
+      }}>
+        {/* Close button */}
+        <div style={{ position:"sticky", top:0, background:"#fff", zIndex:2,
+          padding:"14px 18px 6px", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+          <span style={{ color:"#999", fontSize:11, fontWeight:600, letterSpacing:0.5 }}>
+            {product.cat?.toUpperCase()}
+          </span>
+          <button onClick={onClose} style={{
+            background:"#F5F5F5", border:"none", color:"#666",
+            width:32, height:32, borderRadius:"50%", cursor:"pointer", fontSize:13, fontWeight:700,
+          }}>✕</button>
+        </div>
+
+        {/* Image */}
+        <div style={{ background:"#FAFAFA", padding:"14px 24px 20px",
+          display:"flex", alignItems:"center", justifyContent:"center" }}>
+          <img src={product.img} alt={product.title}
+            style={{ width:"100%", maxWidth:300, maxHeight:300, objectFit:"contain" }} />
+        </div>
+
+        {/* Title + meta */}
+        <div style={{ padding:"18px 22px 24px" }}>
+          <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:22,
+            color:"#111", lineHeight:1.2, marginBottom:10 }}>{product.title}</div>
+
+          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12 }}>
+            <Stars rating={product.rating}/>
+            <span style={{ color:"#C8C8C8", fontSize:13 }}>
+              ({product.reviews?.toLocaleString() ?? 0} reviews)
+            </span>
+          </div>
+
+          <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:32,
+            color:B, marginBottom:16, letterSpacing:-0.5 }}>
+            ₹{product.price?.toLocaleString('en-IN')}
+          </div>
+
+          <p style={{ color:"#666", fontSize:14, lineHeight:1.6, marginBottom:24,
+            whiteSpace:"pre-line" }}>{product.summary}</p>
+
+          {/* Action buttons */}
+          <button onClick={() => openAmazon(product.amazonUrl, product.asin)} style={{
+            background:B, color:"#fff", border:"none", borderRadius:12,
+            padding:"14px 0", width:"100%", fontFamily:"'Barlow Condensed'",
+            fontWeight:900, fontSize:17, cursor:"pointer", letterSpacing:0.6,
+            marginBottom:10,
+          }}>OPEN ON AMAZON →</button>
+          <button onClick={onAddToCart} style={{
+            background: alreadyInCart ? "#F5F5F5" : Y, color: alreadyInCart ? "#999" : "#000",
+            border:"none", borderRadius:12, padding:"12px 0", width:"100%",
+            fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:15, cursor:"pointer",
+            letterSpacing:0.6,
+          }}>{alreadyInCart ? "ALREADY IN CART" : "♥  ADD TO CART"}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function HowToModal({ onClose }) {
   const rows = [
     { color:"#D0021B", bg:"#FEF2F2", arrow:"←", label:"SKIP",
@@ -284,6 +352,7 @@ export default function App() {
   const [filterPrice, setFilterPrice] = useState(0);
   const [legalModal,  setLegalModal]  = useState(null);
   const [showHowTo,   setShowHowTo]   = useState(false);
+  const [detailProduct, setDetailProduct] = useState(null);
 
   const { mainCats, singletonCats } = useMemo(() => computeCategories(productsData), []);
 
@@ -311,6 +380,7 @@ export default function App() {
   const [undoStack, setUndoStack] = useState([]);   // [{ product, dir }, ...] — most recent at end, max 15
 
   const dragStart    = useRef({ x:0, y:0 });
+  const dragStartTime= useRef(0);
   const isDragging   = useRef(false);
   const isExiting    = useRef(false);
 
@@ -381,6 +451,22 @@ export default function App() {
     }
   }, [doSwipe]);
 
+  // Treat a quick, small-distance press-and-release as a TAP → open detail modal
+  const handlePointerUp = useCallback((dx, dy) => {
+    const dist = Math.sqrt(dx*dx + dy*dy);
+    const duration = Date.now() - dragStartTime.current;
+    if (dist < 8 && duration < 250) {
+      // Tap — open product detail
+      isDragging.current = false;
+      setDraggingId(null);
+      setOffset({ x: 0, y: 0 });
+      const product = stackRef.current[0];
+      if (product) setDetailProduct(product);
+      return;
+    }
+    trySwipe(dx, dy);
+  }, [trySwipe]);
+
   useEffect(() => {
     const onMove = (e) => {
       if (!isDragging.current) return;
@@ -388,7 +474,7 @@ export default function App() {
     };
     const onUp = (e) => {
       if (!isDragging.current) return;
-      trySwipe(e.clientX - dragStart.current.x, e.clientY - dragStart.current.y);
+      handlePointerUp(e.clientX - dragStart.current.x, e.clientY - dragStart.current.y);
     };
     document.addEventListener("mousemove", onMove);
     document.addEventListener("mouseup",   onUp);
@@ -396,11 +482,12 @@ export default function App() {
       document.removeEventListener("mousemove", onMove);
       document.removeEventListener("mouseup",   onUp);
     };
-  }, [trySwipe]);
+  }, [handlePointerUp]);
 
   const onMouseDown = (e) => {
     if (isExiting.current) return;
     dragStart.current = { x: e.clientX, y: e.clientY };
+    dragStartTime.current = Date.now();
     isDragging.current = true;
     setDraggingId(stackRef.current[0]?.id ?? null);
   };
@@ -408,6 +495,7 @@ export default function App() {
     if (isExiting.current) return;
     const t = e.touches[0];
     dragStart.current = { x: t.clientX, y: t.clientY };
+    dragStartTime.current = Date.now();
     isDragging.current = true;
     setDraggingId(stackRef.current[0]?.id ?? null);
   };
@@ -419,7 +507,7 @@ export default function App() {
   };
   const onTouchEnd = () => {
     if (!isDragging.current) return;
-    trySwipe(offsetRef.current.x, offsetRef.current.y);
+    handlePointerUp(offsetRef.current.x, offsetRef.current.y);
   };
 
   const getSwipeDir = () => {
@@ -920,6 +1008,22 @@ export default function App() {
 
       {legalModal && <LegalModal kind={legalModal} onClose={() => setLegalModal(null)} />}
       {showHowTo  && <HowToModal onClose={() => setShowHowTo(false)} />}
+      {detailProduct && (
+        <ProductDetailModal
+          product={detailProduct}
+          alreadyInCart={cart.some(p => p.id === detailProduct.id)}
+          onClose={() => setDetailProduct(null)}
+          onAddToCart={() => {
+            if (!cart.some(p => p.id === detailProduct.id)) {
+              saveCart([...cart, detailProduct]);
+              flash("🛒 Added to cart!");
+            } else {
+              flash("Already in cart");
+            }
+            setDetailProduct(null);
+          }}
+        />
+      )}
       <Toast msg={toast.msg} on={toast.on} />
     </div>
   );
