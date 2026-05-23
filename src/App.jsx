@@ -80,8 +80,11 @@ const EXIT = {
 const OVERLAYS = {
   right:{ label:"ADD TO CART",    color:"#00A550", bg:"rgba(0,165,80,0.09)"   },
   left: { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
+  up:   { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
   down: { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
 };
+
+const SWIPE_THRESHOLD = 50;  // px — lower = snappier, easier to trigger
 
 function Stars({ rating }) {
   return (
@@ -305,6 +308,7 @@ export default function App() {
   const [offset,     setOffset]     = useState({ x:0, y:0 });
   const [exitingId,  setExitingId]  = useState(null);
   const [exitDir,    setExitDir]    = useState(null);
+  const [lastSwiped, setLastSwiped] = useState(null);  // { product, dir }
 
   const dragStart    = useRef({ x:0, y:0 });
   const isDragging   = useRef(false);
@@ -343,12 +347,14 @@ export default function App() {
       const exists = cartRef.current.find(p => p.id === product.id);
       if (!exists) { saveCart([...cartRef.current, product]); flash("🛒 Added to cart!"); }
       else flash("Already in cart");
-    } else if (dir === "left") {
+    } else if (dir === "left" || dir === "up") {
       flash("Skipped");
     } else if (dir === "down") {
       openAmazon(product.amazonUrl, product.asin);
       flash("Opening Amazon...");
     }
+
+    setLastSwiped({ product, dir });
 
     setTimeout(() => {
       setStack(prev => prev.filter(p => p.id !== product.id));
@@ -362,13 +368,15 @@ export default function App() {
   const trySwipe = useCallback((dx, dy) => {
     const product = stackRef.current[0];
     if (!product) { isDragging.current = false; setDraggingId(null); return; }
+    const T = SWIPE_THRESHOLD;
     const ax = Math.abs(dx), ay = Math.abs(dy);
     if (ax > ay) {
-      if      (dx >  78) doSwipe("right", product);
-      else if (dx < -78) doSwipe("left",  product);
+      if      (dx >  T) doSwipe("right", product);
+      else if (dx < -T) doSwipe("left",  product);
       else { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); }
     } else {
-      if (dy > 78) doSwipe("down", product);   // Down = Amazon. Up does nothing.
+      if      (dy >  T) doSwipe("down", product);  // Down = Amazon
+      else if (dy < -T) doSwipe("up",   product);  // Up = Skip
       else { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); }
     }
   }, [doSwipe]);
@@ -416,9 +424,9 @@ export default function App() {
 
   const getSwipeDir = () => {
     const { x, y } = offset;
-    if (Math.abs(x) < 25 && Math.abs(y) < 25) return null;
+    if (Math.abs(x) < 18 && Math.abs(y) < 18) return null;  // lower visual threshold too
     if (Math.abs(x) > Math.abs(y)) return x > 0 ? "right" : "left";
-    return y > 0 ? "down" : null;   // Up does nothing
+    return y > 0 ? "down" : "up";
   };
   const swipeDir = draggingId ? getSwipeDir() : null;
 
@@ -802,7 +810,7 @@ export default function App() {
                 CLEAR CART
               </button>
             </div>
-            <div style={{ justifySelf:"start" }}>
+            <div style={{ justifySelf:"start", display:"flex", gap:6 }}>
               <button onClick={() => window.location.reload()} style={miniBtn}>
                 <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
                   stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
@@ -810,6 +818,26 @@ export default function App() {
                   <polyline points="21 3 21 9 15 9"/>
                 </svg>
                 RELOAD
+              </button>
+              <button onClick={() => {
+                  if (!lastSwiped) { flash("Nothing to undo"); return; }
+                  const { product, dir } = lastSwiped;
+                  // If the last action was add-to-cart, remove it from cart
+                  if (dir === "right") {
+                    saveCart(cartRef.current.filter(p => p.id !== product.id));
+                  }
+                  setStack(prev => [product, ...prev.filter(p => p.id !== product.id)]);
+                  setLastSwiped(null);
+                  flash("↶ Restored");
+                }}
+                disabled={!lastSwiped}
+                style={{ ...miniBtn, opacity: lastSwiped ? 1 : 0.5 }}>
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                  stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 7v6h6"/>
+                  <path d="M3 13a9 9 0 1 0 3-6.7L3 9"/>
+                </svg>
+                UNDO
               </button>
             </div>
           </div>
