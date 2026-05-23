@@ -414,5 +414,18 @@
     "badge": "Amazon's Choice",
     "cat": "Applicator Bottles",
     "amazonUrl": "https://www.amazon.in/dp/B0FF1RTPH8/"
+  },
+  {
+    "id": 1779558016091,
+    "asin": "B0G59MC2XP",
+    "title": "Lightly Salted Roasted Edamame",
+    "price": 195,
+    "rating": 4.3,
+    "reviews": 199,
+    "summary": "This lightly salted roasted edamame offers a convenient, plant-based snack crafted from whole young soybeans. It provides a good source of protein and fiber, supporting satiety and balanced energy throughout your day. Enjoy this crunchy, nutritious option for mindful eating and everyday nourishment.",
+    "img": "/images/B0G59MC2XP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vegetable Snacks",
+    "amazonUrl": "https://www.amazon.in/dp/B0G59MC2XP/"
   }
 ]
