@@ -193,5 +193,18 @@
     "badge": "Amazon's Choice",
     "cat": "Puncture Repair Kits",
     "amazonUrl": "https://www.amazon.in/dp/B0FS7N1DX1/"
+  },
+  {
+    "id": 1779555819375,
+    "asin": "B074DDJFTH",
+    "title": "Compact Digital Tyre Inflator",
+    "price": 1899,
+    "rating": 4,
+    "reviews": 18115,
+    "summary": "This compact digital tyre inflator provides a convenient way to maintain proper tyre pressure for various vehicles. It plugs into a 12-volt port and features a digital gauge with auto shut-off, promoting safer driving and longer tyre life.",
+    "img": "/images/B074DDJFTH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Tyre Inflators",
+    "amazonUrl": "https://www.amazon.in/dp/B074DDJFTH/"
   }
 ]
