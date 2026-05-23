@@ -388,5 +388,18 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Handheld Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B09ZV233RH/"
+  },
+  {
+    "id": 1779557902316,
+    "asin": "B0DTJ3RL5J",
+    "title": "Silicone Scalp Massager for Healthy Hair",
+    "price": 150,
+    "rating": 4.4,
+    "reviews": 651,
+    "summary": "This silicone scalp massager gently stimulates your scalp, promoting healthy hair growth and reducing dandruff. Its soft bristles effectively exfoliate, removing buildup while enhancing circulation. Enjoy a clean, invigorated scalp with every use.",
+    "img": "/images/B0DTJ3RL5J.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Scalp Massagers",
+    "amazonUrl": "https://www.amazon.in/dp/B0DTJ3RL5J/"
   }
 ]
