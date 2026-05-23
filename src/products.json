@@ -440,5 +440,18 @@
     "badge": "Amazon's Choice",
     "cat": "Beard & Moustache Trimmers",
     "amazonUrl": "https://www.amazon.in/dp/B0G6DVB6DG/"
+  },
+  {
+    "id": 1779558069841,
+    "asin": "B0G2S8C4VQ",
+    "title": "Philips 13-in-1 Grooming Kit",
+    "price": 3699,
+    "rating": 4.3,
+    "reviews": 10858,
+    "summary": "This 13-in-1 grooming kit offers a comprehensive solution for facial hair, haircuts, and body grooming. It provides versatile tools for precise styling and comfortable trimming across various areas. The kit is designed to meet diverse personal grooming needs efficiently.",
+    "img": "/images/B0G2S8C4VQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Grooming Sets & Kits",
+    "amazonUrl": "https://www.amazon.in/dp/B0G2S8C4VQ/"
   }
 ]
