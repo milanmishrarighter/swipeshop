@@ -349,5 +349,18 @@
     "badge": "Amazon's Choice",
     "cat": "Overhead Showers",
     "amazonUrl": "https://www.amazon.in/dp/B0B4SSD3K3/"
+  },
+  {
+    "id": 1779557723024,
+    "asin": "B099KQ5WLQ",
+    "title": "Fashnex Resistance Bands Kit",
+    "price": 1398,
+    "rating": 4.5,
+    "reviews": 6582,
+    "summary": "The Fashnex Resistance Bands Kit offers a versatile way to exercise, providing five stackable bands for adjustable intensity up to 100 lbs. This portable set supports a wide range of workouts, making it suitable for various fitness levels and exercises at home or while traveling.",
+    "img": "/images/B099KQ5WLQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Resistance Bands",
+    "amazonUrl": "https://www.amazon.in/dp/B099KQ5WLQ/"
   }
 ]
