@@ -308,7 +308,7 @@ export default function App() {
   const [offset,     setOffset]     = useState({ x:0, y:0 });
   const [exitingId,  setExitingId]  = useState(null);
   const [exitDir,    setExitDir]    = useState(null);
-  const [lastSwiped, setLastSwiped] = useState(null);  // { product, dir }
+  const [undoStack, setUndoStack] = useState([]);   // [{ product, dir }, ...] — most recent at end, max 15
 
   const dragStart    = useRef({ x:0, y:0 });
   const isDragging   = useRef(false);
@@ -354,7 +354,7 @@ export default function App() {
       flash("Opening Amazon...");
     }
 
-    setLastSwiped({ product, dir });
+    setUndoStack(prev => [...prev, { product, dir }].slice(-15));   // keep last 15 only
 
     setTimeout(() => {
       setStack(prev => prev.filter(p => p.id !== product.id));
@@ -783,63 +783,59 @@ export default function App() {
 
         {stack.length > 0 && (
           <div style={{
-            display:"grid", gridTemplateColumns:"1fr auto 1fr",
-            alignItems:"center", gap:10, marginTop:10,
+            display:"flex", justifyContent:"space-evenly", alignItems:"center",
+            marginTop:10, gap:4,
           }}>
-            <div style={{ justifySelf:"end" }}>
-              <button onClick={() => setShowHowTo(true)} style={miniBtn}>
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-                  stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="12" y1="11" x2="12" y2="17"/>
-                  <circle cx="12" cy="7.5" r="0.6" fill="#AAA"/>
-                </svg>
-                INSTRUCTIONS
-              </button>
-            </div>
-            <div style={{ justifySelf:"center" }}>
-              <button onClick={() => {
-                  if (cart.length === 0) { flash("Cart is already empty"); return; }
-                  saveCart([]); flash("Cart cleared");
-                }} style={miniBtn}>
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-                  stroke="#AAA" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="5" x2="19" y2="19"/>
-                  <line x1="19" y1="5" x2="5" y2="19"/>
-                </svg>
-                CLEAR CART
-              </button>
-            </div>
-            <div style={{ justifySelf:"start", display:"flex", gap:6 }}>
-              <button onClick={() => window.location.reload()} style={miniBtn}>
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-                  stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 12a9 9 0 1 1-3-6.7"/>
-                  <polyline points="21 3 21 9 15 9"/>
-                </svg>
-                RELOAD
-              </button>
-              <button onClick={() => {
-                  if (!lastSwiped) { flash("Nothing to undo"); return; }
-                  const { product, dir } = lastSwiped;
-                  // If the last action was add-to-cart, remove it from cart
-                  if (dir === "right") {
-                    saveCart(cartRef.current.filter(p => p.id !== product.id));
-                  }
-                  setStack(prev => [product, ...prev.filter(p => p.id !== product.id)]);
-                  setLastSwiped(null);
-                  flash("↶ Restored");
-                }}
-                disabled={!lastSwiped}
-                style={{ ...miniBtn, opacity: lastSwiped ? 1 : 0.5 }}>
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-                  stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 7v6h6"/>
-                  <path d="M3 13a9 9 0 1 0 3-6.7L3 9"/>
-                </svg>
-                UNDO
-              </button>
-            </div>
+            <button onClick={() => setShowHowTo(true)} style={miniBtn}>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="11" x2="12" y2="17"/>
+                <circle cx="12" cy="7.5" r="0.6" fill="#AAA"/>
+              </svg>
+              INSTRUCTIONS
+            </button>
+
+            <button onClick={() => {
+                if (cart.length === 0) { flash("Cart is already empty"); return; }
+                saveCart([]); flash("Cart cleared");
+              }} style={miniBtn}>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                stroke="#AAA" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="5" x2="19" y2="19"/>
+                <line x1="19" y1="5" x2="5" y2="19"/>
+              </svg>
+              CLEAR CART
+            </button>
+
+            <button onClick={() => window.location.reload()} style={miniBtn}>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12a9 9 0 1 1-3-6.7"/>
+                <polyline points="21 3 21 9 15 9"/>
+              </svg>
+              RELOAD
+            </button>
+
+            <button onClick={() => {
+                if (undoStack.length === 0) { flash("Nothing to undo"); return; }
+                const { product, dir } = undoStack[undoStack.length - 1];
+                if (dir === "right") {
+                  saveCart(cartRef.current.filter(p => p.id !== product.id));
+                }
+                setStack(prev => [product, ...prev.filter(p => p.id !== product.id)]);
+                setUndoStack(prev => prev.slice(0, -1));
+                flash("↶ Restored");
+              }}
+              disabled={undoStack.length === 0}
+              style={{ ...miniBtn, opacity: undoStack.length > 0 ? 1 : 0.5 }}>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 7v6h6"/>
+                <path d="M3 13a9 9 0 1 0 3-6.7L3 9"/>
+              </svg>
+              UNDO{undoStack.length > 0 ? ` (${undoStack.length})` : ""}
+            </button>
           </div>
         )}
 
