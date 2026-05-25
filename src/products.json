@@ -622,5 +622,18 @@
     "badge": "Amazon's Choice",
     "cat": "Portable Photo Printers",
     "amazonUrl": "https://www.amazon.in/dp/B0DB8SKHM2/"
+  },
+  {
+    "id": 1779691876473,
+    "asin": "B0FT3RQG6H",
+    "title": "Magnetic Motion Sensor Night Lights",
+    "price": 475,
+    "rating": 4.1,
+    "reviews": 331,
+    "summary": "These magnetic motion sensor night lights provide gentle, automatic illumination in dark areas. They detect movement to turn on, then switch off to conserve power, offering convenient, hands-free lighting where you need it most. Their rechargeable design and easy magnetic mounting ensure versatile placement and sustained use.",
+    "img": "/images/B0FT3RQG6H.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Night Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B0FT3RQG6H/"
   }
 ]
