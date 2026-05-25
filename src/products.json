@@ -674,5 +674,18 @@
     "badge": "Amazon's Choice",
     "cat": "Book Lights",
     "amazonUrl": "https://www.amazon.in/dp/B0F63GHR4T/"
+  },
+  {
+    "id": 1779692034250,
+    "asin": "B0DXQ6TVZW",
+    "title": "Niwlix Touch Dimmable Night Light",
+    "price": 350,
+    "rating": 4.5,
+    "reviews": 429,
+    "summary": "The Niwlix Touch Dimmable Night Light offers gentle, flicker-free illumination with adjustable brightness. Its eye-friendly LED design and portable, USB-rechargeable nature provide versatile, comfortable lighting for any room. This night light helps create a soothing atmosphere and supports better sleep.",
+    "img": "/images/B0DXQ6TVZW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Night Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B0DXQ6TVZW/"
   }
 ]
