@@ -817,5 +817,18 @@
     "badge": "Amazon's Choice",
     "cat": "Paper Towels",
     "amazonUrl": "https://www.amazon.in/dp/B07PJQX981/"
+  },
+  {
+    "id": 1779692734169,
+    "asin": "B08RCQRZ5V",
+    "title": "No Drill Easy Wall Hooks",
+    "price": 299,
+    "rating": 4.2,
+    "reviews": 5403,
+    "summary": "Easy Wall Hooks offer a simple solution for hanging items without drilling. You can securely attach these durable hooks to various wall types, including concrete, using just a hammer. They provide a permanent hold for up to 5 kg, perfect for frames, clocks, and other decorative items.",
+    "img": "/images/B08RCQRZ5V.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wall Hooks",
+    "amazonUrl": "https://www.amazon.in/dp/B08RCQRZ5V/"
   }
 ]
