@@ -752,5 +752,18 @@
     "badge": "Amazon's Choice",
     "cat": "Dashboard Figurines & Idols",
     "amazonUrl": "https://www.amazon.in/dp/B0DPDLN2BF/"
+  },
+  {
+    "id": 1779692325159,
+    "asin": "B00PPY1B18",
+    "title": "Aqua Fine Car Fragrance Spray",
+    "price": 389,
+    "rating": 3.8,
+    "reviews": 10408,
+    "summary": "Aqua Fine Car Fragrance Spray is a concentrated, gas-free air freshener designed for vehicle interiors. Its cologne-inspired scents effectively eliminate odors and provide a lasting, pleasant aroma, even in larger cars. This product ensures a consistently fresh and inviting cabin environment.",
+    "img": "/images/B00PPY1B18.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Air Fresheners",
+    "amazonUrl": "https://www.amazon.in/dp/B00PPY1B18/"
   }
 ]
