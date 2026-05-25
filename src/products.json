@@ -713,5 +713,18 @@
     "badge": "Amazon's Choice",
     "cat": "Posters",
     "amazonUrl": "https://www.amazon.in/dp/B0C3MD6F7N/"
+  },
+  {
+    "id": 1779692137971,
+    "asin": "B0FTQ5Q7BZ",
+    "title": "Smart RGB Neon Rope Light",
+    "price": 699,
+    "rating": 4.1,
+    "reviews": 919,
+    "summary": "This Smart RGB Neon Rope Light is a flexible LED strip that offers extensive customization. You can effortlessly control its millions of colors and dynamic lighting effects through a mobile app or remote, enhancing your space with personalized ambiance. Its energy-efficient design provides long-lasting, vibrant illumination for various decorative needs.",
+    "img": "/images/B0FTQ5Q7BZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "LED Strips",
+    "amazonUrl": "https://www.amazon.in/dp/B0FTQ5Q7BZ/"
   }
 ]
