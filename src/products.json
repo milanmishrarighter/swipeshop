@@ -661,5 +661,18 @@
     "badge": "Amazon's Choice",
     "cat": "Night Lights",
     "amazonUrl": "https://www.amazon.in/dp/B0D324VJ6G/"
+  },
+  {
+    "id": 1779692003204,
+    "asin": "B0F63GHR4T",
+    "title": "Clip-On Reading Lamp",
+    "price": 273,
+    "rating": 4.3,
+    "reviews": 269,
+    "summary": "This clip-on reading lamp provides adjustable, eye-friendly LED illumination for various tasks. Its flexible design and three light modes offer comfortable, flicker-free lighting, reducing eye strain during extended use. The lamp is conveniently rechargeable and portable, making it suitable for reading anywhere.",
+    "img": "/images/B0F63GHR4T.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Book Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B0F63GHR4T/"
   }
 ]
