@@ -791,5 +791,18 @@
     "badge": "Amazon's Choice",
     "cat": "Garage Storage",
     "amazonUrl": "https://www.amazon.in/dp/B09LTYGZ8T/"
+  },
+  {
+    "id": 1779692543502,
+    "asin": "B0D8Q74M3G",
+    "title": "DALUCI Self-Adhesive Hooks for Home",
+    "price": 199,
+    "rating": 4.1,
+    "reviews": 380,
+    "summary": "DALUCI Self-Adhesive Hooks offer a convenient, drill-free solution for hanging various items in your home. These heavy-duty hooks provide strong, reliable support for organization without damaging your walls. They are ideal for wardrobes, bathrooms, and kitchens, helping to keep your spaces tidy and functional.",
+    "img": "/images/B0D8Q74M3G.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wall Hooks",
+    "amazonUrl": "https://www.amazon.in/dp/B0D8Q74M3G/"
   }
 ]
