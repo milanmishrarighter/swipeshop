@@ -583,5 +583,18 @@
     "badge": "Amazon's Choice",
     "cat": "Chewing & Bubble Gum",
     "amazonUrl": "https://www.amazon.in/dp/B09TWG2QPC/"
+  },
+  {
+    "id": 1779691583660,
+    "asin": "B08FSZMMN1",
+    "title": "Kodak Mini 3 Retro Printer Bundle",
+    "price": 10099,
+    "rating": 3.4,
+    "reviews": 4170,
+    "summary": "The Kodak Mini 3 Retro Printer is a portable device that connects to your smartphone via Bluetooth, allowing you to print physical photos instantly. It uses 4PASS technology for durable, high-quality prints that resist water and fingerprints, ensuring your memories last.",
+    "img": "/images/B08FSZMMN1.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Portable Photo Printers",
+    "amazonUrl": "https://www.amazon.in/dp/B08FSZMMN1/"
   }
 ]
