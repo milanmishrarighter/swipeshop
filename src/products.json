@@ -804,5 +804,18 @@
     "badge": "Amazon's Choice",
     "cat": "Wall Hooks",
     "amazonUrl": "https://www.amazon.in/dp/B0D8Q74M3G/"
+  },
+  {
+    "id": 1779692592940,
+    "asin": "B07PJQX981",
+    "title": "Beco Reusable Bamboo Towel Roll - 2000 Times Washable",
+    "price": 220,
+    "rating": 4.4,
+    "reviews": 17132,
+    "summary": "This Beco Reusable Bamboo Towel Roll offers a sustainable alternative to traditional paper towels. Each sheet is washable up to 100 times, providing exceptional absorbency and durability for various cleaning tasks. Made from organic bamboo, these towels are naturally odor-resistant and gentle on surfaces, reducing waste and promoting a cleaner home.",
+    "img": "/images/B07PJQX981.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Paper Towels",
+    "amazonUrl": "https://www.amazon.in/dp/B07PJQX981/"
   }
 ]
