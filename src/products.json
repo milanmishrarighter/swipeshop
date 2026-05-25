@@ -648,5 +648,18 @@
     "badge": "Amazon's Choice",
     "cat": "Night Lights",
     "amazonUrl": "https://www.amazon.in/dp/B0DN1R1XK3/"
+  },
+  {
+    "id": 1779691951432,
+    "asin": "B0D324VJ6G",
+    "title": "Smart Motion Sensor Night Light",
+    "price": 229,
+    "rating": 3.7,
+    "reviews": 3980,
+    "summary": "This smart motion sensor night light provides a soft, warm white glow, offering comfortable illumination for nighttime visibility. Its energy-efficient LED design ensures reliable, long-lasting performance without being harsh on your eyes or disturbing sleep.",
+    "img": "/images/B0D324VJ6G.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Night Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B0D324VJ6G/"
   }
 ]
