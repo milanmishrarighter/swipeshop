@@ -635,5 +635,18 @@
     "badge": "Amazon's Choice",
     "cat": "Night Lights",
     "amazonUrl": "https://www.amazon.in/dp/B0FT3RQG6H/"
+  },
+  {
+    "id": 1779691918706,
+    "asin": "B0DN1R1XK3",
+    "title": "Moon Crystal Lamp",
+    "price": 199,
+    "rating": 4.1,
+    "reviews": 3798,
+    "summary": "This Moon Crystal Lamp features a K10 crystal sphere, laser-etched with a detailed moon design, resting on a wooden base. Six warm white LEDs softly illuminate the crystal, creating a calming glow that enhances any space. It offers a unique, serene ambiance and plugs in conveniently via USB.",
+    "img": "/images/B0DN1R1XK3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Night Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B0DN1R1XK3/"
   }
 ]
