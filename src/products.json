@@ -895,5 +895,18 @@
     "badge": "Amazon's Choice",
     "cat": "Healthy Living & Wellness",
     "amazonUrl": "https://www.amazon.in/dp/0141983760/"
+  },
+  {
+    "id": 1779815066014,
+    "asin": "000728487X",
+    "title": "Bad Science",
+    "price": 437,
+    "rating": 4.3,
+    "reviews": 3876,
+    "summary": "Bad Science\" by Ben Goldacre exposes the flawed data and misleading claims often found in medicine and media. This book critically examines topics from alternative therapies to pharmaceutical practices, helping readers discern genuine scientific evidence from hype. It offers an informative look at how to approach health information with a more discerning eye.",
+    "img": "/images/000728487X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Literature & Fiction",
+    "amazonUrl": "https://www.amazon.in/dp/000728487X/"
   }
 ]
