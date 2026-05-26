@@ -947,5 +947,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cinema & Broadcast",
     "amazonUrl": "https://www.amazon.in/dp/014303653X/"
+  },
+  {
+    "id": 1779815150462,
+    "asin": "1847943063",
+    "title": "The Happiness Hypothesis: Ten Ways to Find Happiness and Meaning in Life",
+    "price": 499,
+    "rating": 4.4,
+    "reviews": 2041,
+    "summary": "The Happiness Hypothesis explores how ancient wisdom, tested by modern psychology, can enrich our lives. This book offers insights into cultivating optimism, strengthening relationships, and finding balance for greater well-being.",
+    "img": "/images/1847943063.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Motivational",
+    "amazonUrl": "https://www.amazon.in/dp/1847943063/"
   }
 ]
