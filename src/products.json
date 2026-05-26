@@ -973,5 +973,18 @@
     "badge": "Amazon's Choice",
     "cat": "Development & Growth",
     "amazonUrl": "https://www.amazon.in/dp/0358329612/"
+  },
+  {
+    "id": 1779815349957,
+    "asin": "B0DVT5XFN6",
+    "title": "Birch Cube Cajon with Snare Tap",
+    "price": 1990,
+    "rating": 4.1,
+    "reviews": 73,
+    "summary": "This birch cube cajon offers a versatile percussion experience, crafted from American birch wood for durability and rich sound. It delivers deep bass and crisp snare tones, enhanced by an external snare tap for added sonic flexibility. Its compact, lightweight design makes it suitable for musicians of all skill levels and ideal for travel.",
+    "img": "/images/B0DVT5XFN6.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cajons",
+    "amazonUrl": "https://www.amazon.in/dp/B0DVT5XFN6/"
   }
 ]
