@@ -1324,5 +1324,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0B6RMB7N4/"
+  },
+  {
+    "id": 1779816186989,
+    "asin": "B08L6LNCY9",
+    "title": "Villain Hydra Eau de Parfum",
+    "price": 375,
+    "rating": 3.9,
+    "reviews": 7921,
+    "summary": "Villain Hydra Eau de Parfum is a masculine fragrance that blends sea notes with a citrus zing. This perfume provides long-lasting freshness, offering an energetic scent experience throughout the day and night.",
+    "img": "/images/B08L6LNCY9.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Parfum",
+    "amazonUrl": "https://www.amazon.in/dp/B08L6LNCY9/"
   }
 ]
