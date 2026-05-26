@@ -921,5 +921,18 @@
     "badge": "Amazon's Choice",
     "cat": "Psychopathology",
     "amazonUrl": "https://www.amazon.in/dp/0804795096/"
+  },
+  {
+    "id": 1779815110859,
+    "asin": "1732265143",
+    "title": "The Revolt of the Public and the Crisis of Authority in the New Millennium",
+    "price": 2267,
+    "rating": 4.5,
+    "reviews": 864,
+    "summary": "This book explores how digital technology has empowered ordinary citizens, shifting the balance of power from traditional authorities. It analyzes how these changes have fueled global insurgencies and examines the rise of figures like Donald Trump and Brexit. The text concludes by considering the future of democratic processes in a digitally connected world.",
+    "img": "/images/1732265143.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "International Relations",
+    "amazonUrl": "https://www.amazon.in/dp/1732265143/"
   }
 ]
