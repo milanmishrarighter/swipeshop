@@ -1207,5 +1207,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B08TGSRW1S/"
+  },
+  {
+    "id": 1779816044878,
+    "asin": "B0FZB8Q659",
+    "title": "Old Money Cedar Vanilla Perfume",
+    "price": 199,
+    "rating": 4.1,
+    "reviews": 629,
+    "summary": "Old Money Cedar Vanilla is a parfum with a 25% oil concentration, offering a sophisticated scent that lasts over twelve hours. This fragrance blends sharp apple and davana with dry florals, cedar, and a restrained vanilla, creating a long-lasting and memorable aroma.",
+    "img": "/images/B0FZB8Q659.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0FZB8Q659/"
   }
 ]
