@@ -934,5 +934,18 @@
     "badge": "Amazon's Choice",
     "cat": "International Relations",
     "amazonUrl": "https://www.amazon.in/dp/1732265143/"
+  },
+  {
+    "id": 1779815126379,
+    "asin": "014303653X",
+    "title": "Amusing Ourselves to Death : Public Disc",
+    "price": 745.93,
+    "rating": 4.6,
+    "reviews": 3975,
+    "summary": "This book explores how entertainment media, from television to the internet, shapes public discourse and our understanding of the world. It offers a critical perspective on the impact of these mediums on politics, education, and religion. The text also provides insights into how we might regain control over our media consumption.",
+    "img": "/images/014303653X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cinema & Broadcast",
+    "amazonUrl": "https://www.amazon.in/dp/014303653X/"
   }
 ]
