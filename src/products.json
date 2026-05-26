@@ -1246,5 +1246,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B07845BYSZ/"
+  },
+  {
+    "id": 1779816090292,
+    "asin": "B0FYGRL51R",
+    "title": "Love Drunk Cinnamon Date Perfume",
+    "price": 199,
+    "rating": 4.1,
+    "reviews": 622,
+    "summary": "Love Drunk is a concentrated parfum, offering a warm and spiced scent that evolves into sweet dates and praline. This fragrance provides over 12 hours of wear, with rich base notes of vanilla and amberwood that linger intimately.",
+    "img": "/images/B0FYGRL51R.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0FYGRL51R/"
   }
 ]
