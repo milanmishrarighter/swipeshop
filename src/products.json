@@ -1051,5 +1051,18 @@
     "badge": "Amazon's Choice",
     "cat": "Ukulele",
     "amazonUrl": "https://www.amazon.in/dp/B01ALJRCBE/"
+  },
+  {
+    "id": 1779815520438,
+    "asin": "B099N9GWFK",
+    "title": "Clapbox Foot Tambourine - Jingles, Black",
+    "price": 494,
+    "rating": 4.3,
+    "reviews": 442,
+    "summary": "This foot tambourine features two sets of metal jingle bells within a compact, durable black body. It comfortably attaches to your foot with an elastic nylon strap, allowing you to add rhythmic accompaniment to various musical performances. This instrument is ideal for timekeepers, guitarists, and singers seeking to enhance their sound.",
+    "img": "/images/B099N9GWFK.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Tambourines",
+    "amazonUrl": "https://www.amazon.in/dp/B099N9GWFK/"
   }
 ]
