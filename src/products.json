@@ -1350,5 +1350,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B08TGY698Y/"
+  },
+  {
+    "id": 1779816218573,
+    "asin": "B0BX656GMJ",
+    "title": "G.O.A.T. Bergamot, Patchouli & Vetiver Parfum",
+    "price": 485,
+    "rating": 4.1,
+    "reviews": 4904,
+    "summary": "G.O.A.T. Bergamot, Patchouli & Vetiver Parfum is an Eau de Parfum featuring refreshing bergamot, warm patchouli, and soothing vetiver notes. This long-lasting fragrance is designed to leave a lasting impression.",
+    "img": "/images/B0BX656GMJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Parfum",
+    "amazonUrl": "https://www.amazon.in/dp/B0BX656GMJ/"
   }
 ]
