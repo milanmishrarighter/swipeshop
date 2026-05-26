@@ -1220,5 +1220,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0FZB8Q659/"
+  },
+  {
+    "id": 1779816061672,
+    "asin": "B0FMXW5DR3",
+    "title": "Lust: Fresh Fruity-Aquatic Perfume",
+    "price": 299,
+    "rating": 3.9,
+    "reviews": 299,
+    "summary": "Lust is a fresh, fruity-aquatic perfume for men, designed to provide a long-lasting fragrance experience. Its concentrated formula offers a confident aroma that remains effective throughout the day, even in warm climates. This scent aims to keep you feeling fresh and composed for various occasions.",
+    "img": "/images/B0FMXW5DR3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0FMXW5DR3/"
   }
 ]
