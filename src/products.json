@@ -830,5 +830,18 @@
     "badge": "Amazon's Choice",
     "cat": "Wall Hooks",
     "amazonUrl": "https://www.amazon.in/dp/B08RCQRZ5V/"
+  },
+  {
+    "id": 1779814617567,
+    "asin": "0385523912",
+    "title": "Nothing To Envy",
+    "price": 0,
+    "rating": 4.6,
+    "reviews": 11414,
+    "summary": "Nothing to Envy\" offers an intimate look into the lives of six North Korean citizens over fifteen years, providing a rare glimpse into a society largely hidden from the world. This book illuminates the daily realities of life under a totalitarian regime, helping readers understand the human experience within this complex nation.",
+    "img": "/images/0385523912.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Civilization & Culture",
+    "amazonUrl": "https://www.amazon.in/dp/0385523912/"
   }
 ]
