@@ -1363,5 +1363,18 @@
     "badge": "Amazon's Choice",
     "cat": "Eau de Parfum",
     "amazonUrl": "https://www.amazon.in/dp/B0BX656GMJ/"
+  },
+  {
+    "id": 1779816232368,
+    "asin": "B09XLJZ3SK",
+    "title": "Honey Oud: Bergamot, Patchouli, Vanilla",
+    "price": 149,
+    "rating": 4.2,
+    "reviews": 17471,
+    "summary": "Honey Oud is an Eau de Parfum featuring a blend of bergamot, patchouli, and vanilla. This fragrance offers a sweet and versatile scent designed to last throughout the day.",
+    "img": "/images/B09XLJZ3SK.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Parfum",
+    "amazonUrl": "https://www.amazon.in/dp/B09XLJZ3SK/"
   }
 ]
