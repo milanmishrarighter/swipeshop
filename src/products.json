@@ -1077,5 +1077,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cymbal Sets",
     "amazonUrl": "https://www.amazon.in/dp/B07J47HNSX/"
+  },
+  {
+    "id": 1779815595996,
+    "asin": "B0DNFQZMSH",
+    "title": "Indian Damru Musical Instrument",
+    "price": 199,
+    "rating": 4.1,
+    "reviews": 87,
+    "summary": "The damru is a traditional Indian percussion instrument, a small, double-headed drum often used in Hindu ceremonies. Crafted from wood or metal, its two membranes produce a distinctive, resonant sound when rotated or shaken, offering rhythmic accompaniment for spiritual practices and chants. This instrument holds cultural significance, symbolizing creation and the cycles of life.",
+    "img": "/images/B0DNFQZMSH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Drums & Percussion",
+    "amazonUrl": "https://www.amazon.in/dp/B0DNFQZMSH/"
   }
 ]
