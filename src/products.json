@@ -1038,5 +1038,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cajons",
     "amazonUrl": "https://www.amazon.in/dp/B0B6VHRQXN/"
+  },
+  {
+    "id": 1779815493233,
+    "asin": "B01ALJRCBE",
+    "title": "Kadence Wanderer Mahogany Ukulele",
+    "price": 2499,
+    "rating": 4.3,
+    "reviews": 5770,
+    "summary": "The Kadence Wanderer Mahogany Ukulele is a lightweight soprano instrument crafted from mahogany, ideal for beginners. It offers a warm, pleasant sound and is easy to hold, making learning enjoyable for all ages. Its compact design and gentle nylon strings provide a comfortable playing experience.",
+    "img": "/images/B01ALJRCBE.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ukulele",
+    "amazonUrl": "https://www.amazon.in/dp/B01ALJRCBE/"
   }
 ]
