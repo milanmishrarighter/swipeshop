@@ -1194,5 +1194,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0CHW268JT/"
+  },
+  {
+    "id": 1779816022457,
+    "asin": "B08TGSRW1S",
+    "title": "Wild Stone Edge Eau de Parfum",
+    "price": 357,
+    "rating": 4.2,
+    "reviews": 7108,
+    "summary": "Wild Stone Edge Eau de Parfum offers a deep, masculine woody fragrance with a burst of lasting freshness. This perfume is designed for everyday use, providing a long-lasting scent experience. Its blend of lemon, green notes, and amber creates a sophisticated aroma.",
+    "img": "/images/B08TGSRW1S.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B08TGSRW1S/"
   }
 ]
