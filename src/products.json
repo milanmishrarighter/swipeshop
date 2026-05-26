@@ -882,5 +882,18 @@
     "badge": "Amazon's Choice",
     "cat": "Mathematics",
     "amazonUrl": "https://www.amazon.in/dp/0140278168/"
+  },
+  {
+    "id": 1779815037229,
+    "asin": "0141983760",
+    "title": "Why We Sleep: The New Science of Sleep and Dreams",
+    "price": 486,
+    "rating": 4.5,
+    "reviews": 32182,
+    "summary": "This book explores the vital role of sleep in our lives, drawing on twenty years of scientific research. It explains what happens during sleep and how factors like caffeine affect it, offering insights into improving overall well-being.",
+    "img": "/images/0141983760.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Healthy Living & Wellness",
+    "amazonUrl": "https://www.amazon.in/dp/0141983760/"
   }
 ]
