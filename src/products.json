@@ -1168,5 +1168,18 @@
     "badge": "Amazon's Choice",
     "cat": "Melodicas",
     "amazonUrl": "https://www.amazon.in/dp/B006GUJFI6/"
+  },
+  {
+    "id": 1779815864310,
+    "asin": "B0BC2ZMWM3",
+    "title": "Steel Tongue Drum",
+    "price": 1880,
+    "rating": 4.2,
+    "reviews": 163,
+    "summary": "This steel tongue drum is a percussion instrument crafted from titanium alloy steel. It produces a clear, melodious sound, offering a simple way to create music and promote relaxation. Its gentle tones can help calm the mind and body.",
+    "img": "/images/B0BC2ZMWM3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Steel Drums",
+    "amazonUrl": "https://www.amazon.in/dp/B0BC2ZMWM3/"
   }
 ]
