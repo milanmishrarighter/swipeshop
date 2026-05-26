@@ -908,5 +908,18 @@
     "badge": "Amazon's Choice",
     "cat": "Literature & Fiction",
     "amazonUrl": "https://www.amazon.in/dp/000728487X/"
+  },
+  {
+    "id": 1779815090482,
+    "asin": "0804795096",
+    "title": "The Burnout Society",
+    "price": 1705,
+    "rating": 4.3,
+    "reviews": 1518,
+    "summary": "The Burnout Society\" explores how modern society's emphasis on positivity and constant connection contributes to widespread psychological distress. This book identifies the societal roots of conditions like depression and ADHD, offering a deeper understanding of our collective mental health challenges.",
+    "img": "/images/0804795096.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Psychopathology",
+    "amazonUrl": "https://www.amazon.in/dp/0804795096/"
   }
 ]
