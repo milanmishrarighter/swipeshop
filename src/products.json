@@ -1311,5 +1311,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0DZXX8XN5/"
+  },
+  {
+    "id": 1779816170929,
+    "asin": "B0B6RMB7N4",
+    "title": "Oud Extreme: Fresh, Powerful Scent",
+    "price": 749,
+    "rating": 4,
+    "reviews": 1112,
+    "summary": "Oud Extreme is a perfume featuring a fresh and powerful oud scent. Its higher concentration ensures the captivating fragrance remains noticeable throughout the day, leaving a lasting impression. This versatile scent is suitable for daily wear or special occasions.",
+    "img": "/images/B0B6RMB7N4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0B6RMB7N4/"
   }
 ]
