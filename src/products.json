@@ -1337,5 +1337,18 @@
     "badge": "Amazon's Choice",
     "cat": "Eau de Parfum",
     "amazonUrl": "https://www.amazon.in/dp/B08L6LNCY9/"
+  },
+  {
+    "id": 1779816204531,
+    "asin": "B08TGY698Y",
+    "title": "Wild Stone Ultra Sensual Perfume",
+    "price": 349,
+    "rating": 4.1,
+    "reviews": 13824,
+    "summary": "Wild Stone Ultra Sensual Perfume is a captivating aromatic fougere fragrance. This long-lasting scent is perfect for casual wear, offering a sophisticated aroma that complements any occasion. Experience an elegant fragrance designed to enhance your everyday presence.",
+    "img": "/images/B08TGY698Y.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B08TGY698Y/"
   }
 ]
