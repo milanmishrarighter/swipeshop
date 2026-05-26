@@ -869,5 +869,18 @@
     "badge": "Amazon's Choice",
     "cat": "Personal Transformation",
     "amazonUrl": "https://www.amazon.in/dp/9395741538/"
+  },
+  {
+    "id": 1779815017938,
+    "asin": "0140278168",
+    "title": "The Beginning of Infinity: Explanations that Transform The World",
+    "price": 557,
+    "rating": 4.5,
+    "reviews": 2210,
+    "summary": "This book explores humanity's ongoing quest for knowledge and good explanations. It delves into how this pursuit has driven progress across science, technology, and human welfare. The author considers whether this progress will continue infinitely, offering a profound perspective on our achievements and future possibilities.",
+    "img": "/images/0140278168.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mathematics",
+    "amazonUrl": "https://www.amazon.in/dp/0140278168/"
   }
 ]
