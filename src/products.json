@@ -1298,5 +1298,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0CSK7YP3H/"
+  },
+  {
+    "id": 1779816151461,
+    "asin": "B0DZXX8XN5",
+    "title": "Thug Life Men's Fragrance Set",
+    "price": 882,
+    "rating": 4.2,
+    "reviews": 332,
+    "summary": "This men's fragrance set offers a collection of distinct scents designed for lasting wear. Each eau de parfum provides a unique aromatic experience, from bold and sophisticated to fresh and invigorating. These concentrated formulas ensure a consistent and enduring fragrance throughout the day.",
+    "img": "/images/B0DZXX8XN5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0DZXX8XN5/"
   }
 ]
