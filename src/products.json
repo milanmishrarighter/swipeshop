@@ -1064,5 +1064,18 @@
     "badge": "Amazon's Choice",
     "cat": "Tambourines",
     "amazonUrl": "https://www.amazon.in/dp/B099N9GWFK/"
+  },
+  {
+    "id": 1779815558552,
+    "asin": "B07J47HNSX",
+    "title": "Indian Brass Hand Cymbals",
+    "price": 299,
+    "rating": 4.5,
+    "reviews": 1211,
+    "summary": "These UAPAN brass hand cymbals are a traditional Indian instrument, crafted for clear, resonant sound. Measuring three inches in diameter, this pair of Manjeera cymbals is perfect for enhancing musical performances and ceremonial rituals with their authentic tone.",
+    "img": "/images/B07J47HNSX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cymbal Sets",
+    "amazonUrl": "https://www.amazon.in/dp/B07J47HNSX/"
   }
 ]
