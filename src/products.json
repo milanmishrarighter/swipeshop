@@ -1285,5 +1285,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0FF56M5M8/"
+  },
+  {
+    "id": 1779816135844,
+    "asin": "B0CSK7YP3H",
+    "title": "Engage Assorted Luxury Perfume Set",
+    "price": 399,
+    "rating": 4.5,
+    "reviews": 1071,
+    "summary": "The Engage Assorted Luxury Perfume Set offers a collection of premium eau de parfum travel packs. These long-lasting fragrances provide diverse scent profiles, from fruity and floral to citrus and woody, suitable for various preferences. It is an ideal option for gifting or personal use, allowing for exploration of different sophisticated aromas.",
+    "img": "/images/B0CSK7YP3H.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0CSK7YP3H/"
   }
 ]
