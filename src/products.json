@@ -1116,5 +1116,18 @@
     "badge": "Amazon's Choice",
     "cat": "Kazoos",
     "amazonUrl": "https://www.amazon.in/dp/B0C2PB4R47/"
+  },
+  {
+    "id": 1779815726745,
+    "asin": "B0CPDMKQP1",
+    "title": "Zelda Ocarina: Triforce Songbird's Gift",
+    "price": 933,
+    "rating": 3.8,
+    "reviews": 48,
+    "summary": "This 12-hole ceramic ocarina, featuring the iconic Triforce, offers a faithful recreation of the instrument from The Legend of Zelda. It provides a rich, harmonious sound for musicians and serves as a collectible item for fans of the series. The set includes a songbook with familiar melodies, allowing for immediate play and enjoyment.",
+    "img": "/images/B0CPDMKQP1.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ocarinas",
+    "amazonUrl": "https://www.amazon.in/dp/B0CPDMKQP1/"
   }
 ]
