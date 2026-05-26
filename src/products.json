@@ -1181,5 +1181,18 @@
     "badge": "Amazon's Choice",
     "cat": "Steel Drums",
     "amazonUrl": "https://www.amazon.in/dp/B0BC2ZMWM3/"
+  },
+  {
+    "id": 1779816003375,
+    "asin": "B0CHW268JT",
+    "title": "White Oud & CEO Man",
+    "price": 197,
+    "rating": 4.2,
+    "reviews": 11820,
+    "summary": "This perfume duo, White Oud & CEO Man, offers a balanced fragrance experience for both men and women. Made with imported, IFRA-certified oils, it provides a non-irritant formula in travel-friendly packaging.",
+    "img": "/images/B0CHW268JT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0CHW268JT/"
   }
 ]
