@@ -986,5 +986,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cajons",
     "amazonUrl": "https://www.amazon.in/dp/B0DVT5XFN6/"
+  },
+  {
+    "id": 1779815381934,
+    "asin": "B08R22LKB7",
+    "title": "Clapbox Dual Chamber Sound Shaker",
+    "price": 325,
+    "rating": 4.3,
+    "reviews": 197,
+    "summary": "This Clapbox Dual Chamber Sound Shaker, crafted from rubber wood, provides a mellow yet full shaker sound. Its comfortable handheld size makes it suitable for musicians of any skill level, adding a natural percussive element to any setting.",
+    "img": "/images/B08R22LKB7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Maracas, Shakers & Rattles",
+    "amazonUrl": "https://www.amazon.in/dp/B08R22LKB7/"
   }
 ]
