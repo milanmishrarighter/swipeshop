@@ -1233,5 +1233,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B0FMXW5DR3/"
+  },
+  {
+    "id": 1779816075863,
+    "asin": "B07845BYSZ",
+    "title": "Euphoria Amber Musk Perfume",
+    "price": 329,
+    "rating": 4.1,
+    "reviews": 6442,
+    "summary": "Euphoria Amber Musk Perfume is a fragrance for men, blending orange flower, amber, and musk notes. This long-lasting scent is designed to provide a sense of confidence and freshness throughout the day. It offers a sophisticated aroma suitable for various occasions.",
+    "img": "/images/B07845BYSZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B07845BYSZ/"
   }
 ]
