@@ -856,5 +856,18 @@
     "badge": "Amazon's Choice",
     "cat": "Commerce",
     "amazonUrl": "https://www.amazon.in/dp/0553459414/"
+  },
+  {
+    "id": 1779814980944,
+    "asin": "9395741538",
+    "title": "The War of Art: Break Through the Blocks and Win Your Inner Creative Battles",
+    "price": 239,
+    "rating": 4.4,
+    "reviews": 29824,
+    "summary": "This book explores the internal resistance that hinders creative endeavors and personal growth. It offers a practical framework for identifying and overcoming these obstacles, helping individuals pursue their ambitions with greater discipline.",
+    "img": "/images/9395741538.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Personal Transformation",
+    "amazonUrl": "https://www.amazon.in/dp/9395741538/"
   }
 ]
