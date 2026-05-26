@@ -1103,5 +1103,18 @@
     "badge": "Amazon's Choice",
     "cat": "Marimbas",
     "amazonUrl": "https://www.amazon.in/dp/B08FBC787K/"
+  },
+  {
+    "id": 1779815685071,
+    "asin": "B0C2PB4R47",
+    "title": "Black Metal Kazoo with Membranes",
+    "price": 799,
+    "rating": 4.4,
+    "reviews": 182,
+    "summary": "This black metal kazoo, crafted from durable aluminum alloy, uses a sensitive membrane to amplify your hummed melodies. It produces a rich, resonant tone, offering a user-friendly way to create music similar to a saxophone or trumpet. The design includes easily replaceable membranes for consistent sound quality.",
+    "img": "/images/B0C2PB4R47.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Kazoos",
+    "amazonUrl": "https://www.amazon.in/dp/B0C2PB4R47/"
   }
 ]
