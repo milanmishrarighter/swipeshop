@@ -1272,5 +1272,18 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B07FK733X4/"
+  },
+  {
+    "id": 1779816119497,
+    "asin": "B0FF56M5M8",
+    "title": "Nomade Amber Oud Leather Perfume",
+    "price": 499,
+    "rating": 4.5,
+    "reviews": 685,
+    "summary": "Nomade Amber Oud Leather is an Eau de Parfum featuring a rich blend of raspberry, rose, and saffron, grounded by amberwood and oud. This fragrance offers a sophisticated scent experience, designed to linger subtly for hours.",
+    "img": "/images/B0FF56M5M8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Perfume",
+    "amazonUrl": "https://www.amazon.in/dp/B0FF56M5M8/"
   }
 ]
