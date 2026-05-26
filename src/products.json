@@ -1012,5 +1012,18 @@
     "badge": "Amazon's Choice",
     "cat": "Djembes",
     "amazonUrl": "https://www.amazon.in/dp/B084RDB8NB/"
+  },
+  {
+    "id": 1779815433903,
+    "asin": "B07SQC9JMG",
+    "title": "Oak Wood Cajon with Adjustable Snares",
+    "price": 3999,
+    "rating": 4.4,
+    "reviews": 3194,
+    "summary": "This oak wood cajon features adjustable snares, allowing for versatile sound control. Users can easily modify tones from a traditional snare sound to a deep, bass-focused instrument. It offers a full range of percussive sounds for various musical settings.",
+    "img": "/images/B07SQC9JMG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cajons",
+    "amazonUrl": "https://www.amazon.in/dp/B07SQC9JMG/"
   }
 ]
