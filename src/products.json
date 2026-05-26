@@ -843,5 +843,18 @@
     "badge": "Amazon's Choice",
     "cat": "Civilization & Culture",
     "amazonUrl": "https://www.amazon.in/dp/0385523912/"
+  },
+  {
+    "id": 1779814953353,
+    "asin": "0553459414",
+    "title": "The Secret Life of Groceries: The Dark Miracle of the American Supermarket",
+    "price": 804,
+    "rating": 4.4,
+    "reviews": 1398,
+    "summary": "This book offers an in-depth look at the American grocery industry, exploring how food reaches our shelves and the human cost involved. It provides powerful social commentary and compassionate insight into the lives of essential workers within our food system.",
+    "img": "/images/0553459414.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Commerce",
+    "amazonUrl": "https://www.amazon.in/dp/0553459414/"
   }
 ]
