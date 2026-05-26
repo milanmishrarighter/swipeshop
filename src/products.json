@@ -960,5 +960,18 @@
     "badge": "Amazon's Choice",
     "cat": "Motivational",
     "amazonUrl": "https://www.amazon.in/dp/1847943063/"
+  },
+  {
+    "id": 1779815175688,
+    "asin": "0358329612",
+    "title": "Mistakes Were Made (but Not By Me) Third Edition: Why We Justify Foolish Beliefs, Bad Decisions, and Hurtful Acts",
+    "price": 1444,
+    "rating": 4.4,
+    "reviews": 1680,
+    "summary": "This book explores the psychological mechanisms of self-justification, explaining why individuals often struggle to admit mistakes. It illuminates how our brains create fictions to maintain self-worth, even when faced with evidence of poor decisions. The text offers insights into overcoming these patterns and learning from cognitive dissonance.",
+    "img": "/images/0358329612.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Development & Growth",
+    "amazonUrl": "https://www.amazon.in/dp/0358329612/"
   }
 ]
