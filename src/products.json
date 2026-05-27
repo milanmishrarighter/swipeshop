@@ -1870,5 +1870,18 @@
     "badge": "Amazon's Choice",
     "cat": "Pencils",
     "amazonUrl": "https://www.amazon.in/dp/B0FL8348LX/"
+  },
+  {
+    "id": 1779902974414,
+    "asin": "B0FX4ZS8HZ",
+    "title": "Superhero Illusion Bookends",
+    "price": 299,
+    "rating": 4.3,
+    "reviews": 114,
+    "summary": "These unique bookends create the illusion of a superhero preventing your books from falling. Crafted from durable metal with a hidden magnetic connection, they provide stable support while adding a playful, decorative element to any shelf. This design effectively organizes books and enhances your space with a touch of creativity.",
+    "img": "/images/B0FX4ZS8HZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Bookends",
+    "amazonUrl": "https://www.amazon.in/dp/B0FX4ZS8HZ/"
   }
 ]
