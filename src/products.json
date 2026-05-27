@@ -1480,5 +1480,18 @@
     "badge": "Amazon's Choice",
     "cat": "Tables",
     "amazonUrl": "https://www.amazon.in/dp/B09KPQ4RB8/"
+  },
+  {
+    "id": 1779901994424,
+    "asin": "B0B5VJSPG4",
+    "title": "Jam & Honey Foosball Table",
+    "price": 1399,
+    "rating": 4.3,
+    "reviews": 563,
+    "summary": "The Jam & Honey Foosball Table offers a compact tabletop design for engaging football games at home. It provides a screen-free activity that helps develop focus, coordination, and a healthy competitive spirit for all ages.",
+    "img": "/images/B0B5VJSPG4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Tables",
+    "amazonUrl": "https://www.amazon.in/dp/B0B5VJSPG4/"
   }
 ]
