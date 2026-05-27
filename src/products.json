@@ -1389,5 +1389,18 @@
     "badge": "Amazon's Choice",
     "cat": "Desk Supplies Organisers",
     "amazonUrl": "https://www.amazon.in/dp/B0FJM61XBW/"
+  },
+  {
+    "id": 1779901515045,
+    "asin": "B0772RJ2VH",
+    "title": "Clear 16-Compartment Makeup Organizer Box",
+    "price": 199,
+    "rating": 4.2,
+    "reviews": 6200,
+    "summary": "This clear plastic organizer features 16 compartments to neatly store various cosmetic items. It helps to reduce clutter on your vanity or in drawers, keeping daily essentials easily accessible and organized.",
+    "img": "/images/B0772RJ2VH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cosmetic Display Cases",
+    "amazonUrl": "https://www.amazon.in/dp/B0772RJ2VH/"
   }
 ]
