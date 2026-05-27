@@ -1662,5 +1662,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B0BZWCKVQW/"
+  },
+  {
+    "id": 1779902495817,
+    "asin": "B07R84N4HD",
+    "title": "Cards vs Sanskaar: Indian Party Game",
+    "price": 1350,
+    "rating": 4.3,
+    "reviews": 382,
+    "summary": "Cards vs Sanskaar is an easy-to-learn party card game designed for 4-10 adults. This satirical game offers a fun way to share laughs and connect over relatable cultural humor. It features 392 professionally printed cards, ensuring durability and smooth gameplay.",
+    "img": "/images/B07R84N4HD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Dedicated Deck Card Games",
+    "amazonUrl": "https://www.amazon.in/dp/B07R84N4HD/"
   }
 ]
