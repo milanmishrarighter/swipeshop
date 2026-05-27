@@ -1974,5 +1974,18 @@
     "badge": "Amazon's Choice",
     "cat": "Paper Weights",
     "amazonUrl": "https://www.amazon.in/dp/B0GP239KC9/"
+  },
+  {
+    "id": 1779903192779,
+    "asin": "B0D95HMDGD",
+    "title": "Classic Aviator UV400 Sunglasses",
+    "price": 581,
+    "rating": 4.4,
+    "reviews": 69,
+    "summary": "These classic aviator sunglasses feature UV400 lenses, providing essential protection from the sun's rays. Their durable construction offers reliable performance and a timeless aesthetic for everyday wear.",
+    "img": "/images/B0D95HMDGD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunglasses",
+    "amazonUrl": "https://www.amazon.in/dp/B0D95HMDGD/"
   }
 ]
