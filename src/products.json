@@ -1792,5 +1792,18 @@
     "badge": "Amazon's Choice",
     "cat": "Card Games",
     "amazonUrl": "https://www.amazon.in/dp/B0C4CDZ818/"
+  },
+  {
+    "id": 1779902781374,
+    "asin": "B0B639R5KJ",
+    "title": "Marble Solitaire",
+    "price": 221,
+    "rating": 4.4,
+    "reviews": 1531,
+    "summary": "Marble Solitaire is a classic board game designed to challenge problem-solving skills. Players strategically move marbles to eliminate others, aiming to leave only one on the board. This activity can help enhance cognitive function and provide engaging mental stimulation.",
+    "img": "/images/B0B639R5KJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B0B639R5KJ/"
   }
 ]
