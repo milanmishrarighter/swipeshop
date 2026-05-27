@@ -1948,5 +1948,18 @@
     "badge": "Amazon's Choice",
     "cat": "Table Fans",
     "amazonUrl": "https://www.amazon.in/dp/B0C3XNCTDX/"
+  },
+  {
+    "id": 1779903141063,
+    "asin": "B0CZ757FRS",
+    "title": "Gaiatop Portable Clip-On Fan",
+    "price": 849,
+    "rating": 4.2,
+    "reviews": 1361,
+    "summary": "The Gaiatop Portable Clip-On Fan is a compact, battery-operated fan designed for versatile personal cooling. It offers quiet, powerful airflow and a secure clip, making it ideal for use in various settings without disturbing others. Its thoughtful design also ensures safety for small children.",
+    "img": "/images/B0CZ757FRS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Clip Fans",
+    "amazonUrl": "https://www.amazon.in/dp/B0CZ757FRS/"
   }
 ]
