@@ -1805,5 +1805,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B0B639R5KJ/"
+  },
+  {
+    "id": 1779902805089,
+    "asin": "B00004TZY8",
+    "title": "Uno: Classic Family Card Game",
+    "price": 109,
+    "rating": 4.5,
+    "reviews": 85885,
+    "summary": "Uno is a classic card game where players match colors and numbers to be the first to empty their hand. This engaging game encourages strategic thinking and provides entertainment for families. It offers a straightforward way to enjoy competitive play.",
+    "img": "/images/B00004TZY8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Dedicated Deck Card Games",
+    "amazonUrl": "https://www.amazon.in/dp/B00004TZY8/"
   }
 ]
