@@ -1935,5 +1935,18 @@
     "badge": "Amazon's Choice",
     "cat": "Science",
     "amazonUrl": "https://www.amazon.in/dp/B076BJRS92/"
+  },
+  {
+    "id": 1779903111591,
+    "asin": "B0C3XNCTDX",
+    "title": "Pygmy Go Mini Fan with LED",
+    "price": 1549,
+    "rating": 3.9,
+    "reviews": 5332,
+    "summary": "The Pygmy Go Mini Fan is a portable table fan designed for personal comfort. It features a rechargeable battery providing up to four hours of use, an integrated LED light, and quiet operation. This fan offers convenient, uninterrupted airflow and illumination wherever you need it.",
+    "img": "/images/B0C3XNCTDX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Table Fans",
+    "amazonUrl": "https://www.amazon.in/dp/B0C3XNCTDX/"
   }
 ]
