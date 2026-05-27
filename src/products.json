@@ -2039,5 +2039,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B0DF94HSWB/"
+  },
+  {
+    "id": 1779903284183,
+    "asin": "B07FM7TPPY",
+    "title": "Men's Classic UV Protection Sunglasses",
+    "price": 967,
+    "rating": 4,
+    "reviews": 6392,
+    "summary": "These men's classic sunglasses offer reliable UV protection for your eyes. Their design provides a comfortable fit while shielding you from harmful ultraviolet rays. This accessory combines practical eye safety with a timeless aesthetic.",
+    "img": "/images/B07FM7TPPY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunglasses",
+    "amazonUrl": "https://www.amazon.in/dp/B07FM7TPPY/"
   }
 ]
