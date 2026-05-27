@@ -1961,5 +1961,18 @@
     "badge": "Amazon's Choice",
     "cat": "Clip Fans",
     "amazonUrl": "https://www.amazon.in/dp/B0CZ757FRS/"
+  },
+  {
+    "id": 1779903171683,
+    "asin": "B0GP239KC9",
+    "title": "Gold and Silver Bar Paperweight",
+    "price": 559,
+    "rating": 4.3,
+    "reviews": 1218,
+    "summary": "This paperweight set features two realistic gold and silver bars, crafted from high-density metal. They provide a reliable way to secure documents while adding a touch of sophisticated decor to any desk or workspace.",
+    "img": "/images/B0GP239KC9.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Paper Weights",
+    "amazonUrl": "https://www.amazon.in/dp/B0GP239KC9/"
   }
 ]
