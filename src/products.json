@@ -1623,5 +1623,18 @@
     "badge": "Amazon's Choice",
     "cat": "Racket Games",
     "amazonUrl": "https://www.amazon.in/dp/B0DG5YLMCQ/"
+  },
+  {
+    "id": 1779902397868,
+    "asin": "B0D8B6LDBV",
+    "title": "Smartivity Tabletop Mini Golf",
+    "price": 577.95,
+    "rating": 4.4,
+    "reviews": 298,
+    "summary": "Smartivity Tabletop Mini Golf offers a compact, DIY golf experience for children aged 6-14. Kids construct their own course, fostering creativity and an understanding of scientific principles through screen-free play. This sustainable wood set provides engaging entertainment and supports skill development.",
+    "img": "/images/B0D8B6LDBV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Golf",
+    "amazonUrl": "https://www.amazon.in/dp/B0D8B6LDBV/"
   }
 ]
