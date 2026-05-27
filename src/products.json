@@ -2000,5 +2000,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B01CZTXKQE/"
+  },
+  {
+    "id": 1779903224843,
+    "asin": "B08VGMBLQW",
+    "title": "Vincent Chase Polarized Pilot Sunglasses",
+    "price": 899,
+    "rating": 4,
+    "reviews": 5271,
+    "summary": "These Vincent Chase polarized pilot sunglasses offer a classic aviator style. They feature a black and blue gradient full rim, providing clear vision and reduced glare. This design ensures comfortable wear and improved visual clarity in bright conditions.",
+    "img": "/images/B08VGMBLQW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunglasses",
+    "amazonUrl": "https://www.amazon.in/dp/B08VGMBLQW/"
   }
 ]
