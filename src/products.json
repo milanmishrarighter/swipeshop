@@ -1636,5 +1636,18 @@
     "badge": "Amazon's Choice",
     "cat": "Golf",
     "amazonUrl": "https://www.amazon.in/dp/B0D8B6LDBV/"
+  },
+  {
+    "id": 1779902418327,
+    "asin": "B0DNQM4PWN",
+    "title": "Mini Pinball Build & Play",
+    "price": 595.93,
+    "rating": 4.2,
+    "reviews": 494,
+    "summary": "This Mini Pinball Build & Play kit allows children to construct their own mechanical pinball machine. It offers a screen-free activity that promotes engagement with science and develops key skills through hands-on building. Made from sustainable wood, this durable toy provides lasting entertainment and learning.",
+    "img": "/images/B0DNQM4PWN.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Handheld Games",
+    "amazonUrl": "https://www.amazon.in/dp/B0DNQM4PWN/"
   }
 ]
