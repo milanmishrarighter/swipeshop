@@ -1831,5 +1831,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B074JGWZJV/"
+  },
+  {
+    "id": 1779902843973,
+    "asin": "B07MYV4F51",
+    "title": "Casino Poker Chip Set",
+    "price": 999,
+    "rating": 4.2,
+    "reviews": 756,
+    "summary": "This casino poker chip set provides everything needed for a complete poker game. It includes 200 high-quality chips, two decks of cards, and essential dealer buttons, creating an authentic gaming experience. The set is suitable for various card games and gatherings, offering entertainment for up to ten players.",
+    "img": "/images/B07MYV4F51.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Poker Sets",
+    "amazonUrl": "https://www.amazon.in/dp/B07MYV4F51/"
   }
 ]
