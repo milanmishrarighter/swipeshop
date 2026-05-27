@@ -1896,5 +1896,18 @@
     "badge": "Amazon's Choice",
     "cat": "Desk & Shelf Clocks",
     "amazonUrl": "https://www.amazon.in/dp/B0BVLMNVL8/"
+  },
+  {
+    "id": 1779903018053,
+    "asin": "B08H51H91C",
+    "title": "Portable LED Table Lamp",
+    "price": 1449,
+    "rating": 4.3,
+    "reviews": 7438,
+    "summary": "This portable LED table lamp offers versatile illumination for any setting. Its rechargeable battery provides up to 48 hours of light, ideal for both indoor use and outdoor adventures. With three dimmable brightness levels, it provides gentle ambient light or focused illumination for reading.",
+    "img": "/images/B08H51H91C.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Night Lights",
+    "amazonUrl": "https://www.amazon.in/dp/B08H51H91C/"
   }
 ]
