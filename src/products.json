@@ -1922,5 +1922,18 @@
     "badge": "Amazon's Choice",
     "cat": "Table Lamps",
     "amazonUrl": "https://www.amazon.in/dp/B0D3WJ12F8/"
+  },
+  {
+    "id": 1779903083713,
+    "asin": "B076BJRS92",
+    "title": "Newton's Cradle Pendulum Toy",
+    "price": 1898,
+    "rating": 4.3,
+    "reviews": 357,
+    "summary": "This Newton's Cradle is a classic pendulum toy that demonstrates the principles of conservation of momentum and energy. Its swinging steel balls provide a calming, consistent motion, making it both an educational tool and a sophisticated desk decoration. It offers a simple, engaging way to observe physics in action while also helping to reduce stress.",
+    "img": "/images/B076BJRS92.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Science",
+    "amazonUrl": "https://www.amazon.in/dp/B076BJRS92/"
   }
 ]
