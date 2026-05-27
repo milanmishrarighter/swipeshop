@@ -1506,5 +1506,18 @@
     "badge": "Amazon's Choice",
     "cat": "Tables",
     "amazonUrl": "https://www.amazon.in/dp/B0B5VGQ938/"
+  },
+  {
+    "id": 1779902082218,
+    "asin": "B08675PSBT",
+    "title": "Jenga Classic Wood Stacking Game",
+    "price": 782,
+    "rating": 4.5,
+    "reviews": 11044,
+    "summary": "Jenga Classic is a timeless stacking game featuring 54 precision-crafted hardwood blocks. Players carefully remove blocks from the tower's base and place them on top, aiming to maintain its balance. This engaging game offers a fun challenge for families and individuals, promoting focus and fine motor skills.",
+    "img": "/images/B08675PSBT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Stacking & Balancing Games",
+    "amazonUrl": "https://www.amazon.in/dp/B08675PSBT/"
   }
 ]
