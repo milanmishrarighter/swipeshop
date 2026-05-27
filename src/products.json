@@ -1766,5 +1766,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B09R6FF1LY/"
+  },
+  {
+    "id": 1779902725181,
+    "asin": "B075WZ7GZG",
+    "title": "Social Humor Party Game for India",
+    "price": 1300,
+    "rating": 4.4,
+    "reviews": 451,
+    "summary": "Social Humor is a satirical card game designed for parties in India. Players match humorous answer cards to question cards, aiming to create the funniest combinations. This game offers an engaging way to share laughter and lighthearted social commentary among friends.",
+    "img": "/images/B075WZ7GZG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Card Games",
+    "amazonUrl": "https://www.amazon.in/dp/B075WZ7GZG/"
   }
 ]
