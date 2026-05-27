@@ -1467,5 +1467,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B09FJKN8K5/"
+  },
+  {
+    "id": 1779901964830,
+    "asin": "B09KPQ4RB8",
+    "title": "Wembley Foosball Table",
+    "price": 1365,
+    "rating": 4,
+    "reviews": 1353,
+    "summary": "The Wembley Foosball Table is a durable, portable game designed for children. It features smooth-spinning rods and integrated goal counters, providing an engaging and competitive experience for indoor play. This table allows kids to enjoy head-to-head soccer action with friends and family.",
+    "img": "/images/B09KPQ4RB8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Tables",
+    "amazonUrl": "https://www.amazon.in/dp/B09KPQ4RB8/"
   }
 ]
