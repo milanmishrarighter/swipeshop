@@ -1649,5 +1649,18 @@
     "badge": "Amazon's Choice",
     "cat": "Handheld Games",
     "amazonUrl": "https://www.amazon.in/dp/B0DNQM4PWN/"
+  },
+  {
+    "id": 1779902454681,
+    "asin": "B0BZWCKVQW",
+    "title": "Sequent: A Strategic Board Game",
+    "price": 579,
+    "rating": 4.4,
+    "reviews": 560,
+    "summary": "Sequent is a strategic board game where players aim to get five chips in a row on the game board. This engaging game challenges critical thinking and reasoning skills, offering entertainment for both children and adults. Its design fosters strategic play while providing a fun experience for families.",
+    "img": "/images/B0BZWCKVQW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B0BZWCKVQW/"
   }
 ]
