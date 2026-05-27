@@ -2026,5 +2026,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B0D3629PHW/"
+  },
+  {
+    "id": 1779903260181,
+    "asin": "B0DF94HSWB",
+    "title": "Creek Oval Sunglasses",
+    "price": 383,
+    "rating": 4.2,
+    "reviews": 1077,
+    "summary": "Creek Oval Sunglasses offer reliable eye protection and comfortable wear. Their lenses provide 100% UV protection, shielding your eyes from harmful ultraviolet rays. Soft silicone nose pads ensure a light, stress-free fit for extended comfort.",
+    "img": "/images/B0DF94HSWB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunglasses",
+    "amazonUrl": "https://www.amazon.in/dp/B0DF94HSWB/"
   }
 ]
