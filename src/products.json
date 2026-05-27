@@ -1571,5 +1571,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B0C8JPGMGM/"
+  },
+  {
+    "id": 1779902271816,
+    "asin": "B09NYD15ZH",
+    "title": "Rapid Rumble: A Fast-Paced Card Game",
+    "price": 622,
+    "rating": 4.5,
+    "reviews": 4117,
+    "summary": "Rapid Rumble is a fast-paced card game where players quickly match letters to categories. This engaging game encourages quick thinking and verbal agility as you race to deplete your letter cards. It offers varied gameplay with numerous category cards, ensuring each round presents a fresh challenge.",
+    "img": "/images/B09NYD15ZH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B09NYD15ZH/"
   }
 ]
