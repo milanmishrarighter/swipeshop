@@ -1584,5 +1584,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B09NYD15ZH/"
+  },
+  {
+    "id": 1779902303667,
+    "asin": "B085W99T27",
+    "title": "Monopoly: A Game for All",
+    "price": 1669,
+    "rating": 4.3,
+    "reviews": 3875,
+    "summary": "Monopoly is a classic board game where players buy, sell, and trade properties to build wealth. This deluxe edition features special golden tokens and wooden houses, enhancing the experience of bankrupting opponents to win. It offers engaging strategic fun for families and friends aged eight and up.",
+    "img": "/images/B085W99T27.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B085W99T27/"
   }
 ]
