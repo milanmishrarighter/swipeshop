@@ -1376,5 +1376,18 @@
     "badge": "Amazon's Choice",
     "cat": "Eau de Parfum",
     "amazonUrl": "https://www.amazon.in/dp/B09XLJZ3SK/"
+  },
+  {
+    "id": 1779901462306,
+    "asin": "B0FJM61XBW",
+    "title": "Desk Organizer with Drawers",
+    "price": 198,
+    "rating": 4.1,
+    "reviews": 2379,
+    "summary": "This desk organizer provides a tidy solution for your workspace, featuring multiple compartments and drawers to store pens, notes, and small essentials. It helps maintain a clutter-free desk, making your study or office tasks more efficient and hassle-free. The compact design ensures accessible storage while complementing any decor.",
+    "img": "/images/B0FJM61XBW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Supplies Organisers",
+    "amazonUrl": "https://www.amazon.in/dp/B0FJM61XBW/"
   }
 ]
