@@ -1844,5 +1844,18 @@
     "badge": "Amazon's Choice",
     "cat": "Poker Sets",
     "amazonUrl": "https://www.amazon.in/dp/B07MYV4F51/"
+  },
+  {
+    "id": 1779902894319,
+    "asin": "B0BLQCGF1M",
+    "title": "Gradient Pilot Sunglasses",
+    "price": 565,
+    "rating": 3.7,
+    "reviews": 777,
+    "summary": "Gradient Pilot Sunglasses offer a modern take on the classic square style, featuring durable frames with subtle metal rivet details. They provide comfortable wear and a sophisticated look, enhancing your everyday style with their quality craftsmanship.",
+    "img": "/images/B0BLQCGF1M.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunglasses",
+    "amazonUrl": "https://www.amazon.in/dp/B0BLQCGF1M/"
   }
 ]
