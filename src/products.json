@@ -1987,5 +1987,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B0D95HMDGD/"
+  },
+  {
+    "id": 1779903213855,
+    "asin": "B01CZTXKQE",
+    "title": "ROYAL SON Aviator Sunglasses",
+    "price": 360,
+    "rating": 3.7,
+    "reviews": 5300,
+    "summary": "ROYAL SON Aviator Sunglasses offer a timeless look with modern protection. These sunglasses feature UV400 lenses, effectively shielding your eyes from harmful UVA and UVB rays. Their durable metal frame provides long-lasting comfort and style for everyday wear.",
+    "img": "/images/B01CZTXKQE.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunglasses",
+    "amazonUrl": "https://www.amazon.in/dp/B01CZTXKQE/"
   }
 ]
