@@ -1597,5 +1597,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B085W99T27/"
+  },
+  {
+    "id": 1779902336153,
+    "asin": "B08662XYXD",
+    "title": "Classic Naval Battleship Strategy Board Game",
+    "price": 1099,
+    "rating": 4.3,
+    "reviews": 1960,
+    "summary": "This classic naval strategy board game offers a head-to-head combat experience for two players. It provides an engaging search-and-destroy mission, challenging players to strategically locate and sink their opponent's fleet. The game includes portable cases for easy storage and travel.",
+    "img": "/images/B08662XYXD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B08662XYXD/"
   }
 ]
