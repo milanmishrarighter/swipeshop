@@ -1857,5 +1857,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B0BLQCGF1M/"
+  },
+  {
+    "id": 1779902932533,
+    "asin": "B0FL8348LX",
+    "title": "Plantable Seed Pencil",
+    "price": 229,
+    "rating": 4.2,
+    "reviews": 43,
+    "summary": "This plantable seed pencil offers a unique way to combine writing with gardening. Once the pencil is too short to use, its end contains seeds that can be planted. This allows you to grow a new plant, promoting sustainability and adding a touch of nature to your everyday items.",
+    "img": "/images/B0FL8348LX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Pencils",
+    "amazonUrl": "https://www.amazon.in/dp/B0FL8348LX/"
   }
 ]
