@@ -1545,5 +1545,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B00ET0MMM6/"
+  },
+  {
+    "id": 1779902225794,
+    "asin": "B0076L2ZIG",
+    "title": "Othello: A Classic Strategy Game",
+    "price": 461,
+    "rating": 4.5,
+    "reviews": 6435,
+    "summary": "Othello is a classic strategy board game that includes a playing board and 64 reversible discs. This two-player game enhances logical thinking, decision-making, and tactical planning skills with every move. It offers engaging, fast-paced gameplay for ages seven and up.",
+    "img": "/images/B0076L2ZIG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B0076L2ZIG/"
   }
 ]
