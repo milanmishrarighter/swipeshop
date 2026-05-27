@@ -1558,5 +1558,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B0076L2ZIG/"
+  },
+  {
+    "id": 1779902256971,
+    "asin": "B0C8JPGMGM",
+    "title": "Classic Board Games for Smart Kids",
+    "price": 495,
+    "rating": 4.3,
+    "reviews": 735,
+    "summary": "This collection offers classic board games designed to entertain and engage children. These games help develop quick decision-making, strategic thinking, and problem-solving skills. They provide an enjoyable way for children aged five and up to learn and grow.",
+    "img": "/images/B0C8JPGMGM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Board Games",
+    "amazonUrl": "https://www.amazon.in/dp/B0C8JPGMGM/"
   }
 ]
