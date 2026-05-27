@@ -1909,5 +1909,18 @@
     "badge": "Amazon's Choice",
     "cat": "Night Lights",
     "amazonUrl": "https://www.amazon.in/dp/B08H51H91C/"
+  },
+  {
+    "id": 1779903036110,
+    "asin": "B0D3WJ12F8",
+    "title": "Round LED Night Lamp with Remote",
+    "price": 1609,
+    "rating": 4.4,
+    "reviews": 377,
+    "summary": "This round LED night lamp offers versatile illumination for any space. It features both touch and remote control for adjusting brightness and color, creating a comfortable ambiance. With a long-lasting battery, it provides gentle light for hours, perfect for reading or relaxation.",
+    "img": "/images/B0D3WJ12F8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Table Lamps",
+    "amazonUrl": "https://www.amazon.in/dp/B0D3WJ12F8/"
   }
 ]
