@@ -1610,5 +1610,18 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B08662XYXD/"
+  },
+  {
+    "id": 1779902374623,
+    "asin": "B0DG5YLMCQ",
+    "title": "Tabletop Tennis Game",
+    "price": 665.98,
+    "rating": 4.3,
+    "reviews": 136,
+    "summary": "This tabletop tennis kit allows children to build their own game, fostering an understanding of scientific principles through hands-on play. It offers a screen-free activity that develops creativity and confidence, providing engaging entertainment while reducing screen time.",
+    "img": "/images/B0DG5YLMCQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Racket Games",
+    "amazonUrl": "https://www.amazon.in/dp/B0DG5YLMCQ/"
   }
 ]
