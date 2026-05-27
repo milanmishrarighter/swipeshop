@@ -1883,5 +1883,18 @@
     "badge": "Amazon's Choice",
     "cat": "Bookends",
     "amazonUrl": "https://www.amazon.in/dp/B0FX4ZS8HZ/"
+  },
+  {
+    "id": 1779902987436,
+    "asin": "B0BVLMNVL8",
+    "title": "Retro Flip Desk Clock",
+    "price": 2999,
+    "rating": 4.5,
+    "reviews": 166,
+    "summary": "This retro flip desk clock features a unique gear-operated display, showing the time with large, easy-to-read numbers. Its mechanical design and accurate quartz movement provide reliable timekeeping with a low noise level. This clock offers a distinctive, functional accent for any desk or shelf.",
+    "img": "/images/B0BVLMNVL8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk & Shelf Clocks",
+    "amazonUrl": "https://www.amazon.in/dp/B0BVLMNVL8/"
   }
 ]
