@@ -2403,5 +2403,18 @@
     "badge": "Amazon's Choice",
     "cat": "Rechargeable Batteries",
     "amazonUrl": "https://www.amazon.in/dp/B0G1YLGDN2/"
+  },
+  {
+    "id": 1779990249147,
+    "asin": "B09ZPL5VYM",
+    "title": "Adjustable Phone Stand",
+    "price": 159,
+    "rating": 4.2,
+    "reviews": 19437,
+    "summary": "This adjustable phone stand provides a stable, hands-free way to view your smartphone. Crafted from durable metal, its telescopic design allows for easy height and angle adjustments, ensuring a comfortable viewing experience. Anti-skid pads offer added protection and stability on any surface.",
+    "img": "/images/B09ZPL5VYM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Stands",
+    "amazonUrl": "https://www.amazon.in/dp/B09ZPL5VYM/"
   }
 ]
