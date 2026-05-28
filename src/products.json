@@ -2338,5 +2338,18 @@
     "badge": "Amazon's Choice",
     "cat": "Drain Strainers",
     "amazonUrl": "https://www.amazon.in/dp/B0DNF8MCZD/"
+  },
+  {
+    "id": 1779990053261,
+    "asin": "B0791GQRPF",
+    "title": "KENT 7-Egg Boiler with Poacher",
+    "price": 1099,
+    "rating": 4.2,
+    "reviews": 51048,
+    "summary": "The KENT 7-Egg Boiler with Poacher efficiently prepares up to seven eggs simultaneously, offering soft, medium, or hard-boiled options to suit various preferences. Its stainless steel design ensures hygienic operation, and an automatic power-off feature provides safety and convenience.",
+    "img": "/images/B0791GQRPF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Egg Boilers",
+    "amazonUrl": "https://www.amazon.in/dp/B0791GQRPF/"
   }
 ]
