@@ -2325,5 +2325,18 @@
     "badge": "Amazon's Choice",
     "cat": "Laundry Bags",
     "amazonUrl": "https://www.amazon.in/dp/B0FNDFFLN8/"
+  },
+  {
+    "id": 1779990012925,
+    "asin": "B0DNF8MCZD",
+    "title": "Disposable Drain Mesh Stickers",
+    "price": 149,
+    "rating": 4.2,
+    "reviews": 4824,
+    "summary": "These disposable drain mesh stickers effectively catch hair and debris, preventing clogs in your bathroom, kitchen, or bathtub drains. Each pack contains 20 individual stickers, offering a convenient and hygienic way to maintain clear, functional drains.",
+    "img": "/images/B0DNF8MCZD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Drain Strainers",
+    "amazonUrl": "https://www.amazon.in/dp/B0DNF8MCZD/"
   }
 ]
