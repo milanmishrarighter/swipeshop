@@ -2429,5 +2429,18 @@
     "badge": "Amazon's Choice",
     "cat": "Mouse Pads",
     "amazonUrl": "https://www.amazon.in/dp/B0CXDN7V9N/"
+  },
+  {
+    "id": 1779990321550,
+    "asin": "B0CKQVZHVC",
+    "title": "Cube Extension Board with USB-C",
+    "price": 949,
+    "rating": 4.4,
+    "reviews": 3887,
+    "summary": "This cube extension board provides four universal outlets, two USB ports, and one USB-C port, allowing you to power up to seven devices simultaneously. Its compact design and surge protection make it a safe and convenient power solution for various settings.",
+    "img": "/images/B0CKQVZHVC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Power Strips",
+    "amazonUrl": "https://www.amazon.in/dp/B0CKQVZHVC/"
   }
 ]
