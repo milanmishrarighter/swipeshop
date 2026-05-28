@@ -2143,5 +2143,18 @@
     "badge": "Amazon's Choice",
     "cat": "Oil Sprayers",
     "amazonUrl": "https://www.amazon.in/dp/B0DH4WS3B4/"
+  },
+  {
+    "id": 1779989470772,
+    "asin": "B0DJ32SY3K",
+    "title": "Nova Automatic Water Pump",
+    "price": 399,
+    "rating": 4.3,
+    "reviews": 4263,
+    "summary": "The Nova Automatic Water Pump provides a convenient way to dispense water from 20-liter bottles. Its powerful motor quickly delivers water, and the long-lasting battery ensures consistent access to hydration for your home or office.",
+    "img": "/images/B0DJ32SY3K.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Hot & Cold Water Dispensers",
+    "amazonUrl": "https://www.amazon.in/dp/B0DJ32SY3K/"
   }
 ]
