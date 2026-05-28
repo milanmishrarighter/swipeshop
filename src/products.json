@@ -2247,5 +2247,18 @@
     "badge": "Amazon's Choice",
     "cat": "Manual Knife Sharpeners",
     "amazonUrl": "https://www.amazon.in/dp/B0GRD1WP4R/"
+  },
+  {
+    "id": 1779989777919,
+    "asin": "B0D4KKKWWS",
+    "title": "Fresh Seal Handheld Sealer",
+    "price": 332,
+    "rating": 3.7,
+    "reviews": 3123,
+    "summary": "The Fresh Seal Handheld Sealer is a portable device designed to reseal various plastic bags. It helps maintain food freshness by creating an airtight seal, and it features a built-in cutter for opening packages. This rechargeable tool offers a convenient way to preserve snacks and other items.",
+    "img": "/images/B0D4KKKWWS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vacuum Sealers",
+    "amazonUrl": "https://www.amazon.in/dp/B0D4KKKWWS/"
   }
 ]
