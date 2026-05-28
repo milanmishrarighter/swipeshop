@@ -2091,5 +2091,18 @@
     "badge": "Amazon's Choice",
     "cat": "Bathroom Soap Dispensers",
     "amazonUrl": "https://www.amazon.in/dp/B0F99V85S7/"
+  },
+  {
+    "id": 1779989311860,
+    "asin": "B0G64J91TG",
+    "title": "Niwlix Reusable Microfiber Cleaning Cloths",
+    "price": 249,
+    "rating": 4.4,
+    "reviews": 235,
+    "summary": "Niwlix Reusable Microfiber Cleaning Cloths offer a gentle yet effective way to clean various surfaces. Made from soft, absorbent microfiber, these lint-free cloths efficiently tackle grease, dust, and water stains without scratching. They are machine washable and reusable, providing a practical and convenient cleaning solution for your home.",
+    "img": "/images/B0G64J91TG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cleaning Cloths",
+    "amazonUrl": "https://www.amazon.in/dp/B0G64J91TG/"
   }
 ]
