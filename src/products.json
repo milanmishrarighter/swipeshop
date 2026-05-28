@@ -2260,5 +2260,18 @@
     "badge": "Amazon's Choice",
     "cat": "Vacuum Sealers",
     "amazonUrl": "https://www.amazon.in/dp/B0D4KKKWWS/"
+  },
+  {
+    "id": 1779989815194,
+    "asin": "B0GQN34JJ7",
+    "title": "Portable Handheld Sewing Tool",
+    "price": 498,
+    "rating": 4.3,
+    "reviews": 188,
+    "summary": "This portable handheld sewing tool offers a simple solution for quick fabric repairs. Its compact, stapler-style design allows for easy, on-the-go mending of hems, loose stitches, and various clothing items. It provides a convenient way to address minor sewing needs without the setup of a larger machine.",
+    "img": "/images/B0GQN34JJ7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sewing Machines & Accessories",
+    "amazonUrl": "https://www.amazon.in/dp/B0GQN34JJ7/"
   }
 ]
