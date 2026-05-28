@@ -2156,5 +2156,18 @@
     "badge": "Amazon's Choice",
     "cat": "Hot & Cold Water Dispensers",
     "amazonUrl": "https://www.amazon.in/dp/B0DJ32SY3K/"
+  },
+  {
+    "id": 1779989506973,
+    "asin": "B0FKN6TMG2",
+    "title": "Adjustable Laptop Table with Tablet Dock",
+    "price": 1199,
+    "rating": 4.2,
+    "reviews": 1184,
+    "summary": "This adjustable laptop table provides a stable surface for your device, easily moving on wheels to any location. Its height adjusts to promote comfortable posture, helping to alleviate common neck and back strain. The integrated tablet dock further enhances convenience for various tasks.",
+    "img": "/images/B0FKN6TMG2.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Lapdesks",
+    "amazonUrl": "https://www.amazon.in/dp/B0FKN6TMG2/"
   }
 ]
