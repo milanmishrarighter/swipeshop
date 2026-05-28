@@ -2377,5 +2377,18 @@
     "badge": "Amazon's Choice",
     "cat": "Kitchen Tools",
     "amazonUrl": "https://www.amazon.in/dp/B08PC18V5B/"
+  },
+  {
+    "id": 1779990193717,
+    "asin": "B0F4G3JQXZ",
+    "title": "Electric Spark Lighter for Kitchen and Candles",
+    "price": 285,
+    "rating": 4.5,
+    "reviews": 6165,
+    "summary": "This electric spark lighter offers a flameless, windproof solution for igniting gas stoves and candles. Its rechargeable design eliminates the need for fuel, providing a safe and convenient alternative to traditional lighters. The flexible neck and safety lock enhance its usability and reliability in any kitchen.",
+    "img": "/images/B0F4G3JQXZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Gas Lighters",
+    "amazonUrl": "https://www.amazon.in/dp/B0F4G3JQXZ/"
   }
 ]
