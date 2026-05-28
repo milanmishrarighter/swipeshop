@@ -2351,5 +2351,18 @@
     "badge": "Amazon's Choice",
     "cat": "Egg Boilers",
     "amazonUrl": "https://www.amazon.in/dp/B0791GQRPF/"
+  },
+  {
+    "id": 1779990098490,
+    "asin": "B0D7ZLSVRQ",
+    "title": "Reusable Small Zip Lock Bags",
+    "price": 245,
+    "rating": 4.4,
+    "reviews": 36544,
+    "summary": "These reusable small food storage bags provide a durable, leak-proof solution for organizing produce and other items. Their clear design allows for easy visibility, while the secure zipper closure keeps contents fresh and protected for everyday use or travel.",
+    "img": "/images/B0D7ZLSVRQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Produce Storage Bags",
+    "amazonUrl": "https://www.amazon.in/dp/B0D7ZLSVRQ/"
   }
 ]
