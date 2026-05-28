@@ -2052,5 +2052,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B07FM7TPPY/"
+  },
+  {
+    "id": 1779989181455,
+    "asin": "B0GS8X2JSZ",
+    "title": "Flexible Faucet Extender for Sink",
+    "price": 289,
+    "rating": 4.6,
+    "reviews": 1044,
+    "summary": "This flexible faucet extender for your sink provides enhanced water control and convenience. Its 360-degree rotating head allows precise water direction, simplifying tasks like dishwashing and rinsing. The design also helps prevent splashing, keeping your sink area cleaner.",
+    "img": "/images/B0GS8X2JSZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Kitchen Sink Aerators",
+    "amazonUrl": "https://www.amazon.in/dp/B0GS8X2JSZ/"
   }
 ]
