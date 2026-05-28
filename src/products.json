@@ -2390,5 +2390,18 @@
     "badge": "Amazon's Choice",
     "cat": "Gas Lighters",
     "amazonUrl": "https://www.amazon.in/dp/B0F4G3JQXZ/"
+  },
+  {
+    "id": 1779990222130,
+    "asin": "B0G1YLGDN2",
+    "title": "Portronics AA USB-C Rechargeable Batteries",
+    "price": 399,
+    "rating": 4.5,
+    "reviews": 855,
+    "summary": "These AA rechargeable batteries feature a built-in USB-C port for convenient charging without an external device. Their high-capacity lithium cells provide consistent power and a long runtime for various electronics, offering a reliable and eco-friendly alternative to disposable batteries.",
+    "img": "/images/B0G1YLGDN2.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Rechargeable Batteries",
+    "amazonUrl": "https://www.amazon.in/dp/B0G1YLGDN2/"
   }
 ]
