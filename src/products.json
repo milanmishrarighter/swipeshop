@@ -2104,5 +2104,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cleaning Cloths",
     "amazonUrl": "https://www.amazon.in/dp/B0G64J91TG/"
+  },
+  {
+    "id": 1779989340193,
+    "asin": "B0D841G1WW",
+    "title": "Cotton Veggie Bags for Fridge",
+    "price": 299,
+    "rating": 4.4,
+    "reviews": 825,
+    "summary": "These breathable cotton mesh bags are designed to store produce in your fridge. They allow proper airflow and maintain moisture balance, which helps keep vegetables fresh longer and reduces waste. The durable, reusable bags offer an eco-friendly alternative for everyday produce storage.",
+    "img": "/images/B0D841G1WW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Produce Storage Bags",
+    "amazonUrl": "https://www.amazon.in/dp/B0D841G1WW/"
   }
 ]
