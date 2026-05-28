@@ -2312,5 +2312,18 @@
     "badge": "Amazon's Choice",
     "cat": "Kitchen Roll Dispensers",
     "amazonUrl": "https://www.amazon.in/dp/B0GS9DVHXB/"
+  },
+  {
+    "id": 1779989973719,
+    "asin": "B0FNDFFLN8",
+    "title": "Mesh Shoe Wash Bag",
+    "price": 299,
+    "rating": 4.3,
+    "reviews": 1135,
+    "summary": "This mesh bag allows you to safely machine wash your shoes. Its durable design protects both your footwear and the washing machine drum from damage, while the breathable mesh ensures a thorough clean. The secure zipper keeps shoes contained throughout the wash cycle.",
+    "img": "/images/B0FNDFFLN8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Laundry Bags",
+    "amazonUrl": "https://www.amazon.in/dp/B0FNDFFLN8/"
   }
 ]
