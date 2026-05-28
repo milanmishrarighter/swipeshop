@@ -2221,5 +2221,18 @@
     "badge": "Amazon's Choice",
     "cat": "Hair Drying Towels",
     "amazonUrl": "https://www.amazon.in/dp/B0CQTKPVZ2/"
+  },
+  {
+    "id": 1779989678749,
+    "asin": "B092J6Q41C",
+    "title": "Magic Silicone Cleaning Gloves",
+    "price": 198,
+    "rating": 4.1,
+    "reviews": 6910,
+    "summary": "These silicone cleaning gloves feature integrated scrubbers on the palms, allowing you to wash dishes and other items directly with your hands. They offer a convenient, waterproof solution for manual cleaning, eliminating the need for separate brushes or sponges.",
+    "img": "/images/B092J6Q41C.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cleaning Gloves",
+    "amazonUrl": "https://www.amazon.in/dp/B092J6Q41C/"
   }
 ]
