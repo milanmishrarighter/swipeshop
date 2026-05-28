@@ -2195,5 +2195,18 @@
     "badge": "Amazon's Choice",
     "cat": "Specialty Medical Pillows",
     "amazonUrl": "https://www.amazon.in/dp/B0FPXFTVXK/"
+  },
+  {
+    "id": 1779989624917,
+    "asin": "B0G8GY2XD4",
+    "title": "Satin Pillowcase Set with Scrunchie",
+    "price": 259,
+    "rating": 4.3,
+    "reviews": 6872,
+    "summary": "This satin pillowcase set, complete with a matching scrunchie, offers a smooth surface that helps protect hair from friction and reduces sleep lines on skin. Its gentle fabric contributes to a more comfortable night's rest, supporting both hair health and skin hydration.",
+    "img": "/images/B0G8GY2XD4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Pillow Cases",
+    "amazonUrl": "https://www.amazon.in/dp/B0G8GY2XD4/"
   }
 ]
