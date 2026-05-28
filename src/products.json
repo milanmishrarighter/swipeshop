@@ -2273,5 +2273,18 @@
     "badge": "Amazon's Choice",
     "cat": "Sewing Machines & Accessories",
     "amazonUrl": "https://www.amazon.in/dp/B0GQN34JJ7/"
+  },
+  {
+    "id": 1779989854110,
+    "asin": "B0GSCGDFK3",
+    "title": "Pore Vacuum for Clear Skin",
+    "price": 299,
+    "rating": 4.2,
+    "reviews": 1153,
+    "summary": "This pore vacuum gently removes blackheads, whiteheads, and impurities using a safe, physical suction method. It deeply cleanses pores, promoting clearer, smoother skin and improved elasticity over time.",
+    "img": "/images/B0GSCGDFK3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Black Head Remover",
+    "amazonUrl": "https://www.amazon.in/dp/B0GSCGDFK3/"
   }
 ]
