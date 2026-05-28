@@ -2208,5 +2208,18 @@
     "badge": "Amazon's Choice",
     "cat": "Pillow Cases",
     "amazonUrl": "https://www.amazon.in/dp/B0G8GY2XD4/"
+  },
+  {
+    "id": 1779989650232,
+    "asin": "B0CQTKPVZ2",
+    "title": "Quick-Dry Microfiber Hair Turban",
+    "price": 184,
+    "rating": 4.2,
+    "reviews": 3392,
+    "summary": "This microfiber hair turban offers a gentle and efficient way to dry your hair. Its soft, absorbent material significantly reduces drying time, helping to minimize frizz and damage. The turban's secure design allows for comfortable wear while you go about your routine.",
+    "img": "/images/B0CQTKPVZ2.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Hair Drying Towels",
+    "amazonUrl": "https://www.amazon.in/dp/B0CQTKPVZ2/"
   }
 ]
