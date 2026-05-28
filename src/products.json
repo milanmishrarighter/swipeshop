@@ -2130,5 +2130,18 @@
     "badge": "Amazon's Choice",
     "cat": "Refrigerator Parts & Accessories",
     "amazonUrl": "https://www.amazon.in/dp/B0BQZ25WQX/"
+  },
+  {
+    "id": 1779989401565,
+    "asin": "B0DH4WS3B4",
+    "title": "Misamo Glass Oil Sprayer and Dispenser",
+    "price": 249,
+    "rating": 4,
+    "reviews": 9810,
+    "summary": "The Misamo Glass Oil Sprayer and Dispenser offers dual functionality, allowing you to precisely mist or pour your favorite oils. Its durable glass construction and ergonomic design ensure controlled dispensing for cooking or table use, without any mess.",
+    "img": "/images/B0DH4WS3B4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Oil Sprayers",
+    "amazonUrl": "https://www.amazon.in/dp/B0DH4WS3B4/"
   }
 ]
