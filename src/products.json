@@ -2299,5 +2299,18 @@
     "badge": "Amazon's Choice",
     "cat": "Digital Scales",
     "amazonUrl": "https://www.amazon.in/dp/B0GCWZ2KVY/"
+  },
+  {
+    "id": 1779989949151,
+    "asin": "B0GS9DVHXB",
+    "title": "Automatic Egg Rolling Dispenser",
+    "price": 298,
+    "rating": 4.6,
+    "reviews": 4115,
+    "summary": "This automatic egg dispenser uses a gravity-fed system to gently roll eggs forward as they are removed, ensuring the oldest eggs are used first. Its compact, multi-tier design holds up to 30 eggs, saving valuable space in your refrigerator while keeping your eggs organized and easily accessible.",
+    "img": "/images/B0GS9DVHXB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Kitchen Roll Dispensers",
+    "amazonUrl": "https://www.amazon.in/dp/B0GS9DVHXB/"
   }
 ]
