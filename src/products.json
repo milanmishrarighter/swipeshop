@@ -2455,5 +2455,18 @@
     "badge": "Amazon's Choice",
     "cat": "Cord Management",
     "amazonUrl": "https://www.amazon.in/dp/B0F6N5XTG3/"
+  },
+  {
+    "id": 1779990408274,
+    "asin": "B0BGS9SJFL",
+    "title": "Reusable Velcro Cable Straps for Cords",
+    "price": 159,
+    "rating": 4.5,
+    "reviews": 1188,
+    "summary": "These reusable cable straps offer a simple solution for organizing various cords around your home or office. Made from durable microfiber, they securely bundle cables without peeling, providing a tidy and long-lasting organization system. Their easy-to-use design helps maintain an uncluttered environment.",
+    "img": "/images/B0BGS9SJFL.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cable Straps",
+    "amazonUrl": "https://www.amazon.in/dp/B0BGS9SJFL/"
   }
 ]
