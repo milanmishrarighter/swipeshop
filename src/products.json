@@ -2442,5 +2442,18 @@
     "badge": "Amazon's Choice",
     "cat": "Power Strips",
     "amazonUrl": "https://www.amazon.in/dp/B0CKQVZHVC/"
+  },
+  {
+    "id": 1779990356833,
+    "asin": "B0F6N5XTG3",
+    "title": "Magnetic Cable Clips for Desks",
+    "price": 190,
+    "rating": 3.8,
+    "reviews": 1044,
+    "summary": "These magnetic cable clips provide an organized solution for managing cords on your desk. They feature a secure, one-handed magnetic lock for easy cable access and a strong adhesive that keeps them firmly in place. This system helps maintain a tidy workspace by preventing tangled wires.",
+    "img": "/images/B0F6N5XTG3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cord Management",
+    "amazonUrl": "https://www.amazon.in/dp/B0F6N5XTG3/"
   }
 ]
