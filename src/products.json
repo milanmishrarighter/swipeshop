@@ -2702,5 +2702,18 @@
     "badge": "Amazon's Choice",
     "cat": "Toilet Seat Covers",
     "amazonUrl": "https://www.amazon.in/dp/B08ZCS1SKB/"
+  },
+  {
+    "id": 1780074491440,
+    "asin": "B08MLDGQMG",
+    "title": "Individually Wrapped Sanitizing Wipes",
+    "price": 325,
+    "rating": 4.4,
+    "reviews": 305,
+    "summary": "These individually wrapped sanitizing wipes offer a convenient way to clean surfaces. They effectively disinfect and eliminate odors, leaving a light lemon fragrance. Each biodegradable wipe is suitable for various settings, from home to travel.",
+    "img": "/images/B08MLDGQMG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Disinfectant Wipes",
+    "amazonUrl": "https://www.amazon.in/dp/B08MLDGQMG/"
   }
 ]
