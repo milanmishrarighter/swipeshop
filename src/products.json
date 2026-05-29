@@ -2637,5 +2637,18 @@
     "badge": "Amazon's Choice",
     "cat": "Stops",
     "amazonUrl": "https://www.amazon.in/dp/B0FTF89Q6S/"
+  },
+  {
+    "id": 1780074262683,
+    "asin": "B0922XL7SH",
+    "title": "Wireless Camera Shutter Remote",
+    "price": 169,
+    "rating": 4.3,
+    "reviews": 8937,
+    "summary": "This wireless camera shutter remote allows you to capture photos and videos from a distance. It offers hands-free control for steady shots and group photos, connecting reliably via Bluetooth up to 30 feet away. The compact design ensures convenient portability for various shooting situations.",
+    "img": "/images/B0922XL7SH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Remote Controls",
+    "amazonUrl": "https://www.amazon.in/dp/B0922XL7SH/"
   }
 ]
