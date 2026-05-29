@@ -2806,5 +2806,18 @@
     "badge": "Amazon's Choice",
     "cat": "Spy Cameras",
     "amazonUrl": "https://www.amazon.in/dp/B0GLGLRD9Z/"
+  },
+  {
+    "id": 1780075059262,
+    "asin": "B0C6TDGMZR",
+    "title": "Armband Phone Holder",
+    "price": 420,
+    "rating": 4.1,
+    "reviews": 364,
+    "summary": "This armband phone holder securely carries your phone and small essentials during exercise. Its breathable, waterproof design ensures comfort and protects your items from the elements. The adjustable strap provides a snug fit for various arm sizes.",
+    "img": "/images/B0C6TDGMZR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Armbands",
+    "amazonUrl": "https://www.amazon.in/dp/B0C6TDGMZR/"
   }
 ]
