@@ -2780,5 +2780,18 @@
     "badge": "Amazon's Choice",
     "cat": "Personal Defense Equipment",
     "amazonUrl": "https://www.amazon.in/dp/B0BPPZFZJD/"
+  },
+  {
+    "id": 1780074930490,
+    "asin": "B0GM6FHMDR",
+    "title": "USB Charger Hidden Camera",
+    "price": 1599,
+    "rating": 4.2,
+    "reviews": 2407,
+    "summary": "This USB charger hidden camera provides discreet surveillance, appearing and functioning as a standard phone charger. It silently records video, offering a natural way to monitor your space without drawing suspicion. The device captures important moments with motion-based recording and provides continuous operation when plugged in.",
+    "img": "/images/B0GM6FHMDR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Spy Cameras",
+    "amazonUrl": "https://www.amazon.in/dp/B0GM6FHMDR/"
   }
 ]
