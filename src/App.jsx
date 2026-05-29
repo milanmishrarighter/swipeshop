@@ -79,9 +79,9 @@ const EXIT = {
 
 const OVERLAYS = {
   right:{ label:"ADD TO CART",    color:"#00A550", bg:"rgba(0,165,80,0.09)"   },
-  left: { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
+  left: { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
   up:   { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
-  down: { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
+  down: { label:"↩ BRING BACK",   color:"#8B5CF6", bg:"rgba(139,92,246,0.09)" },
 };
 
 const SWIPE_THRESHOLD = 50;  // px — lower = snappier, easier to trigger
@@ -188,6 +188,26 @@ const TERMS_CONTENT = (
   </>
 );
 
+const CONTACT_EMAIL = "hello@swipeshop.example.com";   // TODO: replace with real email
+
+const CONTACT_CONTENT = (
+  <>
+    <h2>Contact Us</h2>
+    <p>Want to complain about something, suggest an idea, or just get in touch? We'd love to hear from you.</p>
+    <p>Email us at: <strong>{CONTACT_EMAIL}</strong></p>
+
+    <h3>Report a problem</h3>
+    <p>Spotted an incorrect price, a broken product link, or something inappropriate? You can tap the
+       small warning icon on any product card to report it, or email us directly.</p>
+
+    <h3>Sponsored products</h3>
+    <p>Want your product featured on SwipeShop? Get in touch at the email above to discuss sponsored
+       placement.</p>
+    <p>Please note: sponsored products will appear with a clear <strong>"Sponsored"</strong> tag on
+       the card so users always know it's a paid placement.</p>
+  </>
+);
+
 function LegalModal({ kind, onClose }) {
   return (
     <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
@@ -210,7 +230,115 @@ function LegalModal({ kind, onClose }) {
           .legal ul { margin:8px 0 10px 22px; }
           .legal li { margin-bottom:4px; }
         `}</style>
-        <div className="legal">{kind === "privacy" ? PRIVACY_CONTENT : TERMS_CONTENT}</div>
+        <div className="legal">{
+          kind === "privacy" ? PRIVACY_CONTENT :
+          kind === "terms"   ? TERMS_CONTENT   :
+          CONTACT_CONTENT
+        }</div>
+      </div>
+    </div>
+  );
+}
+
+function SidebarMenu({ onClose, onSelect }) {
+  const items = [
+    { key: "contact", label: "Contact Us" },
+    { key: "privacy", label: "Privacy Policy" },
+    { key: "terms",   label: "Terms of Service" },
+  ];
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.45)", zIndex:210,
+        display:"flex" }}
+      onClick={onClose}>
+      <div onClick={e => e.stopPropagation()} style={{
+        background:"#fff", width:"78%", maxWidth:300, height:"100%",
+        boxShadow:"4px 0 30px rgba(0,0,0,0.15)", display:"flex", flexDirection:"column",
+        fontFamily:"'Barlow',sans-serif",
+        animation:"ssSlideIn 0.22s ease-out",
+      }}>
+        <style>{`@keyframes ssSlideIn { from { transform:translateX(-100%);} to { transform:translateX(0);} }`}</style>
+        <div style={{ padding:"20px 20px 16px", borderBottom:"1px solid #F2F2F2",
+          display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+          <div style={{ display:"flex", alignItems:"baseline" }}>
+            <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SWIPE</span>
+            <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SHOP</span>
+          </div>
+          <button onClick={onClose} style={{
+            background:"#F5F5F5", border:"none", color:"#666", width:30, height:30,
+            borderRadius:"50%", cursor:"pointer", fontSize:13, fontWeight:700 }}>✕</button>
+        </div>
+        <div style={{ padding:"10px 0", flex:1 }}>
+          {items.map(it => (
+            <button key={it.key} onClick={() => onSelect(it.key)} style={{
+              display:"block", width:"100%", textAlign:"left", background:"none",
+              border:"none", padding:"14px 22px", fontSize:15, color:"#222",
+              fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+            }}>{it.label}</button>
+          ))}
+        </div>
+        <div style={{ padding:"14px 22px", borderTop:"1px solid #F2F2F2",
+          fontSize:11, color:"#BBB", lineHeight:1.5 }}>
+          As an Amazon Associate we earn from qualifying purchases.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ReportModal({ product, onClose, onSubmit }) {
+  const [text, setText] = useState("");
+  const reasons = ["Wrong price", "Broken link", "Inappropriate", "Out of stock", "Other"];
+  const [reason, setReason] = useState("");
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:220,
+        display:"flex", alignItems:"center", justifyContent:"center", padding:"16px" }}
+      onClick={onClose}>
+      <div onClick={e => e.stopPropagation()} style={{
+        background:"#fff", borderRadius:18, width:"100%", maxWidth:340,
+        padding:"20px 20px 18px", boxShadow:"0 8px 40px rgba(0,0,0,0.18)",
+        fontFamily:"'Barlow',sans-serif",
+      }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:6 }}>
+          <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20, color:"#111" }}>
+            REPORT PRODUCT
+          </span>
+          <button onClick={onClose} style={{
+            background:"#F5F5F5", border:"none", color:"#666", width:28, height:28,
+            borderRadius:"50%", cursor:"pointer", fontSize:12, fontWeight:700 }}>✕</button>
+        </div>
+        <p style={{ fontSize:12, color:"#999", marginBottom:14, lineHeight:1.4 }}>
+          {product.title}
+        </p>
+
+        <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:12 }}>
+          {reasons.map(r => (
+            <button key={r} onClick={() => setReason(r)} style={{
+              background: reason === r ? "#FFF4ED" : "#F5F5F5",
+              border: `1px solid ${reason === r ? "#FF6900" : "#EEE"}`,
+              color: reason === r ? "#FF6900" : "#666",
+              borderRadius:8, padding:"5px 10px", fontSize:11, fontWeight:700,
+              cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+            }}>{r}</button>
+          ))}
+        </div>
+
+        <textarea
+          value={text}
+          onChange={e => setText(e.target.value)}
+          placeholder="Tell us more (optional)..."
+          style={{
+            width:"100%", minHeight:70, padding:"9px 11px", border:"1px solid #E0E0E0",
+            borderRadius:8, fontSize:13, fontFamily:"'Barlow',sans-serif", resize:"vertical",
+            marginBottom:12, color:"#222", lineHeight:1.4,
+          }}
+        />
+
+        <button onClick={() => onSubmit(reason, text)} disabled={!reason} style={{
+          background: reason ? "#FF6900" : "#E8E8E8", color: reason ? "#fff" : "#AAA",
+          border:"none", borderRadius:10, padding:"11px 0", width:"100%",
+          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:15, letterSpacing:0.5,
+          cursor: reason ? "pointer" : "not-allowed",
+        }}>SUBMIT REPORT</button>
       </div>
     </div>
   );
@@ -286,7 +414,7 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
 
 function HowToModal({ onClose }) {
   const rows = [
-    { color:"#D0021B", bg:"#FEF2F2", arrow:"←", label:"SKIP",
+    { color:"#D0021B", bg:"#FEF2F2", arrow:"↑", label:"SKIP",
       svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
           stroke="#D0021B" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10"/>
@@ -300,17 +428,23 @@ function HowToModal({ onClose }) {
           <circle cx="20" cy="21" r="1.4"/>
           <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
         </svg>) },
-    { color:"#1668F5", bg:"#EEF3FF", arrow:"↓", label:"GO TO PRODUCT PAGE",
+    { color:"#1668F5", bg:"#EEF3FF", arrow:"←", label:"OPEN ON AMAZON",
       svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
           stroke="#1668F5" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 5v14"/>
-          <path d="M19 12l-7 7-7-7"/>
+          <path d="M19 12H5"/>
+          <path d="M12 19l-7-7 7-7"/>
         </svg>) },
-    { color:"#8B5CF6", bg:"#F4F0FF", arrow:"TAP", label:"VIEW FULL DETAILS",
+    { color:"#8B5CF6", bg:"#F4F0FF", arrow:"↓", label:"BRING BACK LAST CARD",
       svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
-          stroke="#8B5CF6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          stroke="#8B5CF6" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 7v6h6"/>
+          <path d="M3 13a9 9 0 1 0 3-6.7L3 9"/>
+        </svg>) },
+    { color:"#555", bg:"#F4F4F4", arrow:"TAP", label:"VIEW FULL DETAILS",
+      svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="#555" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 11.2c0-2.2 1.5-3.2 3-3.2s3 1 3 3-3 3-3 5"/>
-          <circle cx="12" cy="18" r="0.8" fill="#8B5CF6"/>
+          <circle cx="12" cy="18" r="0.8" fill="#555"/>
           <circle cx="12" cy="12" r="10"/>
         </svg>) },
   ];
@@ -360,6 +494,8 @@ export default function App() {
   const [legalModal,  setLegalModal]  = useState(null);
   const [showHowTo,   setShowHowTo]   = useState(false);
   const [detailProduct, setDetailProduct] = useState(null);
+  const [showMenu,    setShowMenu]    = useState(false);
+  const [reportProduct, setReportProduct] = useState(null);
 
   const { mainCats, singletonCats } = useMemo(() => computeCategories(productsData), []);
 
@@ -384,6 +520,7 @@ export default function App() {
   const [offset,     setOffset]     = useState({ x:0, y:0 });
   const [exitingId,  setExitingId]  = useState(null);
   const [exitDir,    setExitDir]    = useState(null);
+  const [enterAnim,  setEnterAnim]  = useState(null);  // { id, dir, phase } — bring-back animation
   const [undoStack, setUndoStack] = useState([]);   // [{ product, dir }, ...] — most recent at end, max 15
 
   const dragStart    = useRef({ x:0, y:0 });
@@ -397,6 +534,20 @@ export default function App() {
     setExitingId(null);
     isExiting.current = false;
   }, [filteredProducts]);
+
+  // Drive the bring-back entrance animation: start off-screen → settle to center
+  useEffect(() => {
+    if (enterAnim?.phase === "start") {
+      const raf = requestAnimationFrame(() =>
+        requestAnimationFrame(() => setEnterAnim(a => a ? { ...a, phase: "settle" } : null))
+      );
+      return () => cancelAnimationFrame(raf);
+    }
+    if (enterAnim?.phase === "settle") {
+      const t = setTimeout(() => setEnterAnim(null), 450);
+      return () => clearTimeout(t);
+    }
+  }, [enterAnim]);
   const toastTimer   = useRef(null);
   const cartRef      = useRef(cart);    cartRef.current = cart;
   const stackRef     = useRef(stack);   stackRef.current = stack;
@@ -411,6 +562,7 @@ export default function App() {
   };
 
   // ── CORE SWIPE ──────────────────────────────────────────────────────────────
+  // right = add to cart, left = amazon, up = skip. (down handled by doUndo)
   const doSwipe = useCallback((dir, product) => {
     if (isExiting.current) return;
     isExiting.current = true;
@@ -424,9 +576,9 @@ export default function App() {
       const exists = cartRef.current.find(p => p.id === product.id);
       if (!exists) { saveCart([...cartRef.current, product]); flash("🛒 Added to cart!"); }
       else flash("Already in cart");
-    } else if (dir === "left" || dir === "up") {
+    } else if (dir === "up") {
       flash("Skipped");
-    } else if (dir === "down") {
+    } else if (dir === "left") {
       openAmazon(product.amazonUrl, product.asin);
       flash("Opening Amazon...");
     }
@@ -442,21 +594,38 @@ export default function App() {
     }, 420);
   }, []);
 
+  // Bring back the most-recently-swiped card, animating it IN from the direction it left.
+  const doUndo = useCallback(() => {
+    if (isExiting.current) return;
+    setUndoStack(prev => {
+      if (prev.length === 0) { flash("Nothing to bring back"); return prev; }
+      const { product, dir } = prev[prev.length - 1];
+      if (dir === "right") {
+        saveCart(cartRef.current.filter(p => p.id !== product.id));
+      }
+      setStack(s => [product, ...s.filter(p => p.id !== product.id)]);
+      setEnterAnim({ id: product.id, dir, phase: "start" });
+      flash("↩ Brought back");
+      return prev.slice(0, -1);
+    });
+  }, []);
+
   const trySwipe = useCallback((dx, dy) => {
     const product = stackRef.current[0];
     if (!product) { isDragging.current = false; setDraggingId(null); return; }
     const T = SWIPE_THRESHOLD;
+    const reset = () => { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); };
     const ax = Math.abs(dx), ay = Math.abs(dy);
     if (ax > ay) {
-      if      (dx >  T) doSwipe("right", product);
-      else if (dx < -T) doSwipe("left",  product);
-      else { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); }
+      if      (dx >  T) doSwipe("right", product);  // Right = Add to cart
+      else if (dx < -T) doSwipe("left",  product);  // Left  = Amazon
+      else reset();
     } else {
-      if      (dy >  T) doSwipe("down", product);  // Down = Amazon
-      else if (dy < -T) doSwipe("up",   product);  // Up = Skip
-      else { setOffset({ x:0, y:0 }); isDragging.current = false; setDraggingId(null); }
+      if      (dy < -T) doSwipe("up", product);     // Up    = Skip
+      else if (dy >  T) { reset(); doUndo(); }       // Down  = Bring back last card
+      else reset();
     }
-  }, [doSwipe]);
+  }, [doSwipe, doUndo]);
 
   // Treat a quick, small-distance press-and-release as a TAP → open detail modal
   const handlePointerUp = useCallback((dx, dy) => {
@@ -536,6 +705,22 @@ export default function App() {
     const isLeaving = p.id === exitingId;
     const visualIndex = (exitingId && !isLeaving) ? index - 1 : index;
 
+    // Bring-back entrance: start off-screen at the exit position, then settle to center
+    if (enterAnim && p.id === enterAnim.id) {
+      if (enterAnim.phase === "start") {
+        return {
+          transform:  EXIT[enterAnim.dir],
+          transition: "none",
+          zIndex: 30,
+        };
+      }
+      return {
+        transform:  "translate(0, 0) rotate(0deg)",
+        transition: "transform 0.45s cubic-bezier(0.2, 0.8, 0.3, 1)",
+        zIndex: 30,
+      };
+    }
+
     if (isLeaving) {
       return {
         transform:  EXIT[exitDir],
@@ -606,11 +791,22 @@ export default function App() {
 
       {/* ── HEADER ── */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
-        padding:"18px 22px 14px", borderBottom:"1px solid #F2F2F2" }}>
-        <div style={{ display:"flex", alignItems:"baseline" }}>
-          <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
-          <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
-          <span style={{ color:"#CCC", fontSize:11, marginLeft:8 }}>{stack.length} left</span>
+        padding:"18px 18px 14px", borderBottom:"1px solid #F2F2F2" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+          <button onClick={() => setShowMenu(true)} aria-label="Menu"
+            style={{ background:"none", border:"none", cursor:"pointer", padding:4, display:"flex" }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="#111" strokeWidth="2.2" strokeLinecap="round">
+              <line x1="3" y1="6"  x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+          <div style={{ display:"flex", alignItems:"baseline" }}>
+            <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
+            <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
+            <span style={{ color:"#CCC", fontSize:11, marginLeft:8 }}>{stack.length} left</span>
+          </div>
         </div>
         <button onClick={() => setShowCart(true)}
           style={{ background:"none", border:"none", cursor:"pointer", position:"relative", padding:8 }}>
@@ -700,10 +896,10 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* LEFT: SKIP — tiny, grey, icon stacked above arrow */}
+          {/* LEFT: OPEN ON AMAZON — tiny, grey, icon stacked above arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
-            aria-label="Skip"
+            aria-label="Open on Amazon"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
               padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
@@ -713,9 +909,10 @@ export default function App() {
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#D8D8D8" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="5" x2="19" y2="19"/>
-              <line x1="19" y1="5" x2="5" y2="19"/>
+              stroke="#D8D8D8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <path d="M15 3h6v6"/>
+              <path d="M10 14L21 3"/>
             </svg>
             <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600 }}>←</span>
           </button>
@@ -809,15 +1006,43 @@ export default function App() {
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26,
                         color:B, marginBottom:6, letterSpacing:-0.5 }}>₹{p.price.toLocaleString('en-IN')}</div>
                       <p style={{ color:"#999", fontSize:12, lineHeight:1.5,
-                        display:"-webkit-box", WebkitLineClamp:4, WebkitBoxOrient:"vertical",
-                        overflow:"hidden",
+                        display:"-webkit-box", WebkitLineClamp:3, WebkitBoxOrient:"vertical",
+                        overflow:"hidden", marginBottom:2,
                       }}>{p.summary}</p>
+                      <span style={{ color:"#888", fontSize:11, fontWeight:600,
+                        textDecoration:"underline", textUnderlineOffset:2 }}>
+                        Read more
+                      </span>
                     </div>
                   ) : (
                     <div style={{ padding:"14px 18px" }}>
                       <div style={{ height:13, background:"#EBEBEB", borderRadius:4, marginBottom:9, width:"68%" }}/>
                       <div style={{ height:10, background:"#F2F2F2", borderRadius:4, width:"40%" }}/>
                     </div>
+                  )}
+
+                  {/* Tiny report icon — bottom-right, faded */}
+                  {(isTop && !isLeaving) && (
+                    <button
+                      aria-label="Report product"
+                      onMouseDown={e => e.stopPropagation()}
+                      onTouchStart={e => e.stopPropagation()}
+                      onClick={(e) => { e.stopPropagation(); setReportProduct(p); }}
+                      style={{
+                        position:"absolute", bottom:8, right:8, background:"none",
+                        border:"none", cursor:"pointer", padding:4, lineHeight:0,
+                        opacity:0.55, transition:"opacity 0.15s",
+                      }}
+                      onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity=0.55; }}
+                    >
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                        stroke="#CCC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                        <line x1="12" y1="9" x2="12" y2="13"/>
+                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                      </svg>
+                    </button>
                   )}
                 </div>
               );
@@ -847,14 +1072,24 @@ export default function App() {
           </>
         )}
 
-        {/* DOWN HINT — sits inside card area so swiped cards fly over it */}
+        {/* UP HINT — skip */}
+        {stack.length > 0 && (
+          <div style={{ position:"absolute", left:0, right:0, top:2,
+            textAlign:"center", fontSize:7.5, color:"#D8D8D8",
+            letterSpacing:0.4, fontWeight:700, zIndex:1,
+            pointerEvents:"none",
+          }}>
+            ↑ SKIP
+          </div>
+        )}
+        {/* DOWN HINT — bring back last card */}
         {stack.length > 0 && (
           <div style={{ position:"absolute", left:0, right:0, bottom:12,
             textAlign:"center", fontSize:7.5, color:"#D8D8D8",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
           }}>
-            GO TO PRODUCT PAGE ↓
+            BRING BACK LAST CARD ↓
           </div>
         )}
       </div>
@@ -910,16 +1145,7 @@ export default function App() {
               RELOAD
             </button>
 
-            <button onClick={() => {
-                if (undoStack.length === 0) { flash("Nothing to undo"); return; }
-                const { product, dir } = undoStack[undoStack.length - 1];
-                if (dir === "right") {
-                  saveCart(cartRef.current.filter(p => p.id !== product.id));
-                }
-                setStack(prev => [product, ...prev.filter(p => p.id !== product.id)]);
-                setUndoStack(prev => prev.slice(0, -1));
-                flash("↶ Restored");
-              }}
+            <button onClick={doUndo}
               disabled={undoStack.length === 0}
               style={{ ...miniBtn, opacity: undoStack.length > 0 ? 1 : 0.5 }}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
@@ -932,17 +1158,6 @@ export default function App() {
           </div>
         )}
 
-        <div style={{ textAlign:"center", marginTop:8 }}>
-          <button onClick={() => setLegalModal("privacy")} style={{
-            background:"none", border:"none", color:"#999", fontSize:10.5,
-            cursor:"pointer", padding:"0 6px",
-          }}>Privacy</button>
-          <span style={{color:"#DDD", fontSize:10}}>·</span>
-          <button onClick={() => setLegalModal("terms")} style={{
-            background:"none", border:"none", color:"#999", fontSize:10.5,
-            cursor:"pointer", padding:"0 6px",
-          }}>Terms</button>
-        </div>
       </div>
 
       {/* ── CART DRAWER ── */}
@@ -1013,6 +1228,24 @@ export default function App() {
         </div>
       )}
 
+      {showMenu && (
+        <SidebarMenu
+          onClose={() => setShowMenu(false)}
+          onSelect={(key) => { setShowMenu(false); setLegalModal(key); }}
+        />
+      )}
+      {reportProduct && (
+        <ReportModal
+          product={reportProduct}
+          onClose={() => setReportProduct(null)}
+          onSubmit={(reason, text) => {
+            // No backend yet — just acknowledge. (Could email/log later.)
+            console.log("Report:", reportProduct.asin, reason, text);
+            setReportProduct(null);
+            flash("🚩 Report submitted — thank you");
+          }}
+        />
+      )}
       {legalModal && <LegalModal kind={legalModal} onClose={() => setLegalModal(null)} />}
       {showHowTo  && <HowToModal onClose={() => setShowHowTo(false)} />}
       {detailProduct && (
