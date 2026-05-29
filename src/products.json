@@ -2871,5 +2871,18 @@
     "badge": "Amazon's Choice",
     "cat": "RFID Supplies",
     "amazonUrl": "https://www.amazon.in/dp/B0CW2H8BMH/"
+  },
+  {
+    "id": 1780075507167,
+    "asin": "B0D53RXMB1",
+    "title": "UGREEN FineTrack Bluetooth Item Finder",
+    "price": 1697,
+    "rating": 4.3,
+    "reviews": 5312,
+    "summary": "The UGREEN FineTrack is a Bluetooth item finder designed for iOS devices. It helps you locate misplaced items globally through the Apple Find My network, emitting an 80dB sound to guide you. This device also provides timely reminders when you leave an item behind.",
+    "img": "/images/B0D53RXMB1.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Item Finders",
+    "amazonUrl": "https://www.amazon.in/dp/B0D53RXMB1/"
   }
 ]
