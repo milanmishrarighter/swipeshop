@@ -2819,5 +2819,18 @@
     "badge": "Amazon's Choice",
     "cat": "Armbands",
     "amazonUrl": "https://www.amazon.in/dp/B0C6TDGMZR/"
+  },
+  {
+    "id": 1780075121509,
+    "asin": "B09Y8QR2ZJ",
+    "title": "Spigen Running Belt for Phones",
+    "price": 1449,
+    "rating": 4.3,
+    "reviews": 390,
+    "summary": "This running belt securely holds your phone and essentials during activity. Its breathable, quick-drying fabric and reflective details enhance comfort and visibility for various workouts.",
+    "img": "/images/B09Y8QR2ZJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Waist Bags",
+    "amazonUrl": "https://www.amazon.in/dp/B09Y8QR2ZJ/"
   }
 ]
