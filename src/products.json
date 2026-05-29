@@ -2741,5 +2741,18 @@
     "badge": "Amazon's Choice",
     "cat": "Mobile Accessories",
     "amazonUrl": "https://www.amazon.in/dp/B0F92TFJH4/"
+  },
+  {
+    "id": 1780074744824,
+    "asin": "B07TP4WPGD",
+    "title": "15-in-1 Multi-Tool Pocket Knife",
+    "price": 719,
+    "rating": 4.3,
+    "reviews": 4835,
+    "summary": "This 15-in-1 multi-tool pocket knife offers a comprehensive set of implements for various tasks. Crafted from durable stainless steel, it provides reliable functionality for everything from cutting and opening to tightening, making it suitable for outdoor activities or household use.",
+    "img": "/images/B07TP4WPGD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Multitools",
+    "amazonUrl": "https://www.amazon.in/dp/B07TP4WPGD/"
   }
 ]
