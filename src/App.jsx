@@ -549,9 +549,11 @@ export default function App() {
     }
   }, [enterAnim]);
   const toastTimer   = useRef(null);
+  const exitTimer    = useRef(null);
   const cartRef      = useRef(cart);    cartRef.current = cart;
   const stackRef     = useRef(stack);   stackRef.current = stack;
   const offsetRef    = useRef(offset);  offsetRef.current = offset;
+  const undoStackRef = useRef(undoStack); undoStackRef.current = undoStack;
 
   const saveCart = (c) => { localStorage.setItem("ss4_cart", JSON.stringify(c)); setCart(c); };
 
@@ -585,7 +587,8 @@ export default function App() {
 
     setUndoStack(prev => [...prev, { product, dir }].slice(-15));   // keep last 15 only
 
-    setTimeout(() => {
+    clearTimeout(exitTimer.current);
+    exitTimer.current = setTimeout(() => {
       setStack(prev => prev.filter(p => p.id !== product.id));
       setOffset({ x:0, y:0 });
       setExitingId(null);
@@ -597,17 +600,18 @@ export default function App() {
   // Bring back the most-recently-swiped card, animating it IN from the direction it left.
   const doUndo = useCallback(() => {
     if (isExiting.current) return;
-    setUndoStack(prev => {
-      if (prev.length === 0) { flash("Nothing to bring back"); return prev; }
-      const { product, dir } = prev[prev.length - 1];
-      if (dir === "right") {
-        saveCart(cartRef.current.filter(p => p.id !== product.id));
-      }
-      setStack(s => [product, ...s.filter(p => p.id !== product.id)]);
-      setEnterAnim({ id: product.id, dir, phase: "start" });
-      flash("↩ Brought back");
-      return prev.slice(0, -1);
-    });
+    const stackNow = undoStackRef.current;
+    if (stackNow.length === 0) { flash("Nothing to bring back"); return; }
+    const { product, dir } = stackNow[stackNow.length - 1];
+
+    if (dir === "right") {
+      saveCart(cartRef.current.filter(p => p.id !== product.id));
+    }
+    // Add to front (filter guarantees it appears exactly once)
+    setStack(s => [product, ...s.filter(p => p.id !== product.id)]);
+    setUndoStack(prev => prev.slice(0, -1));
+    setEnterAnim({ id: product.id, dir, phase: "start" });
+    flash("↩ Brought back");
   }, []);
 
   const trySwipe = useCallback((dx, dy) => {
@@ -759,7 +763,8 @@ export default function App() {
     const peekUp = (vi + 1) * 18;
     return {
       transform:  `translateY(-${peekUp}px) scale(${scale})`,
-      transition: exitingId ? "transform 0.4s ease" : "none",
+      // Smoothly glide background cards into place during exit OR bring-back (no snapping)
+      transition: (exitingId || enterAnim) ? "transform 0.42s cubic-bezier(0.2, 0.8, 0.3, 1)" : "none",
       zIndex: 10 - index,
       pointerEvents: "none",
     };
@@ -896,25 +901,26 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* LEFT: OPEN ON AMAZON — tiny, grey, icon stacked above arrow */}
+          {/* LEFT: OPEN ON AMAZON — globe icon stacked above arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
             aria-label="Open on Amazon"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
               padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
-              gap:3, transition:"transform 0.15s", width:24,
+              justifyContent:"center", gap:3, transition:"transform 0.15s", width:26,
             }}
             onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#D8D8D8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <path d="M15 3h6v6"/>
-              <path d="M10 14L21 3"/>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
+              stroke="#D8D8D8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
-            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600 }}>←</span>
+            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600,
+              width:"100%", textAlign:"center", display:"block" }}>←</span>
           </button>
 
           <div style={{
@@ -1049,25 +1055,26 @@ export default function App() {
             })}
           </div>
 
-          {/* RIGHT: ADD-TO-CART — tiny, grey, icon stacked above arrow */}
+          {/* RIGHT: ADD-TO-CART — cart icon stacked above arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("right", stack[0]); }}
             aria-label="Add to cart"
             style={{
               flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
               padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
-              gap:3, transition:"transform 0.15s", width:24,
+              justifyContent:"center", gap:3, transition:"transform 0.15s", width:26,
             }}
             onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="#D8D8D8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
+              stroke="#D8D8D8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="9" cy="21" r="1"/>
               <circle cx="20" cy="21" r="1"/>
               <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
             </svg>
-            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600 }}>→</span>
+            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600,
+              width:"100%", textAlign:"center", display:"block" }}>→</span>
           </button>
           </>
         )}
@@ -1084,7 +1091,7 @@ export default function App() {
         )}
         {/* DOWN HINT — bring back last card */}
         {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, bottom:12,
+          <div style={{ position:"absolute", left:0, right:0, bottom:26,
             textAlign:"center", fontSize:7.5, color:"#D8D8D8",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
@@ -1095,7 +1102,7 @@ export default function App() {
       </div>
 
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
-      <div style={{ padding:"8px 16px 10px" }}>
+      <div style={{ padding:"6px 16px 24px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
