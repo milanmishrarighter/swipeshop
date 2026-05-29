@@ -2715,5 +2715,18 @@
     "badge": "Amazon's Choice",
     "cat": "Disinfectant Wipes",
     "amazonUrl": "https://www.amazon.in/dp/B08MLDGQMG/"
+  },
+  {
+    "id": 1780074539129,
+    "asin": "B0DJ9LYFZZ",
+    "title": "Vintage Vinyl Stickers for Everything",
+    "price": 149,
+    "rating": 4.2,
+    "reviews": 1022,
+    "summary": "These durable vinyl stickers offer a simple way to personalize your belongings. They adhere well to various surfaces like laptops or water bottles and can be repositioned without leaving residue. Enjoy adding a touch of vintage style to your everyday items.",
+    "img": "/images/B0DJ9LYFZZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Decals",
+    "amazonUrl": "https://www.amazon.in/dp/B0DJ9LYFZZ/"
   }
 ]
