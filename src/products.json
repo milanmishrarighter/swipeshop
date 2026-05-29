@@ -2858,5 +2858,18 @@
     "badge": "Amazon's Choice",
     "cat": "Grips",
     "amazonUrl": "https://www.amazon.in/dp/B081JQBDNF/"
+  },
+  {
+    "id": 1780075438175,
+    "asin": "B0CW2H8BMH",
+    "title": "NFC Tag Sticker for Phones",
+    "price": 160,
+    "rating": 4.2,
+    "reviews": 323,
+    "summary": "These NFC tag stickers provide a simple way to share information or trigger actions with a tap of your phone. Easily programmable and reusable, they offer a convenient, unobtrusive solution for tasks like sharing contact details or automating phone functions.",
+    "img": "/images/B0CW2H8BMH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "RFID Supplies",
+    "amazonUrl": "https://www.amazon.in/dp/B0CW2H8BMH/"
   }
 ]
