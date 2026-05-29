@@ -2832,5 +2832,18 @@
     "badge": "Amazon's Choice",
     "cat": "Waist Bags",
     "amazonUrl": "https://www.amazon.in/dp/B09Y8QR2ZJ/"
+  },
+  {
+    "id": 1780075247675,
+    "asin": "B0F2NZV9X5",
+    "title": "MagSafe Magnetic Ring",
+    "price": 179,
+    "rating": 4,
+    "reviews": 504,
+    "summary": "This magnetic phone grip attaches to your phone case, providing a secure hold and enhanced compatibility with MagSafe accessories. Its strong magnetic lock ensures stability, while also allowing for efficient wireless charging.",
+    "img": "/images/B0F2NZV9X5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Grips",
+    "amazonUrl": "https://www.amazon.in/dp/B0F2NZV9X5/"
   }
 ]
