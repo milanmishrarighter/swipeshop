@@ -2624,5 +2624,18 @@
     "badge": "Amazon's Choice",
     "cat": "Glasses Cases",
     "amazonUrl": "https://www.amazon.in/dp/B0DHGNL1NW/"
+  },
+  {
+    "id": 1780074242886,
+    "asin": "B0FTF89Q6S",
+    "title": "Magnetic Door Stop and Wall Protector",
+    "price": 229,
+    "rating": 4.3,
+    "reviews": 73,
+    "summary": "This magnetic door stop securely holds doors open, preventing them from slamming shut. It protects walls and furniture from damage while reducing noise. The discreet design offers a practical and stable solution for any doorway.",
+    "img": "/images/B0FTF89Q6S.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Stops",
+    "amazonUrl": "https://www.amazon.in/dp/B0FTF89Q6S/"
   }
 ]
