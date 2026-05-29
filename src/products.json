@@ -2520,5 +2520,18 @@
     "badge": "Amazon's Choice",
     "cat": "Idols & Figurines",
     "amazonUrl": "https://www.amazon.in/dp/B0C3XKPX8T/"
+  },
+  {
+    "id": 1780073810122,
+    "asin": "B0BYN9ZC7Y",
+    "title": "Mini USB Dragon Fan with LED Light",
+    "price": 145,
+    "rating": 3.8,
+    "reviews": 782,
+    "summary": "This mini USB fan provides a gentle, cooling breeze through its soft, rotating blades. Its lightweight and flexible design makes it easily portable for use with laptops, power banks, or other USB-enabled devices.",
+    "img": "/images/B0BYN9ZC7Y.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Fans",
+    "amazonUrl": "https://www.amazon.in/dp/B0BYN9ZC7Y/"
   }
 ]
