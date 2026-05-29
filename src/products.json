@@ -2884,5 +2884,18 @@
     "badge": "Amazon's Choice",
     "cat": "Item Finders",
     "amazonUrl": "https://www.amazon.in/dp/B0D53RXMB1/"
+  },
+  {
+    "id": 1780075587576,
+    "asin": "B0CRYK88VX",
+    "title": "Luxcell Wireless Mini Power Bank",
+    "price": 1479,
+    "rating": 4,
+    "reviews": 4327,
+    "summary": "The Luxcell Wireless Mini Power Bank is a compact, portable device designed to charge your electronic devices on the go. It offers 15W MagSafe wireless charging and 22.5W wired charging through dual ports, ensuring your devices stay powered throughout the day. Its small size allows for easy portability, fitting comfortably in a bag or pocket.",
+    "img": "/images/B0CRYK88VX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Power Banks",
+    "amazonUrl": "https://www.amazon.in/dp/B0CRYK88VX/"
   }
 ]
