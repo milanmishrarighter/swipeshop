@@ -2689,5 +2689,18 @@
     "badge": "Amazon's Choice",
     "cat": "Travel Accessories",
     "amazonUrl": "https://www.amazon.in/dp/B0DNYY5K9L/"
+  },
+  {
+    "id": 1780074440924,
+    "asin": "B08ZCS1SKB",
+    "title": "Pee Buddy: Disposable, Nature-Friendly Seat Covers",
+    "price": 200,
+    "rating": 4.2,
+    "reviews": 12793,
+    "summary": "Pee Buddy disposable toilet seat covers offer a hygienic barrier for public restrooms. These biodegradable paper covers prevent direct contact with the seat, reducing exposure to germs and supporting personal well-being. They are designed for convenience and fit standard toilet seats.",
+    "img": "/images/B08ZCS1SKB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Toilet Seat Covers",
+    "amazonUrl": "https://www.amazon.in/dp/B08ZCS1SKB/"
   }
 ]
