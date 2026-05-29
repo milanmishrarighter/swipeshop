@@ -2611,5 +2611,18 @@
     "badge": "Amazon's Choice",
     "cat": "Clotheslines",
     "amazonUrl": "https://www.amazon.in/dp/B0G57ZV6PV/"
+  },
+  {
+    "id": 1780074189793,
+    "asin": "B0DHGNL1NW",
+    "title": "Wall-Mounted Glasses Display Case",
+    "price": 299,
+    "rating": 4.2,
+    "reviews": 338,
+    "summary": "This wall-mounted display case offers a convenient way to store and organize your eyeglasses. It helps you keep your glasses easily accessible and prevents them from getting lost or misplaced. The durable design also saves space and protects your eyewear from damage.",
+    "img": "/images/B0DHGNL1NW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Glasses Cases",
+    "amazonUrl": "https://www.amazon.in/dp/B0DHGNL1NW/"
   }
 ]
