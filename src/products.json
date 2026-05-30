@@ -4123,5 +4123,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DZWT39C6/"
+  },
+  {
+    "id": 1780146661952,
+    "asin": "B0GH7KYVTG",
+    "title": "90s Kids Candy Combo Pack",
+    "price": 149,
+    "rating": 5,
+    "reviews": 5,
+    "summary": "This 90s Kids Candy Combo Pack offers a selection of nostalgic treats, including the intense sourness of Warheads and the unique texture of Nerds Rope. Enjoy wearable Ring Pops, bringing back the fun and flavor of childhood favorites. This collection provides a simple way to revisit classic candies.",
+    "img": "/images/B0GH7KYVTG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Candies & Mints",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GH7KYVTG/"
   }
 ]
