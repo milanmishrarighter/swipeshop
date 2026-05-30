@@ -3755,5 +3755,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09NK6X1SM/"
+  },
+  {
+    "id": 1780145607998,
+    "asin": "B09HKKHX4J",
+    "title": "Buldak Spicy Noodle Variety Pack",
+    "price": 388,
+    "rating": 4.2,
+    "reviews": 459,
+    "summary": "This variety pack offers several flavors of Buldak spicy Korean ramen. Each serving provides a quick, flavorful meal with a distinct heat, perfect for those who enjoy a fiery kick. The noodles are made with quality ingredients, ensuring a satisfying and authentic taste experience.",
+    "img": "/images/B09HKKHX4J.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ramen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09HKKHX4J/"
   }
 ]
