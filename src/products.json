@@ -3947,5 +3947,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FNDM9DTP/"
+  },
+  {
+    "id": 1780146175502,
+    "asin": "B07QR5PHZT",
+    "title": "Quinoa Chips: Jalapeno & Peri Peri",
+    "price": 487,
+    "rating": 4,
+    "reviews": 436,
+    "summary": "This combo offers two packs of gluten-free quinoa chips, flavored with peri peri and jalapeno. Made with quinoa flour, these chips provide a convenient and flavorful snack option. They are a good source of protein and fiber for a balanced choice.",
+    "img": "/images/B07QR5PHZT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Quinoa",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07QR5PHZT/"
   }
 ]
