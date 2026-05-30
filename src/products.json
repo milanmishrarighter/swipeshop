@@ -4155,5 +4155,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BH4XYBPT/"
+  },
+  {
+    "id": 1780149655206,
+    "asin": "B09FFW2RWM",
+    "title": "Sweet Mango Slice Mouth Freshener",
+    "price": 255,
+    "rating": 4.1,
+    "reviews": 450,
+    "summary": "Sweet Mango Slice is a traditional Indian mouth freshener, crafted from quality ingredients and select herbs. This after-meal snack offers a delicious way to refresh your palate and aid digestion. It provides an authentic, flavorful experience.",
+    "img": "/images/B09FFW2RWM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mukhwas (Mouth Fresheners)",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09FFW2RWM/"
   }
 ]
