@@ -4251,5 +4251,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09LVP9GNP/"
+  },
+  {
+    "id": 1780150615074,
+    "asin": "B0CXTGVRBX",
+    "title": "Kerala Tapioca Chips, No Palm Oil",
+    "price": 58,
+    "rating": 4,
+    "reviews": 391,
+    "summary": "These Kerala Tapioca Chips offer a wholesome snack, crafted from natural cassava root and fried in rice bran oil. They provide an authentic taste experience, free from palm oil, preservatives, and artificial additives. Enjoy a simply delicious and crispy treat.",
+    "img": "/images/B0CXTGVRBX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Tapioca",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CXTGVRBX/"
   }
 ]
