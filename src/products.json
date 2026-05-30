@@ -2359,7 +2359,9 @@
     "badge": "Amazon's Choice",
     "cat": "Table Lamps",
     "amazonUrl": "https://www.amazon.in/dp/B0D3WJ12F8/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779903083713,
