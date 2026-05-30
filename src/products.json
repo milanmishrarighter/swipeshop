@@ -433,7 +433,9 @@
     "badge": "Amazon's Choice",
     "cat": "Overhead Showers",
     "amazonUrl": "https://www.amazon.in/dp/B0B4SSD3K3/",
-    "categories": []
+    "categories": [
+      "Utility and House Repair"
+    ]
   },
   {
     "id": 1779557723024,
