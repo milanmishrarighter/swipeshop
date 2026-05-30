@@ -1361,7 +1361,9 @@
     "badge": "Amazon's Choice",
     "cat": "Marimbas",
     "amazonUrl": "https://www.amazon.in/dp/B08FBC787K/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815685071,
