@@ -4027,5 +4027,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09SB6PFMD/"
+  },
+  {
+    "id": 1780146383886,
+    "asin": "B09Q86HM5F",
+    "title": "BRB Popped Potato Chips Variety Pack",
+    "price": 475,
+    "rating": 4.1,
+    "reviews": 1742,
+    "summary": "BRB Popped Potato Chips are a variety pack of light, crunchy potato snacks made with an innovative popping technology. These chips offer 60% less fat than traditional fried options and are designed to be smartphone-friendly, ensuring a mess-free snacking experience. Each serving provides a flavorful, lower-calorie alternative to typical potato chips.",
+    "img": "/images/B09Q86HM5F.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09Q86HM5F/"
   }
 ]
