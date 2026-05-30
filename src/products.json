@@ -4267,5 +4267,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CXTGVRBX/"
+  },
+  {
+    "id": 1780150655773,
+    "asin": "B0D4LW6BCV",
+    "title": "Farmley Roasted Makhana Snacks, 4-Flavor Pack",
+    "price": 678,
+    "rating": 4.3,
+    "reviews": 9,
+    "summary": "Farmley Roasted Makhana Snacks offer a healthy, crunchy alternative to traditional snacks. These fox nuts, sourced directly from farms, provide a satisfying option for mid-meal hunger. Enjoy the unique taste and health benefits in a convenient four-flavor pack.",
+    "img": "/images/B0D4LW6BCV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Puffed Snacks",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D4LW6BCV/"
   }
 ]
