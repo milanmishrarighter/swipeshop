@@ -2659,7 +2659,9 @@
     "badge": "Amazon's Choice",
     "cat": "Hot & Cold Water Dispensers",
     "amazonUrl": "https://www.amazon.in/dp/B0DJ32SY3K/",
-    "categories": []
+    "categories": [
+      "Kitchen Items"
+    ]
   },
   {
     "id": 1779989506973,
