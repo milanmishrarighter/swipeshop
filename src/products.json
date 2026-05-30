@@ -2462,7 +2462,9 @@
     "badge": "Amazon's Choice",
     "cat": "Sunglasses",
     "amazonUrl": "https://www.amazon.in/dp/B01CZTXKQE/",
-    "categories": []
+    "categories": [
+      "Lifestyle"
+    ]
   },
   {
     "id": 1779903224843,
