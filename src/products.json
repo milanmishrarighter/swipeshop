@@ -4364,5 +4364,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FHBDN5SM/"
+  },
+  {
+    "id": 1780151043653,
+    "asin": "B07Y85D6MR",
+    "title": "BBQ Sunflower Seeds, High Fiber Snack",
+    "price": 336,
+    "rating": 4.6,
+    "reviews": 371,
+    "summary": "These BBQ Sunflower Seeds offer a flavorful and high-fiber snack option. They provide essential nutrients like Vitamin E, zinc, and selenium, which support immune health. Enjoy them on their own or as a crunchy addition to various meals.",
+    "img": "/images/B07Y85D6MR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sunflower Seeds",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07Y85D6MR/"
   }
 ]
