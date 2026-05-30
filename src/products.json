@@ -705,7 +705,9 @@
     "badge": "Amazon's Choice",
     "cat": "Chewing & Bubble Gum",
     "amazonUrl": "https://www.amazon.in/dp/B08KLG1KSY/",
-    "categories": []
+    "categories": [
+      "Food and Snacks"
+    ]
   },
   {
     "id": 1779558372046,
