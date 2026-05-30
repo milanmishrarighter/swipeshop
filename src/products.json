@@ -2959,7 +2959,9 @@
     "badge": "Amazon's Choice",
     "cat": "Gas Lighters",
     "amazonUrl": "https://www.amazon.in/dp/B0F4G3JQXZ/",
-    "categories": []
+    "categories": [
+      "Kitchen Items"
+    ]
   },
   {
     "id": 1779990222130,
