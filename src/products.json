@@ -3803,5 +3803,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B075VM9N96/"
+  },
+  {
+    "id": 1780145701671,
+    "asin": "B0BH8RV287",
+    "title": "Samyang Habanero Lime Chicken Ramen (5-Pack)",
+    "price": 549,
+    "rating": 4.3,
+    "reviews": 15237,
+    "summary": "Samyang Habanero Lime Chicken Ramen offers a convenient and flavorful meal option. These chewy, spaghetti-style noodles are accompanied by a sauce packet, delivering a distinct habanero lime and chicken taste. It's a certified halal product, providing an easy-to-prepare and enjoyable experience.",
+    "img": "/images/B0BH8RV287.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ramen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BH8RV287/"
   }
 ]
