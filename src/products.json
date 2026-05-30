@@ -3191,7 +3191,10 @@
     "badge": "Amazon's Choice",
     "cat": "Shower & Wall Mounts",
     "amazonUrl": "https://www.amazon.in/dp/B0CX5GY71W/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Life Hacks"
+    ]
   },
   {
     "id": 1780074056164,
