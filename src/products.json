@@ -2429,7 +2429,10 @@
     "badge": "Amazon's Choice",
     "cat": "Paper Weights",
     "amazonUrl": "https://www.amazon.in/dp/B0GP239KC9/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Stationary and Productivity"
+    ]
   },
   {
     "id": 1779903192779,
