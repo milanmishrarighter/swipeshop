@@ -4380,5 +4380,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07Y85D6MR/"
+  },
+  {
+    "id": 1780151078400,
+    "asin": "B08L3DM437",
+    "title": "Pran Potato Spicy Flavoured Biscuit, 100g",
+    "price": 137.8,
+    "rating": 4.5,
+    "reviews": 319,
+    "summary": "Pran Potato Spicy Flavoured Biscuits offer a convenient and savory snack option. These crispy biscuits provide a distinct spicy potato taste in every bite, perfect for satisfying a craving. Each 100g pack delivers a flavorful and easy-to-enjoy treat.",
+    "img": "/images/B08L3DM437.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08L3DM437/"
   }
 ]
