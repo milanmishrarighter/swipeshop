@@ -950,7 +950,9 @@
     "badge": "Amazon's Choice",
     "cat": "Air Fresheners",
     "amazonUrl": "https://www.amazon.in/dp/B00PPY1B18/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779692446080,
