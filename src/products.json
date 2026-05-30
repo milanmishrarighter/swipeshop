@@ -3707,5 +3707,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0989RWJCS/"
+  },
+  {
+    "id": 1780145471808,
+    "asin": "B092W2HD21",
+    "title": "Pani Puri Kit with 4 Chutneys",
+    "price": 149,
+    "rating": 3.7,
+    "reviews": 1111,
+    "summary": "This Pani Puri Kit provides everything needed to prepare the popular Indian street food at home. It includes ready-to-fry puris and a selection of chutneys, allowing you to easily create a flavorful and customizable snack. Enjoy the authentic taste and texture of fresh pani puri with minimal effort.",
+    "img": "/images/B092W2HD21.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Papad",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B092W2HD21/"
   }
 ]
