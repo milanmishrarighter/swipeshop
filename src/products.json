@@ -983,7 +983,10 @@
     "badge": "Amazon's Choice",
     "cat": "Garage Storage",
     "amazonUrl": "https://www.amazon.in/dp/B09LTYGZ8T/",
-    "categories": []
+    "categories": [
+      "OCD/Organizer/Storage Stuff",
+      "Utility and House Repair"
+    ]
   },
   {
     "id": 1779692543502,
