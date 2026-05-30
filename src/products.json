@@ -4107,5 +4107,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B085XG3TVY/"
+  },
+  {
+    "id": 1780146618098,
+    "asin": "B0DZWT39C6",
+    "title": "90s Kids Candy",
+    "price": 155,
+    "rating": 4.1,
+    "reviews": 12,
+    "summary": "This 90s Kids Candy combo offers a selection of hard candies, including sweet, tangy, and spicy flavors. These treats provide a nostalgic taste experience while also aiding digestion. Each piece delivers a burst of classic childhood flavors.",
+    "img": "/images/B0DZWT39C6.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Hard Candies",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DZWT39C6/"
   }
 ]
