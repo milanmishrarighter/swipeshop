@@ -934,7 +934,9 @@
     "badge": "Amazon's Choice",
     "cat": "Dashboard Figurines & Idols",
     "amazonUrl": "https://www.amazon.in/dp/B0DPDLN2BF/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779692325159,
