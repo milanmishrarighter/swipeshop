@@ -465,7 +465,10 @@
     "badge": "Amazon's Choice",
     "cat": "Perfume",
     "amazonUrl": "https://www.amazon.in/dp/B07FQS78ZQ/",
-    "categories": []
+    "categories": [
+      "Personal Care",
+      "Lifestyle"
+    ]
   },
   {
     "id": 1779557886216,
