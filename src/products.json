@@ -3040,7 +3040,9 @@
     "badge": "Amazon's Choice",
     "cat": "Cord Management",
     "amazonUrl": "https://www.amazon.in/dp/B0F6N5XTG3/",
-    "categories": []
+    "categories": [
+      "Tech Products"
+    ]
   },
   {
     "id": 1779990408274,
