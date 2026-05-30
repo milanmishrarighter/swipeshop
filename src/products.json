@@ -902,7 +902,9 @@
     "badge": "Amazon's Choice",
     "cat": "LED Strips",
     "amazonUrl": "https://www.amazon.in/dp/B0FTQ5Q7BZ/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779692236323,
