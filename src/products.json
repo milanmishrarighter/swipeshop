@@ -400,7 +400,10 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Handheld Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B0F13YTLQ4/",
-    "categories": []
+    "categories": [
+      "Personal Care",
+      "Tech Products"
+    ]
   },
   {
     "id": 1779557581125,
