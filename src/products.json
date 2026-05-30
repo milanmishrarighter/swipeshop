@@ -2992,7 +2992,9 @@
     "badge": "Amazon's Choice",
     "cat": "Stands",
     "amazonUrl": "https://www.amazon.in/dp/B09ZPL5VYM/",
-    "categories": []
+    "categories": [
+      "Tech Products"
+    ]
   },
   {
     "id": 1779990280219,
