@@ -2909,7 +2909,10 @@
     "badge": "Amazon's Choice",
     "cat": "Egg Boilers",
     "amazonUrl": "https://www.amazon.in/dp/B0791GQRPF/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Kitchen Items"
+    ]
   },
   {
     "id": 1779990098490,
