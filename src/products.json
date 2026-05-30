@@ -3851,5 +3851,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BZZ47RHL/"
+  },
+  {
+    "id": 1780145905053,
+    "asin": "B0DBZMTMTL",
+    "title": "Master Protein Chips: Ragi, Quinoa, Oats",
+    "price": 249,
+    "rating": 4.3,
+    "reviews": 565,
+    "summary": "Master Protein Chips offer a healthier snacking alternative, crafted from nutrient-rich ragi, quinoa, and oats. These chips provide a good source of protein and fiber, supporting your body without artificial additives. Enjoy a satisfying crunch that fits various dietary needs and lifestyles.",
+    "img": "/images/B0DBZMTMTL.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chips",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DBZMTMTL/"
   }
 ]
