@@ -4043,5 +4043,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09Q86HM5F/"
+  },
+  {
+    "id": 1780146421264,
+    "asin": "B09JCKPQYX",
+    "title": "Natkhat Wheat Puffs",
+    "price": 19,
+    "rating": 4.4,
+    "reviews": 377,
+    "summary": "Natkhat Wheat Puffs are light, crispy snacks made from wholesome wheat. These flavorful puffs offer a satisfying crunch, making them a suitable option for everyday enjoyment or a quick snack during various activities.",
+    "img": "/images/B09JCKPQYX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Puffed Snacks",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09JCKPQYX/"
   }
 ]
