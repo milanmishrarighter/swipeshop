@@ -139,7 +139,9 @@
     "badge": "Amazon's Choice",
     "cat": "Notepads & Memo Books",
     "amazonUrl": "https://www.amazon.in/dp/B09JYMV72F/",
-    "categories": []
+    "categories": [
+      "Stationary and Productivity"
+    ]
   },
   {
     "id": 1779518244151,
