@@ -4299,5 +4299,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DYVKQYYQ/"
+  },
+  {
+    "id": 1780150796727,
+    "asin": "B0CV48BK3W",
+    "title": "Uncle Chipps Spicy Treat",
+    "price": 34,
+    "rating": 4.4,
+    "reviews": 2588,
+    "summary": "Uncle Chipps Spicy Treat offers a vegetarian potato snack with a distinct spicy flavor. These thinly sliced chips provide a satisfying crunch, ideal for a quick break or enjoying with your favorite programs. Each 80-gram bag delivers a convenient and flavorful experience.",
+    "img": "/images/B0CV48BK3W.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CV48BK3W/"
   }
 ]
