@@ -107,7 +107,9 @@
     "badge": "Amazon's Choice",
     "cat": "Desk Lights",
     "amazonUrl": "https://www.amazon.in/dp/B016VYAWA6/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779518016592,
