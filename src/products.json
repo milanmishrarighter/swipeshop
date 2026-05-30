@@ -1247,7 +1247,9 @@
     "badge": "Amazon's Choice",
     "cat": "Djembes",
     "amazonUrl": "https://www.amazon.in/dp/B084RDB8NB/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815433903,
