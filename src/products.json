@@ -1217,7 +1217,9 @@
     "badge": "Amazon's Choice",
     "cat": "Cajons",
     "amazonUrl": "https://www.amazon.in/dp/B0DVT5XFN6/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815381934,
