@@ -2761,7 +2761,10 @@
     "badge": "Amazon's Choice",
     "cat": "Cleaning Gloves",
     "amazonUrl": "https://www.amazon.in/dp/B092J6Q41C/",
-    "categories": []
+    "categories": [
+      "Personal Care",
+      "Kitchen Items"
+    ]
   },
   {
     "id": 1779989706948,
