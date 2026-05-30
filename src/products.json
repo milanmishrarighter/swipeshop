@@ -3723,5 +3723,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B092W2HD21/"
+  },
+  {
+    "id": 1780145522219,
+    "asin": "B07T31M15L",
+    "title": "Minimal Ready-to-Fry Golgappa Papad",
+    "price": 300,
+    "rating": 4.3,
+    "reviews": 1501,
+    "summary": "These ready-to-fry golgappa papads allow you to easily create crispy shells for homemade pani puri. Simply fry or microwave the pellets to enjoy this popular Indian street food without the effort of preparing dough from scratch. This product offers a convenient way to enjoy fresh golgappa at home.",
+    "img": "/images/B07T31M15L.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Papad",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07T31M15L/"
   }
 ]
