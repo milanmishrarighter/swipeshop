@@ -3691,5 +3691,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DNNDQN7K/"
+  },
+  {
+    "id": 1780145419278,
+    "asin": "B0989RWJCS",
+    "title": "Pani Puri Kit with Chutneys",
+    "price": 349,
+    "rating": 3.2,
+    "reviews": 42,
+    "summary": "This Pani Puri Kit provides everything needed to prepare the popular Indian street food at home. It includes dry atta golgappas, pani puri masala, and both sweet and green chutneys. This convenient kit allows for a customizable, fresh snack experience.",
+    "img": "/images/B0989RWJCS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Papad",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0989RWJCS/"
   }
 ]
