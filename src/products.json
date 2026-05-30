@@ -562,7 +562,9 @@
     "badge": "Amazon's Choice",
     "cat": "Grooming Sets & Kits",
     "amazonUrl": "https://www.amazon.in/dp/B0G2S8C4VQ/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779558135563,
