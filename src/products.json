@@ -2975,7 +2975,10 @@
     "badge": "Amazon's Choice",
     "cat": "Rechargeable Batteries",
     "amazonUrl": "https://www.amazon.in/dp/B0G1YLGDN2/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Life Hacks"
+    ]
   },
   {
     "id": 1779990249147,
