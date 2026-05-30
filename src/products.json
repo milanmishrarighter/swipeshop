@@ -4315,5 +4315,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CV48BK3W/"
+  },
+  {
+    "id": 1780150884538,
+    "asin": "B09C5P4WNF",
+    "title": "Evolve Chips Combo!",
+    "price": 265,
+    "rating": 4,
+    "reviews": 146,
+    "summary": "These Baked Bhakarwadi and Quinoa Chips offer a crunchy, flavorful snack option. They are vacuum-fried to minimize oil while retaining taste and provide beneficial nutrients like fiber and protein. Enjoy a satisfying, guilt-free snack experience.",
+    "img": "/images/B09C5P4WNF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Namkeen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09C5P4WNF/"
   }
 ]
