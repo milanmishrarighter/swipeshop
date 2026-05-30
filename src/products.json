@@ -3963,5 +3963,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07QR5PHZT/"
+  },
+  {
+    "id": 1780146205482,
+    "asin": "B0CR6KKYB5",
+    "title": "Fabeato Crispy Vegetable Chips Variety Pack",
+    "price": 399,
+    "rating": 3.3,
+    "reviews": 78,
+    "summary": "This Fabeato variety pack offers crispy vegetable chips, including okra, jackfruit, and sweet potato options. These vacuum-fried snacks contain 50% less oil and are a good source of dietary fiber, providing a real vegetable snack without artificial additives.",
+    "img": "/images/B0CR6KKYB5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vegetable",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CR6KKYB5/"
   }
 ]
