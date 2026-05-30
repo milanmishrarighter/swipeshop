@@ -1341,7 +1341,9 @@
     "badge": "Amazon's Choice",
     "cat": "Drums & Percussion",
     "amazonUrl": "https://www.amazon.in/dp/B0DNFQZMSH/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815658803,
