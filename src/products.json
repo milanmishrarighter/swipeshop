@@ -1173,7 +1173,9 @@
     "badge": "Amazon's Choice",
     "cat": "Cinema & Broadcast",
     "amazonUrl": "https://www.amazon.in/dp/014303653X/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815150462,
