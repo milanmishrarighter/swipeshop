@@ -1431,7 +1431,9 @@
     "badge": "Amazon's Choice",
     "cat": "Finger Puppets",
     "amazonUrl": "https://www.amazon.in/dp/B0D5HGXXPT/",
-    "categories": []
+    "categories": [
+      "Kids"
+    ]
   },
   {
     "id": 1779815813578,
