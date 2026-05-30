@@ -4059,5 +4059,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09JCKPQYX/"
+  },
+  {
+    "id": 1780146475887,
+    "asin": "B08QRN7GDT",
+    "title": "Lay's Magic Masala Potato Chips Party Pack",
+    "price": 80,
+    "rating": 4.4,
+    "reviews": 5453,
+    "summary": "Lay's Magic Masala Potato Chips offer a party-sized bag of potato chips seasoned with a delectable blend of Indian spices. These chips provide a flavorful, vegetarian snack option suitable for various occasions, from daily enjoyment to social gatherings.",
+    "img": "/images/B08QRN7GDT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08QRN7GDT/"
   }
 ]
