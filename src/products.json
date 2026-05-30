@@ -59,7 +59,9 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Foot Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B0DRCWBXPQ/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779517102630,
