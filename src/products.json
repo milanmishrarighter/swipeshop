@@ -4331,5 +4331,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09C5P4WNF/"
+  },
+  {
+    "id": 1780150925657,
+    "asin": "B0FBMCLWMM",
+    "title": "Atom Eats Assorted Pretzel Snack Pack",
+    "price": 926,
+    "rating": 3.8,
+    "reviews": 6,
+    "summary": "This Atom Eats Power Pack offers nine individual servings of assorted pretzels, providing a convenient variety of sweet, savory, and spicy flavors. It delivers a premium snacking experience with options like chocolate-coated, Peri Peri, and Korean BBQ salted pretzels, suitable for diverse preferences.",
+    "img": "/images/B0FBMCLWMM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Pretzels & Pretzel Sticks",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FBMCLWMM/"
   }
 ]
