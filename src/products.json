@@ -3585,7 +3585,10 @@
     "badge": "Amazon's Choice",
     "cat": "Item Finders",
     "amazonUrl": "https://www.amazon.in/dp/B0D53RXMB1/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Life Hacks"
+    ]
   },
   {
     "id": 1780075587576,
