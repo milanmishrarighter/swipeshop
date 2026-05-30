@@ -1076,7 +1076,9 @@
     "badge": "Amazon's Choice",
     "cat": "Personal Transformation",
     "amazonUrl": "https://www.amazon.in/dp/9395741538/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815017938,
