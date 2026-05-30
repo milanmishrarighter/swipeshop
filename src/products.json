@@ -3441,7 +3441,10 @@
     "badge": "Amazon's Choice",
     "cat": "Personal Defense Equipment",
     "amazonUrl": "https://www.amazon.in/dp/B075KC6SLD/",
-    "categories": []
+    "categories": [
+      "Personal Care",
+      "Life Hacks"
+    ]
   },
   {
     "id": 1780074812965,
