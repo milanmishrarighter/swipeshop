@@ -1373,7 +1373,9 @@
     "badge": "Amazon's Choice",
     "cat": "Kazoos",
     "amazonUrl": "https://www.amazon.in/dp/B0C2PB4R47/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815726745,
