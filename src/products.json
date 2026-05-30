@@ -885,7 +885,10 @@
     "badge": "Amazon's Choice",
     "cat": "Posters",
     "amazonUrl": "https://www.amazon.in/dp/B0C3MD6F7N/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Lifestyle"
+    ]
   },
   {
     "id": 1779692137971,
