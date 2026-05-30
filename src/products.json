@@ -4187,5 +4187,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CXNDKGFM/"
+  },
+  {
+    "id": 1780149724867,
+    "asin": "B0CGF7ZRTV",
+    "title": "Wholy Belgian Chocolate Fudge Cakes",
+    "price": 360,
+    "rating": 4.3,
+    "reviews": 116,
+    "summary": "Wholy Belgian Chocolate Fudge Cakes are individual snack cakes made with rich Belgian cocoa and sweetened with jaggery. These eggless cakes offer a delicious, high-fiber treat that supports digestion without refined sugar or artificial ingredients.",
+    "img": "/images/B0CGF7ZRTV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Snack Cakes",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CGF7ZRTV/"
   }
 ]
