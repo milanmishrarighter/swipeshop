@@ -3024,7 +3024,9 @@
     "badge": "Amazon's Choice",
     "cat": "Power Strips",
     "amazonUrl": "https://www.amazon.in/dp/B0CKQVZHVC/",
-    "categories": []
+    "categories": [
+      "Tech Products"
+    ]
   },
   {
     "id": 1779990356833,
