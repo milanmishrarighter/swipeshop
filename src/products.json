@@ -4203,5 +4203,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CGF7ZRTV/"
+  },
+  {
+    "id": 1780149766362,
+    "asin": "B0B74QDPRJ",
+    "title": "Belgian Chocolate Wafer Cubes",
+    "price": 68,
+    "rating": 4.1,
+    "reviews": 1025,
+    "summary": "These Belgian Chocolate Wafer Cubes offer a delightful snack, featuring crispy wafers with a rich chocolate cream filling. They provide a satisfying indulgence, perfect for enjoying with a hot beverage or as a simple dessert.",
+    "img": "/images/B0B74QDPRJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wafers",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B74QDPRJ/"
   }
 ]
