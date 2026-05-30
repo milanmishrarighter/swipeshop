@@ -3675,5 +3675,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D91ZCJYZ/"
+  },
+  {
+    "id": 1780145379839,
+    "asin": "B0DNNDQN7K",
+    "title": "Indian Spice Popped Chips",
+    "price": 17,
+    "rating": 4.1,
+    "reviews": 299,
+    "summary": "These Indian Spice Popped Chips offer a lighter snack option, crafted from potatoes and peas using a popping process rather than frying. This method results in an airy, crunchy texture with 30% less fat, providing a flavorful experience with authentic Indian spices.",
+    "img": "/images/B0DNNDQN7K.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Puffed Snacks",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DNNDQN7K/"
   }
 ]
