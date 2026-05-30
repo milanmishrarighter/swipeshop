@@ -2745,7 +2745,9 @@
     "badge": "Amazon's Choice",
     "cat": "Hair Drying Towels",
     "amazonUrl": "https://www.amazon.in/dp/B0CQTKPVZ2/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779989678749,
