@@ -4139,5 +4139,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GH7KYVTG/"
+  },
+  {
+    "id": 1780146727659,
+    "asin": "B0BH4XYBPT",
+    "title": "Amritsari Masala Mango Slices",
+    "price": 227,
+    "rating": 2.8,
+    "reviews": 202,
+    "summary": "Amritsari Masala Mango Slices are a traditional fruit leather, crafted from real raw Alphonso mango pulp and sun-dried. These sweet and sour slices offer a natural, chemical-free snack that evokes a sense of nostalgia. They provide a wholesome treat for all ages, made simply with earthy ingredients.",
+    "img": "/images/B0BH4XYBPT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Papad",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BH4XYBPT/"
   }
 ]
