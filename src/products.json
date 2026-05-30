@@ -836,7 +836,10 @@
     "badge": "Amazon's Choice",
     "cat": "Book Lights",
     "amazonUrl": "https://www.amazon.in/dp/B0F63GHR4T/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Books"
+    ]
   },
   {
     "id": 1779692034250,
