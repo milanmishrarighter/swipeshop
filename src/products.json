@@ -626,7 +626,9 @@
     "badge": "Amazon's Choice",
     "cat": "Mechanical Pencils",
     "amazonUrl": "https://www.amazon.in/dp/B0CFDTW992/",
-    "categories": []
+    "categories": [
+      "Stationary and Productivity"
+    ]
   },
   {
     "id": 1779558252715,
