@@ -2379,7 +2379,9 @@
     "badge": "Amazon's Choice",
     "cat": "Science",
     "amazonUrl": "https://www.amazon.in/dp/B076BJRS92/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779903111591,
