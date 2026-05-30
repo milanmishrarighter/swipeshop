@@ -2942,7 +2942,10 @@
     "badge": "Amazon's Choice",
     "cat": "Kitchen Tools",
     "amazonUrl": "https://www.amazon.in/dp/B08PC18V5B/",
-    "categories": []
+    "categories": [
+      "OCD/Organizer/Storage Stuff",
+      "Kitchen Items"
+    ]
   },
   {
     "id": 1779990193717,
