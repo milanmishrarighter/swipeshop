@@ -1657,7 +1657,9 @@
     "badge": "Amazon's Choice",
     "cat": "Eau de Parfum",
     "amazonUrl": "https://www.amazon.in/dp/B08L6LNCY9/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779816204531,
