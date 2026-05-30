@@ -3627,5 +3627,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BSXC1Z63/"
+  },
+  {
+    "id": 1780145177988,
+    "asin": "B0FCYBVLLJ",
+    "title": "Filter Coffee Burfi",
+    "price": 183,
+    "rating": 3.9,
+    "reviews": 98,
+    "summary": "This Filter Coffee Burfi is an Indian sweet that combines the rich taste of South Indian filter coffee with traditional burfi. It offers a unique, aromatic flavor profile and is made without refined sugar for a naturally sweet indulgence.",
+    "img": "/images/B0FCYBVLLJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Indian Sweets",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FCYBVLLJ/"
   }
 ]
