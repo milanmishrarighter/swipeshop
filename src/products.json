@@ -514,7 +514,9 @@
     "badge": "Amazon's Choice",
     "cat": "Applicator Bottles",
     "amazonUrl": "https://www.amazon.in/dp/B0FF1RTPH8/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779558016091,
