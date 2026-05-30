@@ -3739,5 +3739,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07T31M15L/"
+  },
+  {
+    "id": 1780145563760,
+    "asin": "B09NK6X1SM",
+    "title": "Pocky: Six Sweet Flavors",
+    "price": 387,
+    "rating": 3.8,
+    "reviews": 300,
+    "summary": "This Pocky variety pack offers six distinct sweet flavors, including strawberry, matcha, and cookies & cream. Each box contains thin, biscuit-like sticks dipped in a creamy coating, providing a satisfying and portable snack. It's a vegetarian treat perfect for enjoying a range of popular tastes.",
+    "img": "/images/B09NK6X1SM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chocolate Chip",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09NK6X1SM/"
   }
 ]
