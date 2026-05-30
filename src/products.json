@@ -3787,5 +3787,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07T9FCZZH/"
+  },
+  {
+    "id": 1780145679985,
+    "asin": "B075VM9N96",
+    "title": "Samyang 2X Spicy Chicken Ramen",
+    "price": 539,
+    "rating": 4.3,
+    "reviews": 24424,
+    "summary": "Samyang 2X Spicy Chicken Ramen offers a Korean-style instant noodle experience with an intense heat level. Each convenient packet provides a flavorful and exceptionally spicy meal for those who enjoy bold flavors.",
+    "img": "/images/B075VM9N96.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ramen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B075VM9N96/"
   }
 ]
