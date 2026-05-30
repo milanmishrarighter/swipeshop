@@ -3555,7 +3555,9 @@
     "badge": "Amazon's Choice",
     "cat": "Grips",
     "amazonUrl": "https://www.amazon.in/dp/B081JQBDNF/",
-    "categories": []
+    "categories": [
+      "Tech Products"
+    ]
   },
   {
     "id": 1780075438175,
