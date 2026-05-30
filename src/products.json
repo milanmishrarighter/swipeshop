@@ -771,7 +771,10 @@
     "badge": "Amazon's Choice",
     "cat": "Portable Photo Printers",
     "amazonUrl": "https://www.amazon.in/dp/B0DB8SKHM2/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Lifestyle"
+    ]
   },
   {
     "id": 1779691876473,
