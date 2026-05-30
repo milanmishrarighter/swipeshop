@@ -2184,7 +2184,9 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B09R6FF1LY/",
-    "categories": []
+    "categories": [
+      "Party & Games"
+    ]
   },
   {
     "id": 1779902725181,
