@@ -4219,5 +4219,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B74QDPRJ/"
+  },
+  {
+    "id": 1780149796308,
+    "asin": "B0D83Z6DFQ",
+    "title": "Dark Fantasy Choco Rolls",
+    "price": 79,
+    "rating": 4.3,
+    "reviews": 556,
+    "summary": "Dark Fantasy Choco Rolls are crisp wafer sticks with a rich, molten chocolate filling. They offer a satisfying texture and a sweet chocolate flavor, making them a pleasant treat for any time of day. These rolls are suitable for a quick snack or as an accompaniment to desserts.",
+    "img": "/images/B0D83Z6DFQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Snacks & Sweets",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D83Z6DFQ/"
   }
 ]
