@@ -449,7 +449,9 @@
     "badge": "Amazon's Choice",
     "cat": "Resistance Bands",
     "amazonUrl": "https://www.amazon.in/dp/B099KQ5WLQ/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779557777584,
