@@ -27,7 +27,9 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Massage Cushions",
     "amazonUrl": "https://www.amazon.in/dp/B06XF471D3/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779516874213,
