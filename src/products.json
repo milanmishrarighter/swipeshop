@@ -315,7 +315,9 @@
     "badge": "Amazon's Choice",
     "cat": "Cleaning Cloths",
     "amazonUrl": "https://www.amazon.in/dp/B0FS215N87/",
-    "categories": []
+    "categories": [
+      "Cleaning & Hygiene Freak"
+    ]
   },
   {
     "id": 1779557206451,
