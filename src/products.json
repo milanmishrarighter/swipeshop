@@ -2778,7 +2778,9 @@
     "badge": "Amazon's Choice",
     "cat": "Manual Knife Sharpeners",
     "amazonUrl": "https://www.amazon.in/dp/B0GRD1WP4R/",
-    "categories": []
+    "categories": [
+      "Kitchen Items"
+    ]
   },
   {
     "id": 1779989777919,
