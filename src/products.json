@@ -1994,7 +1994,9 @@
     "badge": "Amazon's Choice",
     "cat": "Board Games",
     "amazonUrl": "https://www.amazon.in/dp/B08662XYXD/",
-    "categories": []
+    "categories": [
+      "Party & Games"
+    ]
   },
   {
     "id": 1779902374623,
