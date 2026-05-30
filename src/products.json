@@ -3819,5 +3819,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BH8RV287/"
+  },
+  {
+    "id": 1780145834783,
+    "asin": "B09BZ4N28M",
+    "title": "Konjac Shirataki Noodles",
+    "price": 170,
+    "rating": 3.8,
+    "reviews": 2116,
+    "summary": "Konjac Shirataki Noodles are a traditional Japanese noodle alternative made from the konjac root. These noodles are naturally very low in digestible carbohydrates and offer a unique, springy texture. They provide a convenient, low-carb option that can be ready in minutes for various meals.",
+    "img": "/images/B09BZ4N28M.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Shirataki",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09BZ4N28M/"
   }
 ]
