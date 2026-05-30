@@ -804,7 +804,9 @@
     "badge": "Amazon's Choice",
     "cat": "Night Lights",
     "amazonUrl": "https://www.amazon.in/dp/B0DN1R1XK3/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779691951432,
