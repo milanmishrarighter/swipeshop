@@ -3659,5 +3659,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0C55MZSWF/"
+  },
+  {
+    "id": 1780145340553,
+    "asin": "B0D91ZCJYZ",
+    "title": "Sweet Onion Kodubale Rings",
+    "price": 173,
+    "rating": 4.1,
+    "reviews": 430,
+    "summary": "These Sweet Onion Kodubale Rings are a gluten-free snack made with rice flour, semolina, and real onion. They offer a satisfying crunch and authentic South Indian flavor, perfect for enjoying with tea or as a side dish. This product contains no preservatives, artificial colors, or flavors.",
+    "img": "/images/B0D91ZCJYZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vegetable Snacks",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D91ZCJYZ/"
   }
 ]
