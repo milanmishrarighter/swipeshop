@@ -656,7 +656,9 @@
     "badge": "Amazon's Choice",
     "cat": "Appointment Books & Planners",
     "amazonUrl": "https://www.amazon.in/dp/B0DKP5964W/",
-    "categories": []
+    "categories": [
+      "Stationary and Productivity"
+    ]
   },
   {
     "id": 1779558299618,
