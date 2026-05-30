@@ -3995,5 +3995,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09L84X5HP/"
+  },
+  {
+    "id": 1780146263789,
+    "asin": "B0D6W99ZBD",
+    "title": "Assorted Dry Fruit Laddoo Box",
+    "price": 299,
+    "rating": 4.1,
+    "reviews": 511,
+    "summary": "This assortment of dry fruit laddoos offers a naturally sweet and healthy snack option. Crafted primarily from dates and nuts, these laddoos provide sustained energy and are free from added sugar. They are a convenient and nutritious alternative to traditional sweets or energy bars.",
+    "img": "/images/B0D6W99ZBD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Snack Foods",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D6W99ZBD/"
   }
 ]
