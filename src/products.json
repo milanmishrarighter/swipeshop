@@ -2827,7 +2827,9 @@
     "badge": "Amazon's Choice",
     "cat": "Black Head Remover",
     "amazonUrl": "https://www.amazon.in/dp/B0GSCGDFK3/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779989903222,
