@@ -4171,5 +4171,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09FFW2RWM/"
+  },
+  {
+    "id": 1780149688324,
+    "asin": "B0CXNDKGFM",
+    "title": "Chocolate Peanut Butter Protein Wafers",
+    "price": 69,
+    "rating": 4,
+    "reviews": 393,
+    "summary": "These protein wafers offer a satisfying blend of chocolate and peanut butter in a crunchy, creamy bite. They provide 16g of plant-based protein per 100g and contain no refined sugar, making them a convenient, energizing snack.",
+    "img": "/images/B0CXNDKGFM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wafers",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CXNDKGFM/"
   }
 ]
