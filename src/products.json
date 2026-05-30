@@ -546,7 +546,9 @@
     "badge": "Amazon's Choice",
     "cat": "Beard & Moustache Trimmers",
     "amazonUrl": "https://www.amazon.in/dp/B0G6DVB6DG/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779558069841,
