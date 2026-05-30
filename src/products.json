@@ -530,7 +530,9 @@
     "badge": "Amazon's Choice",
     "cat": "Vegetable Snacks",
     "amazonUrl": "https://www.amazon.in/dp/B0G59MC2XP/",
-    "categories": []
+    "categories": [
+      "Food and Snacks"
+    ]
   },
   {
     "id": 1779558055215,
