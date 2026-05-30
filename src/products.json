@@ -4011,5 +4011,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D6W99ZBD/"
+  },
+  {
+    "id": 1780146313355,
+    "asin": "B09SB6PFMD",
+    "title": "Beyond Snack Banana Chips Variety Pack",
+    "price": 317,
+    "rating": 4,
+    "reviews": 1062,
+    "summary": "Beyond Snack Banana Chips offer a crispy, flavorful alternative to traditional potato chips. Made from authentic Kerala bananas, these thin-sliced chips come in a variety pack with exciting flavors like peri peri and sour cream. They provide a satisfying crunch and are perfect for any snack break.",
+    "img": "/images/B09SB6PFMD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Banana",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09SB6PFMD/"
   }
 ]
