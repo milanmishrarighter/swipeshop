@@ -4235,5 +4235,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D83Z6DFQ/"
+  },
+  {
+    "id": 1780150588767,
+    "asin": "B09LVP9GNP",
+    "title": "Chocwich Home Delights Wafer Combo",
+    "price": 244,
+    "rating": 4.1,
+    "reviews": 428,
+    "summary": "The Chocwich Home Delights Wafer Combo offers a unique twist on classic crunchy wafers. This selection includes both white and milk chocolate-draped wafers, providing a satisfying blend of crisp texture and smooth chocolate. It is ideal for satisfying snacking or light dessert cravings.",
+    "img": "/images/B09LVP9GNP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wafers",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09LVP9GNP/"
   }
 ]
