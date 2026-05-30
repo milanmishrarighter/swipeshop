@@ -1155,7 +1155,9 @@
     "badge": "Amazon's Choice",
     "cat": "International Relations",
     "amazonUrl": "https://www.amazon.in/dp/1732265143/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815126379,
