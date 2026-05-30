@@ -3915,5 +3915,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FSRNQBHD/"
+  },
+  {
+    "id": 1780146059080,
+    "asin": "B0CP466P7Q",
+    "title": "Open Secret Baked Bhujia Sev",
+    "price": 169,
+    "rating": 4.2,
+    "reviews": 390,
+    "summary": "Open Secret Baked Bhujia Sev offers a crunchy, flavorful snack made with natural ingredients. This healthy option contains zero trans fat and no cholesterol, allowing you to enjoy a guilt-free treat. It is an ideal accompaniment for your tea or coffee break.",
+    "img": "/images/B0CP466P7Q.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Namkeen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CP466P7Q/"
   }
 ]
