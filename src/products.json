@@ -1129,7 +1129,9 @@
     "badge": "Amazon's Choice",
     "cat": "Literature & Fiction",
     "amazonUrl": "https://www.amazon.in/dp/000728487X/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815090482,
