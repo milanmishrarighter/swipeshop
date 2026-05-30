@@ -1065,7 +1065,9 @@
     "badge": "Amazon's Choice",
     "cat": "Commerce",
     "amazonUrl": "https://www.amazon.in/dp/0553459414/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779814980944,
