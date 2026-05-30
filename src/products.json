@@ -1201,7 +1201,9 @@
     "badge": "Amazon's Choice",
     "cat": "Development & Growth",
     "amazonUrl": "https://www.amazon.in/dp/0358329612/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815349957,
