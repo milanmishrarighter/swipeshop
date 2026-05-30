@@ -1295,7 +1295,9 @@
     "badge": "Amazon's Choice",
     "cat": "Ukulele",
     "amazonUrl": "https://www.amazon.in/dp/B01ALJRCBE/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815520438,
