@@ -498,7 +498,9 @@
     "badge": "Amazon's Choice",
     "cat": "Scalp Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B0DTJ3RL5J/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779557966148,
