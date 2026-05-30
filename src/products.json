@@ -4091,5 +4091,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BDMZYBP2/"
+  },
+  {
+    "id": 1780146545468,
+    "asin": "B085XG3TVY",
+    "title": "Makino Roasted Corn Nacho Chips Assorted Flavors",
+    "price": 210,
+    "rating": 4.2,
+    "reviews": 1088,
+    "summary": "Makino Roasted Corn Nacho Chips offer a satisfying crunch made from non-GMO corn. These chips contain 40% less fat than potato chips and are free from trans-fat and MSG, providing a lighter snacking option. They are a versatile choice for various occasions, delivering flavor without unnecessary additives.",
+    "img": "/images/B085XG3TVY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Nachos & Tortillas",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B085XG3TVY/"
   }
 ]
