@@ -3291,7 +3291,9 @@
     "badge": "Amazon's Choice",
     "cat": "Remote Controls",
     "amazonUrl": "https://www.amazon.in/dp/B0922XL7SH/",
-    "categories": []
+    "categories": [
+      "Tech Products"
+    ]
   },
   {
     "id": 1780074310797,
