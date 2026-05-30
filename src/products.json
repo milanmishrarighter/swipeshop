@@ -610,7 +610,9 @@
     "badge": "Amazon's Choice",
     "cat": "Calligraphy Pens",
     "amazonUrl": "https://www.amazon.in/dp/B0DGGSH492/",
-    "categories": []
+    "categories": [
+      "Stationary and Productivity"
+    ]
   },
   {
     "id": 1779558236666,
