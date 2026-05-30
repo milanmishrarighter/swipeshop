@@ -918,7 +918,9 @@
     "badge": "Amazon's Choice",
     "cat": "Idols & Figurines",
     "amazonUrl": "https://www.amazon.in/dp/B0G9M3K4WW/",
-    "categories": []
+    "categories": [
+      "Home Decor"
+    ]
   },
   {
     "id": 1779692275806,
