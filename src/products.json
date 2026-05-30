@@ -3979,5 +3979,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CR6KKYB5/"
+  },
+  {
+    "id": 1780146240120,
+    "asin": "B09L84X5HP",
+    "title": "Lay's Sizzlin' Hot Potato Chips",
+    "price": 17,
+    "rating": 4.2,
+    "reviews": 3143,
+    "summary": "Lay's Sizzlin' Hot Potato Chips offer a spicy snack experience, crafted from high-quality potatoes for a consistent crunch. These chips provide a fiery flavor that can be enjoyed individually or shared during social gatherings.",
+    "img": "/images/B09L84X5HP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09L84X5HP/"
   }
 ]
