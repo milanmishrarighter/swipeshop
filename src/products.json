@@ -1046,7 +1046,9 @@
     "badge": "Amazon's Choice",
     "cat": "Civilization & Culture",
     "amazonUrl": "https://www.amazon.in/dp/0385523912/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779814953353,
