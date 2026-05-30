@@ -3091,7 +3091,10 @@
     "badge": "Amazon's Choice",
     "cat": "Artificial Plants",
     "amazonUrl": "https://www.amazon.in/dp/B0BCKLM33P/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Plants"
+    ]
   },
   {
     "id": 1779990532832,
