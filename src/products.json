@@ -3931,5 +3931,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CP466P7Q/"
+  },
+  {
+    "id": 1780146112534,
+    "asin": "B0FNDM9DTP",
+    "title": "Green Gainz Roasted Edamame Snacks",
+    "price": 564,
+    "rating": 4.3,
+    "reviews": 68,
+    "summary": "Green Gainz Roasted Edamame Snacks are a vegetarian, protein-rich snack made from roasted edamame beans. They offer a convenient way to support muscle health, sustained energy, and satiety, fitting well into low-carb or keto dietary approaches.",
+    "img": "/images/B0FNDM9DTP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Namkeen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FNDM9DTP/"
   }
 ]
