@@ -2298,7 +2298,9 @@
     "badge": "Amazon's Choice",
     "cat": "Pencils",
     "amazonUrl": "https://www.amazon.in/dp/B0FL8348LX/",
-    "categories": []
+    "categories": [
+      "Plants"
+    ]
   },
   {
     "id": 1779902974414,
