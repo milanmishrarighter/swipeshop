@@ -1785,7 +1785,9 @@
     "badge": "Amazon's Choice",
     "cat": "Tabletop & Miniature Gaming",
     "amazonUrl": "https://www.amazon.in/dp/B06XZXBH9T/",
-    "categories": []
+    "categories": [
+      "Party & Games"
+    ]
   },
   {
     "id": 1779901840021,
