@@ -3835,5 +3835,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09BZ4N28M/"
+  },
+  {
+    "id": 1780145875864,
+    "asin": "B0BZZ47RHL",
+    "title": "Baked Millet Chips Snack Pack",
+    "price": 285,
+    "rating": 4.1,
+    "reviews": 612,
+    "summary": "These Baked Millet Chips are a namkeen snack made from wholesome grains like ragi and jowar. They offer a lighter, baked alternative to fried snacks, providing a flavorful and crunchy option for everyday enjoyment.",
+    "img": "/images/B0BZZ47RHL.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Namkeen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BZZ47RHL/"
   }
 ]
