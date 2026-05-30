@@ -3643,5 +3643,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FCYBVLLJ/"
+  },
+  {
+    "id": 1780145224009,
+    "asin": "B0C55MZSWF",
+    "title": "Peanut Jaggery Chikki Bites",
+    "price": 178,
+    "rating": 4.3,
+    "reviews": 770,
+    "summary": "These Peanut Jaggery Chikki Bites offer a wholesome snack, crafted from peanuts and jaggery for natural sweetness. They provide a satisfying source of protein and fiber, free from unhealthy additives like liquid glucose or trans fat. Enjoy these convenient bites as an energizing treat anytime.",
+    "img": "/images/B0C55MZSWF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chikki",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C55MZSWF/"
   }
 ]
