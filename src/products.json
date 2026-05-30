@@ -3771,5 +3771,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09HKKHX4J/"
+  },
+  {
+    "id": 1780145648514,
+    "asin": "B07T9FCZZH",
+    "title": "Buldak Cheese Hot Chicken Ramen",
+    "price": 285,
+    "rating": 4.1,
+    "reviews": 835,
+    "summary": "Buldak Cheese Hot Chicken Ramen offers a convenient and flavorful meal option. These Korean ramen noodles combine a spicy kick with a creamy cheese flavor, providing a satisfying taste experience. Enjoy a quick and delicious dish without any added preservatives.",
+    "img": "/images/B07T9FCZZH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ramen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07T9FCZZH/"
   }
 ]
