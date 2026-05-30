@@ -1141,7 +1141,9 @@
     "badge": "Amazon's Choice",
     "cat": "Psychopathology",
     "amazonUrl": "https://www.amazon.in/dp/0804795096/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815110859,
