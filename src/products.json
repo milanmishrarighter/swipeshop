@@ -43,7 +43,9 @@
     "badge": "Amazon's Choice",
     "cat": "Snap-On Neck Massagers",
     "amazonUrl": "https://www.amazon.in/dp/B077G1HNHV/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779516997379,
