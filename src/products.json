@@ -3571,7 +3571,10 @@
     "badge": "Amazon's Choice",
     "cat": "RFID Supplies",
     "amazonUrl": "https://www.amazon.in/dp/B0CW2H8BMH/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Life Hacks"
+    ]
   },
   {
     "id": 1780075507167,
