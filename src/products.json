@@ -1106,7 +1106,9 @@
     "badge": "Amazon's Choice",
     "cat": "Healthy Living & Wellness",
     "amazonUrl": "https://www.amazon.in/dp/0141983760/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815066014,
