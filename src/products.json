@@ -91,7 +91,9 @@
     "badge": "Amazon's Choice",
     "cat": "Specialty Medical Pillows",
     "amazonUrl": "https://www.amazon.in/dp/B0CHBFV2RG/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779517822405,
