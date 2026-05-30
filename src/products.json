@@ -3174,7 +3174,10 @@
     "badge": "Amazon's Choice",
     "cat": "Grips",
     "amazonUrl": "https://www.amazon.in/dp/B0F3VTDJRN/",
-    "categories": []
+    "categories": [
+      "Tech Products",
+      "Life Hacks"
+    ]
   },
   {
     "id": 1780073994789,
