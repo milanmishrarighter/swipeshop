@@ -3899,5 +3899,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CFTXS2X9/"
+  },
+  {
+    "id": 1780146010312,
+    "asin": "B0FSRNQBHD",
+    "title": "Slurrp Farm Multigrain Cookies Assorted",
+    "price": 176,
+    "rating": 4.2,
+    "reviews": 797,
+    "summary": "Slurrp Farm Multigrain Cookies are a wholesome snack for children, crafted with jowar, whole wheat, and oats. These cookies offer a nutritious option for school or travel, free from maida and trans fat. They provide a simple, healthy treat for young ones.",
+    "img": "/images/B0FSRNQBHD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biscuits & Cookies",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FSRNQBHD/"
   }
 ]
