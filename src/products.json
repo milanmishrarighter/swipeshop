@@ -235,7 +235,9 @@
     "badge": "Amazon's Choice",
     "cat": "Puncture Repair Kits",
     "amazonUrl": "https://www.amazon.in/dp/B0FS7N1DX1/",
-    "categories": []
+    "categories": [
+      "Utility and House Repair"
+    ]
   },
   {
     "id": 1779555819375,
