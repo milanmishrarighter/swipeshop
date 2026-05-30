@@ -4283,5 +4283,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D4LW6BCV/"
+  },
+  {
+    "id": 1780150755405,
+    "asin": "B0DYVKQYYQ",
+    "title": "Yogabar Protein Bars, Assorted Flavors",
+    "price": 649,
+    "rating": 4.2,
+    "reviews": 278,
+    "summary": "Yogabar Protein Bars offer a convenient way to boost your daily protein intake. Each bar provides 20 grams of protein and high dietary fiber, with no added sugar or trans fat. These bars are designed to provide quick energy and sustained nutrition for a healthy lifestyle.",
+    "img": "/images/B0DYVKQYYQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Protein Bars",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DYVKQYYQ/"
   }
 ]
