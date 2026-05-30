@@ -3867,5 +3867,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DBZMTMTL/"
+  },
+  {
+    "id": 1780145936509,
+    "asin": "B09NQ2T42G",
+    "title": "Popped Potato Chips, 5 Flavors",
+    "price": 190,
+    "rating": 4.1,
+    "reviews": 1742,
+    "summary": "These popped potato chips offer a light, airy crunch in five distinct flavors. Made with innovative popping technology, they contain 60% less oil than traditional fried chips. This provides a satisfying snack option with fewer calories per serving.",
+    "img": "/images/B09NQ2T42G.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09NQ2T42G/"
   }
 ]
