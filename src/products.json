@@ -1801,7 +1801,10 @@
     "badge": "Amazon's Choice",
     "cat": "Science",
     "amazonUrl": "https://www.amazon.in/dp/B0CWTXB71N/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Party & Games"
+    ]
   },
   {
     "id": 1779901883179,
