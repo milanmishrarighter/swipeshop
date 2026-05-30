@@ -417,7 +417,9 @@
     "badge": "Amazon's Choice",
     "cat": "Electric Heating Pads",
     "amazonUrl": "https://www.amazon.in/dp/B0GL7ZBRWG/",
-    "categories": []
+    "categories": [
+      "Personal Care"
+    ]
   },
   {
     "id": 1779557661953,
