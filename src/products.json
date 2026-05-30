@@ -1095,7 +1095,9 @@
     "badge": "Amazon's Choice",
     "cat": "Mathematics",
     "amazonUrl": "https://www.amazon.in/dp/0140278168/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815037229,
