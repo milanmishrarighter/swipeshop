@@ -2395,7 +2395,10 @@
     "badge": "Amazon's Choice",
     "cat": "Table Fans",
     "amazonUrl": "https://www.amazon.in/dp/B0C3XNCTDX/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Tech Products"
+    ]
   },
   {
     "id": 1779903141063,
