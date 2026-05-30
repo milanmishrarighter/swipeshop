@@ -2709,7 +2709,12 @@
     "badge": "Amazon's Choice",
     "cat": "Specialty Medical Pillows",
     "amazonUrl": "https://www.amazon.in/dp/B0FPXFTVXK/",
-    "categories": []
+    "categories": [
+      "Personal Care",
+      "OCD/Organizer/Storage Stuff",
+      "Stationary and Productivity",
+      "Tech Products"
+    ]
   },
   {
     "id": 1779989624917,
