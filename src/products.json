@@ -2412,7 +2412,10 @@
     "badge": "Amazon's Choice",
     "cat": "Clip Fans",
     "amazonUrl": "https://www.amazon.in/dp/B0CZ757FRS/",
-    "categories": []
+    "categories": [
+      "Home Decor",
+      "Tech Products"
+    ]
   },
   {
     "id": 1779903171683,
