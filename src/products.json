@@ -1327,7 +1327,9 @@
     "badge": "Amazon's Choice",
     "cat": "Cymbal Sets",
     "amazonUrl": "https://www.amazon.in/dp/B07J47HNSX/",
-    "categories": []
+    "categories": [
+      "Music"
+    ]
   },
   {
     "id": 1779815595996,
