@@ -4903,5 +4903,24 @@
       "Gift"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DFMJ3C3W/"
+  },
+  {
+    "id": 1780337282370,
+    "asin": "B0F6P1LZBR",
+    "title": "Funny Turtle Coaster for Drinks",
+    "price": 298,
+    "rating": 4.4,
+    "reviews": 152,
+    "summary": "This turtle-shaped coaster protects surfaces from heat and water, offering a playful touch to any table. Crafted from durable, easy-to-clean plastic, it features an interactive design where placing a cup makes its limbs appear to lift. It serves as a functional item and a delightful conversation starter.",
+    "img": "/images/B0F6P1LZBR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coasters",
+    "categories": [
+      "Home Decor",
+      "OCD/Organizer/Storage Stuff",
+      "Gift",
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F6P1LZBR/"
   }
 ]
