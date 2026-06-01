@@ -4598,5 +4598,22 @@
       "Gift"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08L6RY1RS/"
+  },
+  {
+    "id": 1780335621030,
+    "asin": "B0FD438ZSX",
+    "title": "Astronaut Galaxy Star Projector Night Light",
+    "price": 499,
+    "rating": 4.1,
+    "reviews": 7567,
+    "summary": "This astronaut-shaped projector casts a mesmerizing galaxy and star effect, transforming any room into a serene, cosmic environment. Its adjustable head allows for precise projection onto walls or ceilings, while the remote control offers convenient customization of colors and brightness. This unique night light creates a calming ambiance, ideal for relaxation or a child's bedtime.",
+    "img": "/images/B0FD438ZSX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Night Lights",
+    "categories": [
+      "Home Decor",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FD438ZSX/"
   }
 ]
