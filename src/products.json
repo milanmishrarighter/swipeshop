@@ -4544,5 +4544,23 @@
       "Gift"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BHH2H99F/"
+  },
+  {
+    "id": 1780335420290,
+    "asin": "B0BRVKRL7J",
+    "title": "Kitchen Gadget Set",
+    "price": 378,
+    "rating": 4.5,
+    "reviews": 377,
+    "summary": "This six-piece kitchen gadget set provides essential tools for everyday food preparation. It includes a peeler, grater, and pizza cutter, all designed for comfortable handling and efficient use. The stackable design allows for convenient storage, keeping your kitchen organized.",
+    "img": "/images/B0BRVKRL7J.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Peelers",
+    "categories": [
+      "Kitchen Items",
+      "Travel",
+      "Life Hacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BRVKRL7J/"
   }
 ]
