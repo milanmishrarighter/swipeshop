@@ -4580,5 +4580,23 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CHXZTBK9/"
+  },
+  {
+    "id": 1780335558900,
+    "asin": "B08L6RY1RS",
+    "title": "Metal Gun Lighter (Grey)",
+    "price": 1471,
+    "rating": 3.6,
+    "reviews": 298,
+    "summary": "This steel lighter, crafted with an antique revolver design, offers a distinctive way to ignite. Its durable construction ensures reliable, long-lasting use. The unique pistol design provides a conversation starter and a touch of vintage style.",
+    "img": "/images/B08L6RY1RS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Lighters & Matches",
+    "categories": [
+      "Personal Care",
+      "Kitchen Items",
+      "Gift"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08L6RY1RS/"
   }
 ]
