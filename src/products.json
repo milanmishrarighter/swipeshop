@@ -5005,5 +5005,22 @@
       "Utility and House Repair"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07PK41FL4/"
+  },
+  {
+    "id": 1780337676095,
+    "asin": "B082WYMTWF",
+    "title": "Worldwide Travel Power Adapter",
+    "price": 499,
+    "rating": 4.2,
+    "reviews": 16280,
+    "summary": "This worldwide travel power adapter offers a single solution for charging devices in over 150 countries. It features integrated US, EU, UK, and AU plugs, along with two USB ports, ensuring compatibility and convenience for your travels. The adapter provides essential safety protection while allowing you to power various electronics globally.",
+    "img": "/images/B082WYMTWF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "International Power Adapters",
+    "categories": [
+      "Tech Products",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B082WYMTWF/"
   }
 ]
