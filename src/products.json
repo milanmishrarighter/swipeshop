@@ -4834,5 +4834,23 @@
       "Gift"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D772K8X8/"
+  },
+  {
+    "id": 1780336944189,
+    "asin": "B09P53B3M5",
+    "title": "Portable Bluetooth Karaoke System",
+    "price": 1399,
+    "rating": 3.8,
+    "reviews": 15903,
+    "summary": "This portable Bluetooth speaker system offers a complete karaoke experience, featuring a wired microphone and dedicated input. It delivers clear audio with deep bass and provides up to five hours of playback on its rechargeable battery. Multiple connectivity options, including Bluetooth and USB, allow for versatile music playback.",
+    "img": "/images/B09P53B3M5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Bluetooth Speakers",
+    "categories": [
+      "Music",
+      "Gift",
+      "Party & Games"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09P53B3M5/"
   }
 ]
