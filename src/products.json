@@ -4922,5 +4922,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F6P1LZBR/"
+  },
+  {
+    "id": 1780337335469,
+    "asin": "B09NBRHBYX",
+    "title": "Walnut Wooden Dog Desk Lamp",
+    "price": 1599,
+    "rating": 4.2,
+    "reviews": 327,
+    "summary": "This desk lamp is crafted from high-quality walnut wood, featuring a unique dog design with adjustable joints. It provides a stable, warm white LED light that is gentle on the eyes and energy-efficient. The integrated rechargeable battery offers convenient, cordless illumination for any space.",
+    "img": "/images/B09NBRHBYX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Lights",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09NBRHBYX/"
   }
 ]
