@@ -4631,5 +4631,21 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F9P3DRFZ/"
+  },
+  {
+    "id": 1780335887542,
+    "asin": "B08KG3ZYNC",
+    "title": "Cooling Gel Eye Mask",
+    "price": 149,
+    "rating": 4,
+    "reviews": 12486,
+    "summary": "This cooling gel eye mask offers a simple way to soothe tired eyes. Chilled in advance, it provides gentle relief from daily strain caused by screens or reading. The mask helps alleviate dryness, redness, and puffiness, promoting a sense of calm relaxation.",
+    "img": "/images/B08KG3ZYNC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eye Masks",
+    "categories": [
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08KG3ZYNC/"
   }
 ]
