@@ -4954,5 +4954,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08Z332VVM/"
+  },
+  {
+    "id": 1780337535045,
+    "asin": "B079TQY1TH",
+    "title": "Nail Grooming Kit with Travel Case",
+    "price": 467,
+    "rating": 4.3,
+    "reviews": 10585,
+    "summary": "This comprehensive nail grooming kit provides twelve essential tools for complete manicure and pedicure care. Crafted from high-grade stainless steel, each tool ensures safe, precise trimming and lasting durability. Its compact travel case allows for convenient, organized grooming wherever you go.",
+    "img": "/images/B079TQY1TH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Clippers & Trimmers",
+    "categories": [
+      "Personal Care",
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B079TQY1TH/"
   }
 ]
