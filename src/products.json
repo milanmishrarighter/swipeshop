@@ -4763,5 +4763,23 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CLJK59NT/"
+  },
+  {
+    "id": 1780336699933,
+    "asin": "B0DVQ75LVP",
+    "title": "Pink Daisy Crochet Flower Bouquet",
+    "price": 239,
+    "rating": 4.3,
+    "reviews": 1600,
+    "summary": "This Pink Daisy Crochet Flower Bouquet offers a lasting decorative accent, crafted from soft, durable cotton thread. It provides an eternal floral display, ideal for those with allergies, bringing color and charm to any space.",
+    "img": "/images/B0DVQ75LVP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Artificial Flowers",
+    "categories": [
+      "Home Decor",
+      "Gift",
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DVQ75LVP/"
   }
 ]
