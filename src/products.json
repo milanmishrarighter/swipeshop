@@ -5123,5 +5123,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07BFQ7BSK/"
+  },
+  {
+    "id": 1780338199904,
+    "asin": "B0FFJDTV59",
+    "title": "Aqua Vital Hydrogen Water Bottle",
+    "price": 2799,
+    "rating": 3.9,
+    "reviews": 474,
+    "summary": "The Aqua Vital Hydrogen Water Bottle transforms plain water into hydrogen-rich refreshment in just three minutes. This 16 oz, USB-rechargeable bottle offers convenient hydration, fitting easily into bike cages and cup holders. Its durable borosilicate glass construction ensures a clean taste and easy maintenance.",
+    "img": "/images/B0FFJDTV59.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cycling",
+    "categories": [
+      "Personal Care",
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FFJDTV59/"
   }
 ]
