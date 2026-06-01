@@ -4445,5 +4445,22 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D3M1SS89/"
+  },
+  {
+    "id": 1780334562495,
+    "asin": "B0CTZWWQYV",
+    "title": "Eye Rover LED Backpack",
+    "price": 9909,
+    "rating": 4.3,
+    "reviews": 84,
+    "summary": "The Eye Rover LED Backpack is a versatile bag featuring a customizable LED screen. Easily controlled via a smartphone app, it allows you to display designs, messages, or animations. Its water-resistant material and durable shell protect your electronics and belongings for daily use.",
+    "img": "/images/B0CTZWWQYV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Laptop Backpacks",
+    "categories": [
+      "Lifestyle",
+      "OCD/Organizer/Storage Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CTZWWQYV/"
   }
 ]
