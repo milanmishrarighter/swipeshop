@@ -5091,5 +5091,21 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DWLB93BG/"
+  },
+  {
+    "id": 1780338059660,
+    "asin": "B07Q65F2FQ",
+    "title": "Portable Adjustable Foot Hammock",
+    "price": 299,
+    "rating": 3.9,
+    "reviews": 378,
+    "summary": "This portable foot hammock offers a comfortable way to elevate your feet and legs, reducing fatigue and improving circulation. It easily attaches to most desks, allowing you to adjust the length and width for personalized support. This product aims to alleviate discomfort during travel or long periods of sitting.",
+    "img": "/images/B07Q65F2FQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Footrests",
+    "categories": [
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07Q65F2FQ/"
   }
 ]
