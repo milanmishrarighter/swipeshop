@@ -66,5 +66,9 @@
   {
     "name": "Travel",
     "emoji": "✈️"
+  },
+  {
+    "name": "Gift",
+    "emoji": "🎁"
   }
 ]
