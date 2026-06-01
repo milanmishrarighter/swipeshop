@@ -4799,5 +4799,22 @@
       "Plants"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FCSMQTTF/"
+  },
+  {
+    "id": 1780336784375,
+    "asin": "B0F7X64BFS",
+    "title": "Happy Birthday Engraved Wooden Music Box",
+    "price": 345,
+    "rating": 4.3,
+    "reviews": 1597,
+    "summary": "This engraved wooden music box plays \"Happy Birthday\" with a simple hand crank. Its compact size and detailed craftsmanship make it a charming, lasting keepsake for any celebration.",
+    "img": "/images/B0F7X64BFS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sound Toys",
+    "categories": [
+      "Gift",
+      "Music"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F7X64BFS/"
   }
 ]
