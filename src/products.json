@@ -4647,5 +4647,21 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08KG3ZYNC/"
+  },
+  {
+    "id": 1780335932781,
+    "asin": "B0D1JZX233",
+    "title": "Cooling Gel Face and Eye Mask",
+    "price": 239,
+    "rating": 4.1,
+    "reviews": 1070,
+    "summary": "This cooling gel mask offers a simple way to soothe your face and eyes. It provides a relaxing, rejuvenating effect that can help reduce the appearance of wrinkles and dark circles with regular use. The mask can be chilled for cold therapy or warmed for a different kind of relief.",
+    "img": "/images/B0D1JZX233.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Face Masks",
+    "categories": [
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D1JZX233/"
   }
 ]
