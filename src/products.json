@@ -4816,5 +4816,23 @@
       "Music"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F7X64BFS/"
+  },
+  {
+    "id": 1780336885360,
+    "asin": "B0D772K8X8",
+    "title": "Portable Karaoke Speaker and Mic",
+    "price": 899,
+    "rating": 4.1,
+    "reviews": 5840,
+    "summary": "The Fusion Tunes Karaoke Speaker is a portable Bluetooth speaker designed for an immersive audio experience. It delivers clear sound with rich bass and includes a wireless microphone for karaoke, featuring voice-changing effects. Enjoy vibrant RGB lighting and up to eight hours of music playtime, with easy portability via its vegan leather strap.",
+    "img": "/images/B0D772K8X8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Bluetooth Speakers",
+    "categories": [
+      "Music",
+      "Party & Games",
+      "Gift"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D772K8X8/"
   }
 ]
