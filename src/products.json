@@ -5039,5 +5039,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F9PLBGMV/"
+  },
+  {
+    "id": 1780337795358,
+    "asin": "B0CVMSSSMM",
+    "title": "Memory Foam Sleep Mask",
+    "price": 346.75,
+    "rating": 4.4,
+    "reviews": 1742,
+    "summary": "This memory foam sleep mask features a 3D contoured design, providing complete darkness without pressure on your eyes. Its soft, lightweight construction ensures comfort in any sleeping position, promoting a natural and restful sleep experience.",
+    "img": "/images/B0CVMSSSMM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sleep & Snoring",
+    "categories": [
+      "Personal Care",
+      "Life Hacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CVMSSSMM/"
   }
 ]
