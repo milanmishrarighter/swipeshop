@@ -5355,5 +5355,21 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GJPN364D/"
+  },
+  {
+    "id": 1780421617620,
+    "asin": "B08J4NMBL2",
+    "title": "Braun Mini Facial Hair Remover",
+    "price": 1495,
+    "rating": 4.2,
+    "reviews": 36578,
+    "summary": "The Braun Mini Facial Hair Remover is a compact rotary shaver designed for gentle and precise hair removal on the face. It offers a smooth finish, ideal for makeup application, and features a smartlight to ensure even the finest hairs are removed without irritation. Its portable design allows for quick and discreet touch-ups anytime, anywhere.",
+    "img": "/images/B08J4NMBL2.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Rotary Shavers",
+    "categories": [
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08J4NMBL2/"
   }
 ]
