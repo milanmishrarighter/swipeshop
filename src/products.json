@@ -5712,5 +5712,22 @@
       "Utility and House Repair"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BRQCJ57Y/"
+  },
+  {
+    "id": 1780423167564,
+    "asin": "B0FDL1DHL4",
+    "title": "Smart Power Plug for Home",
+    "price": 689,
+    "rating": 4,
+    "reviews": 300,
+    "summary": "This smart power plug allows you to remotely control home appliances, including high-power devices, via app or voice commands. It offers convenient scheduling and safety timers to prevent overcharging and reduce energy waste. You can also share control and group multiple devices for streamlined home management.",
+    "img": "/images/B0FDL1DHL4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Smart & Remote Controlled Plugs",
+    "categories": [
+      "Tech Products",
+      "Utility and House Repair"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FDL1DHL4/"
   }
 ]
