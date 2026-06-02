@@ -5241,5 +5241,21 @@
       "Gift"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0G2K9LT67/"
+  },
+  {
+    "id": 1780421109859,
+    "asin": "B0GSR1CQWY",
+    "title": "Heavy Furniture Lifting and Moving Set",
+    "price": 599,
+    "rating": 4.4,
+    "reviews": 3098,
+    "summary": "This furniture lifting and moving set provides a simple way to reposition heavy items. It includes a lifter and four wheeled corner movers, allowing you to easily slide furniture across floors. The durable steel construction and rotatable pads ensure smooth, controlled movement without excessive strain.",
+    "img": "/images/B0GSR1CQWY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Pulling & Lifting",
+    "categories": [
+      "Utility and House Repair"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GSR1CQWY/"
   }
 ]
