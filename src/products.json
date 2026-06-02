@@ -5581,5 +5581,21 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09WVXMG96/"
+  },
+  {
+    "id": 1780422268735,
+    "asin": "B00INLF3A0",
+    "title": "SG Iball Red Hanging Ball",
+    "price": 309,
+    "rating": 4.3,
+    "reviews": 1915,
+    "summary": "This synthetic hanging ball, designed for cricket, helps players refine hand-eye coordination and concentration. Its durable PVC construction and attached cord make it an effective tool for batting practice, aiding in stroke development.",
+    "img": "/images/B00INLF3A0.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Synthetic",
+    "categories": [
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B00INLF3A0/"
   }
 ]
