@@ -5387,5 +5387,23 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DQLBFFV2/"
+  },
+  {
+    "id": 1780421758082,
+    "asin": "B0BXS74BNG",
+    "title": "ChillGo Wearable Neck Fan",
+    "price": 1997,
+    "rating": 3.8,
+    "reviews": 2943,
+    "summary": "The ChillGo Wearable Neck Fan offers hands-free personal cooling with its quiet, powerful airflow system. Its foldable design and long-lasting battery provide convenient, portable comfort for various activities.",
+    "img": "/images/B0BXS74BNG.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Personal Fans",
+    "categories": [
+      "Personal Care",
+      "Tech Products",
+      "Life Hacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BXS74BNG/"
   }
 ]
