@@ -5533,5 +5533,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07VZ6BDWF/"
+  },
+  {
+    "id": 1780422126510,
+    "asin": "B0B2T9CV6P",
+    "title": "White Sports Watch",
+    "price": 990,
+    "rating": 4,
+    "reviews": 436,
+    "summary": "This white digital sports watch offers precise timekeeping with a clear, easy-to-read display. Its durable, water-resistant design and comfortable strap make it ideal for active lifestyles, ensuring reliable performance during any activity.",
+    "img": "/images/B0B2T9CV6P.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wrist Watches",
+    "categories": [
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B2T9CV6P/"
   }
 ]
