@@ -5646,5 +5646,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CSFJRSQ2/"
+  },
+  {
+    "id": 1780422920477,
+    "asin": "B0G4DBRQ2F",
+    "title": "Seseno Electric Spin Scrubber Kit",
+    "price": 999,
+    "rating": 4.2,
+    "reviews": 11788,
+    "summary": "The Seseno Electric Spin Scrubber is a cordless cleaning tool designed to simplify household tasks. It features a two-speed motor and seven interchangeable brush heads, allowing for effective cleaning of various surfaces without manual scrubbing. Its adjustable handle and long battery life offer comfortable, extended use for a wide range of cleaning needs.",
+    "img": "/images/B0G4DBRQ2F.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Scrubbers",
+    "categories": [
+      "Cleaning & Hygiene Freak",
+      "Utility and House Repair"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0G4DBRQ2F/"
   }
 ]
