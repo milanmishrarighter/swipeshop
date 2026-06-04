@@ -5763,5 +5763,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BTPGJX8H/"
+  },
+  {
+    "id": 1780593924154,
+    "asin": "B0C6QRW4BH",
+    "title": "Mini Indoor Plant Collection",
+    "price": 999,
+    "rating": 3.9,
+    "reviews": 387,
+    "summary": "This collection offers four distinct, low-maintenance indoor plants, including Jade Mini, ideal for enhancing various living spaces. They arrive in pots, ready to bring natural greenery and a touch of calm to any room with minimal effort. These plants thrive in indirect sunlight, making them suitable for diverse home and office environments.",
+    "img": "/images/B0C6QRW4BH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cacti & Succulents",
+    "categories": [
+      "Home Decor",
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C6QRW4BH/"
   }
 ]
