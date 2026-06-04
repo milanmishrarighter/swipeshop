@@ -6063,5 +6063,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DS5FDDGL/"
+  },
+  {
+    "id": 1780594841188,
+    "asin": "B0B6SXGSD5",
+    "title": "Tripod Floor Lamp with Shelves",
+    "price": 1699,
+    "rating": 4.5,
+    "reviews": 7809,
+    "summary": "This tripod floor lamp offers both illumination and storage. Its sturdy metal frame supports three integrated shelves, providing space for decor or essentials. A soft fabric shade diffuses light gently, creating a warm and inviting atmosphere in any room.",
+    "img": "/images/B0B6SXGSD5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Floor Lamps",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B6SXGSD5/"
   }
 ]
