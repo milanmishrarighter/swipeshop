@@ -6111,5 +6111,25 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DJZC3FRC/"
+  },
+  {
+    "id": 1780594985653,
+    "asin": "B0GTM3952B",
+    "title": "Loud Digital Alarm Clock",
+    "price": 459,
+    "rating": 4.2,
+    "reviews": 763,
+    "summary": "This digital alarm clock features an ultra-large 4.5\" LCD display, showing time, temperature, and calendar clearly. It offers essential functions like snooze, a nightlight, and temperature monitoring. The clock is battery-powered for cordless convenience and made from durable ABS material.",
+    "img": "/images/B0GTM3952B.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Alarm Clocks",
+    "categories": [
+      "Home Decor",
+      "Personal Care",
+      "Life Hacks",
+      "Tech Products",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GTM3952B/"
   }
 ]
