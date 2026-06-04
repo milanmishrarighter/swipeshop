@@ -6916,5 +6916,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07Y36D8B9/"
+  },
+  {
+    "id": 1780596791663,
+    "asin": "B09MLPKZ1T",
+    "title": "Indian Vegetable Seeds for Home Gardens",
+    "price": 199,
+    "rating": 3.6,
+    "reviews": 2486,
+    "summary": "Cultivate a diverse home garden with this collection of Indian vegetable seeds. This organic assortment provides a wide variety of vegetables, allowing you to grow fresh, healthy produce directly from your garden. Enjoy the satisfaction of harvesting your own nutritious ingredients for meals.",
+    "img": "/images/B09MLPKZ1T.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vegetables",
+    "categories": [
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09MLPKZ1T/"
   }
 ]
