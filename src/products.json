@@ -6364,5 +6364,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08MD5J7Z5/"
+  },
+  {
+    "id": 1780595714764,
+    "asin": "B0FLQHHV48",
+    "title": "White Ceramic Abstract Vase Set",
+    "price": 599,
+    "rating": 4.2,
+    "reviews": 157,
+    "summary": "This set includes two white ceramic donut vases, featuring a modern, hollow-out design. They offer a subtle, sculptural accent for various spaces, suitable for displaying both fresh and dried flowers. Their durable ceramic construction ensures lasting use while adding an elegant touch to any decor.",
+    "img": "/images/B0FLQHHV48.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vases",
+    "categories": [
+      "Home Decor",
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FLQHHV48/"
   }
 ]
