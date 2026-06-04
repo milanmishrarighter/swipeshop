@@ -6095,5 +6095,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B089T7BFWH/"
+  },
+  {
+    "id": 1780594914145,
+    "asin": "B0DJZC3FRC",
+    "title": "White Wooden CoffeeTable",
+    "price": 549,
+    "rating": 4,
+    "reviews": 19222,
+    "summary": "This white wooden end table offers a clean, versatile surface for any room. Its compact, sturdy design provides a functional accent piece that brightens your space.",
+    "img": "/images/B0DJZC3FRC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "End Tables",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DJZC3FRC/"
   }
 ]
