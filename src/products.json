@@ -7064,5 +7064,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08T6H1CYH/"
+  },
+  {
+    "id": 1780597094891,
+    "asin": "B0DF4TB93J",
+    "title": "Digital Soil pH and Moisture Meter",
+    "price": 2373,
+    "rating": 4.2,
+    "reviews": 2795,
+    "summary": "This digital soil meter provides essential data for plant care. It accurately measures soil pH, moisture, and temperature, alongside ambient sunlight levels. This information helps you understand your soil conditions and make informed decisions about watering and plant placement.",
+    "img": "/images/B0DF4TB93J.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Soil Meters",
+    "categories": [
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DF4TB93J/"
   }
 ]
