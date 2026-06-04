@@ -6331,5 +6331,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F3DSL9DF/"
+  },
+  {
+    "id": 1780595643242,
+    "asin": "B0BWYLRGGZ",
+    "title": "Konso Ceramic Vases, Set of 3",
+    "price": 1310,
+    "rating": 4.1,
+    "reviews": 281,
+    "summary": "The Konso Ceramic Vases are a set of three distinct, matte white ceramic vases, each with unique shapes and rustic twine accents. These durable vases offer versatile decoration options, enhancing various home decor themes with their artistic charm and timeless design. They are ideal for displaying flowers or as standalone decorative pieces, adding a touch of warmth to any space.",
+    "img": "/images/B0BWYLRGGZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vases",
+    "categories": [
+      "Home Decor",
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BWYLRGGZ/"
   }
 ]
