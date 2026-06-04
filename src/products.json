@@ -5746,5 +5746,22 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0G64G64YL/"
+  },
+  {
+    "id": 1780593828612,
+    "asin": "B0BTPGJX8H",
+    "title": "Kyari Indoor Plant Set with Pots",
+    "price": 999,
+    "rating": 4,
+    "reviews": 895,
+    "summary": "The Kyari Indoor Plant Set offers a curated selection of live plants, each pre-potted for immediate display. These low-maintenance plants are chosen for their air-purifying qualities and ability to thrive in various indoor environments, providing natural greenery with minimal effort.",
+    "img": "/images/B0BTPGJX8H.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Indoor Plants",
+    "categories": [
+      "Plants",
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BTPGJX8H/"
   }
 ]
