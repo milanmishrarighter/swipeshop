@@ -6079,5 +6079,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B6SXGSD5/"
+  },
+  {
+    "id": 1780594877763,
+    "asin": "B089T7BFWH",
+    "title": "Crosscut Wooden Floor Lamp with Shelf",
+    "price": 2595,
+    "rating": 4.5,
+    "reviews": 6660,
+    "summary": "This wooden floor lamp features a sturdy design with integrated shelving. It provides soft illumination while offering convenient surfaces to display decor or store small items, enhancing both the light and organization of your space.",
+    "img": "/images/B089T7BFWH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Floor Lamps",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B089T7BFWH/"
   }
 ]
