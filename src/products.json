@@ -5780,5 +5780,22 @@
       "Plants"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0C6QRW4BH/"
+  },
+  {
+    "id": 1780593961470,
+    "asin": "B0F9FRQB6R",
+    "title": "Peace Lily in White Pot",
+    "price": 249,
+    "rating": 3.8,
+    "reviews": 1095,
+    "summary": "This Peace Lily, presented in a white pot, is an elegant indoor plant featuring glossy foliage and pure white blooms. It thrives in low light and naturally purifies the air, contributing to a healthier indoor environment. Its self-watering pot ensures simple, hassle-free care.",
+    "img": "/images/B0F9FRQB6R.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Indoor Plants",
+    "categories": [
+      "Home Decor",
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F9FRQB6R/"
   }
 ]
