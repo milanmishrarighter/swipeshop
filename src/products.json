@@ -7031,5 +7031,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0C7HFS963/"
+  },
+  {
+    "id": 1780597056173,
+    "asin": "B0FJRCMPH6",
+    "title": "Plant Food Sticks for Potted Plants",
+    "price": 199,
+    "rating": 3.8,
+    "reviews": 177,
+    "summary": "These plant food sticks provide a continuous supply of natural nutrients, ensuring your potted plants grow strong and healthy. They are designed for easy, mess-free application, promoting lush growth and vibrant blooms without the need for frequent reapplication.",
+    "img": "/images/B0FJRCMPH6.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Multi-Purpose Fertilizers",
+    "categories": [
+      "Plants"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FJRCMPH6/"
   }
 ]
