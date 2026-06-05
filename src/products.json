@@ -7345,5 +7345,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B94NPZYF/"
+  },
+  {
+    "id": 1780680527783,
+    "asin": "B07Y2RXYHB",
+    "title": "Malgudi Filter Coffee with Chicory",
+    "price": 397,
+    "rating": 4.1,
+    "reviews": 4959,
+    "summary": "Malgudi Filter Coffee is a traditional South Indian blend of 80% coffee and 20% chicory. This ground coffee offers a rich aroma and smooth flavor, ideal for daily enjoyment. It provides an authentic taste experience in every cup.",
+    "img": "/images/B07Y2RXYHB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ground Coffee",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07Y2RXYHB/"
   }
 ]
