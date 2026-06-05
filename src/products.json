@@ -8534,5 +8534,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F8NT1QHB/"
+  },
+  {
+    "id": 1780684112582,
+    "asin": "B07ZQGMXVC",
+    "title": "French Press Coffee & Tea Maker",
+    "price": 1499,
+    "rating": 4.4,
+    "reviews": 2381,
+    "summary": "This French Press Coffee & Tea Maker provides a pure brew by utilizing a four-level filtration system, effectively preventing grounds from entering your cup. Crafted from high-grade stainless steel and durable borosilicate glass, it ensures a resilient and safe brewing experience. This press is ideal for creating flavorful coffee, tea, or even frothing milk for lattes.",
+    "img": "/images/B07ZQGMXVC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Presses",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07ZQGMXVC/"
   }
 ]
