@@ -8242,5 +8242,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07Y28WTBQ/"
+  },
+  {
+    "id": 1780683251851,
+    "asin": "B0019M4H16",
+    "title": "Bialetti Moka Express Stovetop Espresso Maker",
+    "price": 3090,
+    "rating": 4.4,
+    "reviews": 101654,
+    "summary": "The Bialetti Moka Express is a classic Italian stovetop espresso maker, crafted from high-quality aluminum for durability. It consistently brews rich, aromatic coffee, allowing you to easily enjoy authentic Italian espresso at home. Its simple design ensures a satisfying coffee experience with minimal effort.",
+    "img": "/images/B0019M4H16.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Stovetop Espresso Pots",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0019M4H16/"
   }
 ]
