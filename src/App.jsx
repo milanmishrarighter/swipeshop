@@ -1014,8 +1014,7 @@ export default function App() {
                     <div style={{ flex:1, padding:"12px 16px 14px", overflow:"hidden" }}>
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:19,
                         color:"#111", lineHeight:1.15, marginBottom:6,
-                        display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
-                        overflow:"hidden",
+                        whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
                       <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:6 }}>
                         <Stars rating={p.rating}/>
@@ -1039,7 +1038,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Tiny find-similar icon — bottom-left, faded */}
+                  {/* Find-similar icon — bottom-left */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Find similar products"
@@ -1050,20 +1049,20 @@ export default function App() {
                       style={{
                         position:"absolute", bottom:8, left:8, background:"none",
                         border:"none", cursor:"pointer", padding:4, lineHeight:0,
-                        opacity:0.55, transition:"opacity 0.15s",
+                        opacity:0.65, transition:"opacity 0.15s", zIndex:5,
                       }}
                       onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
-                      onMouseLeave={e => { e.currentTarget.style.opacity=0.55; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity=0.65; }}
                     >
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-                        stroke="#CCC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="11" cy="11" r="7"/>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                       </svg>
                     </button>
                   )}
 
-                  {/* Tiny report icon — bottom-right, faded */}
+                  {/* Report icon — bottom-right */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Report product"
@@ -1073,13 +1072,13 @@ export default function App() {
                       style={{
                         position:"absolute", bottom:8, right:8, background:"none",
                         border:"none", cursor:"pointer", padding:4, lineHeight:0,
-                        opacity:0.55, transition:"opacity 0.15s",
+                        opacity:0.65, transition:"opacity 0.15s", zIndex:5,
                       }}
                       onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
-                      onMouseLeave={e => { e.currentTarget.style.opacity=0.55; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity=0.65; }}
                     >
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-                        stroke="#CCC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                         <line x1="12" y1="9" x2="12" y2="13"/>
                         <line x1="12" y1="17" x2="12.01" y2="17"/>
