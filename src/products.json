@@ -7922,5 +7922,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CZ3NVPX4/"
+  },
+  {
+    "id": 1780682092580,
+    "asin": "B06XTYYYJ8",
+    "title": "Heapwell Japanese Matcha Powder",
+    "price": 465,
+    "rating": 4.1,
+    "reviews": 7966,
+    "summary": "Heapwell Japanese Matcha Powder is a finely ground green tea from Shizuoka, Japan, offering a vibrant flavor and color. This premium grade matcha provides a smooth, sustained energy boost and is versatile for drinks, baking, and other culinary uses. Its rich umami notes are ideal for both newcomers and experienced matcha enthusiasts.",
+    "img": "/images/B06XTYYYJ8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Matcha",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B06XTYYYJ8/"
   }
 ]
