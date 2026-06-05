@@ -7538,5 +7538,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0C74KDPGV/"
+  },
+  {
+    "id": 1780681195816,
+    "asin": "B08G8KFKMJ",
+    "title": "Red Bud Floral Dinner Set",
+    "price": 2376,
+    "rating": 4.3,
+    "reviews": 2805,
+    "summary": "The Red Bud Floral Dinner Set is a bone-ash free, 100% vegetarian option for your table. Crafted from durable opalware glass, it is microwave-safe, chip-resistant, and designed for effortless cleaning. This lightweight, stackable set offers both practicality and a pristine dining experience.",
+    "img": "/images/B08G8KFKMJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Dinner Sets",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08G8KFKMJ/"
   }
 ]
