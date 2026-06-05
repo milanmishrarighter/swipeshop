@@ -7618,5 +7618,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BGDRTG4W/"
+  },
+  {
+    "id": 1780681394561,
+    "asin": "B0GH6PPCSN",
+    "title": "Shay A Ceramic Mug",
+    "price": 426.55,
+    "rating": 4.5,
+    "reviews": 47,
+    "summary": "The Shay A Ceramic Mug is a 300ml porcelain mug, featuring a colorful, glossy design on a white background. This durable mug is microwave and dishwasher safe, offering a comfortable and chip-resistant option for your daily hot beverages.",
+    "img": "/images/B0GH6PPCSN.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Cups & Mugs",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GH6PPCSN/"
   }
 ]
