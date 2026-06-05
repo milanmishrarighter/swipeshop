@@ -7394,5 +7394,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08KS2KQTK/"
+  },
+  {
+    "id": 1780680650793,
+    "asin": "B09GFJF6PZ",
+    "title": "Assorted Colombian Brew Instant Coffee Sachets",
+    "price": 697,
+    "rating": 4.2,
+    "reviews": 3025,
+    "summary": "This product offers a selection of instant coffee sachets, including popular flavors like Café Latte and Cappuccino. Each sachet provides a rich, creamy beverage that is easily prepared by simply adding hot water. Enjoy a convenient and flavorful coffee experience with real milk.",
+    "img": "/images/B09GFJF6PZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Coffee",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09GFJF6PZ/"
   }
 ]
