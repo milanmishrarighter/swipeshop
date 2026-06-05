@@ -8550,5 +8550,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07ZQGMXVC/"
+  },
+  {
+    "id": 1780684135231,
+    "asin": "B07YVL8SF3",
+    "title": "AeroPress Go Travel Coffee Maker",
+    "price": 4275,
+    "rating": 4.6,
+    "reviews": 12545,
+    "summary": "The AeroPress Go is a compact coffee press designed for travel, allowing you to brew smooth, delicious coffee without bitterness. It quickly prepares hot coffee or espresso in about a minute, or cold brew in two minutes. Its clever design integrates a mug and lid that double as a convenient carrying case.",
+    "img": "/images/B07YVL8SF3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Presses",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07YVL8SF3/"
   }
 ]
