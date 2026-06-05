@@ -8417,5 +8417,23 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B3G7ZTPW/"
+  },
+  {
+    "id": 1780683737915,
+    "asin": "B0CZR9CCRX",
+    "title": "Philips Garment Steamer 1020",
+    "price": 5780.45,
+    "rating": 4.1,
+    "reviews": 4084,
+    "summary": "The Philips Garment Steamer 1020 is a vertical steamer designed for effortless fabric care. It provides 50 minutes of continuous, powerful steam to quickly de-wrinkle clothes and effectively eliminates 99.9% of bacteria and dust mites. This steamer offers a gentle yet thorough way to refresh garments.",
+    "img": "/images/B0CZR9CCRX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vertical Steamers",
+    "categories": [
+      "OCD/Organizer/Storage Stuff",
+      "Cleaning & Hygiene Freak",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CZR9CCRX/"
   }
 ]
