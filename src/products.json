@@ -8258,5 +8258,22 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0019M4H16/"
+  },
+  {
+    "id": 1780683304950,
+    "asin": "B0098ZXQ7C",
+    "title": "Preethi Cafe Zest Drip Coffee Maker",
+    "price": 2398,
+    "rating": 4.2,
+    "reviews": 3319,
+    "summary": "The Preethi Cafe Zest is a drip coffee maker designed for ease of use. It features an anti-drip system and a water level indicator for convenient brewing. A heat-sensitive thermal fuse and power indicator switch ensure safe operation.",
+    "img": "/images/B0098ZXQ7C.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Drip Coffee Machines",
+    "categories": [
+      "Kitchen Items",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0098ZXQ7C/"
   }
 ]
