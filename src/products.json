@@ -8400,5 +8400,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F18VFW6T/"
+  },
+  {
+    "id": 1780683703924,
+    "asin": "B0B3G7ZTPW",
+    "title": "InstaCuppa Electric Food Chopper",
+    "price": 2496,
+    "rating": 4.2,
+    "reviews": 3071,
+    "summary": "The InstaCuppa Electric Food Chopper simplifies meal preparation by effortlessly chopping and dicing ingredients. Its one-touch operation and easy-to-clean, detachable components help save time in the kitchen. This convenient tool reduces the need for multiple utensils, making healthy meal prep less stressful.",
+    "img": "/images/B0B3G7ZTPW.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mini Food Processors & Choppers",
+    "categories": [
+      "Tech Products",
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B3G7ZTPW/"
   }
 ]
