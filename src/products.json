@@ -7410,5 +7410,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09GFJF6PZ/"
+  },
+  {
+    "id": 1780680695543,
+    "asin": "B08JSH7369",
+    "title": "Irish Hazelnut & Dark Chocolate Coffee",
+    "price": 499,
+    "rating": 4.3,
+    "reviews": 865,
+    "summary": "This instant coffee offers the rich, comforting flavors of Irish hazelnut and dark chocolate. It provides a convenient way to enjoy a delicious, aromatic coffee experience without the need for brewing.",
+    "img": "/images/B08JSH7369.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Coffee",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08JSH7369/"
   }
 ]
