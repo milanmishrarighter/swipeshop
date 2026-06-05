@@ -7554,5 +7554,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08G8KFKMJ/"
+  },
+  {
+    "id": 1780681229911,
+    "asin": "B08G8H1TT9",
+    "title": "Green Leaves Opalware Dinner Set",
+    "price": 1999,
+    "rating": 4.4,
+    "reviews": 8739,
+    "summary": "The Green Leaves Opalware Dinner Set offers a durable and practical dining solution. Crafted from toughened opalware glass, it is microwave-safe, chip-resistant, and completely free of animal-derived components. This set provides effortless cleaning and convenient storage, making it ideal for daily use.",
+    "img": "/images/B08G8H1TT9.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Dinner Sets",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08G8H1TT9/"
   }
 ]
