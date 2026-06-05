@@ -8226,5 +8226,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B01C75MJPO/"
+  },
+  {
+    "id": 1780683153579,
+    "asin": "B07Y28WTBQ",
+    "title": "Copper French Press Coffee Maker",
+    "price": 1599,
+    "rating": 4.4,
+    "reviews": 3481,
+    "summary": "This copper French press coffee maker offers a simple way to brew rich, full-bodied coffee. Its durable design and heat-resistant carafe ensure your coffee stays warm while providing a clear view of the brewing process. This press allows for consistent, flavorful coffee with minimal effort.",
+    "img": "/images/B07Y28WTBQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Presses",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07Y28WTBQ/"
   }
 ]
