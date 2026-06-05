@@ -1011,7 +1011,7 @@ export default function App() {
 
                   {/* Info section */}
                   {(isTop || isLeaving) ? (
-                    <div style={{ flex:1, padding:"12px 16px 14px", overflow:"hidden" }}>
+                    <div style={{ flex:1, padding:"12px 16px 40px", overflow:"hidden" }}>
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:19,
                         color:"#111", lineHeight:1.15, marginBottom:6,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
@@ -1023,7 +1023,7 @@ export default function App() {
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26,
                         color:B, marginBottom:6, letterSpacing:-0.5 }}>₹{p.price.toLocaleString('en-IN')}</div>
                       <p style={{ color:"#999", fontSize:12, lineHeight:1.5,
-                        display:"-webkit-box", WebkitLineClamp:3, WebkitBoxOrient:"vertical",
+                        display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden", marginBottom:2,
                       }}>{p.summary}</p>
                       <span style={{ color:"#888", fontSize:11, fontWeight:600,
