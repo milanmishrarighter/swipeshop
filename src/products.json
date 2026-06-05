@@ -8502,5 +8502,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09MS467SH/"
+  },
+  {
+    "id": 1780684051070,
+    "asin": "B0B1WR3HJH",
+    "title": "Elite Manual Coffee Grinder",
+    "price": 1199,
+    "rating": 4.2,
+    "reviews": 988,
+    "summary": "The Elite Manual Coffee Grinder features a stainless steel body, ceramic conical burr, and a 100-gram glass jar. It offers six adjustable settings, allowing you to achieve the ideal grind for various brewing methods, from French Press to Espresso, while preserving the coffee's original flavor. This portable grinder requires no electricity and is easy to clean.",
+    "img": "/images/B0B1WR3HJH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Manual Grinders",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B1WR3HJH/"
   }
 ]
