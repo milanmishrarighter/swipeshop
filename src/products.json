@@ -8614,5 +8614,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09MMH8F4C/"
+  },
+  {
+    "id": 1780684250396,
+    "asin": "B0C1K8HJCR",
+    "title": "Society Masala Instant Tea",
+    "price": 220,
+    "rating": 4.1,
+    "reviews": 2684,
+    "summary": "Society Masala Instant Tea offers a convenient way to enjoy a warm, spiced milk tea. This blend provides a flavorful experience with traditional spices, ready in moments. It's an ideal choice for a quick, comforting beverage at home or on the go.",
+    "img": "/images/B0C1K8HJCR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Milk Tea Mix",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C1K8HJCR/"
   }
 ]
