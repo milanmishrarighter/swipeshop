@@ -8210,5 +8210,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FND3Y4N4/"
+  },
+  {
+    "id": 1780683014609,
+    "asin": "B01C75MJPO",
+    "title": "Blue Tokai Dark Roast Ground Coffee",
+    "price": 592,
+    "rating": 4.4,
+    "reviews": 1898,
+    "summary": "Blue Tokai Dark Roast Ground Coffee offers a rich, bold flavor profile for your daily cup. This 100% Arabica coffee is freshly roasted and ground, providing a consistent and satisfying coffee experience. It is suitable for various brewing methods and pairs well with milk.",
+    "img": "/images/B01C75MJPO.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ground Coffee",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B01C75MJPO/"
   }
 ]
