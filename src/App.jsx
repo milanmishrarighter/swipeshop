@@ -1011,22 +1011,22 @@ export default function App() {
 
                   {/* Info section */}
                   {(isTop || isLeaving) ? (
-                    <div style={{ flex:1, padding:"12px 16px 40px", overflow:"hidden" }}>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:19,
-                        color:"#111", lineHeight:1.15, marginBottom:6,
+                    <div style={{ flex:1, padding:"10px 14px 36px", overflow:"hidden" }}>
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18,
+                        color:"#111", lineHeight:1.1, marginBottom:3,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
-                      <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:6 }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:3 }}>
                         <Stars rating={p.rating}/>
-                        <span style={{ color:"#C8C8C8", fontSize:12 }}>({p.reviews.toLocaleString()})</span>
+                        <span style={{ color:"#C8C8C8", fontSize:11 }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26,
-                        color:B, marginBottom:6, letterSpacing:-0.5 }}>₹{p.price.toLocaleString('en-IN')}</div>
-                      <p style={{ color:"#999", fontSize:12, lineHeight:1.5,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
+                        color:B, marginBottom:4, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
+                      <p style={{ color:"#999", fontSize:11.5, lineHeight:1.4,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
-                        overflow:"hidden", marginBottom:2,
+                        overflow:"hidden", marginBottom:1,
                       }}>{p.summary}</p>
-                      <span style={{ color:"#888", fontSize:11, fontWeight:600,
+                      <span style={{ color:"#999", fontSize:10.5, fontWeight:600,
                         textDecoration:"underline", textUnderlineOffset:2 }}>
                         Read more
                       </span>
@@ -1038,7 +1038,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Find-similar button — bottom-left, pill style */}
+                  {/* Find-similar button — bottom-left, tiny pill */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Find similar products"
@@ -1048,27 +1048,25 @@ export default function App() {
                       onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
                       style={{
                         position:"absolute", bottom:8, left:8,
-                        background:"#F5F5F5", border:"1px solid #E8E8E8",
-                        borderRadius:14, cursor:"pointer",
-                        padding:"4px 9px", display:"flex", alignItems:"center", gap:5,
-                        opacity:0.85, transition:"opacity 0.15s", zIndex:5,
+                        background:"none", border:"1px solid #EEE",
+                        borderRadius:10, cursor:"pointer",
+                        padding:"2px 7px", display:"flex", alignItems:"center", gap:4,
+                        transition:"opacity 0.15s", zIndex:5,
                         fontFamily:"'Barlow',sans-serif",
                       }}
-                      onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
-                      onMouseLeave={e => { e.currentTarget.style.opacity=0.85; }}
                     >
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="#777" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                        stroke="#D8D8D8" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="11" cy="11" r="7"/>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                       </svg>
-                      <span style={{ fontSize:10, color:"#777", fontWeight:700, letterSpacing:0.3 }}>
+                      <span style={{ fontSize:8.5, color:"#BBB", fontWeight:700, letterSpacing:0.3 }}>
                         FIND SIMILAR
                       </span>
                     </button>
                   )}
 
-                  {/* Report icon — bottom-right */}
+                  {/* Report icon — bottom-right, tiny faded */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Report product"
@@ -1077,14 +1075,12 @@ export default function App() {
                       onClick={(e) => { e.stopPropagation(); setReportProduct(p); }}
                       style={{
                         position:"absolute", bottom:8, right:8, background:"none",
-                        border:"none", cursor:"pointer", padding:4, lineHeight:0,
-                        opacity:0.65, transition:"opacity 0.15s", zIndex:5,
+                        border:"none", cursor:"pointer", padding:3, lineHeight:0,
+                        transition:"opacity 0.15s", zIndex:5,
                       }}
-                      onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
-                      onMouseLeave={e => { e.currentTarget.style.opacity=0.65; }}
                     >
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                        stroke="#D8D8D8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                         <line x1="12" y1="9" x2="12" y2="13"/>
                         <line x1="12" y1="17" x2="12.01" y2="17"/>
