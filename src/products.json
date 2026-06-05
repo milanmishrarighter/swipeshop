@@ -8454,5 +8454,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BBWD3DBJ/"
+  },
+  {
+    "id": 1780683805143,
+    "asin": "B0DP4TS4XS",
+    "title": "South Indian Filter Coffee Maker",
+    "price": 398,
+    "rating": 4.2,
+    "reviews": 5311,
+    "summary": "This South Indian Filter Coffee Maker is designed to produce a rich, robust coffee decoction. Its traditional method and durable stainless steel construction allow for easy preparation of authentic, flavorful coffee at home.",
+    "img": "/images/B0DP4TS4XS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Makers",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DP4TS4XS/"
   }
 ]
