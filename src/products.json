@@ -8381,5 +8381,24 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08TM71L54/"
+  },
+  {
+    "id": 1780683651118,
+    "asin": "B0F18VFW6T",
+    "title": "Hamilton Beach Professional Garment Steamer",
+    "price": 3489.99,
+    "rating": 4,
+    "reviews": 7681,
+    "summary": "The Hamilton Beach Professional Garment Steamer is a vertical steamer designed to smooth wrinkles from various fabrics. It features a ceramic-coated steam plate and a turbo mode, providing powerful steam that is safe for all fabric types without causing burns. Its large water tank and quick heat-up time allow for efficient and comfortable garment care.",
+    "img": "/images/B0F18VFW6T.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vertical Steamers",
+    "categories": [
+      "OCD/Organizer/Storage Stuff",
+      "Cleaning & Hygiene Freak",
+      "Tech Products",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F18VFW6T/"
   }
 ]
