@@ -8518,5 +8518,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B1WR3HJH/"
+  },
+  {
+    "id": 1780684088071,
+    "asin": "B0F8NT1QHB",
+    "title": "CÜRAA Electric Pepper Mill",
+    "price": 1099,
+    "rating": 4.5,
+    "reviews": 277,
+    "summary": "The CÜRAA Electric Pepper Mill offers effortless, one-touch grinding for your culinary needs. It features an external dial for six levels of adjustable coarseness, allowing precise seasoning from fine to coarse. This rechargeable mill provides convenient, consistent performance with a single charge lasting weeks.",
+    "img": "/images/B0F8NT1QHB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Pepper Mills",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F8NT1QHB/"
   }
 ]
