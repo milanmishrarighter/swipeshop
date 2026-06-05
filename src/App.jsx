@@ -1,6 +1,10 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import productsData from "./products.json";
 
+// Build version injected by vite.config.js (commit SHA + build time)
+// eslint-disable-next-line no-undef
+const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
+
 const Y = "#FFB300";
 const B = "#1668F5";
 const AFFILIATE_TAG = "swipeandsho03-21";
@@ -825,6 +829,9 @@ export default function App() {
             <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
             <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
             <span style={{ color:"#CCC", fontSize:11, marginLeft:8 }}>{stack.length} left</span>
+            <span style={{ color:"#D8D8D8", fontSize:8.5, marginLeft:6, fontFamily:"monospace" }} title="Build version">
+              v{APP_VERSION}
+            </span>
           </div>
         </div>
         <button onClick={() => setShowCart(true)}
