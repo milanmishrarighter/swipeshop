@@ -1038,7 +1038,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Find-similar icon — bottom-left */}
+                  {/* Find-similar button — bottom-left, pill style */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Find similar products"
@@ -1047,18 +1047,24 @@ export default function App() {
                       onTouchStart={e => e.stopPropagation()}
                       onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
                       style={{
-                        position:"absolute", bottom:8, left:8, background:"none",
-                        border:"none", cursor:"pointer", padding:4, lineHeight:0,
-                        opacity:0.65, transition:"opacity 0.15s", zIndex:5,
+                        position:"absolute", bottom:8, left:8,
+                        background:"#F5F5F5", border:"1px solid #E8E8E8",
+                        borderRadius:14, cursor:"pointer",
+                        padding:"4px 9px", display:"flex", alignItems:"center", gap:5,
+                        opacity:0.85, transition:"opacity 0.15s", zIndex:5,
+                        fontFamily:"'Barlow',sans-serif",
                       }}
                       onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
-                      onMouseLeave={e => { e.currentTarget.style.opacity=0.65; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity=0.85; }}
                     >
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                        stroke="#777" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="11" cy="11" r="7"/>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                       </svg>
+                      <span style={{ fontSize:10, color:"#777", fontWeight:700, letterSpacing:0.3 }}>
+                        FIND SIMILAR
+                      </span>
                     </button>
                   )}
 
