@@ -15,6 +15,18 @@ const shuffle = (arr) => {
   return a;
 };
 
+// Build an Amazon search URL with similar products, stripping brand + filler from title
+const similarUrl = (product) => {
+  const words = (product.title || "")
+    .split(/\s+/)
+    .slice(1)                                          // drop brand (usually first word)
+    .filter(w => w.length > 2 && !/^\d+$/.test(w))     // drop short/numeric junk
+    .slice(0, 5)
+    .join(' ');
+  const query = words.length >= 8 ? words : (product.cat || product.title || "");
+  return `https://www.amazon.in/s?k=${encodeURIComponent(query)}&tag=${AFFILIATE_TAG}`;
+};
+
 const withAffiliate = (url) => {
   if (!url) return `https://www.amazon.in/?tag=${AFFILIATE_TAG}`;
   if (url.includes('tag=')) return url.replace(/tag=[^&]*/, `tag=${AFFILIATE_TAG}`);
@@ -1025,6 +1037,30 @@ export default function App() {
                       <div style={{ height:13, background:"#EBEBEB", borderRadius:4, marginBottom:9, width:"68%" }}/>
                       <div style={{ height:10, background:"#F2F2F2", borderRadius:4, width:"40%" }}/>
                     </div>
+                  )}
+
+                  {/* Tiny find-similar icon — bottom-left, faded */}
+                  {(isTop && !isLeaving) && (
+                    <button
+                      aria-label="Find similar products"
+                      title="Find similar on Amazon"
+                      onMouseDown={e => e.stopPropagation()}
+                      onTouchStart={e => e.stopPropagation()}
+                      onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
+                      style={{
+                        position:"absolute", bottom:8, left:8, background:"none",
+                        border:"none", cursor:"pointer", padding:4, lineHeight:0,
+                        opacity:0.55, transition:"opacity 0.15s",
+                      }}
+                      onMouseEnter={e => { e.currentTarget.style.opacity=1; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity=0.55; }}
+                    >
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                        stroke="#CCC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="11" cy="11" r="7"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                      </svg>
+                    </button>
                   )}
 
                   {/* Tiny report icon — bottom-right, faded */}
