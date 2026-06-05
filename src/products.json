@@ -8598,5 +8598,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BYSXW6PQ/"
+  },
+  {
+    "id": 1780684218070,
+    "asin": "B09MMH8F4C",
+    "title": "Date Palm Jaggery Coffee Cubes",
+    "price": 994,
+    "rating": 3.9,
+    "reviews": 6401,
+    "summary": "Enjoy a naturally sweet coffee experience with our Date Palm Jaggery Coffee Cubes. Crafted from real date palm jaggery and premium coffee, these convenient cubes dissolve instantly to create a rich, flavorful beverage. They offer a wholesome alternative to traditional instant coffee, providing a unique, caramel-like sweetness without refined sugars.",
+    "img": "/images/B09MMH8F4C.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Coffee",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09MMH8F4C/"
   }
 ]
