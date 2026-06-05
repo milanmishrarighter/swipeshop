@@ -8630,5 +8630,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0C1K8HJCR/"
+  },
+  {
+    "id": 1780684267273,
+    "asin": "B0163KBUZE",
+    "title": "Wagh Bakri Ginger Chai Premix",
+    "price": 139,
+    "rating": 4.2,
+    "reviews": 4381,
+    "summary": "This Wagh Bakri Ginger Chai Premix offers a convenient way to enjoy a decaffeinated, ginger-flavored tea. Each sachet provides the comforting taste of homemade chai by simply adding hot water. It's a quick and easy option for a warm beverage anytime.",
+    "img": "/images/B0163KBUZE.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Chai",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0163KBUZE/"
   }
 ]
