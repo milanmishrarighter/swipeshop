@@ -8486,5 +8486,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0016H2PLS/"
+  },
+  {
+    "id": 1780684017119,
+    "asin": "B09MS467SH",
+    "title": "Coffee Press with Filters",
+    "price": 1499,
+    "rating": 4.4,
+    "reviews": 490,
+    "summary": "This coffee press gently brews your coffee, preserving its natural aroma and caffeine. It significantly reduces acidity and oils, resulting in a noticeably smoother, cleaner cup. The press includes 500 paper filters and a durable metal filter to get you started.",
+    "img": "/images/B09MS467SH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Presses",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09MS467SH/"
   }
 ]
