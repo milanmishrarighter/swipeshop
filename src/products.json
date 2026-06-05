@@ -8309,5 +8309,21 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DM87CKQF/"
+  },
+  {
+    "id": 1780683407758,
+    "asin": "B07H3LQP5K",
+    "title": "Nescafé E Frothy Coffee Maker",
+    "price": 5199,
+    "rating": 3.9,
+    "reviews": 2390,
+    "summary": "The Nescafé E Frothy Coffee Maker allows you to prepare various hot and cold coffee beverages at home. Its portable, spill-proof mug ensures you can enjoy your favorite coffee conveniently on the go. This device silently brews a rich, flavorful cup in under 90 seconds.",
+    "img": "/images/B07H3LQP5K.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Makers",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07H3LQP5K/"
   }
 ]
