@@ -115,13 +115,15 @@ function Stars({ rating }) {
 function Toast({ msg, on }) {
   return (
     <div style={{
-      position:"fixed", bottom:94, left:"50%",
-      transform:`translateX(-50%) translateY(${on?0:6}px)`,
+      position:"fixed", bottom:110, left:"50%",
+      transform:`translateX(-50%) translateY(${on?0:4}px)`,
       opacity:on?1:0, transition:"all 0.2s ease",
-      background:"#111", color:"#fff", padding:"9px 22px", borderRadius:50,
-      fontWeight:700, fontSize:13, zIndex:9999, pointerEvents:"none",
+      background:"rgba(0,0,0,0.45)", color:"#fff",
+      padding:"5px 13px", borderRadius:40,
+      fontWeight:600, fontSize:10.5, letterSpacing:0.2,
+      zIndex:9999, pointerEvents:"none",
       whiteSpace:"nowrap", fontFamily:"'Barlow',sans-serif",
-      boxShadow:"0 4px 20px rgba(0,0,0,0.15)"
+      backdropFilter:"blur(6px)", WebkitBackdropFilter:"blur(6px)",
     }}>{msg}</div>
   );
 }
