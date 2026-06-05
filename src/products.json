@@ -8566,5 +8566,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07YVL8SF3/"
+  },
+  {
+    "id": 1780684152610,
+    "asin": "B000GXZ2GS",
+    "title": "AeroPress: Delicious Coffee, No Bitterness",
+    "price": 5796,
+    "rating": 4.7,
+    "reviews": 20314,
+    "summary": "The AeroPress is a coffee press designed to produce smooth, rich coffee. It uses total immersion and gentle pressure for a brew with significantly lower acidity and no bitterness. This method yields a pure, particle-free coffee concentrate or American-style coffee.",
+    "img": "/images/B000GXZ2GS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Coffee Presses",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B000GXZ2GS/"
   }
 ]
