@@ -9319,5 +9319,22 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CZP1D7CX/"
+  },
+  {
+    "id": 1780932537395,
+    "asin": "B0CFQLCDPX",
+    "title": "Rechargeable Scalp and Head Massager",
+    "price": 2849,
+    "rating": 4.4,
+    "reviews": 3093,
+    "summary": "This rechargeable scalp and head massager provides a gentle, kneading massage to help relieve tension and promote relaxation. Its design aims to enhance scalp circulation, which can contribute to overall well-being and comfort. The device offers a straightforward way to soothe your head.",
+    "img": "/images/B0CFQLCDPX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Scalp Massagers",
+    "categories": [
+      "Personal Care",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CFQLCDPX/"
   }
 ]
