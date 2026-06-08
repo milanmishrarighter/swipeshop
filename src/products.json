@@ -9037,5 +9037,22 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FY2G5SY9/"
+  },
+  {
+    "id": 1780931773189,
+    "asin": "B0824329ST",
+    "title": "Soft Flexible Flying Disc",
+    "price": 79,
+    "rating": 4.1,
+    "reviews": 3526,
+    "summary": "This soft, flexible flying disc is designed for recreational throwing and catching. Its easy-grip design promotes skill development for all ages, encouraging outdoor activity. Enjoy engaging games at the beach, lake, or even with your dog.",
+    "img": "/images/B0824329ST.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Flying Discs",
+    "categories": [
+      "Party & Games",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0824329ST/"
   }
 ]
