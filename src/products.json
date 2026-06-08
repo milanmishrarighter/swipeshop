@@ -9121,5 +9121,23 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CNM27L5P/"
+  },
+  {
+    "id": 1780932019333,
+    "asin": "B07HRJMNH4",
+    "title": "Helios Shoe Cleaning Kit",
+    "price": 268.98,
+    "rating": 3.9,
+    "reviews": 7200,
+    "summary": "The Helios Shoe Cleaning Kit safely cleans sports shoes, sneakers, canvas, mesh, and synthetic materials. Its gentle formula effectively removes dirt without fading colors or damaging textures, making it ideal for regular maintenance and quick touch-ups. This easy-to-use kit leaves a clean, residue-free finish, keeping your everyday footwear fresh.",
+    "img": "/images/B07HRJMNH4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Shoe Cleaners",
+    "categories": [
+      "Sports and Fitness",
+      "Cleaning & Hygiene Freak",
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07HRJMNH4/"
   }
 ]
