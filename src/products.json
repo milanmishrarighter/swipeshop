@@ -8730,5 +8730,21 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GL2JZGXF/"
+  },
+  {
+    "id": 1780930931344,
+    "asin": "B0FD817WFP",
+    "title": "Lifelong Fit Pro Treadmill",
+    "price": 9499,
+    "rating": 4.3,
+    "reviews": 7150,
+    "summary": "The Lifelong Fit Pro Treadmill is a compact walking pad designed for convenient home workouts. Its quiet motor and two-step manual incline provide effective exercise, while the foldable design and transport wheels allow for easy storage in smaller spaces. You can monitor your progress clearly with the integrated LED display.",
+    "img": "/images/B0FD817WFP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Treadmills",
+    "categories": [
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FD817WFP/"
   }
 ]
