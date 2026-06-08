@@ -9189,5 +9189,22 @@
       "Utility and House Repair"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B00ICCYIRO/"
+  },
+  {
+    "id": 1780932169370,
+    "asin": "B00ICCYF0E",
+    "title": "Nivia Storm Rubber Football",
+    "price": 369,
+    "rating": 3.9,
+    "reviews": 51382,
+    "summary": "The Nivia Storm Rubber Football is designed for casual play and training sessions. Its durable rubber construction makes it suitable for use on hard surfaces like asphalt and concrete. This football offers a long-lasting, budget-friendly option for players.",
+    "img": "/images/B00ICCYF0E.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Match Balls",
+    "categories": [
+      "Sports and Fitness",
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B00ICCYF0E/"
   }
 ]
