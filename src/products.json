@@ -8680,5 +8680,22 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0H28ZG681/"
+  },
+  {
+    "id": 1780930748539,
+    "asin": "B0C6M315RN",
+    "title": "Fit Pro Indoor Cycle",
+    "price": 8714,
+    "rating": 4.3,
+    "reviews": 1490,
+    "summary": "The Fit Pro Indoor Cycle is an upright exercise bike designed for home cardio workouts. Its smooth, belt-driven system and sturdy flywheel provide a quiet and consistent riding experience. An integrated LCD monitor tracks key metrics like heart rate, speed, and distance, helping you monitor your fitness progress.",
+    "img": "/images/B0C6M315RN.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Upright",
+    "categories": [
+      "Personal Care",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C6M315RN/"
   }
 ]
