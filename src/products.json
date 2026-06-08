@@ -8763,5 +8763,21 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D6NBHSY7/"
+  },
+  {
+    "id": 1780931013229,
+    "asin": "B077P72P5W",
+    "title": "PowerMax Foldable Home Treadmill",
+    "price": 16999,
+    "rating": 4.3,
+    "reviews": 7189,
+    "summary": "The PowerMax Foldable Home Treadmill offers a quiet, comfortable running experience in your home. Its shock absorption system and spacious surface minimize impact, while the foldable design allows for easy storage. You can track your progress and enjoy entertainment during your workouts.",
+    "img": "/images/B077P72P5W.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Treadmills",
+    "categories": [
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B077P72P5W/"
   }
 ]
