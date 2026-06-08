@@ -8646,5 +8646,22 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0163KBUZE/"
+  },
+  {
+    "id": 1780930658497,
+    "asin": "B0FKNNQ6KY",
+    "title": "Fit Pro Indoor Cycle",
+    "price": 8499,
+    "rating": 4.3,
+    "reviews": 1490,
+    "summary": "The Fit Pro Indoor Cycle is an upright exercise bike designed for home use. It offers a smooth, stable ride with adjustable resistance and real-time workout tracking, allowing users to monitor their progress and customize their intensity. Its comfortable, adjustable design and built-in heart rate sensors support effective, personalized fitness routines.",
+    "img": "/images/B0FKNNQ6KY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Upright",
+    "categories": [
+      "Personal Care",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FKNNQ6KY/"
   }
 ]
