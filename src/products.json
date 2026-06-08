@@ -9501,5 +9501,23 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07XXFB9CZ/"
+  },
+  {
+    "id": 1780932902456,
+    "asin": "B0FFB98CLV",
+    "title": "Gear Cross-Training Duffle",
+    "price": 878,
+    "rating": 4.2,
+    "reviews": 25602,
+    "summary": "The Gear Cross-Training Duffle is a lightweight travel bag designed for organized transport of your essentials. It features a water-repellent exterior, multiple pockets for intuitive access, and comfortable carrying options, ensuring your items are secure and easily accessible.",
+    "img": "/images/B0FFB98CLV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Travel Duffles",
+    "categories": [
+      "Sports and Fitness",
+      "OCD/Organizer/Storage Stuff",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FFB98CLV/"
   }
 ]
