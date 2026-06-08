@@ -8844,5 +8844,21 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DJW7PW93/"
+  },
+  {
+    "id": 1780931180437,
+    "asin": "B089DF1PXS",
+    "title": "Kore Home Gym Set, 16kg",
+    "price": 1149,
+    "rating": 3.6,
+    "reviews": 35920,
+    "summary": "The Kore Home Gym Set offers a comprehensive strength training solution with 16kg of PVC weights, a curl rod, and two dumbbell rods. This durable set provides essential equipment for varied exercises, allowing you to build muscle effectively within your home.",
+    "img": "/images/B089DF1PXS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Strength Training Sets",
+    "categories": [
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B089DF1PXS/"
   }
 ]
