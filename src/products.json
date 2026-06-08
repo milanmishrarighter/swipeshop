@@ -9731,5 +9731,23 @@
     "cat": "Bottles",
     "categories": [],
     "amazonUrl": "https://www.amazon.in/dp/B0GGP6RZVC/"
+  },
+  {
+    "id": 1780933375090,
+    "asin": "B0DSC7N477",
+    "title": "Perch Amber Stainless Steel Bottle",
+    "price": 989,
+    "rating": 4.3,
+    "reviews": 1027,
+    "summary": "The Perch Amber Stainless Steel Bottle uses triple-layer insulation to maintain beverage temperature for hours. Its leakproof design and anti-skid base offer reliable portability and stability. This BPA-free, reusable bottle provides a durable and eco-friendly hydration solution.",
+    "img": "/images/B0DSC7N477.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Bottles",
+    "categories": [
+      "Personal Care",
+      "Kitchen Items",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DSC7N477/"
   }
 ]
