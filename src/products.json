@@ -10495,5 +10495,23 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DSPDGS1Z/"
+  },
+  {
+    "id": 1781027446881,
+    "asin": "B09M8QS88Y",
+    "title": "QUBO Smart Lock: 7-Way Access",
+    "price": 13890,
+    "rating": 4.3,
+    "reviews": 2319,
+    "summary": "The QUBO Smart Lock offers secure, keyless entry to your home through multiple methods, including fingerprint, passcode, and app access. This biometric lock enhances security with dual bolts and smart features, providing convenient and flexible access management for your household. Its durable design and long battery life ensure reliable, everyday protection.",
+    "img": "/images/B09M8QS88Y.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biometrics",
+    "categories": [
+      "Home Decor",
+      "Utility and House Repair",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09M8QS88Y/"
   }
 ]
