@@ -10342,5 +10342,23 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B01MQFC1MS/"
+  },
+  {
+    "id": 1781026899385,
+    "asin": "B0D3M3VRPR",
+    "title": "Wembley Air Hockey Table",
+    "price": 1994,
+    "rating": 3.5,
+    "reviews": 604,
+    "summary": "The Wembley Air Hockey Table offers an engaging arcade-style experience for your home. Its air-permeable surface ensures smooth, fast-paced puck movement, providing hours of competitive fun for all ages. Crafted from durable, eco-friendly materials, this compact table is both safe and easy to set up.",
+    "img": "/images/B0D3M3VRPR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Hockey",
+    "categories": [
+      "Party & Games",
+      "Kids",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D3M3VRPR/"
   }
 ]
