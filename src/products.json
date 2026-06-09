@@ -10579,5 +10579,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CDXSPB5Y/"
+  },
+  {
+    "id": 1781027599820,
+    "asin": "B09DSM56X3",
+    "title": "Oxford Street Rose Gold Clock",
+    "price": 2899,
+    "rating": 4.5,
+    "reviews": 659,
+    "summary": "This 12-inch wall clock features a durable rose gold metal frame and a clear white dial. Its silent sweep movement ensures quiet operation, while the HD glass protects the face and provides optimal readability. This clock offers a blend of modern design and lasting elegance for any room.",
+    "img": "/images/B09DSM56X3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wall Clocks",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09DSM56X3/"
   }
 ]
