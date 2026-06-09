@@ -10291,5 +10291,23 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08WHFPD3P/"
+  },
+  {
+    "id": 1781026551905,
+    "asin": "B0FX2TX6K8",
+    "title": "Encasa Beige Waterproof Shower Curtain",
+    "price": 999,
+    "rating": 4.3,
+    "reviews": 1200,
+    "summary": "The Encasa Beige Waterproof Shower Curtain is a durable polyester fabric curtain designed to keep your bathroom dry. Its water-resistant finish and neutral beige color offer a practical and calm addition to any bathroom space.",
+    "img": "/images/B0FX2TX6K8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Shower Curtains",
+    "categories": [
+      "Home Decor",
+      "Cleaning & Hygiene Freak",
+      "OCD/Organizer/Storage Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FX2TX6K8/"
   }
 ]
