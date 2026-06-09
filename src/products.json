@@ -10113,5 +10113,21 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DXQ8WY9Y/"
+  },
+  {
+    "id": 1781026053592,
+    "asin": "B0F8ND41C4",
+    "title": "Rally Wood Table Tennis Set",
+    "price": 575,
+    "rating": 4.3,
+    "reviews": 116,
+    "summary": "The Rally Wood Table Tennis Set provides everything needed for a complete game. It includes two durable, 7-ply wood rackets with high-quality rubber for superior control and spin, alongside four training balls. This set is designed for consistent performance and comfortable play, minimizing hand fatigue during extended use.",
+    "img": "/images/B0F8ND41C4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Table Tennis Sets",
+    "categories": [
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F8ND41C4/"
   }
 ]
