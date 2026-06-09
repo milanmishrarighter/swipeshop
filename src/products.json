@@ -10478,5 +10478,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CRYTQ4VZ/"
+  },
+  {
+    "id": 1781027401324,
+    "asin": "B0DSPDGS1Z",
+    "title": "Enzel Ceiling Fan, Misty Teal",
+    "price": 3749,
+    "rating": 4.2,
+    "reviews": 27898,
+    "summary": "The Enzel Ceiling Fan in Misty Teal offers efficient air circulation with a quiet, energy-saving design. Its advanced motor and blade combination ensures a consistent breeze throughout your space, while the sleek profile complements various room decors. This fan provides comfort and reduces energy consumption.",
+    "img": "/images/B0DSPDGS1Z.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Ceiling Fans",
+    "categories": [
+      "Home Decor",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DSPDGS1Z/"
   }
 ]
