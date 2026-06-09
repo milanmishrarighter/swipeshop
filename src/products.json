@@ -10462,5 +10462,21 @@
       "Music"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B071SGMQ7V/"
+  },
+  {
+    "id": 1781027331684,
+    "asin": "B0CRYTQ4VZ",
+    "title": "ANALOGI RGB Large Digital Wall Clock",
+    "price": 2999,
+    "rating": 4.4,
+    "reviews": 404,
+    "summary": "The ANALOGI RGB Large Digital Wall Clock offers a clear, expansive display of time, date, and temperature, ensuring easy readability for everyone. Its versatile design allows for both desk and wall placement, while the integrated RGB night light provides a gentle, ambient glow. This clock also features automatic brightness adjustment and a power backup to maintain accurate time during outages.",
+    "img": "/images/B0CRYTQ4VZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wall Clocks",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CRYTQ4VZ/"
   }
 ]
