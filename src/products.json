@@ -10627,5 +10627,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B2PNFVVS/"
+  },
+  {
+    "id": 1781027677044,
+    "asin": "B0GTDNYTDH",
+    "title": "Loud Digital Alarm Clock with Temp",
+    "price": 337,
+    "rating": 4.3,
+    "reviews": 583,
+    "summary": "Multifunctional time piece with a large digital display, this alarm clock clearly shows the time, temperature, and date. It offers adjustable brightness and a gentle, escalating alarm to help you wake up naturally. This clock provides both USB and battery power options for versatile placement.",
+    "img": "/images/B0GTDNYTDH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Alarm Clocks",
+    "categories": [
+      "Home Decor",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GTDNYTDH/"
   }
 ]
