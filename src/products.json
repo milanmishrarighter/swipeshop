@@ -9850,5 +9850,22 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CBBDKV76/"
+  },
+  {
+    "id": 1781024820145,
+    "asin": "B0D22Z7P18",
+    "title": "AK 47 Blaster with Laser Sight",
+    "price": 709,
+    "rating": 3.8,
+    "reviews": 4405,
+    "summary": "This foam blaster is designed in the style of an AK-47, offering a realistic look for imaginative play. It includes a laser sight to assist with aiming during target practice. The blaster is easy to operate and comes with 500 foam projectiles for extended use.",
+    "img": "/images/B0D22Z7P18.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Foam Blasters",
+    "categories": [
+      "Kids",
+      "Party & Games"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D22Z7P18/"
   }
 ]
