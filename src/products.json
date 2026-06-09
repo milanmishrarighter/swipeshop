@@ -10513,5 +10513,23 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09M8QS88Y/"
+  },
+  {
+    "id": 1781027468620,
+    "asin": "B0D1BYW5WZ",
+    "title": "Qubo Smart Video Doorbell",
+    "price": 8990,
+    "rating": 4,
+    "reviews": 2441,
+    "summary": "The Qubo Smart Video Doorbell provides clear 1080p full HD video with a wide 130° view, ensuring you see visitors clearly day or night. It offers instant phone alerts and two-way talk, allowing you to communicate with anyone at your door from anywhere. This device also functions as a security camera, logging visitors and detecting intruders for enhanced home monitoring.",
+    "img": "/images/B0D1BYW5WZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Video Doorbells",
+    "categories": [
+      "Tech Products",
+      "Home Decor",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D1BYW5WZ/"
   }
 ]
