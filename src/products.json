@@ -10015,5 +10015,22 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09P1JXYTF/"
+  },
+  {
+    "id": 1781025729011,
+    "asin": "B089FK89VQ",
+    "title": "Jaspo Hurricane Composite Skateboard",
+    "price": 999,
+    "rating": 4.2,
+    "reviews": 1544,
+    "summary": "The Jaspo Hurricane Composite Skateboard is a 31\" x 8\" skateboard designed for a smooth and controlled ride. Its durable fiber deck, high-angle trucks, and smooth wheels provide stability and responsiveness for various riding styles and tricks.",
+    "img": "/images/B089FK89VQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Skateboards",
+    "categories": [
+      "Kids",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B089FK89VQ/"
   }
 ]
