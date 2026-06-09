@@ -10611,5 +10611,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DF2VP6D6/"
+  },
+  {
+    "id": 1781027630903,
+    "asin": "B0B2PNFVVS",
+    "title": "Modern Silent Wall Clock",
+    "price": 567,
+    "rating": 4.2,
+    "reviews": 3891,
+    "summary": "This modern wall clock features a silent quartz movement, ensuring accurate time without any ticking sounds. Its clear, large numbers and glass cover make it easy to read and maintain, suitable for various rooms.",
+    "img": "/images/B0B2PNFVVS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wall Clocks",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B2PNFVVS/"
   }
 ]
