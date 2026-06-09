@@ -10360,5 +10360,22 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D3M3VRPR/"
+  },
+  {
+    "id": 1781026941454,
+    "asin": "B07TCNJ7MF",
+    "title": "All-Terrain Hoverboard with Speakers",
+    "price": 26489,
+    "rating": 4.3,
+    "reviews": 164,
+    "summary": "This all-terrain hoverboard features robust 8.5-inch tires and a powerful 700-watt motor, providing a smooth ride across various surfaces like grass or gravel. It includes a built-in speaker for enjoying music during your journey and offers self-balancing technology for easier use.",
+    "img": "/images/B07TCNJ7MF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Self-Balancing Scooters",
+    "categories": [
+      "Sports and Fitness",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07TCNJ7MF/"
   }
 ]
