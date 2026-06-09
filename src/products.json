@@ -9981,5 +9981,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07Z7R89ZD/"
+  },
+  {
+    "id": 1781025663148,
+    "asin": "B085WPTJJD",
+    "title": "Kriva Blue Mini Cruiser Skateboard",
+    "price": 1685,
+    "rating": 4.4,
+    "reviews": 189,
+    "summary": "The Kriva Blue Mini Cruiser Skateboard is a compact, durable skateboard designed for everyday use. Its lightweight build and smooth-gliding wheels make it easy to carry and provide a comfortable ride for commuting or recreation. This board offers a stable and enjoyable experience for skaters of all levels.",
+    "img": "/images/B085WPTJJD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Skateboards",
+    "categories": [
+      "Kids",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B085WPTJJD/"
   }
 ]
