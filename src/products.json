@@ -10377,5 +10377,22 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07TCNJ7MF/"
+  },
+  {
+    "id": 1781027005860,
+    "asin": "B09GFWQ4R7",
+    "title": "UBOARD X7: Foldable Electric Scooter",
+    "price": 41329,
+    "rating": 4.3,
+    "reviews": 70,
+    "summary": "The UBOARD X7 is a foldable electric scooter designed for convenient urban travel. Its 250-watt motor and detachable battery offer a 25km range, allowing for flexible charging. A triple braking system and UL safety certification provide a secure and reliable riding experience.",
+    "img": "/images/B09GFWQ4R7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Electric Scooters",
+    "categories": [
+      "Sports and Fitness",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09GFWQ4R7/"
   }
 ]
