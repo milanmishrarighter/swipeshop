@@ -9885,5 +9885,21 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F66PXRP8/"
+  },
+  {
+    "id": 1781024931305,
+    "asin": "B0GWQK4F7Z",
+    "title": "Pink Bazooka Bubble Blaster",
+    "price": 349,
+    "rating": 4.6,
+    "reviews": 3244,
+    "summary": "This electric bubble blaster creates a continuous stream of bubbles, offering engaging outdoor entertainment for children. Its design produces numerous bubbles quickly, enhancing playtime and reducing screen time.",
+    "img": "/images/B0GWQK4F7Z.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Bubble Makers",
+    "categories": [
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GWQK4F7Z/"
   }
 ]
