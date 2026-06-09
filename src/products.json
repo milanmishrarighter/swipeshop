@@ -10411,5 +10411,22 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08QFZ13MV/"
+  },
+  {
+    "id": 1781027082920,
+    "asin": "B0GF8H8WF5",
+    "title": "Kids Electric Scooter for Ages 6-12",
+    "price": 9999,
+    "rating": 4.1,
+    "reviews": 5318,
+    "summary": "This electric scooter is designed for children aged 6-12, offering a safe and enjoyable riding experience. It features an easy one-button start, adjustable handle height, and a rechargeable battery for convenient use. The scooter's stable design and rear foot brake prioritize your child's safety and confidence.",
+    "img": "/images/B0GF8H8WF5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Scooters",
+    "categories": [
+      "Sports and Fitness",
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GF8H8WF5/"
   }
 ]
