@@ -10901,5 +10901,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1760630721/"
+  },
+  {
+    "id": 1781631490032,
+    "asin": "1781259194",
+    "title": "THE LAWS OF HUMAN NATURE",
+    "price": 587,
+    "rating": 4.6,
+    "reviews": 12757,
+    "summary": "The Laws of Human Nature\" offers a comprehensive guide to understanding human behavior. This book helps readers decipher people's motivations and drives, even unconscious ones. By mastering self-control and developing empathy, you can improve relationships, achieve success, and navigate the world more effectively.",
+    "img": "/images/1781259194.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Success",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1781259194/"
   }
 ]
