@@ -11063,5 +11063,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8119898702/"
+  },
+  {
+    "id": 1781631836778,
+    "asin": "9354400507",
+    "title": "Indian Mythology: A Timeless Collection",
+    "price": 299,
+    "rating": 4.5,
+    "reviews": 1886,
+    "summary": "This collection offers ten beautifully illustrated storybooks, introducing young readers to Indian mythology. It presents tales of gods, goddesses, and heroes in simple language, fostering cultural awareness. The set aims to share the spiritual and moral essence of ancient Indian traditions.",
+    "img": "/images/9354400507.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mythology & Folklore",
+    "categories": [
+      "Kids",
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9354400507/"
   }
 ]
