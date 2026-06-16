@@ -11468,5 +11468,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1787460614/"
+  },
+  {
+    "id": 1781633023501,
+    "asin": "0141182571",
+    "title": "In Cold Blood: A True Account of a Multiple Murder and its Consequences",
+    "price": 301.5,
+    "rating": 4.3,
+    "reviews": 25102,
+    "summary": "In Cold Blood is Truman Capote's meticulously researched non-fiction account of a 1959 multiple murder in rural Kansas. This work explores the crime, its investigation, and the lives of both victims and perpetrators, offering a deep look into the human elements of a tragic event.",
+    "img": "/images/0141182571.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "United States",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0141182571/"
   }
 ]
