@@ -10725,5 +10725,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9387779467/"
+  },
+  {
+    "id": 1781631108916,
+    "asin": "8172344880",
+    "title": "The Origin of Species",
+    "price": 278,
+    "rating": 4.5,
+    "reviews": 9223,
+    "summary": "Charles Darwin's *The Origin of Species* presents the theory of evolution through natural selection, fundamentally reshaping our understanding of life on Earth. This landmark work offers meticulous research and insightful observations, detailing the origins and diversity of species. It remains a cornerstone of modern biology and continues to influence scientific thought.",
+    "img": "/images/8172344880.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biology & Life Sciences",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/8172344880/"
   }
 ]
