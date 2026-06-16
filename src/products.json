@@ -10821,5 +10821,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0141977817/"
+  },
+  {
+    "id": 1781631348431,
+    "asin": "000819680X",
+    "title": "Adrian Newey: How to Build a Car",
+    "price": 1111,
+    "rating": 4.7,
+    "reviews": 8805,
+    "summary": "This memoir by Adrian Newey, a leading Formula One designer, offers a detailed look into his 35-year career. It explains how racing cars function through the lens of his designs, drivers, and races, providing insight into the engineering and excitement of Formula One.",
+    "img": "/images/000819680X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Formula One",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/000819680X/"
   }
 ]
