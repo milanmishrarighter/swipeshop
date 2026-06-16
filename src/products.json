@@ -11339,5 +11339,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9351772071/"
+  },
+  {
+    "id": 1781632486076,
+    "asin": "1119543614",
+    "title": "Auto Repair For Dummies, 2nd Edition",
+    "price": 1447,
+    "rating": 4.6,
+    "reviews": 2138,
+    "summary": "This guide provides clear instructions for basic automotive maintenance and repairs. It helps readers understand their vehicle's systems and perform common tasks, potentially saving money on professional services. The book also offers advice on troubleshooting and recognizing when expert assistance is needed.",
+    "img": "/images/1119543614.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Higher Education Textbooks",
+    "categories": [
+      "Utility and House Repair",
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1119543614/"
   }
 ]
