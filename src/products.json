@@ -11388,5 +11388,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8126543809/"
+  },
+  {
+    "id": 1781632670928,
+    "asin": "1119660769",
+    "title": "Stock Investing for Dummies",
+    "price": 4740,
+    "rating": 4.6,
+    "reviews": 2759,
+    "summary": "This guide provides clear, understandable information for navigating the stock market. It explains how to evaluate stocks, build a portfolio, and manage the emotional aspects of investing. Readers will gain the knowledge to make informed decisions and work towards their financial goals.",
+    "img": "/images/1119660769.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Analysis & Strategy",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1119660769/"
   }
 ]
