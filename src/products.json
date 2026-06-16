@@ -11113,5 +11113,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9373171984/"
+  },
+  {
+    "id": 1781631941563,
+    "asin": "0143465066",
+    "title": "The Art of Letting Go",
+    "price": 212,
+    "rating": 4.5,
+    "reviews": 1391,
+    "summary": "The Art of Letting Go\" offers practical, psychologically proven methods to quiet an overwhelmed mind. This book guides you in managing thoughts and emotions, helping to restore inner peace. Learn to release the past, ease future worries, and transform your internal perspective for a calmer, more present life.",
+    "img": "/images/0143465066.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Emotions",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0143465066/"
   }
 ]
