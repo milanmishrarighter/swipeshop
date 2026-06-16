@@ -10917,5 +10917,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1781259194/"
+  },
+  {
+    "id": 1781631539928,
+    "asin": "9390166268",
+    "title": "The Psychology of Money",
+    "price": 290,
+    "rating": 4.6,
+    "reviews": 81613,
+    "summary": "The Psychology of Money\" explores the complex interplay between human behavior and financial decisions. This book offers timeless insights into managing wealth, investing, and making business choices by examining the often irrational ways people interact with money. It helps readers understand their own financial psychology for more informed decision-making.",
+    "img": "/images/9390166268.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Analysis & Strategy",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9390166268/"
   }
 ]
