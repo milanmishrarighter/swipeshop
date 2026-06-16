@@ -10981,5 +10981,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1612681131/"
+  },
+  {
+    "id": 1781631679721,
+    "asin": "817234564X",
+    "title": "Think and Grow Rich",
+    "price": 119,
+    "rating": 4.5,
+    "reviews": 5204,
+    "summary": "Think and Grow Rich\" is a foundational guide that explores how focused thought and specific habits contribute to personal and financial success. This edition updates classic principles with modern examples, offering a clear roadmap for achieving your goals. It helps readers understand the mindset behind prosperity and personal mastery.",
+    "img": "/images/817234564X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Microeconomics",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/817234564X/"
   }
 ]
