@@ -10773,5 +10773,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8175994657/"
+  },
+  {
+    "id": 1781631229125,
+    "asin": "9358562161",
+    "title": "Newton's Laws of Motion",
+    "price": 359,
+    "rating": 4.6,
+    "reviews": 403,
+    "summary": "This foundational reference work meticulously details Newton's laws of motion and universal gravitation. It provides a logical framework for understanding planetary motion and the principles governing the physical world. This seminal text remains essential for anyone studying classical mechanics and the history of scientific thought.",
+    "img": "/images/9358562161.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Encyclopaedias & Reference Works",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9358562161/"
   }
 ]
