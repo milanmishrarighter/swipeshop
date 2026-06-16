@@ -10965,5 +10965,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/818430336X/"
+  },
+  {
+    "id": 1781631650728,
+    "asin": "1612681131",
+    "title": "Rich Dad Poor Dad: Money Lessons",
+    "price": 370,
+    "rating": 4.5,
+    "reviews": 37683,
+    "summary": "Rich Dad Poor Dad offers timeless money lessons through a compelling personal narrative. This book provides foundational insights into financial literacy and wealth building strategies. It helps readers understand the principles of investing and taking control of their financial future.",
+    "img": "/images/1612681131.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Analysis & Strategy",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1612681131/"
   }
 ]
