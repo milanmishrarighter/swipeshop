@@ -11129,5 +11129,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0143465066/"
+  },
+  {
+    "id": 1781631960909,
+    "asin": "8175994754",
+    "title": "Marcus Aurelius: Meditations on Living",
+    "price": 109,
+    "rating": 4.3,
+    "reviews": 15755,
+    "summary": "Marcus Aurelius's Meditations offers timeless Stoic philosophy, providing practical insights into resilience and self-discipline. This influential work guides readers toward a more purposeful existence by encouraging self-reflection and inner peace.",
+    "img": "/images/8175994754.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Meditation",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/8175994754/"
   }
 ]
