@@ -11226,5 +11226,22 @@
       "Music"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1119575524/"
+  },
+  {
+    "id": 1781632146778,
+    "asin": "0241987350",
+    "title": "Your Brain on Music",
+    "price": 486,
+    "rating": 4.5,
+    "reviews": 2809,
+    "summary": "This book explores the deep connection between music and the human brain. It explains how music influences our emotions and development, offering insights into its role in human evolution. Readers will gain a new understanding of why music holds such profound significance in our lives.",
+    "img": "/images/0241987350.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Music",
+    "categories": [
+      "Books",
+      "Music"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0241987350/"
   }
 ]
