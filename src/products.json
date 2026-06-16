@@ -11452,5 +11452,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0804139903/"
+  },
+  {
+    "id": 1781632991233,
+    "asin": "1787460614",
+    "title": "Mindhunter: Inside the FBI Elite Serial Crime Unit",
+    "price": 499,
+    "rating": 4.6,
+    "reviews": 16361,
+    "summary": "Mindhunter chronicles the true story of the FBI's first elite serial crime unit. This book details how an underfunded team pioneered criminal profiling, offering unique insights into the minds of notorious serial killers. Readers will gain a deeper understanding of behavioral science and its application in solving complex cases.",
+    "img": "/images/1787460614.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biographies & Autobiographies",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1787460614/"
   }
 ]
