@@ -10677,5 +10677,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8126576103/"
+  },
+  {
+    "id": 1781630961461,
+    "asin": "0141981806",
+    "title": "Life 3.0: Being Human in the age of AI",
+    "price": 439,
+    "rating": 4.4,
+    "reviews": 6037,
+    "summary": "Life 3.0: Being Human in AI explores the profound implications of artificial intelligence for humanity's future. This book clarifies the potential paths AI might take, distinguishing between myths and realistic outcomes. It helps readers understand how to navigate the challenges and opportunities presented by advanced AI, ensuring a beneficial future for all.",
+    "img": "/images/0141981806.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Artificial Intelligence",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0141981806/"
   }
 ]
