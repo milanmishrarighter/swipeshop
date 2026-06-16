@@ -10933,5 +10933,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9390166268/"
+  },
+  {
+    "id": 1781631593671,
+    "asin": "8172345666",
+    "title": "The Power of Your Subconscious Mind",
+    "price": 149,
+    "rating": 4.5,
+    "reviews": 66593,
+    "summary": "This book explores the profound influence of your subconscious mind. It explains how understanding and directing this inner force can enhance various aspects of your daily life, from personal achievements to relationships. By learning to harness its power, you can foster greater well-being and success.",
+    "img": "/images/8172345666.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Theory & Philosophy",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/8172345666/"
   }
 ]
