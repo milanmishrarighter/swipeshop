@@ -11013,5 +11013,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9389432014/"
+  },
+  {
+    "id": 1781631763427,
+    "asin": "9354401570",
+    "title": "World’s Greatest Classic (Set of 4 Books)",
+    "price": 579,
+    "rating": 4.5,
+    "reviews": 3191,
+    "summary": "This set includes four classic fiction novels, offering an engaging journey into enduring stories. Readers can explore timeless themes of love, society, and human nature through these well-crafted narratives. Each book provides hours of captivating reading and intellectual exploration.",
+    "img": "/images/9354401570.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Classic Fiction",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9354401570/"
   }
 ]
