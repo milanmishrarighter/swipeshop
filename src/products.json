@@ -11209,5 +11209,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0670919535/"
+  },
+  {
+    "id": 1781632103034,
+    "asin": "1119575524",
+    "title": "Music Theory for Dummies",
+    "price": 1818,
+    "rating": 4.6,
+    "reviews": 1652,
+    "summary": "This book offers a straightforward introduction to music theory, explaining fundamental concepts in an accessible way. It helps readers understand how music is structured, improving their ability to read scores and appreciate musical compositions. This guide provides a solid foundation for anyone interested in deepening their musical knowledge.",
+    "img": "/images/1119575524.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Music",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1119575524/"
   }
 ]
