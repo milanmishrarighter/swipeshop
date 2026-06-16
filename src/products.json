@@ -11259,5 +11259,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1523505745/"
+  },
+  {
+    "id": 1781632269622,
+    "asin": "9390085497",
+    "title": "The Millionaire Fastlane: Crack the Code",
+    "price": 386,
+    "rating": 4.6,
+    "reviews": 14933,
+    "summary": "The Millionaire Fastlane\" presents an alternative approach to wealth creation, challenging conventional \"get rich slow\" strategies. This book offers a framework for achieving financial independence more rapidly, focusing on actionable steps to build significant income and net worth. It aims to help readers understand and implement principles for accelerated wealth accumulation.",
+    "img": "/images/9390085497.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Analysis & Strategy",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9390085497/"
   }
 ]
