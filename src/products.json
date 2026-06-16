@@ -10853,5 +10853,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9386867109/"
+  },
+  {
+    "id": 1781631417469,
+    "asin": "935543135X",
+    "title": "Don't Believe Everything You Think (English)",
+    "price": 179,
+    "rating": 4.5,
+    "reviews": 5799,
+    "summary": "Don't Believe Everything You Think\" is a book that explores the origins of psychological suffering. It offers insights to help readers detach from negative thought cycles and cultivate inner peace. The book aims to guide individuals toward a life free from anxiety and self-doubt.",
+    "img": "/images/935543135X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Anxieties & Phobias",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/935543135X/"
   }
 ]
