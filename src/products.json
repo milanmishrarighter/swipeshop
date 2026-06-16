@@ -11029,5 +11029,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9354401570/"
+  },
+  {
+    "id": 1781631784945,
+    "asin": "9389432006",
+    "title": "Children's Classic Stories: 5-Book Set",
+    "price": 579,
+    "rating": 4.4,
+    "reviews": 8798,
+    "summary": "This five-book set compiles classic children's adventure stories, offering timeless tales that have captivated readers for generations. Children can explore magical worlds and befriend memorable characters, fostering imagination and a love for reading.",
+    "img": "/images/9389432006.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Action & Adventure",
+    "categories": [
+      "Books",
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9389432006/"
   }
 ]
