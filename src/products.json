@@ -11193,5 +11193,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0241370140/"
+  },
+  {
+    "id": 1781632083297,
+    "asin": "0670919535",
+    "title": "The Personal MBA: Business Education",
+    "price": 489,
+    "rating": 4.5,
+    "reviews": 8141,
+    "summary": "The Personal MBA offers a comprehensive business education, distilling essential concepts into practical mental models. This book provides the knowledge needed to understand products, marketing, teamwork, and systems, empowering readers to advance their careers and businesses effectively.",
+    "img": "/images/0670919535.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Entrepreneurship",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0670919535/"
   }
 ]
