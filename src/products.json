@@ -11484,5 +11484,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0141182571/"
+  },
+  {
+    "id": 1781633043442,
+    "asin": "B08KYPGG1J",
+    "title": "Guitar All-in-One For Dummies: Book + Online Video and Audio Instruction",
+    "price": 2424,
+    "rating": 4.6,
+    "reviews": 854,
+    "summary": "This comprehensive guide offers essential instruction for guitar owners, covering everything from basic maintenance to playing various genres. It provides clear explanations of music theory and techniques, enhanced by accompanying online video and audio resources for practical demonstration. This resource helps individuals develop their guitar skills effectively.",
+    "img": "/images/B08KYPGG1J.jpg",
+    "badge": null,
+    "cat": "Music",
+    "categories": [
+      "Books",
+      "Music"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08KYPGG1J/"
   }
 ]
