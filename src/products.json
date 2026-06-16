@@ -10997,5 +10997,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/817234564X/"
+  },
+  {
+    "id": 1781631718873,
+    "asin": "9389432014",
+    "title": "Great Books for Personal Growth",
+    "price": 325,
+    "rating": 4.5,
+    "reviews": 28553,
+    "summary": "This collection of four timeless classics offers profound wisdom and time-tested principles. These inspirational books provide enduring guidance for personal growth and self-improvement.",
+    "img": "/images/9389432014.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Development & Growth",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9389432014/"
   }
 ]
