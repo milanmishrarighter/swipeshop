@@ -11161,5 +11161,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0198788606/"
+  },
+  {
+    "id": 1781632021670,
+    "asin": "9390466733",
+    "title": "Excel Formulas and Functions for Dummies",
+    "price": 755,
+    "rating": 4.4,
+    "reviews": 1607,
+    "summary": "This book provides clear, step-by-step instructions for utilizing Excel's most useful functions. It explains how to effectively integrate these functions into your formulas with practical, real-world examples. Understanding these tools can significantly streamline your data management and analysis tasks.",
+    "img": "/images/9390466733.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Database Storage & Design",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9390466733/"
   }
 ]
