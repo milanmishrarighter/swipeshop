@@ -10693,5 +10693,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0141981806/"
+  },
+  {
+    "id": 1781631015803,
+    "asin": "1398504122",
+    "title": "CHIP WAR PA: The Fight for the World's Most Critical Technology",
+    "price": 398,
+    "rating": 4.7,
+    "reviews": 9687,
+    "summary": "This book explores the critical role of microchip technology in global power dynamics. It details the historical and ongoing competition to control chip manufacturing, explaining how this struggle impacts economic and geopolitical stability. Understanding this industry is essential for comprehending the future of international relations.",
+    "img": "/images/1398504122.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Economics",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1398504122/"
   }
 ]
