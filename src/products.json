@@ -10885,5 +10885,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9355434146/"
+  },
+  {
+    "id": 1781631463134,
+    "asin": "1760630721",
+    "title": "The Courage to Be Disliked",
+    "price": 345,
+    "rating": 4.5,
+    "reviews": 22291,
+    "summary": "This book explores the psychological theories of Alfred Adler, offering a path to personal liberation and lasting happiness. It explains how individuals can overcome past experiences and external expectations to determine their own future. The insights provided aim to foster the courage to change and embrace one's true self.",
+    "img": "/images/1760630721.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Success",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1760630721/"
   }
 ]
