@@ -11372,5 +11372,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8175994401/"
+  },
+  {
+    "id": 1781632596567,
+    "asin": "8126543809",
+    "title": "Psychology for Dummies",
+    "price": 745,
+    "rating": 4.5,
+    "reviews": 1012,
+    "summary": "Psychology for Dummies\" offers a clear, accessible guide to understanding human behavior and mental processes. This resource simplifies complex psychological concepts, making them approachable for students and anyone curious about the subject. It provides a solid foundation for grasping why people think and act the way they do.",
+    "img": "/images/8126543809.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Psychology",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/8126543809/"
   }
 ]
