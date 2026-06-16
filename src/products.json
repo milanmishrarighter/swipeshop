@@ -11275,5 +11275,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9390085497/"
+  },
+  {
+    "id": 1781632322834,
+    "asin": "4805312270",
+    "title": "Japanese Hiragana and Katakana Workbook",
+    "price": 883,
+    "rating": 4.8,
+    "reviews": 5937,
+    "summary": "This Japanese workbook systematically teaches Hiragana and Katakana, the foundational phonetic alphabets necessary for learning Japanese. It provides clear, step-by-step guidance on writing each character, along with extensive practice space and audio support for correct pronunciation. Mastering these symbols is essential for any beginner studying the Japanese language.",
+    "img": "/images/4805312270.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vocabulary",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/4805312270/"
   }
 ]
