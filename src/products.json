@@ -10660,5 +10660,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07R2XWTY9/"
+  },
+  {
+    "id": 1781630899080,
+    "asin": "8126576103",
+    "title": "AI for Dummies",
+    "price": 755,
+    "rating": 4.2,
+    "reviews": 275,
+    "summary": "AI for Beginners\" offers a clear introduction to artificial intelligence, explaining its current applications and addressing common misunderstandings. This book provides a foundational overview of the technology, helping you understand what AI truly is today.",
+    "img": "/images/8126576103.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Programming Languages",
+    "categories": [
+      "Stationary and Productivity",
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/8126576103/"
   }
 ]
