@@ -11145,5 +11145,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8175994754/"
+  },
+  {
+    "id": 1781631987328,
+    "asin": "0198788606",
+    "title": "The Selfish Gene, Fourth Edition",
+    "price": 391,
+    "rating": 4.6,
+    "reviews": 8444,
+    "summary": "This fourth edition of *The Selfish Gene* presents a foundational work in evolutionary biology. It offers a gene-centric view of evolution, providing a powerful framework for understanding life and its mechanisms. The book's insights remain relevant, stimulating continued discussion and research in the field.",
+    "img": "/images/0198788606.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biology & Life Sciences",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0198788606/"
   }
 ]
