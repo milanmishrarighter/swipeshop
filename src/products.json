@@ -11517,5 +11517,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/014344798X/"
+  },
+  {
+    "id": 1781633143610,
+    "asin": "B012X9DNUO",
+    "title": "Import / Export Kit For Dummies",
+    "price": 2363,
+    "rating": 4.4,
+    "reviews": 211,
+    "summary": "This kit offers a straightforward introduction to the world of import and export for entrepreneurs and businesses. It provides essential information on trade regulations and navigating international commerce. The guide helps you understand the process of expanding your business globally.",
+    "img": "/images/B012X9DNUO.jpg",
+    "badge": null,
+    "cat": "Business, Strategy & Management",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B012X9DNUO/"
   }
 ]
