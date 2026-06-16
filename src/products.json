@@ -11307,5 +11307,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1951949110/"
+  },
+  {
+    "id": 1781632415099,
+    "asin": "0143452126",
+    "title": "Do It Today: Overcome Procrastination",
+    "price": 199,
+    "rating": 4.4,
+    "reviews": 11385,
+    "summary": "Do It Today: Overcome Procrastination\" is a collection of articles designed to help readers understand and conquer procrastination. This book offers practical strategies to enhance productivity and achieve personal goals without added stress. It aims to guide individuals toward a more fulfilling and action-oriented life.",
+    "img": "/images/0143452126.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Success",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0143452126/"
   }
 ]
