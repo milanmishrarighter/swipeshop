@@ -11177,5 +11177,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9390466733/"
+  },
+  {
+    "id": 1781632064120,
+    "asin": "0241370140",
+    "title": "This is Marketing: See and Be Seen",
+    "price": 602,
+    "rating": 4.5,
+    "reviews": 5375,
+    "summary": "This book compiles Seth Godin's essential marketing insights into one accessible guide. It helps individuals and businesses reframe how they present their work, fostering meaningful connections with their audience. The content aims to empower readers to create work they are proud of and that genuinely resonates with others.",
+    "img": "/images/0241370140.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Entrepreneurship",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0241370140/"
   }
 ]
