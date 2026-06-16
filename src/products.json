@@ -11243,5 +11243,21 @@
       "Music"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0241987350/"
+  },
+  {
+    "id": 1781632230624,
+    "asin": "1523505745",
+    "title": "I Will Teach You to Be Rich",
+    "price": 999,
+    "rating": 4.3,
+    "reviews": 22818,
+    "summary": "This book offers a six-week program designed to help you manage your personal finances effectively. It provides practical strategies for automating your money, reducing debt, and investing simply, allowing you to spend on what you value without guilt.",
+    "img": "/images/1523505745.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Success",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1523505745/"
   }
 ]
