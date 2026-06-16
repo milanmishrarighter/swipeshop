@@ -11404,5 +11404,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1119660769/"
+  },
+  {
+    "id": 1781632772084,
+    "asin": "1593271441",
+    "title": "Hacking: The Art of Exploitation, 2nd Edition",
+    "price": 2589,
+    "rating": 4.5,
+    "reviews": 1535,
+    "summary": "Hacking: The Art of Exploitation, 2nd Edition\" teaches the technical foundations of hacking, moving beyond simple exploit execution. This book explains how various hacking techniques function, covering C programming and debugging, to help you understand and apply these concepts. It provides a comprehensive approach to exploring system vulnerabilities and developing new exploits.",
+    "img": "/images/1593271441.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Hacking",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1593271441/"
   }
 ]
