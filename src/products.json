@@ -10741,5 +10741,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8172344880/"
+  },
+  {
+    "id": 1781631166357,
+    "asin": "9358566140",
+    "title": "Quantum Theory Classics",
+    "price": 149,
+    "rating": 4.5,
+    "reviews": 892,
+    "summary": "Quantum Theory Classics offers a collection of foundational texts in physics. These works by pioneers like Planck and Bohr illuminate the revolutionary ideas that redefined our understanding of the subatomic world, introducing concepts of uncertainty and potential. This collection provides insight into the paradoxes and probabilities that continue to shape modern science and philosophy.",
+    "img": "/images/9358566140.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Physics",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9358566140/"
   }
 ]
