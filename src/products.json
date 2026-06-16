@@ -10789,5 +10789,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9358562161/"
+  },
+  {
+    "id": 1781631271555,
+    "asin": "085750357X",
+    "title": "Black Holes: The Reith Lectures",
+    "price": 119,
+    "rating": 4.5,
+    "reviews": 8522,
+    "summary": "This book presents Stephen Hawking's BBC Reith Lectures on black holes. It explores how these enigmatic phenomena challenge our understanding of space and time. By delving into their mysteries, readers can gain insight into the fundamental workings of the universe.",
+    "img": "/images/085750357X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Physics",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/085750357X/"
   }
 ]
