@@ -10837,5 +10837,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/000819680X/"
+  },
+  {
+    "id": 1781631400840,
+    "asin": "9386867109",
+    "title": "The Practicing Mind: Love the Process",
+    "price": 199,
+    "rating": 4.5,
+    "reviews": 3130,
+    "summary": "This book explores how to cultivate patience, focus, and discipline when learning new skills or facing challenges. It teaches readers to embrace the learning process itself, transforming effort into a fulfilling journey rather than a means to an end.",
+    "img": "/images/9386867109.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Motivational",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9386867109/"
   }
 ]
