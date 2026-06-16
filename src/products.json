@@ -11080,5 +11080,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9354400507/"
+  },
+  {
+    "id": 1781631868104,
+    "asin": "9390093961",
+    "title": "Inspiring Lives: A Children's Encyclopedia",
+    "price": 778,
+    "rating": 4.5,
+    "reviews": 1027,
+    "summary": "Inspiring Lives: A Children's Encyclopedia introduces young readers to 200 influential figures from around the globe. This eight-book collection, featuring age-appropriate content and illustrations, helps children develop reading skills and expand their general knowledge. It calmly presents achievements, challenges, and legacies to engage inquisitive minds.",
+    "img": "/images/9390093961.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Children's Encyclopedias",
+    "categories": [
+      "Kids",
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9390093961/"
   }
 ]
