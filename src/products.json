@@ -10805,5 +10805,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/085750357X/"
+  },
+  {
+    "id": 1781631301403,
+    "asin": "0141977817",
+    "title": "Quantum Mechanics: The Theoretical Minimum",
+    "price": 433,
+    "rating": 4.6,
+    "reviews": 2532,
+    "summary": "Quantum Mechanics: The Theoretical Minimum\" offers a practical introduction to the fundamental principles of quantum mechanics. This book provides clear explanations and step-by-step exercises, equipping readers with the essential skills to understand this complex scientific field. It serves as an accessible toolkit for anyone seeking to grasp the core concepts of how reality works at its most fundamental level.",
+    "img": "/images/0141977817.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Engineering & Technology",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0141977817/"
   }
 ]
