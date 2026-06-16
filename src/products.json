@@ -11436,5 +11436,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9388144317/"
+  },
+  {
+    "id": 1781632958876,
+    "asin": "0804139903",
+    "title": "Inside the Criminal Mind (Newly Revised Edition)",
+    "price": 623,
+    "rating": 4.6,
+    "reviews": 1560,
+    "summary": "This revised edition offers a comprehensive profile of the criminal mind, updated with the latest research on criminal behavior and effective intervention methods. It provides crucial insights into how criminals think, aiming to inform more reasonable and compassionate approaches to criminal justice.",
+    "img": "/images/0804139903.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Society & Culture",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0804139903/"
   }
 ]
