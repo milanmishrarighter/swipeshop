@@ -10709,5 +10709,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1398504122/"
+  },
+  {
+    "id": 1781631056518,
+    "asin": "9387779467",
+    "title": "The Wealth of Nations",
+    "price": 379,
+    "rating": 4.5,
+    "reviews": 2177,
+    "summary": "The Wealth of Nations is a foundational text in economics, written by Adam Smith. It explores principles like the division of labor and market forces, explaining how wealth is created and distributed within economies. This work offers a comprehensive analysis that shaped modern understanding of capitalism and economic policy.",
+    "img": "/images/9387779467.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Commercial Policy",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9387779467/"
   }
 ]
