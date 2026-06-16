@@ -11420,5 +11420,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/1593271441/"
+  },
+  {
+    "id": 1781632889244,
+    "asin": "9388144317",
+    "title": "The Richest Man in Babylon",
+    "price": 99,
+    "rating": 4.5,
+    "reviews": 12521,
+    "summary": "The Richest Man in Babylon\" presents a collection of parables set in ancient Babylon, offering foundational principles for personal finance. Through these engaging stories, readers learn practical, time-tested strategies for saving, investing, and accumulating wealth. This classic guide provides enduring financial wisdom applicable to anyone seeking independence and success.",
+    "img": "/images/9388144317.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Economic History",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9388144317/"
   }
 ]
