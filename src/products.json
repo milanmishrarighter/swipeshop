@@ -10949,5 +10949,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/8172345666/"
+  },
+  {
+    "id": 1781631627917,
+    "asin": "818430336X",
+    "title": "Born to Blossom: A Guide to Growth",
+    "price": 217,
+    "rating": 4.5,
+    "reviews": 2457,
+    "summary": "Born to Blossom\" is a guide exploring how knowledge can lead to prosperity and societal transformation. It envisions a future where education fosters diverse talents and emphasizes continuous learning throughout life. The book encourages a scientific mindset guided by conscience and social values, demonstrating that growth and blossoming are possible at any age.",
+    "img": "/images/818430336X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Success",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/818430336X/"
   }
 ]
