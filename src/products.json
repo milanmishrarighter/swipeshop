@@ -11291,5 +11291,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/4805312270/"
+  },
+  {
+    "id": 1781632357983,
+    "asin": "1951949110",
+    "title": "Fluent Japanese: 2000 Common Words",
+    "price": 1121,
+    "rating": 4.5,
+    "reviews": 1443,
+    "summary": "Fluent Japanese: 2000 Common Words helps you expand your Japanese vocabulary. This book provides 2000 frequently used words with translations and example sentences, enhancing your reading comprehension for both fiction and non-fiction. It offers a structured approach to learning essential Japanese terms.",
+    "img": "/images/1951949110.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Reading Skills",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1951949110/"
   }
 ]
