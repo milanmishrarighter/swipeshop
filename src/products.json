@@ -10757,5 +10757,21 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9358566140/"
+  },
+  {
+    "id": 1781631198224,
+    "asin": "8175994657",
+    "title": "Relativity: The Special And The General Theory",
+    "price": 169,
+    "rating": 4.5,
+    "reviews": 5789,
+    "summary": "Relativity: The Special and the General Theory\" presents Albert Einstein's foundational work on space, time, and gravity. This book offers a direct exploration of the theories that reshaped our understanding of the universe. It provides a clear explanation of these complex scientific principles.",
+    "img": "/images/8175994657.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "History",
+    "categories": [
+      "Books"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/8175994657/"
   }
 ]
