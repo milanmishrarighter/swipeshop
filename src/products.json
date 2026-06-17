@@ -11694,5 +11694,21 @@
       "Kids"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GM3KHBCD/"
+  },
+  {
+    "id": 1781713830408,
+    "asin": "B0D8G9J1P5",
+    "title": "Turbo Sweep Wet-Dry Handheld Vacuum",
+    "price": 4299,
+    "rating": 4.5,
+    "reviews": 3643,
+    "summary": "The Turbo Sweep is a handheld vacuum that combines both wet and dry cleaning capabilities. It efficiently vacuums and mops surfaces, offering a comprehensive cleaning solution for everyday household tasks. Its powerful suction and compact design provide convenient, versatile cleaning.",
+    "img": "/images/B0D8G9J1P5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Handheld Vacuums",
+    "categories": [
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D8G9J1P5/"
   }
 ]
