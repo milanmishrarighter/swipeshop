@@ -11864,5 +11864,22 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09MJ3FL43/"
+  },
+  {
+    "id": 1781714310974,
+    "asin": "B07Q2ZM5LS",
+    "title": "Philips Straightening Brush",
+    "price": 2686,
+    "rating": 4.2,
+    "reviews": 42083,
+    "summary": "The Philips Straightening Brush is a heated styling tool designed to smooth hair. Its ceramic-coated bristles and ThermoProtect technology work to gently straighten hair while minimizing heat exposure. This brush offers a convenient way to achieve a naturally straight and shiny look.",
+    "img": "/images/B07Q2ZM5LS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Straighteners",
+    "categories": [
+      "Personal Care",
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07Q2ZM5LS/"
   }
 ]
