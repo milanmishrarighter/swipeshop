@@ -11948,5 +11948,23 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DJ91HSPK/"
+  },
+  {
+    "id": 1781714472334,
+    "asin": "B09THDF5FB",
+    "title": "Body Measurement Tape with Lock",
+    "price": 299,
+    "rating": 3.8,
+    "reviews": 1989,
+    "summary": "This body measurement tape is designed for easily taking accurate body measurements. Its retractable design and locking pin allow for simple, one-handed use, ensuring consistent results. The durable fiberglass tape and clear markings in both inches and centimeters provide reliable, easy-to-read measurements.",
+    "img": "/images/B09THDF5FB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Tape Measures",
+    "categories": [
+      "Personal Care",
+      "Lifestyle",
+      "Utility and House Repair"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09THDF5FB/"
   }
 ]
