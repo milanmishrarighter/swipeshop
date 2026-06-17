@@ -11881,5 +11881,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07Q2ZM5LS/"
+  },
+  {
+    "id": 1781714327237,
+    "asin": "B0F4D8VRWP",
+    "title": "Hansaplast First Aid for Wounds",
+    "price": 345,
+    "rating": 4.4,
+    "reviews": 800,
+    "summary": "This Hansaplast Fast Aid Kit is a compact, multi-use first aid solution for minor wounds and injuries. It contains essential items to clean, protect, and secure wounds, offering immediate care for cuts and bruises. The kit is lightweight and portable, making it suitable for home, travel, or outdoor activities.",
+    "img": "/images/B0F4D8VRWP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "First Aid Kits",
+    "categories": [
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F4D8VRWP/"
   }
 ]
