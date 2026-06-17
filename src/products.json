@@ -11533,5 +11533,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B012X9DNUO/"
+  },
+  {
+    "id": 1781713343388,
+    "asin": "B0FL2458CF",
+    "title": "DEEBOT N30 Robot Vacuum & Mop",
+    "price": 23999,
+    "rating": 4.5,
+    "reviews": 1525,
+    "summary": "The DEEBOT N30 is a robotic vacuum and mop that simultaneously cleans floors. It offers powerful suction and efficient hair removal, providing a thorough clean for various floor types. This device simplifies home maintenance by vacuuming and mopping in one pass.",
+    "img": "/images/B0FL2458CF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Robotic Vacuums",
+    "categories": [
+      "Cleaning & Hygiene Freak",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FL2458CF/"
   }
 ]
