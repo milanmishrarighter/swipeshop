@@ -12068,5 +12068,22 @@
       "Kids"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BNKRZSTC/"
+  },
+  {
+    "id": 1781714696424,
+    "asin": "B0CG1N11DV",
+    "title": "Core Mini Air Purifier",
+    "price": 4998,
+    "rating": 4.4,
+    "reviews": 94108,
+    "summary": "The LEVOIT Core Mini Air Purifier uses an H13 True HEPA filter to capture 99.97% of airborne particles like dust, smoke, and pollen. This compact device helps improve your indoor air quality and can also diffuse essential oils for a pleasant aroma. It is designed for quiet operation and comes with a two-year warranty.",
+    "img": "/images/B0CG1N11DV.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "HEPA Air Purifiers",
+    "categories": [
+      "Home Decor",
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CG1N11DV/"
   }
 ]
