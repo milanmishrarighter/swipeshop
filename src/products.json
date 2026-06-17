@@ -12085,5 +12085,24 @@
       "Cleaning & Hygiene Freak"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CG1N11DV/"
+  },
+  {
+    "id": 1781714758191,
+    "asin": "B079N98K93",
+    "title": "ThermoPro Indoor Temperature and Humidity Monitor",
+    "price": 999,
+    "rating": 4.5,
+    "reviews": 8594,
+    "summary": "The ThermoPro monitor provides accurate indoor temperature and humidity readings. Its clear digital display and touch backlight allow for easy viewing at any time. This device helps you maintain a comfortable and healthy home environment.",
+    "img": "/images/B079N98K93.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Indoor Thermometers",
+    "categories": [
+      "Home Decor",
+      "Personal Care",
+      "Cleaning & Hygiene Freak",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B079N98K93/"
   }
 ]
