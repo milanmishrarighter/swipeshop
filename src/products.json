@@ -11831,5 +11831,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F31ZQD1H/"
+  },
+  {
+    "id": 1781714189425,
+    "asin": "B0CW27Q8HQ",
+    "title": "Kärcher WD 3 Wet-Dry Vacuum",
+    "price": 5899,
+    "rating": 4.3,
+    "reviews": 12505,
+    "summary": "The Kärcher WD 3 is a versatile wet-dry vacuum designed for comprehensive cleaning tasks. It offers powerful suction for both liquid spills and dry debris, making it suitable for various environments. Its compact design and included accessories provide efficient, hassle-free maintenance and use.",
+    "img": "/images/B0CW27Q8HQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wet-Dry Shop Vacuums",
+    "categories": [
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CW27Q8HQ/"
   }
 ]
