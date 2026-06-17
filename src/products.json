@@ -11630,5 +11630,21 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GN2GLVK6/"
+  },
+  {
+    "id": 1781713593443,
+    "asin": "B0CGWXLZDC",
+    "title": "Dyson V8 Absolute Cordless Vacuum",
+    "price": 29900,
+    "rating": 4.4,
+    "reviews": 1956,
+    "summary": "The Dyson V8 Absolute is a cordless vacuum designed for versatile whole-home cleaning. It offers powerful suction for various surfaces and features advanced filtration to capture allergens, expelling cleaner air. Its lightweight design and de-tangling technology make it effective for pet owners and hard-to-reach areas.",
+    "img": "/images/B0CGWXLZDC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Handheld Vacuums",
+    "categories": [
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CGWXLZDC/"
   }
 ]
