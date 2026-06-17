@@ -11914,5 +11914,22 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BY1V1JX9/"
+  },
+  {
+    "id": 1781714398381,
+    "asin": "B00FSC9PBK",
+    "title": "SINGER 1408: Compact Home Sewing Machine",
+    "price": 10208,
+    "rating": 4.2,
+    "reviews": 19567,
+    "summary": "The SINGER 1408 is a compact electric sewing machine designed for home use. It offers 8 built-in stitches and a heavy-duty metal frame, ensuring durability and ease of use for everyday sewing tasks. This machine allows for simple stitch selection and includes a reverse function to secure seams effectively.",
+    "img": "/images/B00FSC9PBK.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Sewing & Embroidery Machines",
+    "categories": [
+      "Personal Care",
+      "Utility and House Repair"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B00FSC9PBK/"
   }
 ]
