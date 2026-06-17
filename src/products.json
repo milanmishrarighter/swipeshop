@@ -12017,5 +12017,22 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FM8C47F6/"
+  },
+  {
+    "id": 1781714610475,
+    "asin": "B07JKXSJMX",
+    "title": "Oral-B Vitality Electric Toothbrush",
+    "price": 1714,
+    "rating": 4.1,
+    "reviews": 6725,
+    "summary": "The Oral-B Vitality electric toothbrush provides a thorough clean for adults. Its rotating head and two brushing modes effectively remove plaque, while a built-in timer ensures you brush for the recommended duration. This design supports consistent, comprehensive oral hygiene.",
+    "img": "/images/B07JKXSJMX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Rotating",
+    "categories": [
+      "Personal Care",
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07JKXSJMX/"
   }
 ]
