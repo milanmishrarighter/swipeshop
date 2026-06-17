@@ -11550,5 +11550,21 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FL2458CF/"
+  },
+  {
+    "id": 1781713379207,
+    "asin": "B0CJF2G4J5",
+    "title": "Alpha Robot Vacuum & Mop",
+    "price": 16999,
+    "rating": 4.3,
+    "reviews": 1188,
+    "summary": "The Alpha Robot Vacuum & Mop provides automated floor care, offering both dry vacuuming and wet mopping capabilities. It intelligently maps your home and adjusts suction for different surfaces, ensuring a thorough clean with minimal effort. This device simplifies routine maintenance, allowing you to schedule cleaning and control it remotely.",
+    "img": "/images/B0CJF2G4J5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Robotic Vacuums",
+    "categories": [
+      "Cleaning & Hygiene Freak"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CJF2G4J5/"
   }
 ]
