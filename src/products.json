@@ -11614,5 +11614,21 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DNZDZFFP/"
+  },
+  {
+    "id": 1781713536687,
+    "asin": "B0GN2GLVK6",
+    "title": "Dyson Airwrap Multi-Styler Complete",
+    "price": 49900,
+    "rating": 4.4,
+    "reviews": 2448,
+    "summary": "The Dyson Airwrap 6-in-1 Multi-Styler uses enhanced Coanda airflow to style hair without extreme heat. It offers six versatile attachments and intelligent heat control to prevent damage. This tool provides various styling options, from drying to curling, with personalized settings for different hair types.",
+    "img": "/images/B0GN2GLVK6.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Hair Dryers",
+    "categories": [
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GN2GLVK6/"
   }
 ]
