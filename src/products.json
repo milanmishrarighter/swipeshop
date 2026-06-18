@@ -12884,5 +12884,22 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GV3W7JLK/"
+  },
+  {
+    "id": 1781805464850,
+    "asin": "B0CG19QXWD",
+    "title": "DJI Osmo Pocket 3 Camera",
+    "price": 40990,
+    "rating": 4.4,
+    "reviews": 3244,
+    "summary": "The DJI Osmo Pocket 3 is a compact video camera designed for stable, high-quality capture. It features a 1-inch CMOS sensor for clear 4K footage and 3-axis stabilization to ensure smooth video. Its rotatable touchscreen and fast focusing simplify framing and tracking subjects, making it suitable for various recording needs.",
+    "img": "/images/B0CG19QXWD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Video Cameras",
+    "categories": [
+      "Travel",
+      "Creativity"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CG19QXWD/"
   }
 ]
