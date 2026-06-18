@@ -12547,5 +12547,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CV86K3QQ/"
+  },
+  {
+    "id": 1781804865978,
+    "asin": "B0FJ8GW5KF",
+    "title": "Retractable Car Charger with USB Ports",
+    "price": 989,
+    "rating": 4.1,
+    "reviews": 10775,
+    "summary": "This car charger provides a convenient way to power multiple devices on the go. It features two retractable cables and two additional USB ports, allowing four items to charge simultaneously. This design helps maintain an organized vehicle interior while ensuring your electronics remain powered.",
+    "img": "/images/B0FJ8GW5KF.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Automobile Chargers",
+    "categories": [
+      "Travel",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FJ8GW5KF/"
   }
 ]
