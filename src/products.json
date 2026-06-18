@@ -12298,5 +12298,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BX8V53KM/"
+  },
+  {
+    "id": 1781804208621,
+    "asin": "B0CG7P9KTH",
+    "title": "Polaroid Go Instant Polaroid Film Camera",
+    "price": 7100,
+    "rating": 4.2,
+    "reviews": 1526,
+    "summary": "The Polaroid Go Generation 2 is a compact instant camera designed for capturing moments on the go. It features upgraded exposure settings and a reflective selfie mirror, allowing for clear, creative photographs. This portable camera is also made with 30% recycled materials, offering a sustainable way to enjoy instant photography.",
+    "img": "/images/B0CG7P9KTH.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Cameras",
+    "categories": [
+      "Creativity",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CG7P9KTH/"
   }
 ]
