@@ -12281,5 +12281,22 @@
       "Kids"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DDH8Z716/"
+  },
+  {
+    "id": 1781804173657,
+    "asin": "B0BX8V53KM",
+    "title": "Instax Mini 12 Instant Polaroid Camera",
+    "price": 7499,
+    "rating": 4.1,
+    "reviews": 6833,
+    "summary": "The Instax Mini 12 is an instant camera designed for capturing and printing immediate memories. It features a pull-out selfie lens, making it easy to take clear close-up shots and self-portraits. This camera allows users to enjoy tangible prints of their favorite moments.",
+    "img": "/images/B0BX8V53KM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Cameras",
+    "categories": [
+      "Creativity",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BX8V53KM/"
   }
 ]
