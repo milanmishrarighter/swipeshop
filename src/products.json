@@ -12835,5 +12835,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CMTK9C67/"
+  },
+  {
+    "id": 1781805373483,
+    "asin": "B0GCS82SVK",
+    "title": "Brown Leather Vanity Pouch",
+    "price": 349,
+    "rating": 4.3,
+    "reviews": 2360,
+    "summary": "This brown leather vanity pouch offers a compact yet spacious solution for organizing your essentials. Its water-resistant design and durable construction protect your items, making it ideal for travel or daily use. This versatile bag neatly stores cosmetics, jewelry, or other small necessities.",
+    "img": "/images/B0GCS82SVK.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cosmetic Bags",
+    "categories": [
+      "OCD/Organizer/Storage Stuff",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GCS82SVK/"
   }
 ]
