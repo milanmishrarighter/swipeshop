@@ -12264,5 +12264,22 @@
       "Creativity"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BYZHDRN6/"
+  },
+  {
+    "id": 1781804073519,
+    "asin": "B0DDH8Z716",
+    "title": "Kids Instant Print Digital Camera",
+    "price": 3649,
+    "rating": 4.3,
+    "reviews": 4035,
+    "summary": "This instant print digital camera for kids allows children to capture and print photos without ink, fostering creativity. It offers various printing modes, color image capture, and 1080p video recording, providing a versatile tool for young explorers.",
+    "img": "/images/B0DDH8Z716.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Digital Cameras",
+    "categories": [
+      "Creativity",
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DDH8Z716/"
   }
 ]
