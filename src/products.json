@@ -12701,5 +12701,23 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DHV38WWD/"
+  },
+  {
+    "id": 1781805136353,
+    "asin": "B0BRY84H2H",
+    "title": "Boldfit Balaclava for Bikers",
+    "price": 246,
+    "rating": 4.1,
+    "reviews": 11502,
+    "summary": "This balaclava offers full face coverage, designed to be worn comfortably under a helmet. It protects against sun, dust, and wind while riding or engaging in other outdoor activities. The soft, stretchable fabric ensures a breathable and secure fit for extended wear.",
+    "img": "/images/B0BRY84H2H.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Face Masks",
+    "categories": [
+      "Personal Care",
+      "Travel",
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BRY84H2H/"
   }
 ]
