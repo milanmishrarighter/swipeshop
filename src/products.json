@@ -12631,5 +12631,23 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F2YDCVSR/"
+  },
+  {
+    "id": 1781805004200,
+    "asin": "B0C783YNW7",
+    "title": "DJI Osmo Action 4 Camera",
+    "price": 24990,
+    "rating": 4.6,
+    "reviews": 4570,
+    "summary": "The DJI Osmo Action 4 camera captures high-quality 4K video with a large sensor for clear low-light imaging. It offers stable footage, even in extreme temperatures, and features a long-lasting battery for extended use. This camera is designed for reliable performance in various environments.",
+    "img": "/images/B0C783YNW7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Action Cameras",
+    "categories": [
+      "Travel",
+      "Tech Products",
+      "Creativity"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C783YNW7/"
   }
 ]
