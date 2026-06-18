@@ -12349,5 +12349,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DB8SQSRH/"
+  },
+  {
+    "id": 1781804339661,
+    "asin": "B0DYVSGMT5",
+    "title": "Fujifilm Instax Mini 41 Camera",
+    "price": 10499,
+    "rating": 4.5,
+    "reviews": 465,
+    "summary": "The Fujifilm Instax Mini 41 is an instant camera designed for straightforward use. It features automatic light adjustment to help ensure proper exposure and includes a close-up mode for detailed shots.",
+    "img": "/images/B0DYVSGMT5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Cameras",
+    "categories": [
+      "Creativity",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DYVSGMT5/"
   }
 ]
