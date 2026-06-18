@@ -12315,5 +12315,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CG7P9KTH/"
+  },
+  {
+    "id": 1781804257082,
+    "asin": "B0D647ST7B",
+    "title": "Fujifilm Instax Mini LiPlay Camera",
+    "price": 15999,
+    "rating": 4.5,
+    "reviews": 5802,
+    "summary": "The Fujifilm Instax Mini LiPlay is a hybrid instant camera and smartphone printer. It allows you to capture and print photos directly, or select images from your phone to print via Bluetooth. This compact device offers the convenience of digital photography with the tangible joy of instant prints.",
+    "img": "/images/B0D647ST7B.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Instant Cameras",
+    "categories": [
+      "Creativity",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D647ST7B/"
   }
 ]
