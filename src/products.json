@@ -12228,5 +12228,23 @@
       "Utility and House Repair"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07JW58P2C/"
+  },
+  {
+    "id": 1781803996303,
+    "asin": "B0DTK5596V",
+    "title": "Sony Alpha 6100 with Two Lenses",
+    "price": 76490,
+    "rating": 4.7,
+    "reviews": 96,
+    "summary": "The Sony Alpha 6100 is a mirrorless camera system featuring an APS-C 24.2-megapixel sensor and two versatile lenses. It offers rapid autofocus with Real-time Eye AF for sharp portraits and 4K video recording. The camera's tiltable LCD screen provides flexibility for various shooting angles.",
+    "img": "/images/B0DTK5596V.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mirrorless System Cameras",
+    "categories": [
+      "Tech Products",
+      "Travel",
+      "Creativity"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DTK5596V/"
   }
 ]
