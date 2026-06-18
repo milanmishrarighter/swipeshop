@@ -12684,5 +12684,22 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DQVBTRJC/"
+  },
+  {
+    "id": 1781805103758,
+    "asin": "B0DHV38WWD",
+    "title": "KZ EDC PRO Wired Earphones",
+    "price": 749,
+    "rating": 4.2,
+    "reviews": 1233,
+    "summary": "The KZ EDC Pro is a wired in-ear monitor that provides clear, high-fidelity audio. Its dynamic driver delivers detailed sound and powerful bass, suitable for both audiophiles and musicians. The ergonomic design and detachable OFC cable ensure comfortable, reliable listening.",
+    "img": "/images/B0DHV38WWD.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "In-Ear",
+    "categories": [
+      "Music",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DHV38WWD/"
   }
 ]
