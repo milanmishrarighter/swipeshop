@@ -12649,5 +12649,23 @@
       "Creativity"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0C783YNW7/"
+  },
+  {
+    "id": 1781805033849,
+    "asin": "B0BCW1S7XR",
+    "title": "insta360 X3: 360 Action Camera",
+    "price": 29990,
+    "rating": 4.4,
+    "reviews": 1542,
+    "summary": "The Insta360 X3 is a compact 360-degree action camera designed to capture your experiences comprehensively. It records 5.7K 360-degree video and 72-megapixel photos, allowing you to choose the best angles after filming. This camera simplifies capturing and sharing dynamic content, ensuring you never miss a moment.",
+    "img": "/images/B0BCW1S7XR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Action Cameras",
+    "categories": [
+      "Creativity",
+      "Travel",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BCW1S7XR/"
   }
 ]
