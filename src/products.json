@@ -12366,5 +12366,22 @@
       "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DYVSGMT5/"
+  },
+  {
+    "id": 1781804380554,
+    "asin": "B0B68SK1KQ",
+    "title": "Art Painting Set for All Ages",
+    "price": 1895,
+    "rating": 4.2,
+    "reviews": 618,
+    "summary": "This art painting set provides a comprehensive collection of supplies for artists of all ages and skill levels. It includes brushes, various papers, canvas boards, and an easel, allowing for exploration across different painting mediums. The kit offers a convenient and complete foundation for creative expression.",
+    "img": "/images/B0B68SK1KQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Kits",
+    "categories": [
+      "Creativity",
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B68SK1KQ/"
   }
 ]
