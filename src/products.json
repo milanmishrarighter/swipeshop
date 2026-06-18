@@ -12466,5 +12466,22 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9386538601/"
+  },
+  {
+    "id": 1781804637534,
+    "asin": "938653861X",
+    "title": "Mandala Coloring Book for Adults",
+    "price": 195,
+    "rating": 4.5,
+    "reviews": 6123,
+    "summary": "This adult coloring book features a collection of intricate mandala designs. Engaging with these patterns offers a calming activity that can help reduce stress and encourage self-reflection. The perforated pages allow you to easily remove and display your finished artwork.",
+    "img": "/images/938653861X.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mandalas & Geometric Patterns",
+    "categories": [
+      "Creativity",
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/938653861X/"
   }
 ]
