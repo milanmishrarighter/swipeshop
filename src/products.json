@@ -13128,5 +13128,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BW6CBY7G/"
+  },
+  {
+    "id": 1782752345187,
+    "asin": "B0DDQ7C2VT",
+    "title": "Amber Vanilla Car Freshener",
+    "price": 299,
+    "rating": 3.9,
+    "reviews": 1423,
+    "summary": "This hanging car air freshener offers a comforting amber vanilla fragrance for your vehicle. Its alcohol-free, non-toxic formula provides a continuous, sophisticated scent for up to 35 days, enhancing your car's atmosphere.",
+    "img": "/images/B0DDQ7C2VT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Air Fresheners",
+    "categories": [
+      "Cleaning & Hygiene Freak",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DDQ7C2VT/"
   }
 ]
