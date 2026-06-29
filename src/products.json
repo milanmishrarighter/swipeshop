@@ -13225,5 +13225,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BRQLZ3D5/"
+  },
+  {
+    "id": 1782752527037,
+    "asin": "B0FLQCBCBC",
+    "title": "Airganic Musk Camphor Aqua Pod",
+    "price": 239,
+    "rating": 3.8,
+    "reviews": 1728,
+    "summary": "This car perfume hanging pod uses natural essential oils to provide a consistent, pleasant scent in your vehicle. Its wooden diffuser lid allows for a slow fragrance release, ensuring a lasting aroma for up to 60 days. The product aims to create a calm and inviting atmosphere during your drives.",
+    "img": "/images/B0FLQCBCBC.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Air Fresheners",
+    "categories": [
+      "Cleaning & Hygiene Freak",
+      "Travel"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FLQCBCBC/"
   }
 ]
