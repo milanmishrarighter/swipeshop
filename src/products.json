@@ -13692,5 +13692,23 @@
       "Adult Money"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0762479833/"
+  },
+  {
+    "id": 1782839696533,
+    "asin": "0762463104",
+    "title": "Harry Potter Talking Dobby Book",
+    "price": 1049,
+    "rating": 4.4,
+    "reviews": 5893,
+    "summary": "This unique collectible features a three-inch Dobby figure that speaks memorable lines from the Harry Potter films. Simply press a button to hear him. It also includes a 48-page book filled with quotes and full-color photography, offering fans a tangible piece of the wizarding world.",
+    "img": "/images/0762463104.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Visionary & Metaphysical",
+    "categories": [
+      "Knick-Knacks/Misc Stuff",
+      "Adult Money",
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0762463104/"
   }
 ]
