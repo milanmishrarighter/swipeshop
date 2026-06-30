@@ -13745,5 +13745,23 @@
       "Sports and Fitness"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0241676738/"
+  },
+  {
+    "id": 1782839861617,
+    "asin": "1684128900",
+    "title": "Harry Potter Paper Models",
+    "price": 1728,
+    "rating": 4.7,
+    "reviews": 546,
+    "summary": "This product provides materials and instructions to construct 22 paper models of iconic locations from the Harry Potter films. It allows fans to create detailed replicas of beloved Wizarding World landmarks. Additionally, a keepsake book with background information and 22 trading cards are included to enhance the experience.",
+    "img": "/images/1684128900.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cinema & Broadcast",
+    "categories": [
+      "Home Decor",
+      "Adult Money",
+      "Knick-Knacks/Misc Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/1684128900/"
   }
 ]
