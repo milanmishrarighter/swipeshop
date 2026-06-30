@@ -14079,5 +14079,23 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DV3T7W5D/"
+  },
+  {
+    "id": 1782840601070,
+    "asin": "B0DG91P4BZ",
+    "title": "Shin-chan Phone and Tablet Stand",
+    "price": 299,
+    "rating": 4.3,
+    "reviews": 107,
+    "summary": "This Shin-chan action figure serves as a stable holder for your phone or tablet, crafted from durable PVC. It securely props up your device while adding a playful decorative element to any space. This versatile item is suitable for desks, car dashboards, or as a unique gift.",
+    "img": "/images/B0DG91P4BZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Stands",
+    "categories": [
+      "Adult Money",
+      "Knick-Knacks/Misc Stuff",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DG91P4BZ/"
   }
 ]
