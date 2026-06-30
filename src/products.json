@@ -13728,5 +13728,22 @@
       "Party & Games"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0762483989/"
+  },
+  {
+    "id": 1782839786812,
+    "asin": "0241676738",
+    "title": "How to Win At Chess",
+    "price": 1981,
+    "rating": 4.6,
+    "reviews": 3516,
+    "summary": "This guide teaches chess fundamentals and advanced strategies for players of all levels. It covers essential moves, openings, endings, tactics, and overall strategy to help you improve your game. With practical tips and illustrations, this resource aims to enhance your understanding and ability to think ahead on the board.",
+    "img": "/images/0241676738.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Games & Strategy Guides",
+    "categories": [
+      "Books",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0241676738/"
   }
 ]
