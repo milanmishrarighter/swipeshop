@@ -13710,5 +13710,23 @@
       "Kids"
     ],
     "amazonUrl": "https://www.amazon.in/dp/0762463104/"
+  },
+  {
+    "id": 1782839751574,
+    "asin": "0762483989",
+    "title": "Harry Potter Wizard Chess Set",
+    "price": 1599,
+    "rating": 4.2,
+    "reviews": 401,
+    "summary": "This officially licensed set is a miniature replica of the Wizard Chess game from Harry Potter and the Sorcerer's Stone. It includes 32 detailed metallic pieces and a collapsible board, allowing fans to recreate the iconic magical game. A small accompanying book provides background information and game instructions.",
+    "img": "/images/0762483989.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Film & Television",
+    "categories": [
+      "Knick-Knacks/Misc Stuff",
+      "Adult Money",
+      "Party & Games"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/0762483989/"
   }
 ]
