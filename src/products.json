@@ -14369,5 +14369,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D9H459WR/"
+  },
+  {
+    "id": 1782924008272,
+    "asin": "B0DC5X7K1V",
+    "title": "Anaya Rattan Swing Chair",
+    "price": 9999,
+    "rating": 4.2,
+    "reviews": 61,
+    "summary": "The Anaya Rattan Swing Chair offers a comfortable and stylish seating option for any space. Handwoven from durable synthetic wicker, it provides a relaxing spot indoors or outdoors. This chair is designed for lasting enjoyment and easy integration into your home.",
+    "img": "/images/B0DC5X7K1V.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Swing Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DC5X7K1V/"
   }
 ]
