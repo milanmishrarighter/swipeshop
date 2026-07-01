@@ -14385,5 +14385,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DC5X7K1V/"
+  },
+  {
+    "id": 1782924046124,
+    "asin": "B084VKXYGQ",
+    "title": "Personalized Vegan Leather Keychain",
+    "price": 299,
+    "rating": 4.2,
+    "reviews": 1286,
+    "summary": "This personalized vegan leather keychain offers a durable and stylish way to organize your keys. It features a customizable charm and name tag, providing a unique accessory for anyone. The sturdy construction ensures lasting quality and everyday convenience.",
+    "img": "/images/B084VKXYGQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Keyrings & Keychains",
+    "categories": [
+      "Knick-Knacks/Misc Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B084VKXYGQ/"
   }
 ]
