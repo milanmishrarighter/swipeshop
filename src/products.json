@@ -14706,5 +14706,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DD7G2672/"
+  },
+  {
+    "id": 1782924732294,
+    "asin": "9389432421",
+    "title": "Baby's First Year Journal",
+    "price": 199,
+    "rating": 4.5,
+    "reviews": 2256,
+    "summary": "This Baby's First Year Journal helps parents document their child's early milestones and memories. It provides a dedicated space to record significant events, from pregnancy through the baby's first steps. This journal allows families to create a lasting keepsake of their child's precious first year.",
+    "img": "/images/9389432421.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Vocabulary & Spelling",
+    "categories": [
+      "Kids"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/9389432421/"
   }
 ]
