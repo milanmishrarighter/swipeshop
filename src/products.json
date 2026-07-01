@@ -14353,5 +14353,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0H2MKDND7/"
+  },
+  {
+    "id": 1782923978526,
+    "asin": "B0D9H459WR",
+    "title": "Curio D-Shape Cotton Swing Chair",
+    "price": 1399,
+    "rating": 3.9,
+    "reviews": 8233,
+    "summary": "This D-shaped cotton swing offers a comfortable, versatile seating option for your home or balcony. It provides a relaxing space for reading or unwinding, suitable for both indoor and outdoor enjoyment. The swing is designed for durability and comes with all necessary hanging accessories.",
+    "img": "/images/B0D9H459WR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Swing Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D9H459WR/"
   }
 ]
