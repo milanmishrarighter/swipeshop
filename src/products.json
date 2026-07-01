@@ -14321,5 +14321,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CBXCWGV6/"
+  },
+  {
+    "id": 1782923939040,
+    "asin": "B0CG3LPG2D",
+    "title": "Velvet Sheesham Rocking Chair with Ottoman",
+    "price": 13999,
+    "rating": 4.1,
+    "reviews": 138,
+    "summary": "This solid Sheesham wood rocking chair, complete with a matching ottoman, offers a comfortable and durable seating option. Its velvet upholstery and ergonomic design provide gentle support for relaxation. The pre-assembled chair is ready to enhance any living space with its smooth rocking motion and natural wood finish.",
+    "img": "/images/B0CG3LPG2D.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Rocking Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CG3LPG2D/"
   }
 ]
