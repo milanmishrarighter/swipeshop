@@ -14337,5 +14337,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CG3LPG2D/"
+  },
+  {
+    "id": 1782923960095,
+    "asin": "B0H2MKDND7",
+    "title": "Purple Cotton Hammock Swing Chair",
+    "price": 999,
+    "rating": 4.2,
+    "reviews": 2698,
+    "summary": "This cotton swinging hammock provides a comfortable and durable seating option for both adults and children. Its soft, breathable material offers a relaxing spot for reading or unwinding. The swing is also portable and weather-resistant, making it suitable for various indoor and outdoor settings.",
+    "img": "/images/B0H2MKDND7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Swing Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0H2MKDND7/"
   }
 ]
