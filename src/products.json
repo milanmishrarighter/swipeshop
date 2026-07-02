@@ -14937,5 +14937,24 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B75WHSGR/"
+  },
+  {
+    "id": 1783012890775,
+    "asin": "B091G3FLL7",
+    "title": "Mi Band 6 Fitness Tracker",
+    "price": 4499,
+    "rating": 3.9,
+    "reviews": 11926,
+    "summary": "The Xiaomi Mi Smart Band 6 is a fitness tracker featuring a 1.56-inch AMOLED display and a two-week battery life. It monitors various health metrics, including SpO2, heart rate, and sleep, while also tracking 30 different fitness activities. This device provides comprehensive health and activity insights in a compact design.",
+    "img": "/images/B091G3FLL7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Smart Watches",
+    "categories": [
+      "Personal Care",
+      "Tech Products",
+      "Sports and Fitness",
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B091G3FLL7/"
   }
 ]
