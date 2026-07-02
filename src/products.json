@@ -14956,5 +14956,24 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B091G3FLL7/"
+  },
+  {
+    "id": 1783012927159,
+    "asin": "B0CVN3NK42",
+    "title": "Galaxy Fit3: Activity and Sleep Tracker",
+    "price": 3699,
+    "rating": 4.2,
+    "reviews": 3493,
+    "summary": "The Samsung Galaxy Fit3 is an activity tracker featuring a 4cm AMOLED display and up to 13 days of battery life. It helps you monitor your health with sleep and workout tracking, offering over 100 exercise modes and media control. This device provides comprehensive insights into your daily activity and well-being.",
+    "img": "/images/B0CVN3NK42.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Activity Trackers",
+    "categories": [
+      "Personal Care",
+      "Sports and Fitness",
+      "Lifestyle",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CVN3NK42/"
   }
 ]
