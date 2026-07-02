@@ -15508,5 +15508,23 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B091F49XYX/"
+  },
+  {
+    "id": 1783014028732,
+    "asin": "B0B6BQ711Q",
+    "title": "Pulse Max Smartwatch (Rose Pink)",
+    "price": 1199,
+    "rating": 4,
+    "reviews": 25998,
+    "summary": "This smartwatch features a 1.85\" display and offers Bluetooth calling directly from your wrist. It provides health tracking with 100 sports modes and boasts a 10-day battery life, ensuring consistent use. The device also includes smart DND and 550 nits brightness for clear visibility.",
+    "img": "/images/B0B6BQ711Q.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Smart Watches",
+    "categories": [
+      "Lifestyle",
+      "Sports and Fitness",
+      "Tech Products"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B6BQ711Q/"
   }
 ]
