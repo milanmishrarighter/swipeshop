@@ -15243,5 +15243,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FC65CJFB/"
+  },
+  {
+    "id": 1783013660920,
+    "asin": "B07352KCC4",
+    "title": "Black Infinity Fidget Cube",
+    "price": 747,
+    "rating": 3.8,
+    "reviews": 1124,
+    "summary": "This Infinity Cube is a discreet fidget toy designed to help manage symptoms of ADD, ADHD, anxiety, and autism. Its continuous, quiet motion provides a calming sensory experience, promoting focus and reducing restlessness for both children and adults. This compact cube offers a simple, effective way to channel excess energy throughout the day.",
+    "img": "/images/B07352KCC4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Infinity Cubes",
+    "categories": [
+      "Knick-Knacks/Misc Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07352KCC4/"
   }
 ]
