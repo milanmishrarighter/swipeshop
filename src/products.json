@@ -15542,5 +15542,23 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07QNXCKP6/"
+  },
+  {
+    "id": 1783014075869,
+    "asin": "B0CQ4JT6NT",
+    "title": "Noise Twist Go Round Smartwatch",
+    "price": 1599,
+    "rating": 4,
+    "reviews": 55751,
+    "summary": "The Noise Twist Go Round dial Smartwatch offers convenient Bluetooth calling and comprehensive health tracking on a clear 1.39\" display. Its durable metal build and IP68 rating ensure reliability, while features like 24/7 heart rate monitoring and sleep tracking support a healthy lifestyle. This smartwatch also provides over 100 sports modes and customizable watch faces.",
+    "img": "/images/B0CQ4JT6NT.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Smart Watches",
+    "categories": [
+      "Lifestyle",
+      "Tech Products",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CQ4JT6NT/"
   }
 ]
