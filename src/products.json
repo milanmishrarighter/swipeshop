@@ -14975,5 +14975,23 @@
       "Tech Products"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CVN3NK42/"
+  },
+  {
+    "id": 1783012974041,
+    "asin": "B0DGQBBTQB",
+    "title": "Gabit Ring: Health Tracking, Titanium",
+    "price": 15426,
+    "rating": 4,
+    "reviews": 887,
+    "summary": "The Gabit Smart Ring is a health tracker designed to monitor sleep, fitness, nutrition, and stress. Crafted from durable titanium, it offers over seven days of battery life and tracks key metrics like HRV and VO2 Max. This device provides comprehensive health insights without a subscription.",
+    "img": "/images/B0DGQBBTQB.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Rings",
+    "categories": [
+      "Personal Care",
+      "Adult Money",
+      "Sports and Fitness"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DGQBBTQB/"
   }
 ]
