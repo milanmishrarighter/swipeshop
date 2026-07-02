@@ -14918,5 +14918,24 @@
       "Personal Care"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B75RC9C3/"
+  },
+  {
+    "id": 1783012848517,
+    "asin": "B0B75WHSGR",
+    "title": "Fitbit Inspire 3 Health Tracker",
+    "price": 8998,
+    "rating": 4.3,
+    "reviews": 1645,
+    "summary": "The Fitbit Inspire 3 is a health and fitness tracker designed to monitor your well-being. It tracks metrics like blood oxygen and offers daily scores for stress management and exercise readiness. This device helps you stay informed about your sleep, stress, and activity levels.",
+    "img": "/images/B0B75WHSGR.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Activity Trackers",
+    "categories": [
+      "Personal Care",
+      "Tech Products",
+      "Sports and Fitness",
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B75WHSGR/"
   }
 ]
