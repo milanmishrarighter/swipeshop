@@ -15030,5 +15030,23 @@
       "Adult Money"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D9WVKRKS/"
+  },
+  {
+    "id": 1783013112122,
+    "asin": "B0FMP1XZT9",
+    "title": "Cute Kitchen Fridge Magnets, Set of 10",
+    "price": 266,
+    "rating": 4,
+    "reviews": 134,
+    "summary": "This set of ten decorative magnets offers a fun, kitchen-themed accent for magnetic surfaces. They provide a strong, reliable hold for notes and photos, while their waterproof and durable design ensures lasting vibrancy.",
+    "img": "/images/B0FMP1XZT9.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Magnets",
+    "categories": [
+      "Knick-Knacks/Misc Stuff",
+      "Kitchen Items",
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FMP1XZT9/"
   }
 ]
