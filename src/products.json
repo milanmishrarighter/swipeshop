@@ -14899,5 +14899,24 @@
       "Knick-Knacks/Misc Stuff"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GWXMRJF3/"
+  },
+  {
+    "id": 1783012826129,
+    "asin": "B0B75RC9C3",
+    "title": "Fitbit Inspire 3 Health Tracker",
+    "price": 8998,
+    "rating": 4.3,
+    "reviews": 5771,
+    "summary": "The Fitbit Inspire 3 is a health and fitness tracker designed to monitor your well-being. It provides insights into stress, sleep, and activity levels, helping you understand your body better. With a long-lasting battery and included Premium membership, it supports your health journey with comprehensive data and personalized guidance.",
+    "img": "/images/B0B75RC9C3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Smart Watches",
+    "categories": [
+      "Sports and Fitness",
+      "Tech Products",
+      "Lifestyle",
+      "Personal Care"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B75RC9C3/"
   }
 ]
