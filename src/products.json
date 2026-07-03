@@ -16252,5 +16252,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B074DXB9SB/"
+  },
+  {
+    "id": 1783101279361,
+    "asin": "B003ZX6LE8",
+    "title": "Loacker Hazelnut Wafer Squares",
+    "price": 210,
+    "rating": 4.2,
+    "reviews": 1465,
+    "summary": "Loacker Quadratini Napolitaner wafers are crispy cubes filled with a smooth hazelnut cream. These Italian treats offer a satisfying texture and natural flavor, making them a delightful snack. They are made without added flavorings, colors, or preservatives.",
+    "img": "/images/B003ZX6LE8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wafers",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B003ZX6LE8/"
   }
 ]
