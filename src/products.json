@@ -16060,5 +16060,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07S2WW2NZ/"
+  },
+  {
+    "id": 1783100988489,
+    "asin": "B0FBRZFGH8",
+    "title": "Madurai Jasmine Eau de Parfum",
+    "price": 1275,
+    "rating": 4.2,
+    "reviews": 328,
+    "summary": "This eau de parfum offers a fresh floral scent, blending luminous orange blossom with pure Madurai jasmine and a soft vanilla base. Crafted with natural ingredients, it provides a clean, long-lasting fragrance suitable for everyday wear.",
+    "img": "/images/B0FBRZFGH8.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Parfum",
+    "categories": [
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FBRZFGH8/"
   }
 ]
