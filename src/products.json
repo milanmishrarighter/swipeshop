@@ -15978,5 +15978,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GMGLDZCZ/"
+  },
+  {
+    "id": 1783100151504,
+    "asin": "B0F8VN24WN",
+    "title": "12-Cube Organizer with Clear Doors",
+    "price": 2342,
+    "rating": 4.2,
+    "reviews": 29427,
+    "summary": "This Amazon Basics 12-cube storage organizer provides a practical solution for tidying your space. Its durable construction and clear front doors allow for organized, dust-protected storage of various items, from clothing to books. The stackable design offers adaptable storage that fits well in any room.",
+    "img": "/images/B0F8VN24WN.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Shelving & Storage",
+    "categories": [
+      "Home Decor",
+      "OCD/Organizer/Storage Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F8VN24WN/"
   }
 ]
