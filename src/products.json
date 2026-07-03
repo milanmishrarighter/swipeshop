@@ -16508,5 +16508,22 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GD7676X8/"
+  },
+  {
+    "id": 1783102109283,
+    "asin": "B0D45ZCN3Y",
+    "title": "JBL Cinema SB560 Soundbar with Subwoofer",
+    "price": 9909,
+    "rating": 4.1,
+    "reviews": 4304,
+    "summary": "The JBL Cinema SB560 is a 3.1 channel soundbar with a wireless subwoofer, designed to enhance your home audio experience. It provides clear dialogue through its dedicated center channel and delivers immersive sound with deep bass, powered by Dolby Audio. This system offers versatile connectivity for an improved listening experience.",
+    "img": "/images/B0D45ZCN3Y.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Soundbar Speakers",
+    "categories": [
+      "Tech Products",
+      "Music"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D45ZCN3Y/"
   }
 ]
