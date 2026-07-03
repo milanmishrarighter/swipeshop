@@ -16348,5 +16348,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07CWCXSY3/"
+  },
+  {
+    "id": 1783101462323,
+    "asin": "B0FDBQKM5G",
+    "title": "Vicenzi Ladyfingers: Original and Strawberry",
+    "price": 938,
+    "rating": 4.4,
+    "reviews": 548,
+    "summary": "This pack contains Matilde Vicenzi ladyfingers in both original and strawberry flavors, offering a versatile base for desserts. These light, crisp biscuits are made with natural ingredients and are designed to absorb liquids without becoming soggy, making them ideal for dishes like tiramisu.",
+    "img": "/images/B0FDBQKM5G.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biscuits & Cookies",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0FDBQKM5G/"
   }
 ]
