@@ -16332,5 +16332,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B73RWQJ4/"
+  },
+  {
+    "id": 1783101424365,
+    "asin": "B07CWCXSY3",
+    "title": "Flamin' Hot Crunchy Cheese Snacks",
+    "price": 839,
+    "rating": 3.8,
+    "reviews": 1306,
+    "summary": "These crunchy, cheese-flavored snacks offer a distinct spicy kick. They provide a satisfying texture and a bold taste experience for those who enjoy a fiery flavor.",
+    "img": "/images/B07CWCXSY3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Namkeen",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07CWCXSY3/"
   }
 ]
