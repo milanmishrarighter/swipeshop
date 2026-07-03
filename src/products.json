@@ -16220,5 +16220,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BMLRHC6T/"
+  },
+  {
+    "id": 1783101239879,
+    "asin": "B000E7WFX4",
+    "title": "CK One: Fresh, Clean, Unisex",
+    "price": 5355,
+    "rating": 3.8,
+    "reviews": 19859,
+    "summary": "CK One is a fresh, clean eau de toilette designed for universal appeal. This balanced fragrance offers a subtle, refreshing scent that is suitable for daily wear. Its light composition provides a pleasant aroma without being overpowering.",
+    "img": "/images/B000E7WFX4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Toilette",
+    "categories": [
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B000E7WFX4/"
   }
 ]
