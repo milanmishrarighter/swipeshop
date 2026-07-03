@@ -15834,5 +15834,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GC6MCZ66/"
+  },
+  {
+    "id": 1783099862654,
+    "asin": "B0F6LG7JVX",
+    "title": "Sheesham Wood Armchair with Cane Back",
+    "price": 5999,
+    "rating": 4.5,
+    "reviews": 231,
+    "summary": "This solid Sheesham wood armchair features a natural cane backrest and a plush, upholstered cushion. It offers comfortable seating for various uses, from a cozy reading nook to an accent piece in your living room. Its durable construction ensures lasting enjoyment both indoors and outdoors.",
+    "img": "/images/B0F6LG7JVX.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Armchairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F6LG7JVX/"
   }
 ]
