@@ -16268,5 +16268,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B003ZX6LE8/"
+  },
+  {
+    "id": 1783101307681,
+    "asin": "B08FGMQZCY",
+    "title": "Flamin' Hot Mac'N Cheese Puffs",
+    "price": 899,
+    "rating": 3.8,
+    "reviews": 2143,
+    "summary": "This product offers a convenient macaroni and cheese meal infused with the distinct Flamin' Hot Cheetos flavor. It provides a quick and easy way to enjoy a spicy, cheesy pasta dish.",
+    "img": "/images/B08FGMQZCY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Puffed Snacks",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B08FGMQZCY/"
   }
 ]
