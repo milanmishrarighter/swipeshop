@@ -15656,5 +15656,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CRVMD5RZ/"
+  },
+  {
+    "id": 1783099512107,
+    "asin": "B0DF2BVVNP",
+    "title": "Wakefit Study Desk with Bookshelf",
+    "price": 9587,
+    "rating": 4.4,
+    "reviews": 8620,
+    "summary": "This study table offers a spacious, wobble-free surface for various tasks, from studying to computer work. It provides ample storage with a smooth-gliding drawer and a cabinet, helping to keep your workspace organized. The durable design supports comfortable posture and is built for long-lasting use.",
+    "img": "/images/B0DF2BVVNP.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desks",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DF2BVVNP/"
   }
 ]
