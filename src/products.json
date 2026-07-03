@@ -15704,5 +15704,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0H2MWMHXC/"
+  },
+  {
+    "id": 1783099599753,
+    "asin": "B0GL2XD8V3",
+    "title": "Gravita Ergonomic Office Chair",
+    "price": 7899,
+    "rating": 4.4,
+    "reviews": 1936,
+    "summary": "The Gravita Ergonomic Office Chair is designed for all-day comfort and support. Its S-shaped curve promotes spinal alignment, while the breathable mesh and adjustable features ensure a personalized, comfortable experience. This chair is rigorously tested for durability, supporting up to 120 kg.",
+    "img": "/images/B0GL2XD8V3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GL2XD8V3/"
   }
 ]
