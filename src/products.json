@@ -16316,5 +16316,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B01787RN3Y/"
+  },
+  {
+    "id": 1783101402790,
+    "asin": "B0B73RWQJ4",
+    "title": "Strawberry Whole Wheat Wafers",
+    "price": 75,
+    "rating": 4.2,
+    "reviews": 469,
+    "summary": "These strawberry whole wheat wafers offer a light and crispy snack. They provide a satisfying treat with the wholesome benefit of whole wheat. Enjoy them as a simple indulgence or a pleasant accompaniment to your favorite beverage.",
+    "img": "/images/B0B73RWQJ4.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Wafers",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B73RWQJ4/"
   }
 ]
