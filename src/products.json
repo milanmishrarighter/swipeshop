@@ -16412,5 +16412,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07D5PX5Y9/"
+  },
+  {
+    "id": 1783101557812,
+    "asin": "B0F143VVH7",
+    "title": "Right Shift Ragi Jaggery Cookies",
+    "price": 210,
+    "rating": 4.1,
+    "reviews": 1310,
+    "summary": "These Ragi cookies are crafted with wholegrains and jaggery, offering a wholesome alternative to traditional biscuits. They provide fiber, protein, and calcium, making them a nutritious and satisfying snack. Enjoy these carefully baked cookies without maida, refined sugar, or artificial additives.",
+    "img": "/images/B0F143VVH7.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Biscuits & Cookies",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F143VVH7/"
   }
 ]
