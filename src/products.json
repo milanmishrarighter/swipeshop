@@ -16300,5 +16300,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0CPY5CK3R/"
+  },
+  {
+    "id": 1783101370793,
+    "asin": "B01787RN3Y",
+    "title": "Cadbury Caramel Milk Chocolate Bar",
+    "price": 499,
+    "rating": 4.7,
+    "reviews": 3954,
+    "summary": "This Cadbury Dairy Milk Caramel bar offers smooth milk chocolate with a soft, sweet caramel filling. It provides a ready-to-eat snack that combines creamy chocolate and gooey caramel, perfect for sharing or a personal treat. Enjoy this classic flavor combination for dessert or any casual occasion.",
+    "img": "/images/B01787RN3Y.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Bars",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B01787RN3Y/"
   }
 ]
