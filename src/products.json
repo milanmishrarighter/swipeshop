@@ -16140,5 +16140,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09X9XPKX5/"
+  },
+  {
+    "id": 1783101156186,
+    "asin": "B074QRH882",
+    "title": "Celeste: Floral, Fruity, Fresh Perfume",
+    "price": 556,
+    "rating": 4.3,
+    "reviews": 3202,
+    "summary": "Celeste is an Eau de Parfum for women, offering a floral and fruity fragrance. It blends notes of grapefruit, pear, and jasmine with a base of sandalwood and patchouli, creating a lasting and joyful scent. This perfume aims to evoke the lively essence of a spring garden.",
+    "img": "/images/B074QRH882.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Parfum",
+    "categories": [
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B074QRH882/"
   }
 ]
