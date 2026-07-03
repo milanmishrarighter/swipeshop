@@ -16364,5 +16364,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FDBQKM5G/"
+  },
+  {
+    "id": 1783101482521,
+    "asin": "B071SLGXH3",
+    "title": "Ritz Cheddar Baked Potato Chips",
+    "price": 530,
+    "rating": 4.4,
+    "reviews": 708,
+    "summary": "Ritz Toasted Chips Cheddar offer a delicious, oven-baked potato chip experience. These chips provide a satisfying crunch with 40% less fat than regular fried chips, making them a lighter snack option. Enjoy the classic cheddar flavor in a convenient, toasted form.",
+    "img": "/images/B071SLGXH3.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Potato",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B071SLGXH3/"
   }
 ]
