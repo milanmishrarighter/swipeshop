@@ -15882,5 +15882,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0927T6DS6/"
+  },
+  {
+    "id": 1783099996630,
+    "asin": "B07L763N19",
+    "title": "White Microfiber Sofa Cushion Set",
+    "price": 1069,
+    "rating": 4.2,
+    "reviews": 8768,
+    "summary": "This set of five 16x16 inch microfiber cushion fillers provides soft, supportive comfort for your sofa or home decor. They are designed to maintain their plushness and shape over time, enhancing the feel of your cushions. The hypoallergenic material also resists odors and microbial growth.",
+    "img": "/images/B07L763N19.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Cushions",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B07L763N19/"
   }
 ]
