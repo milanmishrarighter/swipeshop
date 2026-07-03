@@ -15736,5 +15736,22 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BRVRPS65/"
+  },
+  {
+    "id": 1783099658142,
+    "asin": "B0BDG4VG2G",
+    "title": "Happer Wall Cabinet with Mirror",
+    "price": 1199,
+    "rating": 4.3,
+    "reviews": 12234,
+    "summary": "This wall-mounted storage cabinet offers a practical solution for organizing various items. It features a mirror and provides ample storage space for your bathroom or bedroom necessities. Made from durable plastic, this cabinet is designed for long-lasting use.",
+    "img": "/images/B0BDG4VG2G.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mirror Cabinets",
+    "categories": [
+      "Home Decor",
+      "OCD/Organizer/Storage Stuff"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0BDG4VG2G/"
   }
 ]
