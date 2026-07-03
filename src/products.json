@@ -16124,5 +16124,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B077XWTBY6/"
+  },
+  {
+    "id": 1783101128375,
+    "asin": "B09X9XPKX5",
+    "title": "Skai Aquatic: Bergamot, Lavender, Patchouli",
+    "price": 482,
+    "rating": 4.1,
+    "reviews": 3250,
+    "summary": "Skai Aquatic is an eau de cologne featuring a blend of bergamot, lavender, and patchouli. This fragrance offers a subtle yet enduring freshness, suitable for daily wear. It provides a sophisticated scent that remains pleasant throughout the day.",
+    "img": "/images/B09X9XPKX5.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Cologne",
+    "categories": [
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09X9XPKX5/"
   }
 ]
