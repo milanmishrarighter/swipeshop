@@ -16284,5 +16284,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08FGMQZCY/"
+  },
+  {
+    "id": 1783101350938,
+    "asin": "B0CPY5CK3R",
+    "title": "Nutty Organics Brazil Nuts",
+    "price": 999,
+    "rating": 4.2,
+    "reviews": 1135,
+    "summary": "NUTTY ORGANICS Brazil Nuts are premium, jumbo-sized nuts, naturally rich in selenium. They support immune function, thyroid health, and contribute to healthy hair and nails. These nuts offer a buttery, nutty flavor with a satisfying crunch.",
+    "img": "/images/B0CPY5CK3R.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Brazil Nuts",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CPY5CK3R/"
   }
 ]
