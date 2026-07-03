@@ -15624,5 +15624,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FZCP7CTG/"
+  },
+  {
+    "id": 1783099441632,
+    "asin": "B0D3QGS394",
+    "title": "Godrej Vurv Ergonomic Mesh Chair",
+    "price": 5990,
+    "rating": 4.2,
+    "reviews": 485,
+    "summary": "The Interio by Godrej Vurv Chair is an ergonomic desk chair designed for comfort and support. Its mesh back provides airflow and lumbar support, while the contoured foam seat relieves pressure during long hours. This chair also features height adjustment and a tilt mechanism for personalized comfort.",
+    "img": "/images/B0D3QGS394.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0D3QGS394/"
   }
 ]
