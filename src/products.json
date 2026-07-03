@@ -15640,5 +15640,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D3QGS394/"
+  },
+  {
+    "id": 1783099459831,
+    "asin": "B0CRVMD5RZ",
+    "title": "Berlin Ergonomic Mesh Office Chair",
+    "price": 5499,
+    "rating": 4.2,
+    "reviews": 2949,
+    "summary": "The CELLBELL C190 Berlin Office Chair is an ergonomic desk chair designed for comfort and support. Its breathable mesh back promotes airflow, while adjustable armrests and hydraulic height adjustment allow for personalized positioning. This chair provides a comfortable and adaptable seating solution for extended use.",
+    "img": "/images/B0CRVMD5RZ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Desk Chairs",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0CRVMD5RZ/"
   }
 ]
