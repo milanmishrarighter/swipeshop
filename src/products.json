@@ -16525,5 +16525,23 @@
       "Music"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D45ZCN3Y/"
+  },
+  {
+    "id": 1783102177013,
+    "asin": "B084685MT1",
+    "title": "Sony 5.1ch Home Theatre Soundbar",
+    "price": 14989,
+    "rating": 4.6,
+    "reviews": 21465,
+    "summary": "The Sony HT-S20R is a 5.1 channel home theater system, offering real surround sound with a soundbar, subwoofer, and rear speakers. This system delivers immersive, cinematic audio for your television. It also features Bluetooth and USB connectivity for playing your favorite music.",
+    "img": "/images/B084685MT1.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Soundbar Speakers",
+    "categories": [
+      "Music",
+      "Tech Products",
+      "Adult Money"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B084685MT1/"
   }
 ]
