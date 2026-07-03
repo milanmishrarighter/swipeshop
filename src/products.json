@@ -16092,5 +16092,21 @@
       "Lifestyle"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B07FQVZVBR/"
+  },
+  {
+    "id": 1783101049832,
+    "asin": "B0009OAHCS",
+    "title": "Cool Water Ocean Breeze for Women",
+    "price": 5175,
+    "rating": 4.4,
+    "reviews": 16343,
+    "summary": "Davidoff Cool Water for Women is a refreshing eau de toilette featuring a delicate floral and fresh scent. Its light composition, highlighted by a watermelon top note and lily of the valley, offers a clean and invigorating fragrance experience. This spray provides a subtle, pleasant aroma perfect for everyday wear.",
+    "img": "/images/B0009OAHCS.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Eau de Toilette",
+    "categories": [
+      "Lifestyle"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0009OAHCS/"
   }
 ]
