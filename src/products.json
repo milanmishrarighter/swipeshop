@@ -15592,5 +15592,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0BWS1QCYZ/"
+  },
+  {
+    "id": 1783099354747,
+    "asin": "B0GZSMFK9S",
+    "title": "Orange Faux Leather Bean Bag Set",
+    "price": 2699,
+    "rating": 4,
+    "reviews": 312,
+    "summary": "This 6XL faux leather bean bag comes pre-filled with high-density polystyrene beans, offering immediate comfort and full body support. It includes a matching footrest and cushion, providing a complete and durable relaxation set for your home.",
+    "img": "/images/B0GZSMFK9S.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Filled Bean Bags",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GZSMFK9S/"
   }
 ]
