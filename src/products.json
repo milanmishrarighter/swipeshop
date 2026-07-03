@@ -15930,5 +15930,21 @@
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B01A4C6I54/"
+  },
+  {
+    "id": 1783100065111,
+    "asin": "B0C15M3M6W",
+    "title": "Solid Wood Console Table, Walnut",
+    "price": 4999,
+    "rating": 4.6,
+    "reviews": 2433,
+    "summary": "This Plank+Beam solid wood console table offers a durable and elegant surface for various spaces. Crafted from knot-free pine, it provides a sturdy accent piece for hallways, entryways, or behind a sofa. Its timeless design and quality construction ensure lasting utility and aesthetic appeal in your home.",
+    "img": "/images/B0C15M3M6W.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Console & Sofa Tables",
+    "categories": [
+      "Home Decor"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C15M3M6W/"
   }
 ]
