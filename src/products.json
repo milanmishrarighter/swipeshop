@@ -16380,5 +16380,21 @@
       "Food and Snacks"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B071SLGXH3/"
+  },
+  {
+    "id": 1783101504744,
+    "asin": "B006QQQ9LQ",
+    "title": "Honey Roasted Walnuts",
+    "price": 295,
+    "rating": 4.2,
+    "reviews": 191,
+    "summary": "These honey-roasted walnuts offer a delicious and satisfying snack. They provide a source of omega-3 fatty acids for an energy boost, all with a delightful crunch and sweet honey flavor.",
+    "img": "/images/B006QQQ9LQ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Walnuts",
+    "categories": [
+      "Food and Snacks"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B006QQQ9LQ/"
   }
 ]
