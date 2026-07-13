@@ -16656,5 +16656,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09HC866JJ/"
+  },
+  {
+    "id": 1783961503452,
+    "asin": "B01FNR4REY",
+    "title": "Spring Chef Four-Sided Grater",
+    "price": 298,
+    "rating": 4.1,
+    "reviews": 20740,
+    "summary": "This four-sided grater offers versatile food preparation, allowing you to grate, slice, and zest various ingredients. It efficiently handles items like cheese, potatoes, and lemons, simplifying meal prep. Its comfortable handle provides control for consistent results.",
+    "img": "/images/B01FNR4REY.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Graters",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B01FNR4REY/"
   }
 ]
