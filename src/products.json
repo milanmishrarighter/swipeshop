@@ -16640,5 +16640,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09JFZPKNB/"
+  },
+  {
+    "id": 1783961468128,
+    "asin": "B09HC866JJ",
+    "title": "Ajanta Steel Slicer and Grater",
+    "price": 343,
+    "rating": 4.3,
+    "reviews": 422,
+    "summary": "The Ajanta Steel Slicer and Grater features sharp, stainless steel blades for efficient food preparation. It includes a durable, attachable container for conveniently catching, measuring, and storing grated items. This product is also dishwasher safe for easy cleaning.",
+    "img": "/images/B09HC866JJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Graters",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09HC866JJ/"
   }
 ]
