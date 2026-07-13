@@ -16720,5 +16720,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FQJZT4WS/"
+  },
+  {
+    "id": 1783961710161,
+    "asin": "B0F8449N91",
+    "title": "Royal Black 3-Piece Knife Set",
+    "price": 499,
+    "rating": 4.3,
+    "reviews": 2147,
+    "summary": "The AGARO Royal 3-in-1 Kitchen Knife Set provides essential cutting tools for any kitchen. Crafted from high-carbon steel with ergonomic handles, these knives offer precise control and reduced hand fatigue during various food preparation tasks. This durable set is designed for efficient, long-lasting performance.",
+    "img": "/images/B0F8449N91.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Kitchen Knife Sets",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0F8449N91/"
   }
 ]
