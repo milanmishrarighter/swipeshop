@@ -16901,5 +16901,22 @@
       "Books"
     ],
     "amazonUrl": "https://www.amazon.in/dp/9332518114/"
+  },
+  {
+    "id": 1783962109142,
+    "asin": "B089KQ3W4D",
+    "title": "Nimwash Natural Fruit & Veggie Wash",
+    "price": 251,
+    "rating": 4.3,
+    "reviews": 13225,
+    "summary": "Nimwash Vegetable & Fruit Wash is a liquid solution designed to clean produce. It uses natural action from neem and citrus fruit extracts to remove pesticides and 99.9% of germs. This product helps ensure your fruits and vegetables are safely disinfected before consumption.",
+    "img": "/images/B089KQ3W4D.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Disinfectant Sprays & Liquids",
+    "categories": [
+      "Cleaning & Hygiene Freak",
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B089KQ3W4D/"
   }
 ]
