@@ -16688,5 +16688,21 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0H6C8WCWF/"
+  },
+  {
+    "id": 1783961624086,
+    "asin": "B0C897PVVM",
+    "title": "Elite Mini Chopper",
+    "price": 599,
+    "rating": 4.2,
+    "reviews": 7926,
+    "summary": "The AGARO Elite Mini Electric Chopper is a rechargeable device designed for quickly processing small quantities of garlic, ginger, onions, and nuts. Its sharp stainless-steel blades and simple one-touch operation ensure efficient chopping for daily meal preparation. This compact, cordless chopper features a 250ml food-grade bowl, offering convenience and easy cleaning.",
+    "img": "/images/B0C897PVVM.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Mini Food Processors & Choppers",
+    "categories": [
+      "Kitchen Items"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0C897PVVM/"
   }
 ]
