@@ -16867,5 +16867,22 @@
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0G91X99BV/"
+  },
+  {
+    "id": 1783962059229,
+    "asin": "B0DR9436GJ",
+    "title": "UniQual Cordless Electric Fabric Cutter",
+    "price": 1989,
+    "rating": 4.2,
+    "reviews": 151,
+    "summary": "This cordless electric scissor offers effortless cutting for various materials like fabric, leather, and soft cardboard. Its lightweight design and powerful motor reduce hand strain, allowing for comfortable, extended use. The USB-rechargeable battery ensures convenient operation for crafting and professional tasks.",
+    "img": "/images/B0DR9436GJ.jpg",
+    "badge": "Amazon's Choice",
+    "cat": "Scissors",
+    "categories": [
+      "Utility and House Repair",
+      "Creativity"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0DR9436GJ/"
   }
 ]
