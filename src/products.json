@@ -4540,9 +4540,7 @@
     "img": "/images/B0BHH2H99F.jpg",
     "badge": "Amazon's Choice",
     "cat": "Keyrings & Keychains",
-    "categories": [
-      "Gift"
-    ],
+    "categories": [],
     "amazonUrl": "https://www.amazon.in/dp/B0BHH2H99F/"
   },
   {
@@ -4575,7 +4573,6 @@
     "badge": "Amazon's Choice",
     "cat": "Lighters & Matches",
     "categories": [
-      "Gift",
       "Kitchen Items",
       "Personal Care"
     ],
@@ -4594,8 +4591,7 @@
     "cat": "Lighters & Matches",
     "categories": [
       "Personal Care",
-      "Kitchen Items",
-      "Gift"
+      "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B08L6RY1RS/"
   },
@@ -4777,7 +4773,6 @@
     "cat": "Artificial Flowers",
     "categories": [
       "Home Decor",
-      "Gift",
       "Plants"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DVQ75LVP/"
@@ -4795,7 +4790,6 @@
     "cat": "Artificial Flowers",
     "categories": [
       "Home Decor",
-      "Gift",
       "Plants"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FCSMQTTF/"
@@ -4812,7 +4806,6 @@
     "badge": "Amazon's Choice",
     "cat": "Sound Toys",
     "categories": [
-      "Gift",
       "Music"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F7X64BFS/"
@@ -4830,8 +4823,7 @@
     "cat": "Bluetooth Speakers",
     "categories": [
       "Music",
-      "Party & Games",
-      "Gift"
+      "Party & Games"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0D772K8X8/"
   },
@@ -4848,7 +4840,6 @@
     "cat": "Bluetooth Speakers",
     "categories": [
       "Music",
-      "Gift",
       "Party & Games"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09P53B3M5/"
@@ -4882,8 +4873,7 @@
     "badge": "Amazon's Choice",
     "cat": "Hanging Ornaments",
     "categories": [
-      "Home Decor",
-      "Gift"
+      "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B073H5BYH5/"
   },
@@ -4899,8 +4889,7 @@
     "badge": "Amazon's Choice",
     "cat": "Shadow Boxes",
     "categories": [
-      "Travel",
-      "Gift"
+      "Travel"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0DFMJ3C3W/"
   },
@@ -4918,7 +4907,6 @@
     "categories": [
       "Home Decor",
       "OCD/Organizer/Storage Stuff",
-      "Gift",
       "Kitchen Items"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0F6P1LZBR/"
@@ -5203,8 +5191,7 @@
     "badge": "Amazon's Choice",
     "cat": "Airplanes",
     "categories": [
-      "Kids",
-      "Gift"
+      "Kids"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0GC766PZ8/"
   },
@@ -5220,7 +5207,6 @@
     "badge": "Amazon's Choice",
     "cat": "Keyrings & Keychains",
     "categories": [
-      "Gift",
       "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0FSSMVXZ4/"
@@ -5237,8 +5223,7 @@
     "badge": "Amazon's Choice",
     "cat": "Keyrings & Keychains",
     "categories": [
-      "Home Decor",
-      "Gift"
+      "Home Decor"
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0G2K9LT67/"
   },
