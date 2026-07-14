@@ -429,49 +429,49 @@ function TutorialOverlay({ onDismiss }) {
       onTouchStart={onDismiss}
       style={{
         position:"fixed", inset:0, zIndex:250,
-        background:"rgba(0,0,0,0.7)", backdropFilter:"blur(4px)",
+        background:"rgba(0,0,0,0.75)", backdropFilter:"blur(4px)",
         display:"flex", alignItems:"center", justifyContent:"center",
         fontFamily:"'Barlow',sans-serif", color:"#fff", padding:"20px",
         animation:"ssFadeIn 0.3s ease",
       }}>
       <style>{`
         @keyframes ssFadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes ssBounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-8px);} }
-        .arrow-up   { animation: ssBounce 1.4s ease infinite; }
-        .arrow-down { animation: ssBounce 1.4s ease infinite; animation-delay: 0.35s; }
-        .arrow-left { animation: ssBounce 1.4s ease infinite; animation-delay: 0.7s; }
-        .arrow-right{ animation: ssBounce 1.4s ease infinite; animation-delay: 1.05s; }
+        @keyframes ssBounceY { 0%,100% { transform: translate(0,0);} 50% { transform: translate(0,-6px);} }
+        @keyframes ssBounceYD { 0%,100% { transform: translate(0,0);} 50% { transform: translate(0,6px);} }
+        @keyframes ssBounceX { 0%,100% { transform: translate(0,-50%);} 50% { transform: translate(-6px,-50%);} }
+        @keyframes ssBounceXR { 0%,100% { transform: translate(0,-50%);} 50% { transform: translate(6px,-50%);} }
+        .arw-up   { animation: ssBounceY 1.4s ease infinite; }
+        .arw-down { animation: ssBounceYD 1.4s ease infinite; animation-delay: 0.35s; }
+        .arw-left { animation: ssBounceX 1.4s ease infinite; animation-delay: 0.7s; }
+        .arw-right{ animation: ssBounceXR 1.4s ease infinite; animation-delay: 1.05s; }
       `}</style>
-      <div style={{ position:"relative", width:"100%", maxWidth:280, aspectRatio:"3/4",
-        border:"2px dashed rgba(255,255,255,0.5)", borderRadius:20,
+      <div style={{ position:"relative", width:"100%", maxWidth:290, aspectRatio:"3/4",
+        border:"2px dashed rgba(255,255,255,0.55)", borderRadius:20,
         display:"flex", alignItems:"center", justifyContent:"center", flexDirection:"column",
       }}>
-        {/* Up arrow */}
-        <div className="arrow-up" style={{ position:"absolute", top:-56, textAlign:"center" }}>
-          <div style={{ fontSize:28 }}>↑</div>
-          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#FF9999" }}>NEXT PRODUCT</div>
+        {/* All arrows/labels are now INSIDE the dotted box near their edge */}
+        <div className="arw-up" style={{ position:"absolute", top:14, left:0, right:0, textAlign:"center" }}>
+          <div style={{ fontSize:22, lineHeight:1 }}>↑</div>
+          <div style={{ fontSize:10, fontWeight:800, letterSpacing:0.8, color:"#FF9999", marginTop:2 }}>NEXT PRODUCT</div>
         </div>
-        {/* Down arrow */}
-        <div className="arrow-down" style={{ position:"absolute", bottom:-56, textAlign:"center" }}>
-          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#C4B5FD" }}>PREVIOUS PRODUCT</div>
-          <div style={{ fontSize:28 }}>↓</div>
+        <div className="arw-down" style={{ position:"absolute", bottom:14, left:0, right:0, textAlign:"center" }}>
+          <div style={{ fontSize:10, fontWeight:800, letterSpacing:0.8, color:"#C4B5FD", marginBottom:2 }}>PREVIOUS PRODUCT</div>
+          <div style={{ fontSize:22, lineHeight:1 }}>↓</div>
         </div>
-        {/* Left arrow */}
-        <div className="arrow-left" style={{ position:"absolute", left:-92, top:"50%", transform:"translateY(-50%)", textAlign:"center", width:80 }}>
-          <div style={{ fontSize:28 }}>←</div>
-          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#93C5FD" }}>AMAZON</div>
+        <div className="arw-left" style={{ position:"absolute", left:10, top:"50%", textAlign:"center", width:70 }}>
+          <div style={{ fontSize:22, lineHeight:1 }}>←</div>
+          <div style={{ fontSize:10, fontWeight:800, letterSpacing:0.8, color:"#93C5FD", marginTop:2 }}>AMAZON</div>
         </div>
-        {/* Right arrow */}
-        <div className="arrow-right" style={{ position:"absolute", right:-92, top:"50%", transform:"translateY(-50%)", textAlign:"center", width:80 }}>
-          <div style={{ fontSize:28 }}>→</div>
-          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#86EFAC" }}>ADD TO CART</div>
+        <div className="arw-right" style={{ position:"absolute", right:10, top:"50%", textAlign:"center", width:70 }}>
+          <div style={{ fontSize:22, lineHeight:1 }}>→</div>
+          <div style={{ fontSize:10, fontWeight:800, letterSpacing:0.8, color:"#86EFAC", marginTop:2 }}>ADD TO CART</div>
         </div>
 
-        <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26,
+        <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24,
           letterSpacing:-0.5, textAlign:"center", padding:"0 20px" }}>
           SWIPE THE CARD
         </div>
-        <div style={{ fontSize:12, opacity:0.7, marginTop:8, textAlign:"center" }}>
+        <div style={{ fontSize:11, opacity:0.7, marginTop:6, textAlign:"center" }}>
           Tap anywhere to dismiss
         </div>
       </div>
@@ -566,7 +566,7 @@ function HowToModal({ onClose, onPreviewTutorial }) {
 export default function App() {
   const [selectedCatNames, setSelectedCatNames] = useState([]);   // array of category names (empty = all)
   const [priceRange,  setPriceRange]  = useState([PRICE_FLOOR, PRICE_CEIL]);
-  const [showFilters, setShowFilters] = useState(false);
+  const [openFilter, setOpenFilter] = useState(null);  // null | "cat" | "price"
   const [legalModal,  setLegalModal]  = useState(null);
   const [showTutorial, setShowTutorial] = useState(false);
   // find-similar expansion — keyed by product id
@@ -943,43 +943,54 @@ export default function App() {
         </button>
       </div>
 
-      {/* ── AFFILIATE DISCLOSURE STRIP ── */}
-      <div style={{ textAlign:"center", padding:"6px 14px",
-        background:"#FFF8E6", color:"#8A6A00", fontSize:11, lineHeight:1.4,
-        borderBottom:"1px solid #F5EAC8"
+      {/* ── AFFILIATE DISCLOSURE STRIP (smaller) ── */}
+      <div style={{ textAlign:"center", padding:"3px 14px",
+        background:"#FFF8E6", color:"#8A6A00", fontSize:8, lineHeight:1.3,
+        borderBottom:"1px solid #F5EAC8", letterSpacing:0.2, fontWeight:600,
       }}>
         As an Amazon Associate we earn from qualifying purchases.
       </div>
 
-      {/* ── FILTERS BAR (modern) ── */}
-      <div style={{ padding:"8px 14px 6px", display:"flex", gap:8 }}>
+      {/* ── FILTERS (two separate buttons) ── */}
+      <div style={{ padding:"5px 12px 4px", display:"flex", gap:6 }}>
         <button
-          onClick={() => setShowFilters(v => !v)}
+          onClick={() => setOpenFilter(v => v === "cat" ? null : "cat")}
           style={{
-            flex:1, padding:"9px 14px", borderRadius:12,
-            border:"1px solid #EEE", background: showFilters ? "#FFF8E6" : "#F8F8F8",
-            fontSize:12, color:"#333", fontFamily:"'Barlow',sans-serif",
-            fontWeight:700, letterSpacing:0.3, cursor:"pointer", display:"flex",
-            alignItems:"center", justifyContent:"space-between",
+            flex:1, padding:"7px 12px", borderRadius:10,
+            border:`1px solid ${openFilter === "cat" ? "#FFB300" : "#EEE"}`,
+            background: openFilter === "cat" ? "#FFF8E6" : "#F8F8F8",
+            fontSize:11, color:"#333", fontFamily:"'Barlow',sans-serif",
+            fontWeight:700, letterSpacing:0.3, cursor:"pointer",
+            display:"flex", alignItems:"center", justifyContent:"space-between", gap:6,
           }}>
-          <span>
-            {selectedCatNames.length === 0 ? "ALL CATEGORIES" : `${selectedCatNames.length} SELECTED`}
-            {" · "}
+          <span style={{ overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+            {selectedCatNames.length === 0 ? "ALL CATEGORIES" : `${selectedCatNames.length} CATEGORIES`}
+          </span>
+          <span style={{ color:"#999", fontSize:9 }}>{openFilter === "cat" ? "▲" : "▼"}</span>
+        </button>
+        <button
+          onClick={() => setOpenFilter(v => v === "price" ? null : "price")}
+          style={{
+            flex:1, padding:"7px 12px", borderRadius:10,
+            border:`1px solid ${openFilter === "price" ? "#FFB300" : "#EEE"}`,
+            background: openFilter === "price" ? "#FFF8E6" : "#F8F8F8",
+            fontSize:11, color:"#333", fontFamily:"'Barlow',sans-serif",
+            fontWeight:700, letterSpacing:0.3, cursor:"pointer",
+            display:"flex", alignItems:"center", justifyContent:"space-between", gap:6,
+          }}>
+          <span style={{ overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
             {(priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL)
               ? "ANY PRICE"
               : `₹${priceRange[0]} – ₹${priceRange[1]}`}
           </span>
-          <span style={{ color:"#999" }}>{showFilters ? "▲" : "▼"}</span>
+          <span style={{ color:"#999", fontSize:9 }}>{openFilter === "price" ? "▲" : "▼"}</span>
         </button>
       </div>
 
-      {showFilters && (
-        <div style={{ padding:"6px 14px 12px", borderBottom:"1px solid #F5F5F5",
-          background:"#FCFCFC", maxHeight:"45vh", overflowY:"auto" }}>
-          {/* Categories */}
-          <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.6,
-            marginBottom:6, textTransform:"uppercase" }}>Categories</div>
-          <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:14 }}>
+      {openFilter === "cat" && (
+        <div style={{ padding:"4px 12px 10px", borderBottom:"1px solid #F5F5F5",
+          background:"#FCFCFC", maxHeight:"40vh", overflowY:"auto" }}>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:5 }}>
             {categoriesData.length === 0 && (
               <span style={{ fontSize:12, color:"#AAA" }}>No categories yet.</span>
             )}
@@ -992,28 +1003,40 @@ export default function App() {
                   style={{
                     background: on ? Y : "#fff", color: on ? "#000" : "#555",
                     border:`1px solid ${on ? Y : "#E5E5E5"}`,
-                    borderRadius:16, padding:"6px 11px", fontSize:12,
+                    borderRadius:14, padding:"4px 9px", fontSize:11,
                     fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
-                    display:"inline-flex", alignItems:"center", gap:5,
+                    display:"inline-flex", alignItems:"center", gap:4,
                     transition:"all 0.15s",
                   }}>
-                  <span style={{ fontSize:14 }}>{c.emoji}</span>
+                  <span style={{ fontSize:13 }}>{c.emoji}</span>
                   {c.name}
                 </button>
               );
             })}
           </div>
+          {selectedCatNames.length > 0 && (
+            <button onClick={() => setSelectedCatNames([])}
+              style={{ background:"none", border:"1px solid #EEE", color:"#666",
+                borderRadius:8, padding:"4px 10px", fontSize:10, fontWeight:700,
+                cursor:"pointer", marginTop:8, fontFamily:"'Barlow',sans-serif" }}>
+              Clear categories
+            </button>
+          )}
+        </div>
+      )}
 
-          {/* Price dual slider */}
-          <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.6,
-            marginBottom:6, textTransform:"uppercase", display:"flex", justifyContent:"space-between" }}>
-            <span>Price</span>
+      {openFilter === "price" && (
+        <div style={{ padding:"6px 14px 10px", borderBottom:"1px solid #F5F5F5",
+          background:"#FCFCFC" }}>
+          <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.5,
+            marginBottom:4, textTransform:"uppercase", display:"flex", justifyContent:"space-between" }}>
+            <span>Range</span>
             <span style={{ color:B, fontWeight:800 }}>₹{priceRange[0]} – ₹{priceRange[1]}</span>
           </div>
-          <div style={{ position:"relative", height:36, marginBottom:2 }}>
-            <div style={{ position:"absolute", top:16, left:0, right:0, height:4,
+          <div style={{ position:"relative", height:34 }}>
+            <div style={{ position:"absolute", top:15, left:0, right:0, height:4,
               background:"#EEE", borderRadius:2 }} />
-            <div style={{ position:"absolute", top:16, height:4, borderRadius:2, background:Y,
+            <div style={{ position:"absolute", top:15, height:4, borderRadius:2, background:Y,
               left: `${((priceRange[0] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
               right:`${100 - ((priceRange[1] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
             }} />
@@ -1023,7 +1046,7 @@ export default function App() {
                 [Math.min(parseInt(e.target.value), hi - 50), hi])}
               style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
                 background:"transparent", pointerEvents:"none", appearance:"none",
-                WebkitAppearance:"none", height:36, margin:0 }}
+                WebkitAppearance:"none", height:34, margin:0 }}
               className="range-thumb" />
             <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
               value={priceRange[1]}
@@ -1031,19 +1054,18 @@ export default function App() {
                 [lo, Math.max(parseInt(e.target.value), lo + 50)])}
               style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
                 background:"transparent", pointerEvents:"none", appearance:"none",
-                WebkitAppearance:"none", height:36, margin:0 }}
+                WebkitAppearance:"none", height:34, margin:0 }}
               className="range-thumb" />
           </div>
-          <div style={{ display:"flex", justifyContent:"space-between", fontSize:10, color:"#BBB", marginTop:2 }}>
+          <div style={{ display:"flex", justifyContent:"space-between", fontSize:9, color:"#BBB" }}>
             <span>₹{PRICE_FLOOR}</span><span>₹{PRICE_CEIL}</span>
           </div>
-
-          {(selectedCatNames.length > 0 || priceRange[0] !== PRICE_FLOOR || priceRange[1] !== PRICE_CEIL) && (
-            <button onClick={() => { setSelectedCatNames([]); setPriceRange([PRICE_FLOOR, PRICE_CEIL]); }}
+          {(priceRange[0] !== PRICE_FLOOR || priceRange[1] !== PRICE_CEIL) && (
+            <button onClick={() => setPriceRange([PRICE_FLOOR, PRICE_CEIL])}
               style={{ background:"none", border:"1px solid #EEE", color:"#666",
-                borderRadius:10, padding:"6px 12px", fontSize:11, fontWeight:700,
-                cursor:"pointer", marginTop:10, fontFamily:"'Barlow',sans-serif" }}>
-              Clear filters
+                borderRadius:8, padding:"4px 10px", fontSize:10, fontWeight:700,
+                cursor:"pointer", marginTop:6, fontFamily:"'Barlow',sans-serif" }}>
+              Clear price
             </button>
           )}
         </div>
@@ -1150,6 +1172,39 @@ export default function App() {
 
                     {(isTop || isLeaving) && (
                       <>
+                        {/* Category emoji pills — top-right of image */}
+                        {(() => {
+                          const cats = (p.categories || [])
+                            .map(name => categoriesData.find(c => c.name === name))
+                            .filter(Boolean);
+                          if (cats.length === 0) return null;
+                          const shown = cats.slice(0, 2);
+                          const extra = cats.length - shown.length;
+                          return (
+                            <div style={{ position:"absolute", top:10, right:10,
+                              display:"flex", gap:4, zIndex:2 }}>
+                              {shown.map(c => (
+                                <div key={c.name}
+                                  title={c.name}
+                                  style={{
+                                    background:"rgba(255,255,255,0.95)",
+                                    borderRadius:20, padding:"3px 8px",
+                                    fontSize:13, lineHeight:1,
+                                    boxShadow:"0 1px 4px rgba(0,0,0,0.08)",
+                                  }}>{c.emoji}</div>
+                              ))}
+                              {extra > 0 && (
+                                <div style={{
+                                  background:"rgba(255,255,255,0.95)",
+                                  borderRadius:20, padding:"3px 8px",
+                                  fontSize:10, fontWeight:800, color:"#666", lineHeight:1.3,
+                                  boxShadow:"0 1px 4px rgba(0,0,0,0.08)",
+                                }}>+{extra}</div>
+                              )}
+                            </div>
+                          );
+                        })()}
+
                         {swipeDir && isTop && !isLeaving && (
                           <div style={{ position:"absolute", inset:0, background:OVERLAYS[swipeDir].bg,
                             display:"flex", alignItems:"center", justifyContent:"center" }}>
@@ -1179,28 +1234,8 @@ export default function App() {
                         <Stars rating={p.rating}/>
                         <span style={{ color:"#C8C8C8", fontSize:11 }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4,
-                        flexWrap:"wrap" }}>
-                        <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
-                          color:B, letterSpacing:-0.3, lineHeight:1 }}>
-                          ₹{p.price.toLocaleString('en-IN')}
-                        </div>
-                        {(p.categories || []).slice(0, 2).map(catName => {
-                          const cat = categoriesData.find(c => c.name === catName);
-                          if (!cat) return null;
-                          return (
-                            <span key={catName} style={{
-                              display:"inline-flex", alignItems:"center", gap:3,
-                              background:"none", border:"1px solid #EEE",
-                              borderRadius:10, padding:"2px 7px",
-                              fontSize:9, color:"#999", fontWeight:700, letterSpacing:0.2,
-                            }}>
-                              <span style={{ fontSize:11 }}>{cat.emoji}</span>
-                              {cat.name}
-                            </span>
-                          );
-                        })}
-                      </div>
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
+                        color:B, marginBottom:4, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
                       <p style={{ color:"#999", fontSize:11.5, lineHeight:1.4,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden", marginBottom:1,
@@ -1217,59 +1252,34 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Find-similar circle → pill; expand on first tap, navigate on second */}
-                  {(isTop && !isLeaving) && (() => {
-                    const expanded = findExpanded === p.id;
-                    return (
-                      <button
-                        aria-label="Find similar products"
-                        title="Find similar on Amazon"
-                        onMouseDown={e => e.stopPropagation()}
-                        onTouchStart={e => e.stopPropagation()}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (expanded) {
-                            window.open(similarUrl(p), "_blank");
-                            setFindExpanded(null);
-                          } else {
-                            setFindExpanded(p.id);
-                            setTimeout(() => setFindExpanded(cur => cur === p.id ? null : cur), 3000);
-                          }
-                        }}
-                        style={{
-                          position:"absolute", bottom:0, left:0,
-                          background:"#FAFAFA", border:"1px solid #EEE",
-                          borderTopLeftRadius:0, borderTopRightRadius:20,
-                          borderBottomLeftRadius:20, borderBottomRightRadius:20,
-                          cursor:"pointer", height:40,
-                          width: expanded ? 130 : 40,
-                          padding:0, display:"flex", alignItems:"center",
-                          justifyContent: expanded ? "flex-start" : "center",
-                          gap:expanded ? 6 : 0, overflow:"hidden", zIndex:5,
-                          fontFamily:"'Barlow',sans-serif",
-                          transition:"width 0.28s cubic-bezier(0.4, 0, 0.2, 1), gap 0.28s",
-                        }}
-                      >
-                        <span style={{ paddingLeft:12, display:"flex", alignItems:"center" }}>
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                            stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                            <circle cx="11" cy="11" r="7"/>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                          </svg>
-                        </span>
-                        <span style={{
-                          fontSize:10, color:"#666", fontWeight:800, letterSpacing:0.3,
-                          whiteSpace:"nowrap",
-                          opacity: expanded ? 1 : 0,
-                          transition:"opacity 0.2s 0.05s",
-                        }}>
-                          FIND SIMILAR
-                        </span>
-                      </button>
-                    );
-                  })()}
+                  {/* Find-similar — small pill, bottom-left, floating (not stuck to corner) */}
+                  {(isTop && !isLeaving) && (
+                    <button
+                      aria-label="Find similar products"
+                      title="Find similar on Amazon"
+                      onMouseDown={e => e.stopPropagation()}
+                      onTouchStart={e => e.stopPropagation()}
+                      onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
+                      style={{
+                        position:"absolute", bottom:16, left:14,
+                        background:"none", border:"1px solid #EEE",
+                        borderRadius:10, cursor:"pointer",
+                        padding:"3px 8px", display:"flex", alignItems:"center", gap:4,
+                        zIndex:5, fontFamily:"'Barlow',sans-serif",
+                      }}
+                    >
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="11" cy="11" r="7"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                      </svg>
+                      <span style={{ fontSize:9, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
+                        FIND SIMILAR
+                      </span>
+                    </button>
+                  )}
 
-                  {/* Report — circle button matching card corner */}
+                  {/* Report — small icon, bottom-right, floating */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Report product"
@@ -1277,17 +1287,13 @@ export default function App() {
                       onTouchStart={e => e.stopPropagation()}
                       onClick={(e) => { e.stopPropagation(); setReportProduct(p); }}
                       style={{
-                        position:"absolute", bottom:0, right:0,
-                        background:"#FAFAFA", border:"1px solid #EEE",
-                        borderTopRightRadius:0, borderTopLeftRadius:20,
-                        borderBottomLeftRadius:20, borderBottomRightRadius:20,
-                        cursor:"pointer", width:40, height:40, padding:0,
-                        display:"flex", alignItems:"center", justifyContent:"center",
+                        position:"absolute", bottom:16, right:14, background:"none",
+                        border:"none", cursor:"pointer", padding:3, lineHeight:0,
                         zIndex:5,
                       }}
                     >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                         <line x1="12" y1="9" x2="12" y2="13"/>
                         <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -1323,11 +1329,11 @@ export default function App() {
           </>
         )}
 
-        {/* UP HINT — next product */}
+        {/* UP HINT — next product (above cards so peek doesn't cover it) */}
         {stack.length > 0 && (
           <div style={{ position:"absolute", left:0, right:0, top:2,
-            textAlign:"center", fontSize:7.5, color:"#D8D8D8",
-            letterSpacing:0.4, fontWeight:700, zIndex:1,
+            textAlign:"center", fontSize:7.5, color:"#BBB",
+            letterSpacing:0.4, fontWeight:700, zIndex:40,
             pointerEvents:"none",
           }}>
             ↑ NEXT PRODUCT
@@ -1335,9 +1341,9 @@ export default function App() {
         )}
         {/* DOWN HINT — previous product */}
         {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, bottom:26,
-            textAlign:"center", fontSize:7.5, color:"#D8D8D8",
-            letterSpacing:0.4, fontWeight:700, zIndex:1,
+          <div style={{ position:"absolute", left:0, right:0, bottom:4,
+            textAlign:"center", fontSize:7.5, color:"#BBB",
+            letterSpacing:0.4, fontWeight:700, zIndex:40,
             pointerEvents:"none",
           }}>
             PREVIOUS PRODUCT ↓
@@ -1346,14 +1352,14 @@ export default function App() {
       </div>
 
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
-      <div style={{ padding:"14px 16px 30px" }}>
+      <div style={{ padding:"6px 16px 42px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
-          border:"none", borderRadius:14, padding:"16px 0", width:"100%",
-          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
+          border:"none", borderRadius:12, padding:"12px 0", width:"100%",
+          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
-          boxShadow: cart.length > 0 ? "0 6px 22px rgba(255,179,0,0.32)" : "none"
+          boxShadow: cart.length > 0 ? "0 4px 18px rgba(255,179,0,0.28)" : "none"
         }}>
           {cart.length > 0
             ? `VIEW CART — ${cart.length} ITEM${cart.length!==1?"S":""}`
