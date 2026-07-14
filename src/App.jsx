@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import productsData from "./products.json";
+import categoriesData from "./categories.json";
 
 // Build version injected by vite.config.js (commit SHA + build time)
 // eslint-disable-next-line no-undef
@@ -70,21 +71,14 @@ const miniBtn = {
   display:"inline-flex", alignItems:"center", gap:5,
 };
 
-const PRICE_RANGES = [
-  { label: "Any Price",        min: 0,    max: Infinity },
-  { label: "Under ₹500",       min: 0,    max: 500 },
-  { label: "₹500 – ₹1,500",    min: 500,  max: 1500 },
-  { label: "₹1,500 – ₹3,000",  min: 1500, max: 3000 },
-  { label: "Over ₹3,000",      min: 3000, max: Infinity },
-];
+// Compute the actual global price range from products
+const ALL_PRICES = productsData.map(p => p.price || 0).filter(p => p > 0);
+const PRICE_MIN  = Math.min(...ALL_PRICES, 0);
+const PRICE_MAX  = Math.max(...ALL_PRICES, 10000);
+const PRICE_FLOOR = Math.floor(PRICE_MIN / 100) * 100;
+const PRICE_CEIL  = Math.ceil(PRICE_MAX / 100) * 100;
 
-function computeCategories(products) {
-  const counts = {};
-  products.forEach(p => { counts[p.cat] = (counts[p.cat] || 0) + 1; });
-  const mainCats     = Object.keys(counts).filter(c => counts[c] >= 2).sort();
-  const singletonCats = Object.keys(counts).filter(c => counts[c] === 1).sort();
-  return { mainCats, singletonCats };
-}
+// (Legacy auto-category compute removed — using custom categoriesData now)
 
 const EXIT = {
   right: "translate(160%,  -5%) rotate(32deg)",
@@ -94,10 +88,10 @@ const EXIT = {
 };
 
 const OVERLAYS = {
-  right:{ label:"ADD TO CART",    color:"#00A550", bg:"rgba(0,165,80,0.09)"   },
-  left: { label:"OPEN ON\nAMAZON",color:B,         bg:"rgba(22,104,245,0.09)" },
-  up:   { label:"SKIP",           color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
-  down: { label:"↩ BRING BACK",   color:"#8B5CF6", bg:"rgba(139,92,246,0.09)" },
+  right:{ label:"ADD TO CART",     color:"#00A550", bg:"rgba(0,165,80,0.09)"   },
+  left: { label:"OPEN ON\nAMAZON", color:B,         bg:"rgba(22,104,245,0.09)" },
+  up:   { label:"NEXT PRODUCT",    color:"#D0021B", bg:"rgba(208,2,27,0.09)"   },
+  down: { label:"↩ PREVIOUS",      color:"#8B5CF6", bg:"rgba(139,92,246,0.09)" },
 };
 
 const SWIPE_THRESHOLD = 50;  // px — lower = snappier, easier to trigger
@@ -116,21 +110,7 @@ function Stars({ rating }) {
   );
 }
 
-function Toast({ msg, on }) {
-  return (
-    <div style={{
-      position:"fixed", bottom:110, left:"50%",
-      transform:`translateX(-50%) translateY(${on?0:4}px)`,
-      opacity:on?1:0, transition:"all 0.2s ease",
-      background:"rgba(0,0,0,0.45)", color:"#fff",
-      padding:"5px 13px", borderRadius:40,
-      fontWeight:600, fontSize:10.5, letterSpacing:0.2,
-      zIndex:9999, pointerEvents:"none",
-      whiteSpace:"nowrap", fontFamily:"'Barlow',sans-serif",
-      backdropFilter:"blur(6px)", WebkitBackdropFilter:"blur(6px)",
-    }}>{msg}</div>
-  );
-}
+// Toast component removed — no more toast bubbles on the site
 
 // ── Legal pages content ─────────────────────────────────────────────────────
 const PRIVACY_CONTENT = (
@@ -422,17 +402,86 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
             background: alreadyInCart ? "#F5F5F5" : Y, color: alreadyInCart ? "#999" : "#000",
             border:"none", borderRadius:12, padding:"12px 0", width:"100%",
             fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:15, cursor:"pointer",
-            letterSpacing:0.6,
-          }}>{alreadyInCart ? "ALREADY IN CART" : "♥  ADD TO CART"}</button>
+            letterSpacing:0.6, display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+          }}>
+            {alreadyInCart ? "ALREADY IN CART" : (
+              <>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="9" cy="21" r="1"/>
+                  <circle cx="20" cy="21" r="1"/>
+                  <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+                </svg>
+                ADD TO CART
+              </>
+            )}
+          </button>
         </div>
       </div>
     </div>
   );
 }
 
-function HowToModal({ onClose }) {
+function TutorialOverlay({ onDismiss }) {
+  return (
+    <div
+      onClick={onDismiss}
+      onTouchStart={onDismiss}
+      style={{
+        position:"fixed", inset:0, zIndex:250,
+        background:"rgba(0,0,0,0.7)", backdropFilter:"blur(4px)",
+        display:"flex", alignItems:"center", justifyContent:"center",
+        fontFamily:"'Barlow',sans-serif", color:"#fff", padding:"20px",
+        animation:"ssFadeIn 0.3s ease",
+      }}>
+      <style>{`
+        @keyframes ssFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes ssBounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-8px);} }
+        .arrow-up   { animation: ssBounce 1.4s ease infinite; }
+        .arrow-down { animation: ssBounce 1.4s ease infinite; animation-delay: 0.35s; }
+        .arrow-left { animation: ssBounce 1.4s ease infinite; animation-delay: 0.7s; }
+        .arrow-right{ animation: ssBounce 1.4s ease infinite; animation-delay: 1.05s; }
+      `}</style>
+      <div style={{ position:"relative", width:"100%", maxWidth:280, aspectRatio:"3/4",
+        border:"2px dashed rgba(255,255,255,0.5)", borderRadius:20,
+        display:"flex", alignItems:"center", justifyContent:"center", flexDirection:"column",
+      }}>
+        {/* Up arrow */}
+        <div className="arrow-up" style={{ position:"absolute", top:-56, textAlign:"center" }}>
+          <div style={{ fontSize:28 }}>↑</div>
+          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#FF9999" }}>NEXT PRODUCT</div>
+        </div>
+        {/* Down arrow */}
+        <div className="arrow-down" style={{ position:"absolute", bottom:-56, textAlign:"center" }}>
+          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#C4B5FD" }}>PREVIOUS PRODUCT</div>
+          <div style={{ fontSize:28 }}>↓</div>
+        </div>
+        {/* Left arrow */}
+        <div className="arrow-left" style={{ position:"absolute", left:-92, top:"50%", transform:"translateY(-50%)", textAlign:"center", width:80 }}>
+          <div style={{ fontSize:28 }}>←</div>
+          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#93C5FD" }}>AMAZON</div>
+        </div>
+        {/* Right arrow */}
+        <div className="arrow-right" style={{ position:"absolute", right:-92, top:"50%", transform:"translateY(-50%)", textAlign:"center", width:80 }}>
+          <div style={{ fontSize:28 }}>→</div>
+          <div style={{ fontSize:11, fontWeight:800, letterSpacing:1, color:"#86EFAC" }}>ADD TO CART</div>
+        </div>
+
+        <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26,
+          letterSpacing:-0.5, textAlign:"center", padding:"0 20px" }}>
+          SWIPE THE CARD
+        </div>
+        <div style={{ fontSize:12, opacity:0.7, marginTop:8, textAlign:"center" }}>
+          Tap anywhere to dismiss
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HowToModal({ onClose, onPreviewTutorial }) {
   const rows = [
-    { color:"#D0021B", bg:"#FEF2F2", arrow:"↑", label:"SKIP",
+    { color:"#D0021B", bg:"#FEF2F2", arrow:"↑", label:"NEXT PRODUCT",
       svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
           stroke="#D0021B" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10"/>
@@ -452,7 +501,7 @@ function HowToModal({ onClose }) {
           <path d="M19 12H5"/>
           <path d="M12 19l-7-7 7-7"/>
         </svg>) },
-    { color:"#8B5CF6", bg:"#F4F0FF", arrow:"↓", label:"BRING BACK LAST CARD",
+    { color:"#8B5CF6", bg:"#F4F0FF", arrow:"↓", label:"PREVIOUS PRODUCT",
       svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
           stroke="#8B5CF6" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 7v6h6"/>
@@ -500,6 +549,14 @@ function HowToModal({ onClose }) {
             </div>
           </div>
         ))}
+
+        {onPreviewTutorial && (
+          <button onClick={onPreviewTutorial} style={{
+            width:"100%", marginTop:8, background:"#111", color:"#fff", border:"none",
+            borderRadius:10, padding:"11px 0", fontSize:13, fontWeight:800,
+            letterSpacing:0.6, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+          }}>▶ PREVIEW TUTORIAL</button>
+        )}
       </div>
     </div>
   );
@@ -507,32 +564,35 @@ function HowToModal({ onClose }) {
 
 // ── Main App ─────────────────────────────────────────────────────────────────
 export default function App() {
-  const [filterCat,   setFilterCat]   = useState("All Categories");
-  const [filterPrice, setFilterPrice] = useState(0);
+  const [selectedCatNames, setSelectedCatNames] = useState([]);   // array of category names (empty = all)
+  const [priceRange,  setPriceRange]  = useState([PRICE_FLOOR, PRICE_CEIL]);
+  const [showFilters, setShowFilters] = useState(false);
   const [legalModal,  setLegalModal]  = useState(null);
+  const [showTutorial, setShowTutorial] = useState(false);
+  // find-similar expansion — keyed by product id
+  const [findExpanded, setFindExpanded] = useState(null);
   const [showHowTo,   setShowHowTo]   = useState(false);
   const [detailProduct, setDetailProduct] = useState(null);
   const [showMenu,    setShowMenu]    = useState(false);
   const [reportProduct, setReportProduct] = useState(null);
 
-  const { mainCats, singletonCats } = useMemo(() => computeCategories(productsData), []);
-
   // Apply filters → produce the actual stack
   const filteredProducts = useMemo(() => {
-    const range = PRICE_RANGES[filterPrice];
+    const [lo, hi] = priceRange;
     return productsData.filter(p => {
-      if (p.price < range.min || p.price > range.max) return false;
-      if (filterCat === "All Categories") return true;
-      return p.cat === filterCat;
+      const price = p.price || 0;
+      if (price < lo || price > hi) return false;
+      if (selectedCatNames.length === 0) return true;
+      const productCats = p.categories || [];
+      return productCats.some(c => selectedCatNames.includes(c));
     });
-  }, [filterCat, filterPrice]);
+  }, [selectedCatNames, priceRange]);
 
   const [stack, setStack] = useState(() => shuffle(filteredProducts));
   const [cart,  setCart]  = useState(() => {
     try { return JSON.parse(localStorage.getItem("ss4_cart") || "[]"); } catch { return []; }
   });
   const [showCart, setShowCart] = useState(false);
-  const [toast,    setToast]    = useState({ msg:"", on:false });
 
   const [draggingId, setDraggingId] = useState(null);
   const [offset,     setOffset]     = useState({ x:0, y:0 });
@@ -553,6 +613,28 @@ export default function App() {
     isExiting.current = false;
   }, [filteredProducts]);
 
+  // Auto-tutorial: show once/twice on first visits, after 5s idle, only if cart is empty
+  useEffect(() => {
+    let count = 0;
+    try { count = parseInt(localStorage.getItem("ss_tutorial_count") || "0") || 0; } catch {}
+    if (count >= 2) return;
+    if (cart.length > 0) return;
+    let cancelled = false;
+    const dismissKeys = ["mousedown", "touchstart", "keydown", "wheel"];
+    const cancel = () => { cancelled = true; };
+    dismissKeys.forEach(k => window.addEventListener(k, cancel, { once: true }));
+    const t = setTimeout(() => {
+      if (!cancelled) {
+        setShowTutorial(true);
+        try { localStorage.setItem("ss_tutorial_count", String(count + 1)); } catch {}
+      }
+    }, 5000);
+    return () => {
+      clearTimeout(t);
+      dismissKeys.forEach(k => window.removeEventListener(k, cancel));
+    };
+  }, []);   // once on mount only
+
   // Drive the bring-back entrance animation: start off-screen → settle to center
   useEffect(() => {
     if (enterAnim?.phase === "start") {
@@ -566,7 +648,6 @@ export default function App() {
       return () => clearTimeout(t);
     }
   }, [enterAnim]);
-  const toastTimer   = useRef(null);
   const exitTimer    = useRef(null);
   const cartRef      = useRef(cart);    cartRef.current = cart;
   const stackRef     = useRef(stack);   stackRef.current = stack;
@@ -575,11 +656,7 @@ export default function App() {
 
   const saveCart = (c) => { localStorage.setItem("ss4_cart", JSON.stringify(c)); setCart(c); };
 
-  const flash = (msg) => {
-    clearTimeout(toastTimer.current);
-    setToast({ msg, on:true });
-    toastTimer.current = setTimeout(() => setToast(t => ({ ...t, on:false })), 1800);
-  };
+  const flash = () => {};   // toasts removed
 
   // ── CORE SWIPE ──────────────────────────────────────────────────────────────
   // right = add to cart, left = amazon, up = skip. (down handled by doUndo)
@@ -810,6 +887,20 @@ export default function App() {
                 background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23999' d='M6 8L0 0h12z'/></svg>");
                 background-repeat:no-repeat; background-position:right 10px center;
                 padding-right:28px; }
+        /* Dual range slider — thumbs interactive, tracks transparent (we draw our own) */
+        input.range-thumb::-webkit-slider-runnable-track { background: transparent; border: none; height: 36px; }
+        input.range-thumb::-moz-range-track             { background: transparent; border: none; height: 36px; }
+        input.range-thumb::-webkit-slider-thumb {
+          -webkit-appearance: none; appearance: none; width: 20px; height: 20px;
+          border-radius: 50%; background: #fff; border: 2px solid ${Y};
+          box-shadow: 0 2px 6px rgba(0,0,0,0.15); cursor: grab;
+          pointer-events: auto; margin-top: 8px;
+        }
+        input.range-thumb::-moz-range-thumb {
+          width: 20px; height: 20px; border-radius: 50%; background: #fff;
+          border: 2px solid ${Y}; box-shadow: 0 2px 6px rgba(0,0,0,0.15); cursor: grab;
+          pointer-events: auto;
+        }
       `}</style>
 
       {/* ── HEADER ── */}
@@ -860,39 +951,103 @@ export default function App() {
         As an Amazon Associate we earn from qualifying purchases.
       </div>
 
-      {/* ── FILTERS ── */}
-      <div style={{ padding:"10px 14px 6px", display:"flex", gap:8, alignItems:"center", flexWrap:"wrap" }}>
-        <select
-          value={filterCat}
-          onChange={e => setFilterCat(e.target.value)}
+      {/* ── FILTERS BAR (modern) ── */}
+      <div style={{ padding:"8px 14px 6px", display:"flex", gap:8 }}>
+        <button
+          onClick={() => setShowFilters(v => !v)}
           style={{
-            flex:1, minWidth:120, padding:"7px 28px 7px 12px", borderRadius:8,
-            border:"1px solid #E5E5E5", background:"#FAFAFA", fontSize:12, color:"#333",
-            fontFamily:"'Barlow',sans-serif", fontWeight:600, cursor:"pointer",
+            flex:1, padding:"9px 14px", borderRadius:12,
+            border:"1px solid #EEE", background: showFilters ? "#FFF8E6" : "#F8F8F8",
+            fontSize:12, color:"#333", fontFamily:"'Barlow',sans-serif",
+            fontWeight:700, letterSpacing:0.3, cursor:"pointer", display:"flex",
+            alignItems:"center", justifyContent:"space-between",
           }}>
-          <option value="All Categories">All Categories</option>
-          {mainCats.length > 0 && (
-            <optgroup label="Categories">
-              {mainCats.map(c => <option key={c} value={c}>{c}</option>)}
-            </optgroup>
-          )}
-          {singletonCats.length > 0 && (
-            <optgroup label={mainCats.length > 0 ? "Other" : "Categories"}>
-              {singletonCats.map(c => <option key={c} value={c}>{c}</option>)}
-            </optgroup>
-          )}
-        </select>
-        <select
-          value={filterPrice}
-          onChange={e => setFilterPrice(parseInt(e.target.value))}
-          style={{
-            flex:1, minWidth:120, padding:"7px 28px 7px 12px", borderRadius:8,
-            border:"1px solid #E5E5E5", background:"#FAFAFA", fontSize:12, color:"#333",
-            fontFamily:"'Barlow',sans-serif", fontWeight:600, cursor:"pointer",
-          }}>
-          {PRICE_RANGES.map((r, i) => <option key={i} value={i}>{r.label}</option>)}
-        </select>
+          <span>
+            {selectedCatNames.length === 0 ? "ALL CATEGORIES" : `${selectedCatNames.length} SELECTED`}
+            {" · "}
+            {(priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL)
+              ? "ANY PRICE"
+              : `₹${priceRange[0]} – ₹${priceRange[1]}`}
+          </span>
+          <span style={{ color:"#999" }}>{showFilters ? "▲" : "▼"}</span>
+        </button>
       </div>
+
+      {showFilters && (
+        <div style={{ padding:"6px 14px 12px", borderBottom:"1px solid #F5F5F5",
+          background:"#FCFCFC", maxHeight:"45vh", overflowY:"auto" }}>
+          {/* Categories */}
+          <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.6,
+            marginBottom:6, textTransform:"uppercase" }}>Categories</div>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:14 }}>
+            {categoriesData.length === 0 && (
+              <span style={{ fontSize:12, color:"#AAA" }}>No categories yet.</span>
+            )}
+            {categoriesData.map(c => {
+              const on = selectedCatNames.includes(c.name);
+              return (
+                <button key={c.name}
+                  onClick={() => setSelectedCatNames(prev =>
+                    prev.includes(c.name) ? prev.filter(n => n !== c.name) : [...prev, c.name])}
+                  style={{
+                    background: on ? Y : "#fff", color: on ? "#000" : "#555",
+                    border:`1px solid ${on ? Y : "#E5E5E5"}`,
+                    borderRadius:16, padding:"6px 11px", fontSize:12,
+                    fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+                    display:"inline-flex", alignItems:"center", gap:5,
+                    transition:"all 0.15s",
+                  }}>
+                  <span style={{ fontSize:14 }}>{c.emoji}</span>
+                  {c.name}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Price dual slider */}
+          <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.6,
+            marginBottom:6, textTransform:"uppercase", display:"flex", justifyContent:"space-between" }}>
+            <span>Price</span>
+            <span style={{ color:B, fontWeight:800 }}>₹{priceRange[0]} – ₹{priceRange[1]}</span>
+          </div>
+          <div style={{ position:"relative", height:36, marginBottom:2 }}>
+            <div style={{ position:"absolute", top:16, left:0, right:0, height:4,
+              background:"#EEE", borderRadius:2 }} />
+            <div style={{ position:"absolute", top:16, height:4, borderRadius:2, background:Y,
+              left: `${((priceRange[0] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
+              right:`${100 - ((priceRange[1] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
+            }} />
+            <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
+              value={priceRange[0]}
+              onChange={e => setPriceRange(([_, hi]) =>
+                [Math.min(parseInt(e.target.value), hi - 50), hi])}
+              style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
+                background:"transparent", pointerEvents:"none", appearance:"none",
+                WebkitAppearance:"none", height:36, margin:0 }}
+              className="range-thumb" />
+            <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
+              value={priceRange[1]}
+              onChange={e => setPriceRange(([lo, _]) =>
+                [lo, Math.max(parseInt(e.target.value), lo + 50)])}
+              style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
+                background:"transparent", pointerEvents:"none", appearance:"none",
+                WebkitAppearance:"none", height:36, margin:0 }}
+              className="range-thumb" />
+          </div>
+          <div style={{ display:"flex", justifyContent:"space-between", fontSize:10, color:"#BBB", marginTop:2 }}>
+            <span>₹{PRICE_FLOOR}</span><span>₹{PRICE_CEIL}</span>
+          </div>
+
+          {(selectedCatNames.length > 0 || priceRange[0] !== PRICE_FLOOR || priceRange[1] !== PRICE_CEIL) && (
+            <button onClick={() => { setSelectedCatNames([]); setPriceRange([PRICE_FLOOR, PRICE_CEIL]); }}
+              style={{ background:"none", border:"1px solid #EEE", color:"#666",
+                borderRadius:10, padding:"6px 12px", fontSize:11, fontWeight:700,
+                cursor:"pointer", marginTop:10, fontFamily:"'Barlow',sans-serif" }}>
+              Clear filters
+            </button>
+          )}
+        </div>
+      )}
 
       {/* ── CARD AREA WITH SIDE ICONS ── */}
       <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
@@ -902,17 +1057,17 @@ export default function App() {
           <div style={{ textAlign:"center" }}>
             <div style={{ fontSize:48, marginBottom:12 }}>🎉</div>
             <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, color:"#111", marginBottom:6 }}>
-              {filterCat === "All Categories" && filterPrice === 0
+              {selectedCatNames.length === 0 && priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL
                 ? "YOU'VE SEEN IT ALL"
                 : "NO PRODUCTS MATCH"}
             </div>
             <div style={{ fontSize:13, color:"#AAA", marginBottom:18 }}>
-              {filterCat === "All Categories" && filterPrice === 0
+              {selectedCatNames.length === 0 && priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL
                 ? "Check your cart for saved items"
                 : "Try adjusting your filters"}
             </div>
             <button onClick={() => {
-                setFilterCat("All Categories"); setFilterPrice(0);
+                setSelectedCatNames([]); setPriceRange([PRICE_FLOOR, PRICE_CEIL]);
                 setStack(shuffle(productsData));
               }} style={{
               background:Y, color:"#000", border:"none", borderRadius:12,
@@ -995,11 +1150,6 @@ export default function App() {
 
                     {(isTop || isLeaving) && (
                       <>
-                        <div style={{ position:"absolute", top:10, right:10, background:"rgba(255,255,255,0.92)",
-                          color:"#777", padding:"3px 10px", borderRadius:4, fontSize:10, fontWeight:600,
-                          maxWidth:"60%", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap"
-                        }}>{p.cat}</div>
-
                         {swipeDir && isTop && !isLeaving && (
                           <div style={{ position:"absolute", inset:0, background:OVERLAYS[swipeDir].bg,
                             display:"flex", alignItems:"center", justifyContent:"center" }}>
@@ -1029,8 +1179,28 @@ export default function App() {
                         <Stars rating={p.rating}/>
                         <span style={{ color:"#C8C8C8", fontSize:11 }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
-                        color:B, marginBottom:4, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
+                      <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4,
+                        flexWrap:"wrap" }}>
+                        <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
+                          color:B, letterSpacing:-0.3, lineHeight:1 }}>
+                          ₹{p.price.toLocaleString('en-IN')}
+                        </div>
+                        {(p.categories || []).slice(0, 2).map(catName => {
+                          const cat = categoriesData.find(c => c.name === catName);
+                          if (!cat) return null;
+                          return (
+                            <span key={catName} style={{
+                              display:"inline-flex", alignItems:"center", gap:3,
+                              background:"none", border:"1px solid #EEE",
+                              borderRadius:10, padding:"2px 7px",
+                              fontSize:9, color:"#999", fontWeight:700, letterSpacing:0.2,
+                            }}>
+                              <span style={{ fontSize:11 }}>{cat.emoji}</span>
+                              {cat.name}
+                            </span>
+                          );
+                        })}
+                      </div>
                       <p style={{ color:"#999", fontSize:11.5, lineHeight:1.4,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden", marginBottom:1,
@@ -1047,35 +1217,59 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Find-similar button — bottom-left, tiny pill */}
-                  {(isTop && !isLeaving) && (
-                    <button
-                      aria-label="Find similar products"
-                      title="Find similar on Amazon"
-                      onMouseDown={e => e.stopPropagation()}
-                      onTouchStart={e => e.stopPropagation()}
-                      onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
-                      style={{
-                        position:"absolute", bottom:8, left:8,
-                        background:"none", border:"1px solid #EEE",
-                        borderRadius:10, cursor:"pointer",
-                        padding:"2px 7px", display:"flex", alignItems:"center", gap:4,
-                        transition:"opacity 0.15s", zIndex:5,
-                        fontFamily:"'Barlow',sans-serif",
-                      }}
-                    >
-                      <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-                        stroke="#D8D8D8" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="11" r="7"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                      </svg>
-                      <span style={{ fontSize:8.5, color:"#BBB", fontWeight:700, letterSpacing:0.3 }}>
-                        FIND SIMILAR
-                      </span>
-                    </button>
-                  )}
+                  {/* Find-similar circle → pill; expand on first tap, navigate on second */}
+                  {(isTop && !isLeaving) && (() => {
+                    const expanded = findExpanded === p.id;
+                    return (
+                      <button
+                        aria-label="Find similar products"
+                        title="Find similar on Amazon"
+                        onMouseDown={e => e.stopPropagation()}
+                        onTouchStart={e => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (expanded) {
+                            window.open(similarUrl(p), "_blank");
+                            setFindExpanded(null);
+                          } else {
+                            setFindExpanded(p.id);
+                            setTimeout(() => setFindExpanded(cur => cur === p.id ? null : cur), 3000);
+                          }
+                        }}
+                        style={{
+                          position:"absolute", bottom:0, left:0,
+                          background:"#FAFAFA", border:"1px solid #EEE",
+                          borderTopLeftRadius:0, borderTopRightRadius:20,
+                          borderBottomLeftRadius:20, borderBottomRightRadius:20,
+                          cursor:"pointer", height:40,
+                          width: expanded ? 130 : 40,
+                          padding:0, display:"flex", alignItems:"center",
+                          justifyContent: expanded ? "flex-start" : "center",
+                          gap:expanded ? 6 : 0, overflow:"hidden", zIndex:5,
+                          fontFamily:"'Barlow',sans-serif",
+                          transition:"width 0.28s cubic-bezier(0.4, 0, 0.2, 1), gap 0.28s",
+                        }}
+                      >
+                        <span style={{ paddingLeft:12, display:"flex", alignItems:"center" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                          </svg>
+                        </span>
+                        <span style={{
+                          fontSize:10, color:"#666", fontWeight:800, letterSpacing:0.3,
+                          whiteSpace:"nowrap",
+                          opacity: expanded ? 1 : 0,
+                          transition:"opacity 0.2s 0.05s",
+                        }}>
+                          FIND SIMILAR
+                        </span>
+                      </button>
+                    );
+                  })()}
 
-                  {/* Report icon — bottom-right, tiny faded */}
+                  {/* Report — circle button matching card corner */}
                   {(isTop && !isLeaving) && (
                     <button
                       aria-label="Report product"
@@ -1083,13 +1277,17 @@ export default function App() {
                       onTouchStart={e => e.stopPropagation()}
                       onClick={(e) => { e.stopPropagation(); setReportProduct(p); }}
                       style={{
-                        position:"absolute", bottom:8, right:8, background:"none",
-                        border:"none", cursor:"pointer", padding:3, lineHeight:0,
-                        transition:"opacity 0.15s", zIndex:5,
+                        position:"absolute", bottom:0, right:0,
+                        background:"#FAFAFA", border:"1px solid #EEE",
+                        borderTopRightRadius:0, borderTopLeftRadius:20,
+                        borderBottomLeftRadius:20, borderBottomRightRadius:20,
+                        cursor:"pointer", width:40, height:40, padding:0,
+                        display:"flex", alignItems:"center", justifyContent:"center",
+                        zIndex:5,
                       }}
                     >
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="#D8D8D8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="#999" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                         <line x1="12" y1="9" x2="12" y2="13"/>
                         <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -1125,37 +1323,37 @@ export default function App() {
           </>
         )}
 
-        {/* UP HINT — skip */}
+        {/* UP HINT — next product */}
         {stack.length > 0 && (
           <div style={{ position:"absolute", left:0, right:0, top:2,
             textAlign:"center", fontSize:7.5, color:"#D8D8D8",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
           }}>
-            ↑ SKIP
+            ↑ NEXT PRODUCT
           </div>
         )}
-        {/* DOWN HINT — bring back last card */}
+        {/* DOWN HINT — previous product */}
         {stack.length > 0 && (
           <div style={{ position:"absolute", left:0, right:0, bottom:26,
             textAlign:"center", fontSize:7.5, color:"#D8D8D8",
             letterSpacing:0.4, fontWeight:700, zIndex:1,
             pointerEvents:"none",
           }}>
-            BRING BACK LAST CARD ↓
+            PREVIOUS PRODUCT ↓
           </div>
         )}
       </div>
 
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
-      <div style={{ padding:"6px 16px 24px" }}>
+      <div style={{ padding:"14px 16px 30px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
-          border:"none", borderRadius:12, padding:"12px 0", width:"100%",
-          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
+          border:"none", borderRadius:14, padding:"16px 0", width:"100%",
+          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
-          boxShadow: cart.length > 0 ? "0 4px 20px rgba(255,179,0,0.28)" : "none"
+          boxShadow: cart.length > 0 ? "0 6px 22px rgba(255,179,0,0.32)" : "none"
         }}>
           {cart.length > 0
             ? `VIEW CART — ${cart.length} ITEM${cart.length!==1?"S":""}`
@@ -1300,7 +1498,9 @@ export default function App() {
         />
       )}
       {legalModal && <LegalModal kind={legalModal} onClose={() => setLegalModal(null)} />}
-      {showHowTo  && <HowToModal onClose={() => setShowHowTo(false)} />}
+      {showHowTo  && <HowToModal onClose={() => setShowHowTo(false)}
+        onPreviewTutorial={() => { setShowHowTo(false); setShowTutorial(true); }} />}
+      {showTutorial && <TutorialOverlay onDismiss={() => setShowTutorial(false)} />}
       {detailProduct && (
         <ProductDetailModal
           product={detailProduct}
@@ -1317,7 +1517,6 @@ export default function App() {
           }}
         />
       )}
-      <Toast msg={toast.msg} on={toast.on} />
     </div>
   );
 }
