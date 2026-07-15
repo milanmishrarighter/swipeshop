@@ -384,9 +384,29 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
           </div>
 
           <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:32,
-            color:B, marginBottom:16, letterSpacing:-0.5 }}>
+            color:B, marginBottom:12, letterSpacing:-0.5 }}>
             ₹{product.price?.toLocaleString('en-IN')}
           </div>
+
+          {(product.categories || []).length > 0 && (
+            <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:16 }}>
+              {(product.categories || []).map(name => {
+                const cat = categoriesData.find(c => c.name === name);
+                if (!cat) return null;
+                return (
+                  <span key={name} style={{
+                    display:"inline-flex", alignItems:"center", gap:5,
+                    background:"#F5F5F5", border:"1px solid #EEE",
+                    borderRadius:14, padding:"4px 10px",
+                    fontSize:12, color:"#555", fontWeight:600,
+                  }}>
+                    <span style={{ fontSize:14 }}>{cat.emoji}</span>
+                    {cat.name}
+                  </span>
+                );
+              })}
+            </div>
+          )}
 
           <p style={{ color:"#666", fontSize:14, lineHeight:1.6, marginBottom:24,
             whiteSpace:"pre-line" }}>{product.summary}</p>
@@ -423,16 +443,24 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
 }
 
 function TutorialOverlay({ onDismiss }) {
+  // Absorb the ENTIRE tap sequence (touchstart+touchmove+touchend+click) so nothing behind fires
+  const kill = (e) => { e.preventDefault(); e.stopPropagation(); };
+  const dismiss = (e) => { kill(e); onDismiss(); };
   return (
     <div
-      onClick={onDismiss}
-      onTouchStart={onDismiss}
+      onPointerDown={dismiss}
+      onTouchStart={dismiss}
+      onTouchMove={kill}
+      onTouchEnd={kill}
+      onMouseDown={dismiss}
+      onClick={kill}
       style={{
         position:"fixed", inset:0, zIndex:250,
         background:"rgba(0,0,0,0.75)", backdropFilter:"blur(4px)",
         display:"flex", alignItems:"center", justifyContent:"center",
         fontFamily:"'Barlow',sans-serif", color:"#fff", padding:"20px",
         animation:"ssFadeIn 0.3s ease",
+        touchAction:"none",
       }}>
       <style>{`
         @keyframes ssFadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -951,8 +979,8 @@ export default function App() {
         As an Amazon Associate we earn from qualifying purchases.
       </div>
 
-      {/* ── FILTERS (two separate buttons) ── */}
-      <div style={{ padding:"5px 12px 4px", display:"flex", gap:6 }}>
+      {/* ── FILTERS (two separate buttons; panels overlay over cards) ── */}
+      <div style={{ padding:"5px 12px 4px", display:"flex", gap:6, position:"relative", zIndex:50 }}>
         <button
           onClick={() => setOpenFilter(v => v === "cat" ? null : "cat")}
           style={{
@@ -987,93 +1015,130 @@ export default function App() {
         </button>
       </div>
 
-      {openFilter === "cat" && (
-        <div style={{ padding:"4px 12px 10px", borderBottom:"1px solid #F5F5F5",
-          background:"#FCFCFC", maxHeight:"40vh", overflowY:"auto" }}>
-          <div style={{ display:"flex", flexWrap:"wrap", gap:5 }}>
-            {categoriesData.length === 0 && (
-              <span style={{ fontSize:12, color:"#AAA" }}>No categories yet.</span>
+      {openFilter && (
+        <>
+          {/* Invisible backdrop that closes the panel and swallows taps on cards */}
+          <div
+            onClick={() => setOpenFilter(null)}
+            onTouchStart={(e) => { e.stopPropagation(); setOpenFilter(null); }}
+            style={{ position:"absolute", inset:0, zIndex:45, background:"transparent" }}
+          />
+          <div
+            onClick={e => e.stopPropagation()}
+            onMouseDown={e => e.stopPropagation()}
+            onTouchStart={e => e.stopPropagation()}
+            style={{
+              position:"absolute", left:12, right:12, zIndex:60,
+              background:"#fff", border:"1px solid #EEE",
+              borderRadius:14, boxShadow:"0 8px 24px rgba(0,0,0,0.10)",
+              padding:"12px 14px", maxHeight:"55vh", overflowY:"auto",
+              // Positioned right below the filter row (which is ~50px tall from container top)
+              top: 105,
+            }}>
+            {openFilter === "cat" && (
+              <>
+                <div style={{ display:"flex", flexWrap:"wrap", gap:5 }}>
+                  {categoriesData.length === 0 && (
+                    <span style={{ fontSize:12, color:"#AAA" }}>No categories yet.</span>
+                  )}
+                  {categoriesData.map(c => {
+                    const on = selectedCatNames.includes(c.name);
+                    return (
+                      <button key={c.name}
+                        onClick={() => setSelectedCatNames(prev =>
+                          prev.includes(c.name) ? prev.filter(n => n !== c.name) : [...prev, c.name])}
+                        style={{
+                          background: on ? Y : "#fff", color: on ? "#000" : "#555",
+                          border:`1px solid ${on ? Y : "#E5E5E5"}`,
+                          borderRadius:14, padding:"4px 9px", fontSize:11,
+                          fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
+                          display:"inline-flex", alignItems:"center", gap:4,
+                          transition:"all 0.15s",
+                        }}>
+                        <span style={{ fontSize:13 }}>{c.emoji}</span>
+                        {c.name}
+                      </button>
+                    );
+                  })}
+                </div>
+                <div style={{ display:"flex", gap:8, marginTop:12 }}>
+                  {selectedCatNames.length > 0 && (
+                    <button onClick={() => setSelectedCatNames([])}
+                      style={{ flex:1, background:"none", border:"1px solid #EEE", color:"#666",
+                        borderRadius:8, padding:"7px 0", fontSize:11, fontWeight:700,
+                        cursor:"pointer", fontFamily:"'Barlow',sans-serif" }}>
+                      Clear
+                    </button>
+                  )}
+                  <button onClick={() => setOpenFilter(null)}
+                    style={{ flex:2, background:Y, border:"none", color:"#000",
+                      borderRadius:8, padding:"7px 0", fontSize:12, fontWeight:800,
+                      cursor:"pointer", fontFamily:"'Barlow',sans-serif", letterSpacing:0.5 }}>
+                    CONFIRM
+                  </button>
+                </div>
+              </>
             )}
-            {categoriesData.map(c => {
-              const on = selectedCatNames.includes(c.name);
-              return (
-                <button key={c.name}
-                  onClick={() => setSelectedCatNames(prev =>
-                    prev.includes(c.name) ? prev.filter(n => n !== c.name) : [...prev, c.name])}
-                  style={{
-                    background: on ? Y : "#fff", color: on ? "#000" : "#555",
-                    border:`1px solid ${on ? Y : "#E5E5E5"}`,
-                    borderRadius:14, padding:"4px 9px", fontSize:11,
-                    fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
-                    display:"inline-flex", alignItems:"center", gap:4,
-                    transition:"all 0.15s",
-                  }}>
-                  <span style={{ fontSize:13 }}>{c.emoji}</span>
-                  {c.name}
-                </button>
-              );
-            })}
-          </div>
-          {selectedCatNames.length > 0 && (
-            <button onClick={() => setSelectedCatNames([])}
-              style={{ background:"none", border:"1px solid #EEE", color:"#666",
-                borderRadius:8, padding:"4px 10px", fontSize:10, fontWeight:700,
-                cursor:"pointer", marginTop:8, fontFamily:"'Barlow',sans-serif" }}>
-              Clear categories
-            </button>
-          )}
-        </div>
-      )}
 
-      {openFilter === "price" && (
-        <div style={{ padding:"6px 14px 10px", borderBottom:"1px solid #F5F5F5",
-          background:"#FCFCFC" }}>
-          <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.5,
-            marginBottom:4, textTransform:"uppercase", display:"flex", justifyContent:"space-between" }}>
-            <span>Range</span>
-            <span style={{ color:B, fontWeight:800 }}>₹{priceRange[0]} – ₹{priceRange[1]}</span>
+            {openFilter === "price" && (
+              <>
+                <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.5,
+                  marginBottom:6, textTransform:"uppercase", display:"flex", justifyContent:"space-between" }}>
+                  <span>Range</span>
+                  <span style={{ color:B, fontWeight:800 }}>₹{priceRange[0]} – ₹{priceRange[1]}</span>
+                </div>
+                <div style={{ position:"relative", height:34 }}>
+                  <div style={{ position:"absolute", top:15, left:0, right:0, height:4,
+                    background:"#EEE", borderRadius:2 }} />
+                  <div style={{ position:"absolute", top:15, height:4, borderRadius:2, background:Y,
+                    left: `${((priceRange[0] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
+                    right:`${100 - ((priceRange[1] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
+                  }} />
+                  <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
+                    value={priceRange[0]}
+                    onChange={e => setPriceRange(([_, hi]) =>
+                      [Math.min(parseInt(e.target.value), hi - 50), hi])}
+                    style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
+                      background:"transparent", pointerEvents:"none", appearance:"none",
+                      WebkitAppearance:"none", height:34, margin:0 }}
+                    className="range-thumb" />
+                  <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
+                    value={priceRange[1]}
+                    onChange={e => setPriceRange(([lo, _]) =>
+                      [lo, Math.max(parseInt(e.target.value), lo + 50)])}
+                    style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
+                      background:"transparent", pointerEvents:"none", appearance:"none",
+                      WebkitAppearance:"none", height:34, margin:0 }}
+                    className="range-thumb" />
+                </div>
+                <div style={{ display:"flex", justifyContent:"space-between", fontSize:9, color:"#BBB" }}>
+                  <span>₹{PRICE_FLOOR}</span><span>₹{PRICE_CEIL}</span>
+                </div>
+                <div style={{ display:"flex", gap:8, marginTop:12 }}>
+                  {(priceRange[0] !== PRICE_FLOOR || priceRange[1] !== PRICE_CEIL) && (
+                    <button onClick={() => setPriceRange([PRICE_FLOOR, PRICE_CEIL])}
+                      style={{ flex:1, background:"none", border:"1px solid #EEE", color:"#666",
+                        borderRadius:8, padding:"7px 0", fontSize:11, fontWeight:700,
+                        cursor:"pointer", fontFamily:"'Barlow',sans-serif" }}>
+                      Clear
+                    </button>
+                  )}
+                  <button onClick={() => setOpenFilter(null)}
+                    style={{ flex:2, background:Y, border:"none", color:"#000",
+                      borderRadius:8, padding:"7px 0", fontSize:12, fontWeight:800,
+                      cursor:"pointer", fontFamily:"'Barlow',sans-serif", letterSpacing:0.5 }}>
+                    CONFIRM
+                  </button>
+                </div>
+              </>
+            )}
           </div>
-          <div style={{ position:"relative", height:34 }}>
-            <div style={{ position:"absolute", top:15, left:0, right:0, height:4,
-              background:"#EEE", borderRadius:2 }} />
-            <div style={{ position:"absolute", top:15, height:4, borderRadius:2, background:Y,
-              left: `${((priceRange[0] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
-              right:`${100 - ((priceRange[1] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
-            }} />
-            <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
-              value={priceRange[0]}
-              onChange={e => setPriceRange(([_, hi]) =>
-                [Math.min(parseInt(e.target.value), hi - 50), hi])}
-              style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
-                background:"transparent", pointerEvents:"none", appearance:"none",
-                WebkitAppearance:"none", height:34, margin:0 }}
-              className="range-thumb" />
-            <input type="range" min={PRICE_FLOOR} max={PRICE_CEIL} step={50}
-              value={priceRange[1]}
-              onChange={e => setPriceRange(([lo, _]) =>
-                [lo, Math.max(parseInt(e.target.value), lo + 50)])}
-              style={{ position:"absolute", top:0, left:0, right:0, width:"100%",
-                background:"transparent", pointerEvents:"none", appearance:"none",
-                WebkitAppearance:"none", height:34, margin:0 }}
-              className="range-thumb" />
-          </div>
-          <div style={{ display:"flex", justifyContent:"space-between", fontSize:9, color:"#BBB" }}>
-            <span>₹{PRICE_FLOOR}</span><span>₹{PRICE_CEIL}</span>
-          </div>
-          {(priceRange[0] !== PRICE_FLOOR || priceRange[1] !== PRICE_CEIL) && (
-            <button onClick={() => setPriceRange([PRICE_FLOOR, PRICE_CEIL])}
-              style={{ background:"none", border:"1px solid #EEE", color:"#666",
-                borderRadius:8, padding:"4px 10px", fontSize:10, fontWeight:700,
-                cursor:"pointer", marginTop:6, fontFamily:"'Barlow',sans-serif" }}>
-              Clear price
-            </button>
-          )}
-        </div>
+        </>
       )}
 
       {/* ── CARD AREA WITH SIDE ICONS ── */}
       <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
-        gap:6, padding:"8px 8px 4px", minHeight:0, overflow:"hidden",
+        gap:6, padding:"18px 8px 18px", minHeight:0, overflow:"hidden",
         touchAction:"none", position:"relative" }}>
         {stack.length === 0 ? (
           <div style={{ textAlign:"center" }}>
@@ -1172,39 +1237,6 @@ export default function App() {
 
                     {(isTop || isLeaving) && (
                       <>
-                        {/* Category emoji pills — top-right of image */}
-                        {(() => {
-                          const cats = (p.categories || [])
-                            .map(name => categoriesData.find(c => c.name === name))
-                            .filter(Boolean);
-                          if (cats.length === 0) return null;
-                          const shown = cats.slice(0, 2);
-                          const extra = cats.length - shown.length;
-                          return (
-                            <div style={{ position:"absolute", top:10, right:10,
-                              display:"flex", gap:4, zIndex:2 }}>
-                              {shown.map(c => (
-                                <div key={c.name}
-                                  title={c.name}
-                                  style={{
-                                    background:"rgba(255,255,255,0.95)",
-                                    borderRadius:20, padding:"3px 8px",
-                                    fontSize:13, lineHeight:1,
-                                    boxShadow:"0 1px 4px rgba(0,0,0,0.08)",
-                                  }}>{c.emoji}</div>
-                              ))}
-                              {extra > 0 && (
-                                <div style={{
-                                  background:"rgba(255,255,255,0.95)",
-                                  borderRadius:20, padding:"3px 8px",
-                                  fontSize:10, fontWeight:800, color:"#666", lineHeight:1.3,
-                                  boxShadow:"0 1px 4px rgba(0,0,0,0.08)",
-                                }}>+{extra}</div>
-                              )}
-                            </div>
-                          );
-                        })()}
-
                         {swipeDir && isTop && !isLeaving && (
                           <div style={{ position:"absolute", inset:0, background:OVERLAYS[swipeDir].bg,
                             display:"flex", alignItems:"center", justifyContent:"center" }}>
@@ -1279,27 +1311,43 @@ export default function App() {
                     </button>
                   )}
 
-                  {/* Report — small icon, bottom-right, floating */}
-                  {(isTop && !isLeaving) && (
-                    <button
-                      aria-label="Report product"
-                      onMouseDown={e => e.stopPropagation()}
-                      onTouchStart={e => e.stopPropagation()}
-                      onClick={(e) => { e.stopPropagation(); setReportProduct(p); }}
-                      style={{
-                        position:"absolute", bottom:16, right:14, background:"none",
-                        border:"none", cursor:"pointer", padding:3, lineHeight:0,
-                        zIndex:5,
-                      }}
-                    >
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                        stroke="#BBB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                        <line x1="12" y1="9" x2="12" y2="13"/>
-                        <line x1="12" y1="17" x2="12.01" y2="17"/>
-                      </svg>
-                    </button>
-                  )}
+                  {/* Category emoji circles — bottom-right (replaces report for now) */}
+                  {(isTop && !isLeaving) && (() => {
+                    const cats = (p.categories || [])
+                      .map(name => categoriesData.find(c => c.name === name))
+                      .filter(Boolean);
+                    if (cats.length === 0) return null;
+                    const shown = cats.slice(0, 2);
+                    const extra = cats.length - shown.length;
+                    return (
+                      <div style={{
+                        position:"absolute", bottom:16, right:14,
+                        display:"flex", gap:4, zIndex:5, pointerEvents:"none",
+                      }}>
+                        {shown.map(c => (
+                          <div key={c.name}
+                            title={c.name}
+                            style={{
+                              background:"#fff", border:"1px solid #EEE",
+                              borderRadius:"50%", width:22, height:22,
+                              display:"flex", alignItems:"center", justifyContent:"center",
+                              fontSize:12, lineHeight:1,
+                              boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
+                            }}>{c.emoji}</div>
+                        ))}
+                        {extra > 0 && (
+                          <div style={{
+                            background:"#fff", border:"1px solid #EEE",
+                            borderRadius:11, padding:"0 6px", height:22,
+                            display:"flex", alignItems:"center", justifyContent:"center",
+                            fontSize:10, fontWeight:800, color:"#666",
+                            boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
+                          }}>+{extra}</div>
+                        )}
+                      </div>
+                    );
+                  })()}
+                  {/* Report button temporarily disabled per user request */}
                 </div>
               );
             })}
@@ -1329,9 +1377,9 @@ export default function App() {
           </>
         )}
 
-        {/* UP HINT — next product (above cards so peek doesn't cover it) */}
+        {/* UP HINT — equidistant from card top */}
         {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, top:2,
+          <div style={{ position:"absolute", left:0, right:0, top:5,
             textAlign:"center", fontSize:7.5, color:"#BBB",
             letterSpacing:0.4, fontWeight:700, zIndex:40,
             pointerEvents:"none",
@@ -1339,9 +1387,9 @@ export default function App() {
             ↑ NEXT PRODUCT
           </div>
         )}
-        {/* DOWN HINT — previous product */}
+        {/* DOWN HINT — equidistant from card bottom */}
         {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, bottom:4,
+          <div style={{ position:"absolute", left:0, right:0, bottom:5,
             textAlign:"center", fontSize:7.5, color:"#BBB",
             letterSpacing:0.4, fontWeight:700, zIndex:40,
             pointerEvents:"none",
@@ -1352,7 +1400,7 @@ export default function App() {
       </div>
 
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
-      <div style={{ padding:"6px 16px 42px" }}>
+      <div style={{ padding:"20px 16px 18px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
