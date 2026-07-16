@@ -641,6 +641,44 @@ export default function App() {
     isExiting.current = false;
   }, [filteredProducts]);
 
+  // ── ADAPTIVE CARD SIZING ─────────────────────────────────────────────────
+  // Measure the real space available for the card (between hints and side icons)
+  // and size the card from that. No viewport math, no hardcoded offsets.
+  const [slotEl, setSlotEl]     = useState(null);
+  const [slotSize, setSlotSize] = useState({ w: 0, h: 0 });
+  useEffect(() => {
+    if (!slotEl) return;
+    const measure = () => {
+      const r = slotEl.getBoundingClientRect();
+      setSlotSize(prev =>
+        (Math.abs(prev.w - r.width) < 1 && Math.abs(prev.h - r.height) < 1)
+          ? prev
+          : { w: r.width, h: r.height });
+    };
+    measure();  // synchronous first measure — card appears immediately
+    let ro = null;
+    if (typeof ResizeObserver !== "undefined") {
+      ro = new ResizeObserver(measure);
+      ro.observe(slotEl);
+    }
+    window.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
+    window.visualViewport?.addEventListener("resize", measure);
+    const iv = setInterval(measure, 1000);   // safety net for webviews that miss resize events
+    return () => {
+      ro?.disconnect();
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
+      window.visualViewport?.removeEventListener("resize", measure);
+      clearInterval(iv);
+    };
+  }, [slotEl]);
+
+  // Card keeps 3:4 ratio; PEEK_ROOM reserves headroom for the stacked-cards peek
+  const PEEK_ROOM = 48;
+  const cardH = Math.max(0, Math.min(slotSize.h - PEEK_ROOM, slotSize.w * (4 / 3), 480));
+  const cardW = cardH * 0.75;
+
   // Auto-tutorial: show once/twice on first visits, after 5s idle, only if cart is empty
   useEffect(() => {
     let count = 0;
@@ -1013,15 +1051,14 @@ export default function App() {
           </span>
           <span style={{ color:"#999", fontSize:9 }}>{openFilter === "price" ? "▲" : "▼"}</span>
         </button>
-      </div>
 
       {openFilter && (
         <>
-          {/* Invisible backdrop that closes the panel and swallows taps on cards */}
+          {/* Full-screen backdrop that closes the panel and swallows taps on cards */}
           <div
             onClick={() => setOpenFilter(null)}
             onTouchStart={(e) => { e.stopPropagation(); setOpenFilter(null); }}
-            style={{ position:"absolute", inset:0, zIndex:45, background:"transparent" }}
+            style={{ position:"fixed", inset:0, zIndex:45, background:"transparent" }}
           />
           <div
             onClick={e => e.stopPropagation()}
@@ -1032,8 +1069,8 @@ export default function App() {
               background:"#fff", border:"1px solid #EEE",
               borderRadius:14, boxShadow:"0 8px 24px rgba(0,0,0,0.10)",
               padding:"12px 14px", maxHeight:"55vh", overflowY:"auto",
-              // Positioned right below the filter row (which is ~50px tall from container top)
-              top: 105,
+              // Anchored to the filter row itself — adapts to any header height
+              top:"calc(100% + 2px)",
             }}>
             {openFilter === "cat" && (
               <>
@@ -1135,13 +1172,14 @@ export default function App() {
           </div>
         </>
       )}
+      </div>{/* end filter row (panel is anchored to it) */}
 
-      {/* ── CARD AREA WITH SIDE ICONS ── */}
-      <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
-        gap:6, padding:"18px 8px 18px", minHeight:0, overflow:"hidden",
+      {/* ── CENTER STAGE — column: hint / (icon|card|icon) / hint — all in-flow, no overlap possible ── */}
+      <div style={{ flex:1, display:"flex", flexDirection:"column",
+        padding:"4px 6px", minHeight:0, overflow:"hidden",
         touchAction:"none", position:"relative" }}>
         {stack.length === 0 ? (
-          <div style={{ textAlign:"center" }}>
+          <div style={{ textAlign:"center", margin:"auto" }}>
             <div style={{ fontSize:48, marginBottom:12 }}>🎉</div>
             <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, color:"#111", marginBottom:6 }}>
               {selectedCatNames.length === 0 && priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL
@@ -1164,6 +1202,16 @@ export default function App() {
           </div>
         ) : (
           <>
+          {/* TOP HINT — in flow, always above the card */}
+          <div style={{ flex:"0 0 auto", textAlign:"center", padding:"2px 0 4px",
+            fontSize:7.5, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
+            ↑ NEXT PRODUCT
+          </div>
+
+          {/* MIDDLE ROW — left icon | measured card slot | right icon */}
+          <div style={{ flex:1, minHeight:0, display:"flex", alignItems:"center",
+            justifyContent:"center", gap:2 }}>
+
           {/* LEFT: OPEN ON AMAZON — globe icon stacked above arrow */}
           <button
             onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
@@ -1186,13 +1234,19 @@ export default function App() {
               width:"100%", textAlign:"center", display:"block" }}>←</span>
           </button>
 
+          {/* CARD SLOT — measured by ResizeObserver; card sized in px from real space */}
+          <div ref={setSlotEl} style={{
+            flex:1, alignSelf:"stretch", minWidth:0, minHeight:0,
+            display:"flex", alignItems:"center", justifyContent:"center",
+          }}>
+          {cardH > 60 && (
           <div style={{
-            width:"100%",
-            maxWidth:"min(360px, calc((100dvh - 240px) * 0.75))",
-            aspectRatio:"3 / 4",
+            width: cardW,
+            height: cardH,
             position:"relative",
             overflow:"visible",
             touchAction:"none",
+            flex:"0 0 auto",
           }}>
             {[...visibleCards].reverse().map((p) => {
               const index     = visibleCards.indexOf(p);
@@ -1352,6 +1406,8 @@ export default function App() {
               );
             })}
           </div>
+          )}
+          </div>
 
           {/* RIGHT: ADD-TO-CART — cart icon stacked above arrow */}
           <button
@@ -1374,28 +1430,15 @@ export default function App() {
             <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600,
               width:"100%", textAlign:"center", display:"block" }}>→</span>
           </button>
-          </>
-        )}
 
-        {/* UP HINT — equidistant from card top */}
-        {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, top:5,
-            textAlign:"center", fontSize:7.5, color:"#BBB",
-            letterSpacing:0.4, fontWeight:700, zIndex:40,
-            pointerEvents:"none",
-          }}>
-            ↑ NEXT PRODUCT
-          </div>
-        )}
-        {/* DOWN HINT — equidistant from card bottom */}
-        {stack.length > 0 && (
-          <div style={{ position:"absolute", left:0, right:0, bottom:5,
-            textAlign:"center", fontSize:7.5, color:"#BBB",
-            letterSpacing:0.4, fontWeight:700, zIndex:40,
-            pointerEvents:"none",
-          }}>
+          </div>{/* end MIDDLE ROW */}
+
+          {/* BOTTOM HINT — in flow, always below the card */}
+          <div style={{ flex:"0 0 auto", textAlign:"center", padding:"4px 0 2px",
+            fontSize:7.5, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
             PREVIOUS PRODUCT ↓
           </div>
+          </>
         )}
       </div>
 
