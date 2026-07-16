@@ -277,6 +277,9 @@ function SidebarMenu({ onClose, onSelect }) {
         <div style={{ padding:"14px 22px", borderTop:"1px solid #F2F2F2",
           fontSize:11, color:"#BBB", lineHeight:1.5 }}>
           As an Amazon Associate we earn from qualifying purchases.
+          <div style={{ marginTop:8, fontSize:9, color:"#D0D0D0", fontFamily:"monospace" }}>
+            v{APP_VERSION}
+          </div>
         </div>
       </div>
     </div>
@@ -641,49 +644,51 @@ export default function App() {
     isExiting.current = false;
   }, [filteredProducts]);
 
-  // ── ADAPTIVE CARD SIZING ─────────────────────────────────────────────────
-  // Measure the whole center-stage area and size the card from it. The card is
-  // dead-centered; hints sit just above/below it. No viewport math, no offsets.
-  const [stageEl, setStageEl]   = useState(null);
-  const [stageSize, setStageSize] = useState({ w: 0, h: 0 });
-  useEffect(() => {
-    if (!stageEl) return;
-    const measure = () => {
-      const r = stageEl.getBoundingClientRect();
-      setStageSize(prev =>
-        (Math.abs(prev.w - r.width) < 1 && Math.abs(prev.h - r.height) < 1)
-          ? prev
-          : { w: r.width, h: r.height });
-    };
-    measure();  // synchronous first measure — card appears immediately
-    let ro = null;
-    if (typeof ResizeObserver !== "undefined") {
-      ro = new ResizeObserver(measure);
-      ro.observe(stageEl);
-    }
-    window.addEventListener("resize", measure);
-    window.addEventListener("orientationchange", measure);
-    window.visualViewport?.addEventListener("resize", measure);
-    const iv = setInterval(measure, 1000);   // safety net for webviews that miss resize events
-    return () => {
-      ro?.disconnect();
-      window.removeEventListener("resize", measure);
-      window.removeEventListener("orientationchange", measure);
-      window.visualViewport?.removeEventListener("resize", measure);
-      clearInterval(iv);
-    };
-  }, [stageEl]);
+  // ── FIXED CARD SIZE ───────────────────────────────────────────────────────
+  // The card is sized purely from viewport WIDTH and never changes with height
+  // or zoom. Text inside grows on zoom and truncates with "…" — the card box
+  // itself stays put. (CSS `min(vw, cap)` naturally stays ~physically stable on
+  // browser zoom, so the card holds while px-based text around it scales.)
+  const CARD_W = "min(86vw, 340px)";
+  const CARD_H = "min(114.6vw, 453px)";   // 86vw * 4/3 and 340 * 4/3
 
-  // Reserve room for the two hint rows (top/bottom) and the side icons (left/right).
-  const HINT_ROWS_H  = 44;   // both hints + their gaps
-  const SIDE_ICONS_W = 64;   // both side icon columns + gaps
-  const PEEK_ROOM    = 22;   // headroom so the stacked-card peek isn't clipped
-  const availH = Math.max(0, stageSize.h - HINT_ROWS_H - PEEK_ROOM);
-  const availW = Math.max(0, stageSize.w - SIDE_ICONS_W);
-  const cardH  = Math.max(0, Math.min(availH, availW * (4 / 3), 480));
-  const cardW  = cardH * 0.75;
-  // Content scale: card design is tuned at 460px tall; shrink content on small cards.
-  const s = cardH > 0 ? Math.max(0.62, Math.min(1, cardH / 460)) : 1;
+  // ── ZOOM LOCK ─────────────────────────────────────────────────────────────
+  // Blocks every zoom path a browser lets us touch. (Desktop Ctrl+/- keyboard is
+  // OS/browser-protected and can't be fully blocked, but we try the wheel + keys.)
+  useEffect(() => {
+    // Ctrl/Cmd + mouse-wheel zoom (works in all desktop browsers)
+    const onWheel = (e) => { if (e.ctrlKey || e.metaKey) e.preventDefault(); };
+    // Ctrl/Cmd + (+ / - / 0 / =) keyboard zoom (best-effort — some browsers ignore)
+    const onKey = (e) => {
+      if ((e.ctrlKey || e.metaKey) && ["+", "-", "=", "0", "_"].includes(e.key)) {
+        e.preventDefault();
+      }
+    };
+    // Safari pinch gesture events (desktop trackpad + iOS)
+    const onGesture = (e) => e.preventDefault();
+    // Block the double-tap-to-zoom on iOS (two taps <300ms apart)
+    let lastTouch = 0;
+    const onTouchEnd = (e) => {
+      const now = Date.now();
+      if (now - lastTouch <= 300) e.preventDefault();
+      lastTouch = now;
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("keydown", onKey, { passive: false });
+    document.addEventListener("gesturestart", onGesture, { passive: false });
+    document.addEventListener("gesturechange", onGesture, { passive: false });
+    document.addEventListener("gestureend", onGesture, { passive: false });
+    document.addEventListener("touchend", onTouchEnd, { passive: false });
+    return () => {
+      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("keydown", onKey);
+      document.removeEventListener("gesturestart", onGesture);
+      document.removeEventListener("gesturechange", onGesture);
+      document.removeEventListener("gestureend", onGesture);
+      document.removeEventListener("touchend", onTouchEnd);
+    };
+  }, []);
 
   // Auto-tutorial: show once/twice on first visits, after 5s idle, only if cart is empty
   useEffect(() => {
@@ -977,7 +982,7 @@ export default function App() {
 
       {/* ── HEADER ── */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
-        padding:"18px 18px 14px", borderBottom:"1px solid #F2F2F2" }}>
+        padding:"12px 18px 10px", borderBottom:"1px solid #F2F2F2" }}>
         <div style={{ display:"flex", alignItems:"center", gap:12 }}>
           <button onClick={() => setShowMenu(true)} aria-label="Menu"
             style={{ background:"none", border:"none", cursor:"pointer", padding:4, display:"flex" }}>
@@ -991,10 +996,6 @@ export default function App() {
           <div style={{ display:"flex", alignItems:"baseline" }}>
             <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
             <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
-            <span style={{ color:"#CCC", fontSize:11, marginLeft:8 }}>{stack.length} left</span>
-            <span style={{ color:"#D8D8D8", fontSize:8.5, marginLeft:6, fontFamily:"monospace" }} title="Build version">
-              v{APP_VERSION}
-            </span>
           </div>
         </div>
         <button onClick={() => setShowCart(true)}
@@ -1024,29 +1025,29 @@ export default function App() {
       </div>
 
       {/* ── FILTERS (two separate buttons; panels overlay over cards) ── */}
-      <div style={{ padding:"5px 12px 4px", display:"flex", gap:6, position:"relative", zIndex:50 }}>
+      <div style={{ padding:"4px 12px 3px", display:"flex", gap:6, position:"relative", zIndex:50 }}>
         <button
           onClick={() => setOpenFilter(v => v === "cat" ? null : "cat")}
           style={{
-            flex:1, padding:"7px 12px", borderRadius:10,
+            flex:1, padding:"5px 10px", borderRadius:9,
             border:`1px solid ${openFilter === "cat" ? "#FFB300" : "#EEE"}`,
             background: openFilter === "cat" ? "#FFF8E6" : "#F8F8F8",
-            fontSize:11, color:"#333", fontFamily:"'Barlow',sans-serif",
+            fontSize:10, color:"#333", fontFamily:"'Barlow',sans-serif",
             fontWeight:700, letterSpacing:0.3, cursor:"pointer",
             display:"flex", alignItems:"center", justifyContent:"space-between", gap:6,
           }}>
           <span style={{ overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
             {selectedCatNames.length === 0 ? "ALL CATEGORIES" : `${selectedCatNames.length} CATEGORIES`}
           </span>
-          <span style={{ color:"#999", fontSize:9 }}>{openFilter === "cat" ? "▲" : "▼"}</span>
+          <span style={{ color:"#999", fontSize:8 }}>{openFilter === "cat" ? "▲" : "▼"}</span>
         </button>
         <button
           onClick={() => setOpenFilter(v => v === "price" ? null : "price")}
           style={{
-            flex:1, padding:"7px 12px", borderRadius:10,
+            flex:1, padding:"5px 10px", borderRadius:9,
             border:`1px solid ${openFilter === "price" ? "#FFB300" : "#EEE"}`,
             background: openFilter === "price" ? "#FFF8E6" : "#F8F8F8",
-            fontSize:11, color:"#333", fontFamily:"'Barlow',sans-serif",
+            fontSize:10, color:"#333", fontFamily:"'Barlow',sans-serif",
             fontWeight:700, letterSpacing:0.3, cursor:"pointer",
             display:"flex", alignItems:"center", justifyContent:"space-between", gap:6,
           }}>
@@ -1055,7 +1056,7 @@ export default function App() {
               ? "ANY PRICE"
               : `₹${priceRange[0]} – ₹${priceRange[1]}`}
           </span>
-          <span style={{ color:"#999", fontSize:9 }}>{openFilter === "price" ? "▲" : "▼"}</span>
+          <span style={{ color:"#999", fontSize:8 }}>{openFilter === "price" ? "▲" : "▼"}</span>
         </button>
 
       {openFilter && (
@@ -1180,10 +1181,10 @@ export default function App() {
       )}
       </div>{/* end filter row (panel is anchored to it) */}
 
-      {/* ── CENTER STAGE — measured; card dead-center, hints hug it ── */}
-      <div ref={setStageEl} style={{ flex:1, display:"flex", flexDirection:"column",
+      {/* ── CENTER STAGE — fixed card, empty space above, no hints/side-icons ── */}
+      <div style={{ flex:1, display:"flex", flexDirection:"column",
         justifyContent:"center", alignItems:"center",
-        padding:"4px 6px", minHeight:0, overflow:"hidden",
+        padding:"20px 6px 6px", minHeight:0, overflow:"hidden",
         touchAction:"none", position:"relative" }}>
         {stack.length === 0 ? (
           <div style={{ textAlign:"center", margin:"auto" }}>
@@ -1209,43 +1210,16 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* TOP HINT — hugs the card, equidistant */}
-          <div style={{ flex:"0 0 auto", textAlign:"center", marginBottom:12,
-            fontSize:8, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
-            ↑ NEXT PRODUCT
-          </div>
+          {/* Hints + side icons commented out per request */}
 
-          {/* MIDDLE ROW — left icon | card | right icon (auto height so group centers) */}
+          {/* MIDDLE ROW — just the fixed card, centered */}
           <div style={{ flex:"0 0 auto", display:"flex", alignItems:"center",
-            justifyContent:"center", gap:2 }}>
+            justifyContent:"center" }}>
 
-          {/* LEFT: OPEN ON AMAZON — globe icon stacked above arrow */}
-          <button
-            onClick={() => { if (stack[0] && !isExiting.current) doSwipe("left", stack[0]); }}
-            aria-label="Open on Amazon"
-            style={{
-              flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
-              justifyContent:"center", gap:3, transition:"transform 0.15s", width:26,
-            }}
-            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
-            onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
-              stroke="#D8D8D8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600,
-              width:"100%", textAlign:"center", display:"block" }}>←</span>
-          </button>
-
-          {/* CARD — sized in px from the measured stage */}
-          {cardH > 60 && (
+          {/* CARD — FIXED size from viewport width; never changes with zoom/height */}
           <div style={{
-            width: cardW,
-            height: cardH,
+            width: CARD_W,
+            height: CARD_H,
             position:"relative",
             overflow:"visible",
             touchAction:"none",
@@ -1285,7 +1259,7 @@ export default function App() {
                     <img
                       src={p.img} alt={p.title} draggable={false}
                       style={{
-                        width:"100%", height:"100%", objectFit:"contain", padding:`${10*s}px`,
+                        width:"100%", height:"100%", objectFit:"contain", padding:"10px",
                         filter: !isTop && !isLeaving ? "blur(1px)" : "none",
                         opacity: !isTop && !isLeaving ? 0.6 : 1,
                         transition: "filter 0.3s, opacity 0.3s"
@@ -1308,32 +1282,32 @@ export default function App() {
                     )}
                   </div>
 
-                  {/* Info section — flex column, everything scales with card size */}
+                  {/* Info section — fixed sizes; text grows on zoom & truncates with … */}
                   {(isTop || isLeaving) ? (
-                    <div style={{ flex:1, minHeight:0, padding:`${8*s}px ${12*s}px ${8*s}px`,
+                    <div style={{ flex:1, minHeight:0, padding:"9px 13px 9px",
                       display:"flex", flexDirection:"column", overflow:"hidden" }}>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18*s,
-                        color:"#111", lineHeight:1.1, marginBottom:2*s,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18,
+                        color:"#111", lineHeight:1.1, marginBottom:2,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
-                      <div style={{ display:"flex", alignItems:"center", gap:7, marginBottom:2*s }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:7, marginBottom:2 }}>
                         <Stars rating={p.rating}/>
-                        <span style={{ color:"#C8C8C8", fontSize:11*s }}>({p.reviews.toLocaleString()})</span>
+                        <span style={{ color:"#C8C8C8", fontSize:11 }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20*s,
-                        color:B, marginBottom:3*s, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
-                      <p style={{ flex:1, minHeight:0, color:"#999", fontSize:11.5*s, lineHeight:1.35,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
+                        color:B, marginBottom:3, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
+                      <p style={{ color:"#999", fontSize:11.5, lineHeight:1.35, margin:0,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
-                        overflow:"hidden", margin:0,
+                        overflow:"hidden",
                       }}>{p.summary}</p>
-                      <span style={{ color:"#999", fontSize:10.5*s, fontWeight:600, marginTop:2*s,
-                        textDecoration:"underline", textUnderlineOffset:2 }}>
+                      <span style={{ color:"#999", fontSize:10.5, fontWeight:600, marginTop:2,
+                        textDecoration:"underline", textUnderlineOffset:2, flex:"0 0 auto" }}>
                         Read more
                       </span>
 
-                      {/* Footer row — in flow, cannot overlap the text */}
+                      {/* Footer row pinned to bottom — can never collide with the text above */}
                       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
-                        gap:6, marginTop:6*s }}>
+                        gap:6, marginTop:"auto", paddingTop:6 }}>
                         <button
                           aria-label="Find similar products"
                           title="Find similar on Amazon"
@@ -1342,17 +1316,17 @@ export default function App() {
                           onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
                           style={{
                             background:"none", border:"1px solid #EEE", borderRadius:10,
-                            cursor:"pointer", padding:`${3*s}px ${8*s}px`,
+                            cursor:"pointer", padding:"3px 8px",
                             display:"flex", alignItems:"center", gap:4,
                             fontFamily:"'Barlow',sans-serif", flex:"0 0 auto",
                           }}
                         >
-                          <svg width={10*s} height={10*s} viewBox="0 0 24 24" fill="none"
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
                             stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="11" cy="11" r="7"/>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                           </svg>
-                          <span style={{ fontSize:9*s, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
+                          <span style={{ fontSize:9, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
                             FIND SIMILAR
                           </span>
                         </button>
@@ -1364,22 +1338,21 @@ export default function App() {
                           if (cats.length === 0) return <span/>;
                           const shown = cats.slice(0, 2);
                           const extra = cats.length - shown.length;
-                          const sz = Math.round(22 * s);
                           return (
                             <div style={{ display:"flex", gap:4, flex:"0 0 auto" }}>
                               {shown.map(c => (
                                 <div key={c.name} title={c.name} style={{
                                   background:"#fff", border:"1px solid #EEE", borderRadius:"50%",
-                                  width:sz, height:sz, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:12*s, lineHeight:1,
+                                  width:22, height:22, display:"flex", alignItems:"center",
+                                  justifyContent:"center", fontSize:12, lineHeight:1,
                                   boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>{c.emoji}</div>
                               ))}
                               {extra > 0 && (
                                 <div style={{
-                                  background:"#fff", border:"1px solid #EEE", borderRadius:sz/2,
-                                  padding:"0 6px", height:sz, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:10*s, fontWeight:800, color:"#666",
+                                  background:"#fff", border:"1px solid #EEE", borderRadius:11,
+                                  padding:"0 6px", height:22, display:"flex", alignItems:"center",
+                                  justifyContent:"center", fontSize:10, fontWeight:800, color:"#666",
                                   boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>+{extra}</div>
                               )}
@@ -1401,41 +1374,34 @@ export default function App() {
           </div>
           )}
 
-          {/* RIGHT: ADD-TO-CART — cart icon stacked above arrow */}
-          <button
-            onClick={() => { if (stack[0] && !isExiting.current) doSwipe("right", stack[0]); }}
-            aria-label="Add to cart"
-            style={{
-              flex:"0 0 auto", background:"none", border:"none", cursor:"pointer",
-              padding:"4px", display:"flex", flexDirection:"column", alignItems:"center",
-              justifyContent:"center", gap:3, transition:"transform 0.15s", width:26,
-            }}
-            onMouseEnter={e => { e.currentTarget.style.transform="scale(1.25)"; }}
-            onMouseLeave={e => { e.currentTarget.style.transform="scale(1)"; }}
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
-              stroke="#D8D8D8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="9" cy="21" r="1"/>
-              <circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
-            </svg>
-            <span style={{ fontSize:13, color:"#D8D8D8", lineHeight:1, fontWeight:600,
-              width:"100%", textAlign:"center", display:"block" }}>→</span>
-          </button>
+          {/* Right side icon commented out per request */}
 
           </div>{/* end MIDDLE ROW */}
-
-          {/* BOTTOM HINT — hugs the card, equidistant */}
-          <div style={{ flex:"0 0 auto", textAlign:"center", marginTop:12,
-            fontSize:8, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
-            PREVIOUS PRODUCT ↓
-          </div>
           </>
         )}
       </div>
 
+      {/* ── SWIPE LEGEND — clean row of all 4 swipe directions, above the cart button ── */}
+      {stack.length > 0 && (
+        <div style={{ display:"flex", justifyContent:"space-evenly", alignItems:"center",
+          padding:"2px 12px 0", gap:6 }}>
+          {[
+            { arrow:"↑", label:"NEXT",     color:"#D0021B" },
+            { arrow:"↓", label:"PREVIOUS", color:"#8B5CF6" },
+            { arrow:"←", label:"AMAZON",   color:"#1668F5" },
+            { arrow:"→", label:"CART",     color:"#00A550" },
+          ].map(x => (
+            <div key={x.label} style={{ display:"flex", alignItems:"center", gap:3,
+              fontSize:8.5, color:"#BBB", fontWeight:700, letterSpacing:0.3 }}>
+              <span style={{ color:x.color, fontSize:11, lineHeight:1 }}>{x.arrow}</span>
+              {x.label}
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
-      <div style={{ padding:"20px 16px 18px" }}>
+      <div style={{ padding:"8px 16px 18px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
