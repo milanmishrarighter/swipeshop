@@ -642,15 +642,15 @@ export default function App() {
   }, [filteredProducts]);
 
   // ── ADAPTIVE CARD SIZING ─────────────────────────────────────────────────
-  // Measure the real space available for the card (between hints and side icons)
-  // and size the card from that. No viewport math, no hardcoded offsets.
-  const [slotEl, setSlotEl]     = useState(null);
-  const [slotSize, setSlotSize] = useState({ w: 0, h: 0 });
+  // Measure the whole center-stage area and size the card from it. The card is
+  // dead-centered; hints sit just above/below it. No viewport math, no offsets.
+  const [stageEl, setStageEl]   = useState(null);
+  const [stageSize, setStageSize] = useState({ w: 0, h: 0 });
   useEffect(() => {
-    if (!slotEl) return;
+    if (!stageEl) return;
     const measure = () => {
-      const r = slotEl.getBoundingClientRect();
-      setSlotSize(prev =>
+      const r = stageEl.getBoundingClientRect();
+      setStageSize(prev =>
         (Math.abs(prev.w - r.width) < 1 && Math.abs(prev.h - r.height) < 1)
           ? prev
           : { w: r.width, h: r.height });
@@ -659,7 +659,7 @@ export default function App() {
     let ro = null;
     if (typeof ResizeObserver !== "undefined") {
       ro = new ResizeObserver(measure);
-      ro.observe(slotEl);
+      ro.observe(stageEl);
     }
     window.addEventListener("resize", measure);
     window.addEventListener("orientationchange", measure);
@@ -672,12 +672,18 @@ export default function App() {
       window.visualViewport?.removeEventListener("resize", measure);
       clearInterval(iv);
     };
-  }, [slotEl]);
+  }, [stageEl]);
 
-  // Card keeps 3:4 ratio; PEEK_ROOM reserves headroom for the stacked-cards peek
-  const PEEK_ROOM = 48;
-  const cardH = Math.max(0, Math.min(slotSize.h - PEEK_ROOM, slotSize.w * (4 / 3), 480));
-  const cardW = cardH * 0.75;
+  // Reserve room for the two hint rows (top/bottom) and the side icons (left/right).
+  const HINT_ROWS_H  = 44;   // both hints + their gaps
+  const SIDE_ICONS_W = 64;   // both side icon columns + gaps
+  const PEEK_ROOM    = 22;   // headroom so the stacked-card peek isn't clipped
+  const availH = Math.max(0, stageSize.h - HINT_ROWS_H - PEEK_ROOM);
+  const availW = Math.max(0, stageSize.w - SIDE_ICONS_W);
+  const cardH  = Math.max(0, Math.min(availH, availW * (4 / 3), 480));
+  const cardW  = cardH * 0.75;
+  // Content scale: card design is tuned at 460px tall; shrink content on small cards.
+  const s = cardH > 0 ? Math.max(0.62, Math.min(1, cardH / 460)) : 1;
 
   // Auto-tutorial: show once/twice on first visits, after 5s idle, only if cart is empty
   useEffect(() => {
@@ -1174,8 +1180,9 @@ export default function App() {
       )}
       </div>{/* end filter row (panel is anchored to it) */}
 
-      {/* ── CENTER STAGE — column: hint / (icon|card|icon) / hint — all in-flow, no overlap possible ── */}
-      <div style={{ flex:1, display:"flex", flexDirection:"column",
+      {/* ── CENTER STAGE — measured; card dead-center, hints hug it ── */}
+      <div ref={setStageEl} style={{ flex:1, display:"flex", flexDirection:"column",
+        justifyContent:"center", alignItems:"center",
         padding:"4px 6px", minHeight:0, overflow:"hidden",
         touchAction:"none", position:"relative" }}>
         {stack.length === 0 ? (
@@ -1202,14 +1209,14 @@ export default function App() {
           </div>
         ) : (
           <>
-          {/* TOP HINT — in flow, always above the card */}
-          <div style={{ flex:"0 0 auto", textAlign:"center", padding:"2px 0 4px",
-            fontSize:7.5, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
+          {/* TOP HINT — hugs the card, equidistant */}
+          <div style={{ flex:"0 0 auto", textAlign:"center", marginBottom:12,
+            fontSize:8, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
             ↑ NEXT PRODUCT
           </div>
 
-          {/* MIDDLE ROW — left icon | measured card slot | right icon */}
-          <div style={{ flex:1, minHeight:0, display:"flex", alignItems:"center",
+          {/* MIDDLE ROW — left icon | card | right icon (auto height so group centers) */}
+          <div style={{ flex:"0 0 auto", display:"flex", alignItems:"center",
             justifyContent:"center", gap:2 }}>
 
           {/* LEFT: OPEN ON AMAZON — globe icon stacked above arrow */}
@@ -1234,11 +1241,7 @@ export default function App() {
               width:"100%", textAlign:"center", display:"block" }}>←</span>
           </button>
 
-          {/* CARD SLOT — measured by ResizeObserver; card sized in px from real space */}
-          <div ref={setSlotEl} style={{
-            flex:1, alignSelf:"stretch", minWidth:0, minHeight:0,
-            display:"flex", alignItems:"center", justifyContent:"center",
-          }}>
+          {/* CARD — sized in px from the measured stage */}
           {cardH > 60 && (
           <div style={{
             width: cardW,
@@ -1277,59 +1280,113 @@ export default function App() {
                   }}
                 >
                   {/* Image — uses contain so square Amazon images aren't cropped */}
-                  <div style={{ flex:"0 0 50%", position:"relative", background:"#fff",
+                  <div style={{ flex:"0 0 47%", position:"relative", background:"#fff",
                     overflow:"hidden", borderBottom:"1px solid #F4F4F4" }}>
                     <img
                       src={p.img} alt={p.title} draggable={false}
                       style={{
-                        width:"100%", height:"100%", objectFit:"contain", padding:"12px",
+                        width:"100%", height:"100%", objectFit:"contain", padding:`${10*s}px`,
                         filter: !isTop && !isLeaving ? "blur(1px)" : "none",
                         opacity: !isTop && !isLeaving ? 0.6 : 1,
                         transition: "filter 0.3s, opacity 0.3s"
                       }}
                     />
 
-                    {(isTop || isLeaving) && (
-                      <>
-                        {swipeDir && isTop && !isLeaving && (
-                          <div style={{ position:"absolute", inset:0, background:OVERLAYS[swipeDir].bg,
-                            display:"flex", alignItems:"center", justifyContent:"center" }}>
-                            <div style={{
-                              border:`3px solid ${OVERLAYS[swipeDir].color}`, borderRadius:12, padding:"8px 22px",
-                              transform: swipeDir==="right" ? "rotate(-12deg)" : swipeDir==="left" ? "rotate(12deg)" : "none",
-                              background:"rgba(255,255,255,0.7)",
-                            }}>
-                              <span style={{ color:OVERLAYS[swipeDir].color, fontFamily:"'Barlow Condensed'",
-                                fontSize:28, fontWeight:900, whiteSpace:"pre-line", textAlign:"center", display:"block"
-                              }}>{OVERLAYS[swipeDir].label}</span>
-                            </div>
-                          </div>
-                        )}
-                      </>
+                    {(isTop || isLeaving) && swipeDir && isTop && !isLeaving && (
+                      <div style={{ position:"absolute", inset:0, background:OVERLAYS[swipeDir].bg,
+                        display:"flex", alignItems:"center", justifyContent:"center" }}>
+                        <div style={{
+                          border:`3px solid ${OVERLAYS[swipeDir].color}`, borderRadius:12, padding:"8px 22px",
+                          transform: swipeDir==="right" ? "rotate(-12deg)" : swipeDir==="left" ? "rotate(12deg)" : "none",
+                          background:"rgba(255,255,255,0.7)",
+                        }}>
+                          <span style={{ color:OVERLAYS[swipeDir].color, fontFamily:"'Barlow Condensed'",
+                            fontSize:26, fontWeight:900, whiteSpace:"pre-line", textAlign:"center", display:"block"
+                          }}>{OVERLAYS[swipeDir].label}</span>
+                        </div>
+                      </div>
                     )}
                   </div>
 
-                  {/* Info section */}
+                  {/* Info section — flex column, everything scales with card size */}
                   {(isTop || isLeaving) ? (
-                    <div style={{ flex:1, padding:"10px 14px 36px", overflow:"hidden" }}>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18,
-                        color:"#111", lineHeight:1.1, marginBottom:3,
+                    <div style={{ flex:1, minHeight:0, padding:`${8*s}px ${12*s}px ${8*s}px`,
+                      display:"flex", flexDirection:"column", overflow:"hidden" }}>
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18*s,
+                        color:"#111", lineHeight:1.1, marginBottom:2*s,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
-                      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:3 }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:7, marginBottom:2*s }}>
                         <Stars rating={p.rating}/>
-                        <span style={{ color:"#C8C8C8", fontSize:11 }}>({p.reviews.toLocaleString()})</span>
+                        <span style={{ color:"#C8C8C8", fontSize:11*s }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
-                        color:B, marginBottom:4, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
-                      <p style={{ color:"#999", fontSize:11.5, lineHeight:1.4,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20*s,
+                        color:B, marginBottom:3*s, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
+                      <p style={{ flex:1, minHeight:0, color:"#999", fontSize:11.5*s, lineHeight:1.35,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
-                        overflow:"hidden", marginBottom:1,
+                        overflow:"hidden", margin:0,
                       }}>{p.summary}</p>
-                      <span style={{ color:"#999", fontSize:10.5, fontWeight:600,
+                      <span style={{ color:"#999", fontSize:10.5*s, fontWeight:600, marginTop:2*s,
                         textDecoration:"underline", textUnderlineOffset:2 }}>
                         Read more
                       </span>
+
+                      {/* Footer row — in flow, cannot overlap the text */}
+                      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
+                        gap:6, marginTop:6*s }}>
+                        <button
+                          aria-label="Find similar products"
+                          title="Find similar on Amazon"
+                          onMouseDown={e => e.stopPropagation()}
+                          onTouchStart={e => e.stopPropagation()}
+                          onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
+                          style={{
+                            background:"none", border:"1px solid #EEE", borderRadius:10,
+                            cursor:"pointer", padding:`${3*s}px ${8*s}px`,
+                            display:"flex", alignItems:"center", gap:4,
+                            fontFamily:"'Barlow',sans-serif", flex:"0 0 auto",
+                          }}
+                        >
+                          <svg width={10*s} height={10*s} viewBox="0 0 24 24" fill="none"
+                            stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                          </svg>
+                          <span style={{ fontSize:9*s, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
+                            FIND SIMILAR
+                          </span>
+                        </button>
+
+                        {(() => {
+                          const cats = (p.categories || [])
+                            .map(name => categoriesData.find(c => c.name === name))
+                            .filter(Boolean);
+                          if (cats.length === 0) return <span/>;
+                          const shown = cats.slice(0, 2);
+                          const extra = cats.length - shown.length;
+                          const sz = Math.round(22 * s);
+                          return (
+                            <div style={{ display:"flex", gap:4, flex:"0 0 auto" }}>
+                              {shown.map(c => (
+                                <div key={c.name} title={c.name} style={{
+                                  background:"#fff", border:"1px solid #EEE", borderRadius:"50%",
+                                  width:sz, height:sz, display:"flex", alignItems:"center",
+                                  justifyContent:"center", fontSize:12*s, lineHeight:1,
+                                  boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
+                                }}>{c.emoji}</div>
+                              ))}
+                              {extra > 0 && (
+                                <div style={{
+                                  background:"#fff", border:"1px solid #EEE", borderRadius:sz/2,
+                                  padding:"0 6px", height:sz, display:"flex", alignItems:"center",
+                                  justifyContent:"center", fontSize:10*s, fontWeight:800, color:"#666",
+                                  boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
+                                }}>+{extra}</div>
+                              )}
+                            </div>
+                          );
+                        })()}
+                      </div>
                     </div>
                   ) : (
                     <div style={{ padding:"14px 18px" }}>
@@ -1337,77 +1394,12 @@ export default function App() {
                       <div style={{ height:10, background:"#F2F2F2", borderRadius:4, width:"40%" }}/>
                     </div>
                   )}
-
-                  {/* Find-similar — small pill, bottom-left, floating (not stuck to corner) */}
-                  {(isTop && !isLeaving) && (
-                    <button
-                      aria-label="Find similar products"
-                      title="Find similar on Amazon"
-                      onMouseDown={e => e.stopPropagation()}
-                      onTouchStart={e => e.stopPropagation()}
-                      onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
-                      style={{
-                        position:"absolute", bottom:16, left:14,
-                        background:"none", border:"1px solid #EEE",
-                        borderRadius:10, cursor:"pointer",
-                        padding:"3px 8px", display:"flex", alignItems:"center", gap:4,
-                        zIndex:5, fontFamily:"'Barlow',sans-serif",
-                      }}
-                    >
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
-                        stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="11" r="7"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                      </svg>
-                      <span style={{ fontSize:9, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
-                        FIND SIMILAR
-                      </span>
-                    </button>
-                  )}
-
-                  {/* Category emoji circles — bottom-right (replaces report for now) */}
-                  {(isTop && !isLeaving) && (() => {
-                    const cats = (p.categories || [])
-                      .map(name => categoriesData.find(c => c.name === name))
-                      .filter(Boolean);
-                    if (cats.length === 0) return null;
-                    const shown = cats.slice(0, 2);
-                    const extra = cats.length - shown.length;
-                    return (
-                      <div style={{
-                        position:"absolute", bottom:16, right:14,
-                        display:"flex", gap:4, zIndex:5, pointerEvents:"none",
-                      }}>
-                        {shown.map(c => (
-                          <div key={c.name}
-                            title={c.name}
-                            style={{
-                              background:"#fff", border:"1px solid #EEE",
-                              borderRadius:"50%", width:22, height:22,
-                              display:"flex", alignItems:"center", justifyContent:"center",
-                              fontSize:12, lineHeight:1,
-                              boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
-                            }}>{c.emoji}</div>
-                        ))}
-                        {extra > 0 && (
-                          <div style={{
-                            background:"#fff", border:"1px solid #EEE",
-                            borderRadius:11, padding:"0 6px", height:22,
-                            display:"flex", alignItems:"center", justifyContent:"center",
-                            fontSize:10, fontWeight:800, color:"#666",
-                            boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
-                          }}>+{extra}</div>
-                        )}
-                      </div>
-                    );
-                  })()}
                   {/* Report button temporarily disabled per user request */}
                 </div>
               );
             })}
           </div>
           )}
-          </div>
 
           {/* RIGHT: ADD-TO-CART — cart icon stacked above arrow */}
           <button
@@ -1433,9 +1425,9 @@ export default function App() {
 
           </div>{/* end MIDDLE ROW */}
 
-          {/* BOTTOM HINT — in flow, always below the card */}
-          <div style={{ flex:"0 0 auto", textAlign:"center", padding:"4px 0 2px",
-            fontSize:7.5, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
+          {/* BOTTOM HINT — hugs the card, equidistant */}
+          <div style={{ flex:"0 0 auto", textAlign:"center", marginTop:12,
+            fontSize:8, color:"#BBB", letterSpacing:0.4, fontWeight:700 }}>
             PREVIOUS PRODUCT ↓
           </div>
           </>
