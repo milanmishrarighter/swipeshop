@@ -65,7 +65,7 @@ const openAmazon = (amazonUrl, asin) => {
 };
 
 // Past this zoom the card stage can't render usefully — show a message instead.
-const ZOOM_MAX = 250;
+const ZOOM_MAX = 175;
 
 const miniBtn = {
   background:"none", border:"1px solid #EEE", borderRadius:10,
@@ -450,11 +450,13 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
 }
 
 function ZoomBlocked() {
+  // Deliberately tiny: this renders inside an already-squeezed stage at high
+  // zoom, so it must never be the thing that clips.
   return (
-    <div style={{ textAlign:"center", padding:"0 20px", maxWidth:300,
-      fontFamily:"'Barlow',sans-serif" }}>
-      <div style={{ fontSize:28, marginBottom:10 }}>🔍</div>
-      <div style={{ fontSize:14, color:"#888", lineHeight:1.5, fontWeight:600 }}>
+    <div style={{ textAlign:"center", padding:"0 8px", maxWidth:200,
+      fontFamily:"'Barlow',sans-serif", overflow:"hidden" }}>
+      <div style={{ fontSize:13, marginBottom:3, lineHeight:1 }}>🔍</div>
+      <div style={{ fontSize:8, color:"#999", lineHeight:1.35, fontWeight:600 }}>
         Zoom out to display the website properly.
       </div>
     </div>
@@ -692,33 +694,14 @@ export default function App() {
     };
   }, [stageEl]);
 
-  // Padding scales with available space — a fixed 46/14 would eat most of the
-  // stage at high zoom. Ratio stays ~3:1 so the top keeps its extra peek room.
-  const padTop = Math.round(Math.min(46, Math.max(9, stageSize.h * 0.11)));
-  const padBot = Math.round(Math.min(14, Math.max(3, stageSize.h * 0.035)));
-  const availH = Math.max(0, stageSize.h - padTop - padBot);
+  // Fixed padding — top is larger so the stacked-card peek reads as balanced.
+  const PAD_TOP = 46, PAD_BOT = 14;
+  const availH = Math.max(0, stageSize.h - PAD_TOP - PAD_BOT);
   const availW = Math.max(0, stageSize.w - 20);
   const cardH = Math.max(0, Math.min(availH, availW * (4 / 3), 460));
   const cardW = cardH * 0.75;
   // Card content scales with the card so it never overflows.
-  const s = cardH > 0 ? Math.max(0.5, Math.min(1, cardH / 440)) : 1;
-
-  // Panels keep a fixed CSS-px size, so as zoom rises they claim more of the
-  // viewport and starve the card. Compact them once vertical space gets tight.
-  const [vpH, setVpH] = useState(typeof window !== "undefined" ? window.innerHeight : 800);
-  useEffect(() => {
-    const on = () => setVpH(window.innerHeight);
-    on();
-    window.addEventListener("resize", on);
-    window.visualViewport?.addEventListener("resize", on);
-    const iv = setInterval(on, 500);
-    return () => {
-      window.removeEventListener("resize", on);
-      window.visualViewport?.removeEventListener("resize", on);
-      clearInterval(iv);
-    };
-  }, []);
-  const compact = vpH < 580;
+  const s = cardH > 0 ? Math.max(0.55, Math.min(1, cardH / 440)) : 1;
 
   // ── ZOOM GATE ─────────────────────────────────────────────────────────────
   // The card stage only renders correctly in a narrow zoom band. Detect the
@@ -743,7 +726,7 @@ export default function App() {
   }, []);
   // Show the message when zoom is past the band OR when the measured space is
   // simply too small to render a usable card — so there's never a blank stage.
-  const MIN_USABLE_CARD_H = 85;
+  const MIN_USABLE_CARD_H = 150;
   const stageMeasured = stageSize.h > 0;
   const cardTooSmall  = stageMeasured && cardH < MIN_USABLE_CARD_H;
   const zoomOK = zoomPct <= ZOOM_MAX && !cardTooSmall;
@@ -1078,12 +1061,12 @@ export default function App() {
 
       {/* ── HEADER ── */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
-        padding: compact ? "5px 12px 4px" : "12px 18px 10px",
+        padding:"10px 18px 8px",
         borderBottom:"1px solid #F2F2F2", gap:8 }}>
-        <div style={{ display:"flex", alignItems:"center", gap: compact?8:12, minWidth:0, overflow:"hidden" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:12, minWidth:0, overflow:"hidden" }}>
           <button onClick={() => setShowMenu(true)} aria-label="Menu"
             style={{ background:"none", border:"none", cursor:"pointer", padding:4, display:"flex" }}>
-            <svg width={compact?17:22} height={compact?17:22} viewBox="0 0 24 24" fill="none"
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="#111" strokeWidth="2.2" strokeLinecap="round">
               <line x1="3" y1="6"  x2="21" y2="6"/>
               <line x1="3" y1="12" x2="21" y2="12"/>
@@ -1091,14 +1074,14 @@ export default function App() {
             </svg>
           </button>
           <div style={{ display:"flex", alignItems:"baseline" }}>
-            <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:compact?19:27, letterSpacing:-1 }}>SWIPE</span>
-            <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:compact?19:27, letterSpacing:-1 }}>SHOP</span>
+            <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
+            <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
           </div>
         </div>
         <button onClick={() => setShowCart(true)}
           style={{ background:"none", border:"none", cursor:"pointer", position:"relative",
-            padding: compact?4:8, flex:"0 0 auto" }}>
-          <svg width={compact?18:24} height={compact?18:24} viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
+            padding:8, flex:"0 0 auto" }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
             stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="21" r="1"/>
             <circle cx="20" cy="21" r="1"/>
@@ -1114,22 +1097,16 @@ export default function App() {
         </button>
       </div>
 
-      {/* ── AFFILIATE DISCLOSURE STRIP (smaller) ── */}
-      <div style={{ textAlign:"center", padding: compact?"2px 8px":"3px 14px",
-        background:"#FFF8E6", color:"#8A6A00", fontSize: compact?6.5:8, lineHeight:1.25,
-        borderBottom:"1px solid #F5EAC8", letterSpacing:0.2, fontWeight:600,
-      }}>
-        As an Amazon Associate we earn from qualifying purchases.
-      </div>
+      {/* Affiliate disclosure strip removed from the main page per request —
+          it still lives in the sidebar menu footer and the Terms page. */}
 
       {/* ── FILTERS (two separate buttons; panels overlay over cards) ── */}
-      <div style={{ padding: compact?"2px 8px 2px":"4px 12px 3px", display:"flex", gap:5,
+      <div style={{ padding:"5px 12px 4px", display:"flex", gap:5,
         position:"relative", zIndex:50, flexWrap:"wrap" }}>
         <button
           onClick={() => setOpenFilter(v => v === "cat" ? null : "cat")}
           style={{
-            flex: compact ? "1 1 66px" : "1 1 120px", minWidth: compact?66:120,
-            padding: compact?"3px 7px":"5px 10px", borderRadius:9,
+            flex:"1 1 120px", minWidth:120, padding:"5px 10px", borderRadius:9,
             border:`1px solid ${openFilter === "cat" ? "#FFB300" : "#EEE"}`,
             background: openFilter === "cat" ? "#FFF8E6" : "#F8F8F8",
             fontSize:10, color:"#333", fontFamily:"'Barlow',sans-serif",
@@ -1145,8 +1122,7 @@ export default function App() {
         <button
           onClick={() => setOpenFilter(v => v === "price" ? null : "price")}
           style={{
-            flex: compact ? "1 1 66px" : "1 1 120px", minWidth: compact?66:120,
-            padding: compact?"3px 7px":"5px 10px", borderRadius:9,
+            flex:"1 1 120px", minWidth:120, padding:"5px 10px", borderRadius:9,
             border:`1px solid ${openFilter === "price" ? "#FFB300" : "#EEE"}`,
             background: openFilter === "price" ? "#FFF8E6" : "#F8F8F8",
             fontSize:10, color:"#333", fontFamily:"'Barlow',sans-serif",
@@ -1288,7 +1264,7 @@ export default function App() {
              Top padding is larger to make room for the stacked-card peek. ── */}
       <div ref={setStageEl} style={{ flex:1, display:"flex", flexDirection:"column",
         justifyContent:"center", alignItems:"center",
-        padding:`${padTop}px 10px ${padBot}px`, minHeight:0, overflow:"hidden",
+        padding:`${PAD_TOP}px 10px ${PAD_BOT}px`, minHeight:0, overflow:"hidden",
         touchAction:"none", position:"relative" }}>
         {!zoomOK ? (
           <ZoomBlocked />
@@ -1493,17 +1469,24 @@ export default function App() {
              whether the card or the zoom message is showing (that would oscillate) ── */}
       {stack.length > 0 && (
         <div style={{ display:"flex", justifyContent:"center", alignItems:"center",
-          padding: compact?"1px 6px 0":"2px 12px 0", gap: compact?7:10, flexWrap:"wrap" }}>
+          padding:"2px 12px 0", gap:10, flexWrap:"wrap" }}>
           {[
-            { arrow:"↑", label:"NEXT",     color:"#D0021B" },
-            { arrow:"↓", label:"PREVIOUS", color:"#8B5CF6" },
-            { arrow:"←", label:"AMAZON",   color:"#1668F5" },
-            { arrow:"→", label:"CART",     color:"#00A550" },
+            { rot:0,   label:"NEXT",     color:"#D0021B" },
+            { rot:180, label:"PREVIOUS", color:"#8B5CF6" },
+            { rot:-90, label:"AMAZON",   color:"#1668F5" },
+            { rot:90,  label:"CART",     color:"#00A550" },
           ].map(x => (
             <div key={x.label} style={{ display:"flex", alignItems:"center", gap:3,
               fontSize:8.5, color:"#BBB", fontWeight:700, letterSpacing:0.3,
               flex:"0 0 auto", whiteSpace:"nowrap" }}>
-              <span style={{ color:x.color, fontSize:11, lineHeight:1 }}>{x.arrow}</span>
+              {/* One arrow SVG rotated per direction — text glyphs (↑↓←→) sit on
+                  different baselines, which made ← look lower than →. */}
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                stroke={x.color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
+                style={{ transform:`rotate(${x.rot}deg)`, display:"block", flex:"0 0 auto" }}>
+                <path d="M12 20V4"/>
+                <path d="M5 11l7-7 7 7"/>
+              </svg>
               {x.label}
             </div>
           ))}
@@ -1511,12 +1494,12 @@ export default function App() {
       )}
 
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
-      <div style={{ padding: compact?"4px 10px 8px":"8px 16px 18px" }}>
+      <div style={{ padding:"8px 16px 18px" }}>
         <button onClick={() => setShowCart(true)} style={{
           background: cart.length > 0 ? Y : "#F5F5F5",
           color: cart.length > 0 ? "#000" : "#C0C0C0",
-          border:"none", borderRadius:12, padding: compact?"7px 0":"12px 0", width:"100%",
-          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize: compact?13:17,
+          border:"none", borderRadius:12, padding:"12px 0", width:"100%",
+          fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
           boxShadow: cart.length > 0 ? "0 4px 18px rgba(255,179,0,0.28)" : "none"
         }}>
@@ -1528,7 +1511,7 @@ export default function App() {
         {stack.length > 0 && (
           <div style={{
             display:"flex", justifyContent:"center", alignItems:"center",
-            marginTop: compact?5:10, gap: compact?4:6, flexWrap:"wrap",
+            marginTop:10, gap:6, flexWrap:"wrap",
           }}>
             <button onClick={() => setShowHowTo(true)} style={miniBtn}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
