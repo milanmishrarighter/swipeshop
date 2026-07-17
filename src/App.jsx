@@ -64,11 +64,15 @@ const openAmazon = (amazonUrl, asin) => {
   window.open(url, "_blank");
 };
 
+// Past this zoom the card stage can't render usefully — show a message instead.
+const ZOOM_MAX = 175;
+
 const miniBtn = {
   background:"none", border:"1px solid #EEE", borderRadius:10,
   padding:"3px 10px", fontSize:8, color:"#AAA", letterSpacing:0.3,
   fontWeight:700, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
   display:"inline-flex", alignItems:"center", gap:5,
+  flex:"0 0 auto", whiteSpace:"nowrap",   // never squish — wrap to next line instead
 };
 
 // Compute the actual global price range from products
@@ -96,16 +100,16 @@ const OVERLAYS = {
 
 const SWIPE_THRESHOLD = 50;  // px — lower = snappier, easier to trigger
 
-function Stars({ rating }) {
+function Stars({ rating, size = 13 }) {
   return (
     <div style={{ display:"flex", alignItems:"center", gap:2 }}>
       {[1,2,3,4,5].map(i => (
-        <svg key={i} width="13" height="13" viewBox="0 0 24 24"
+        <svg key={i} width={size} height={size} viewBox="0 0 24 24"
           fill={i <= Math.round(rating) ? Y : "#E8E8E8"}>
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
       ))}
-      <span style={{ color:"#999", fontSize:12, marginLeft:4 }}>{rating}</span>
+      <span style={{ color:"#999", fontSize:size * 0.92, marginLeft:4 }}>{rating}</span>
     </div>
   );
 }
@@ -445,6 +449,43 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
   );
 }
 
+function ZoomBlocked({ zoomPct }) {
+  const Key = ({ children }) => (
+    <span style={{
+      display:"inline-flex", alignItems:"center", justifyContent:"center",
+      minWidth:26, height:26, padding:"0 7px",
+      background:"#fff", border:"1px solid #DDD", borderBottomWidth:2,
+      borderRadius:6, fontSize:12, fontWeight:800, color:"#444",
+      fontFamily:"'Barlow',sans-serif", boxShadow:"0 1px 0 rgba(0,0,0,0.04)",
+    }}>{children}</span>
+  );
+  return (
+    <div style={{ textAlign:"center", padding:"0 24px", maxWidth:340,
+      fontFamily:"'Barlow',sans-serif" }}>
+      <div style={{ fontSize:34, marginBottom:10 }}>🔍</div>
+      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:22,
+        color:"#111", marginBottom:6, letterSpacing:-0.3 }}>
+        CAN'T RENDER AT THIS ZOOM
+      </div>
+      <div style={{ fontSize:13, color:"#888", lineHeight:1.5, marginBottom:16 }}>
+        You're at about <strong style={{ color:"#111" }}>{zoomPct}%</strong> zoom.
+        Please zoom out to continue browsing products.
+      </div>
+
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"center",
+        gap:8, marginBottom:10, flexWrap:"wrap" }}>
+        <Key>Ctrl</Key><span style={{ color:"#CCC", fontSize:12 }}>+</span><Key>−</Key>
+        <span style={{ color:"#BBB", fontSize:11, margin:"0 4px" }}>or</span>
+        <Key>Ctrl</Key><span style={{ color:"#CCC", fontSize:12 }}>+</span><Key>0</Key>
+        <span style={{ color:"#BBB", fontSize:11 }}>to reset</span>
+      </div>
+      <div style={{ fontSize:10.5, color:"#BBB", lineHeight:1.5 }}>
+        On Mac use <strong>⌘</strong> instead of Ctrl.
+      </div>
+    </div>
+  );
+}
+
 function TutorialOverlay({ onDismiss }) {
   // Absorb the ENTIRE tap sequence (touchstart+touchmove+touchend+click) so nothing behind fires
   const kill = (e) => { e.preventDefault(); e.stopPropagation(); };
@@ -644,13 +685,69 @@ export default function App() {
     isExiting.current = false;
   }, [filteredProducts]);
 
-  // ── FIXED CARD SIZE ───────────────────────────────────────────────────────
-  // The card is sized purely from viewport WIDTH and never changes with height
-  // or zoom. Text inside grows on zoom and truncates with "…" — the card box
-  // itself stays put. (CSS `min(vw, cap)` naturally stays ~physically stable on
-  // browser zoom, so the card holds while px-based text around it scales.)
-  const CARD_W = "min(86vw, 340px)";
-  const CARD_H = "min(114.6vw, 453px)";   // 86vw * 4/3 and 340 * 4/3
+  // ── ADAPTIVE CARD SIZE ────────────────────────────────────────────────────
+  // Measure the stage's CONTENT box (padding already excluded) and shrink the
+  // card to fit it. Padding is asymmetric — more on top so the stacked-card
+  // silhouettes peeking above still read as equidistant from the panels.
+  const [stageEl, setStageEl]     = useState(null);
+  const [stageSize, setStageSize] = useState({ w: 0, h: 0 });
+  useEffect(() => {
+    if (!stageEl) return;
+    const measure = () => {
+      const cs = getComputedStyle(stageEl);
+      const w = stageEl.clientWidth  - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      const h = stageEl.clientHeight - parseFloat(cs.paddingTop)  - parseFloat(cs.paddingBottom);
+      setStageSize(prev =>
+        (Math.abs(prev.w - w) < 1 && Math.abs(prev.h - h) < 1) ? prev : { w, h });
+    };
+    measure();
+    let ro = null;
+    if (typeof ResizeObserver !== "undefined") { ro = new ResizeObserver(measure); ro.observe(stageEl); }
+    window.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
+    window.visualViewport?.addEventListener("resize", measure);
+    const iv = setInterval(measure, 500);   // no zoom event exists — poll
+    return () => {
+      ro?.disconnect();
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
+      window.visualViewport?.removeEventListener("resize", measure);
+      clearInterval(iv);
+    };
+  }, [stageEl]);
+
+  const cardH = Math.max(0, Math.min(stageSize.h, stageSize.w * (4 / 3), 460));
+  const cardW = cardH * 0.75;
+  // Card content scales with the card so it never overflows.
+  const s = cardH > 0 ? Math.max(0.55, Math.min(1, cardH / 440)) : 1;
+
+  // ── ZOOM GATE ─────────────────────────────────────────────────────────────
+  // The card stage only renders correctly in a narrow zoom band. Detect the
+  // browser zoom (outerWidth/innerWidth ratio — independent of screen size, so
+  // small phones never trip it) and swap the stage for a message outside it.
+  // Touch devices are exempt: pinch is already blocked by the viewport meta.
+  const [zoomPct, setZoomPct] = useState(100);
+  useEffect(() => {
+    const isTouch = window.matchMedia?.("(pointer: coarse)")?.matches;
+    if (isTouch) return;                       // phones/tablets: never gate
+    const measure = () => {
+      const ow = window.outerWidth, iw = window.innerWidth;
+      if (!ow || !iw) return;
+      const z = Math.round((ow / iw) * 100);
+      if (z < 25 || z > 500) return;           // nonsense reading — ignore
+      setZoomPct(prev => (Math.abs(prev - z) >= 2 ? z : prev));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    const iv = setInterval(measure, 400);      // no zoom event exists — poll
+    return () => { window.removeEventListener("resize", measure); clearInterval(iv); };
+  }, []);
+  // Show the message when zoom is past the band OR when the measured space is
+  // simply too small to render a usable card — so there's never a blank stage.
+  const MIN_USABLE_CARD_H = 150;
+  const stageMeasured = stageSize.h > 0;
+  const cardTooSmall  = stageMeasured && cardH < MIN_USABLE_CARD_H;
+  const zoomOK = zoomPct <= ZOOM_MAX && !cardTooSmall;
 
   // ── ZOOM LOCK ─────────────────────────────────────────────────────────────
   // Blocks every zoom path a browser lets us touch. (Desktop Ctrl+/- keyboard is
@@ -982,8 +1079,8 @@ export default function App() {
 
       {/* ── HEADER ── */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
-        padding:"12px 18px 10px", borderBottom:"1px solid #F2F2F2" }}>
-        <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+        padding:"12px 18px 10px", borderBottom:"1px solid #F2F2F2", gap:8 }}>
+        <div style={{ display:"flex", alignItems:"center", gap:12, minWidth:0, overflow:"hidden" }}>
           <button onClick={() => setShowMenu(true)} aria-label="Menu"
             style={{ background:"none", border:"none", cursor:"pointer", padding:4, display:"flex" }}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -999,8 +1096,9 @@ export default function App() {
           </div>
         </div>
         <button onClick={() => setShowCart(true)}
-          style={{ background:"none", border:"none", cursor:"pointer", position:"relative", padding:8 }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+          style={{ background:"none", border:"none", cursor:"pointer", position:"relative",
+            padding:8, flex:"0 0 auto" }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
             stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="21" r="1"/>
             <circle cx="20" cy="21" r="1"/>
@@ -1181,12 +1279,15 @@ export default function App() {
       )}
       </div>{/* end filter row (panel is anchored to it) */}
 
-      {/* ── CENTER STAGE — fixed card, empty space above, no hints/side-icons ── */}
-      <div style={{ flex:1, display:"flex", flexDirection:"column",
+      {/* ── CENTER STAGE — card shrinks to always respect this padding.
+             Top padding is larger to make room for the stacked-card peek. ── */}
+      <div ref={setStageEl} style={{ flex:1, display:"flex", flexDirection:"column",
         justifyContent:"center", alignItems:"center",
-        padding:"20px 6px 6px", minHeight:0, overflow:"hidden",
+        padding:"46px 10px 14px", minHeight:0, overflow:"hidden",
         touchAction:"none", position:"relative" }}>
-        {stack.length === 0 ? (
+        {!zoomOK ? (
+          <ZoomBlocked zoomPct={zoomPct} />
+        ) : stack.length === 0 ? (
           <div style={{ textAlign:"center", margin:"auto" }}>
             <div style={{ fontSize:48, marginBottom:12 }}>🎉</div>
             <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, color:"#111", marginBottom:6 }}>
@@ -1216,10 +1317,11 @@ export default function App() {
           <div style={{ flex:"0 0 auto", display:"flex", alignItems:"center",
             justifyContent:"center" }}>
 
-          {/* CARD — FIXED size from viewport width; never changes with zoom/height */}
+          {/* CARD — measured; shrinks so the padding above/below is always respected */}
+          {cardH > 50 && (
           <div style={{
-            width: CARD_W,
-            height: CARD_H,
+            width: cardW,
+            height: cardH,
             position:"relative",
             overflow:"visible",
             touchAction:"none",
@@ -1282,32 +1384,32 @@ export default function App() {
                     )}
                   </div>
 
-                  {/* Info section — fixed sizes; text grows on zoom & truncates with … */}
+                  {/* Info section — scales with the card so it never overflows */}
                   {(isTop || isLeaving) ? (
-                    <div style={{ flex:1, minHeight:0, padding:"9px 13px 9px",
+                    <div style={{ flex:1, minHeight:0, padding:`${9*s}px ${13*s}px ${9*s}px`,
                       display:"flex", flexDirection:"column", overflow:"hidden" }}>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18,
-                        color:"#111", lineHeight:1.1, marginBottom:2,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18*s,
+                        color:"#111", lineHeight:1.1, marginBottom:2*s,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
-                      <div style={{ display:"flex", alignItems:"center", gap:7, marginBottom:2 }}>
-                        <Stars rating={p.rating}/>
-                        <span style={{ color:"#C8C8C8", fontSize:11 }}>({p.reviews.toLocaleString()})</span>
+                      <div style={{ display:"flex", alignItems:"center", gap:6*s, marginBottom:2*s }}>
+                        <Stars rating={p.rating} size={13*s}/>
+                        <span style={{ color:"#C8C8C8", fontSize:11*s }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20,
-                        color:B, marginBottom:3, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
-                      <p style={{ color:"#999", fontSize:11.5, lineHeight:1.35, margin:0,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20*s,
+                        color:B, marginBottom:3*s, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
+                      <p style={{ color:"#999", fontSize:11.5*s, lineHeight:1.35, margin:0,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden",
                       }}>{p.summary}</p>
-                      <span style={{ color:"#999", fontSize:10.5, fontWeight:600, marginTop:2,
+                      <span style={{ color:"#999", fontSize:10.5*s, fontWeight:600, marginTop:2*s,
                         textDecoration:"underline", textUnderlineOffset:2, flex:"0 0 auto" }}>
                         Read more
                       </span>
 
                       {/* Footer row pinned to bottom — can never collide with the text above */}
                       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
-                        gap:6, marginTop:"auto", paddingTop:6 }}>
+                        gap:6, marginTop:"auto", paddingTop:5*s }}>
                         <button
                           aria-label="Find similar products"
                           title="Find similar on Amazon"
@@ -1316,17 +1418,17 @@ export default function App() {
                           onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
                           style={{
                             background:"none", border:"1px solid #EEE", borderRadius:10,
-                            cursor:"pointer", padding:"3px 8px",
-                            display:"flex", alignItems:"center", gap:4,
+                            cursor:"pointer", padding:`${3*s}px ${8*s}px`,
+                            display:"flex", alignItems:"center", gap:4*s,
                             fontFamily:"'Barlow',sans-serif", flex:"0 0 auto",
                           }}
                         >
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+                          <svg width={10*s} height={10*s} viewBox="0 0 24 24" fill="none"
                             stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="11" cy="11" r="7"/>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                           </svg>
-                          <span style={{ fontSize:9, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
+                          <span style={{ fontSize:9*s, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
                             FIND SIMILAR
                           </span>
                         </button>
@@ -1338,21 +1440,22 @@ export default function App() {
                           if (cats.length === 0) return <span/>;
                           const shown = cats.slice(0, 2);
                           const extra = cats.length - shown.length;
+                          const sz = Math.round(22 * s);
                           return (
                             <div style={{ display:"flex", gap:4, flex:"0 0 auto" }}>
                               {shown.map(c => (
                                 <div key={c.name} title={c.name} style={{
                                   background:"#fff", border:"1px solid #EEE", borderRadius:"50%",
-                                  width:22, height:22, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:12, lineHeight:1,
+                                  width:sz, height:sz, display:"flex", alignItems:"center",
+                                  justifyContent:"center", fontSize:12*s, lineHeight:1,
                                   boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>{c.emoji}</div>
                               ))}
                               {extra > 0 && (
                                 <div style={{
-                                  background:"#fff", border:"1px solid #EEE", borderRadius:11,
-                                  padding:"0 6px", height:22, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:10, fontWeight:800, color:"#666",
+                                  background:"#fff", border:"1px solid #EEE", borderRadius:sz/2,
+                                  padding:`0 ${5*s}px`, height:sz, display:"flex", alignItems:"center",
+                                  justifyContent:"center", fontSize:10*s, fontWeight:800, color:"#666",
                                   boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>+{extra}</div>
                               )}
@@ -1382,9 +1485,9 @@ export default function App() {
       </div>
 
       {/* ── SWIPE LEGEND — clean row of all 4 swipe directions, above the cart button ── */}
-      {stack.length > 0 && (
-        <div style={{ display:"flex", justifyContent:"space-evenly", alignItems:"center",
-          padding:"2px 12px 0", gap:6 }}>
+      {zoomOK && stack.length > 0 && (
+        <div style={{ display:"flex", justifyContent:"center", alignItems:"center",
+          padding:"2px 12px 0", gap:10, flexWrap:"wrap" }}>
           {[
             { arrow:"↑", label:"NEXT",     color:"#D0021B" },
             { arrow:"↓", label:"PREVIOUS", color:"#8B5CF6" },
@@ -1392,7 +1495,8 @@ export default function App() {
             { arrow:"→", label:"CART",     color:"#00A550" },
           ].map(x => (
             <div key={x.label} style={{ display:"flex", alignItems:"center", gap:3,
-              fontSize:8.5, color:"#BBB", fontWeight:700, letterSpacing:0.3 }}>
+              fontSize:8.5, color:"#BBB", fontWeight:700, letterSpacing:0.3,
+              flex:"0 0 auto", whiteSpace:"nowrap" }}>
               <span style={{ color:x.color, fontSize:11, lineHeight:1 }}>{x.arrow}</span>
               {x.label}
             </div>
@@ -1417,8 +1521,8 @@ export default function App() {
 
         {stack.length > 0 && (
           <div style={{
-            display:"flex", justifyContent:"space-evenly", alignItems:"center",
-            marginTop:10, gap:4,
+            display:"flex", justifyContent:"center", alignItems:"center",
+            marginTop:10, gap:6, flexWrap:"wrap",
           }}>
             <button onClick={() => setShowHowTo(true)} style={miniBtn}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
