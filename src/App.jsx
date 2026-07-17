@@ -1369,21 +1369,21 @@ export default function App() {
                   {(isTop || isLeaving) ? (
                     <div style={{ flex:1, minHeight:0, padding:`${9*s}px ${13*s}px ${9*s}px`,
                       display:"flex", flexDirection:"column", overflow:"hidden" }}>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:18*s,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:21.6*s,
                         color:"#111", lineHeight:1.1, marginBottom:2*s,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
                       <div style={{ display:"flex", alignItems:"center", gap:6*s, marginBottom:2*s }}>
-                        <Stars rating={p.rating} size={13*s}/>
-                        <span style={{ color:"#C8C8C8", fontSize:11*s }}>({p.reviews.toLocaleString()})</span>
+                        <Stars rating={p.rating} size={15.6*s}/>
+                        <span style={{ color:"#C8C8C8", fontSize:13.2*s }}>({p.reviews.toLocaleString()})</span>
                       </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20*s,
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24*s,
                         color:B, marginBottom:3*s, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
-                      <p style={{ color:"#999", fontSize:11.5*s, lineHeight:1.35, margin:0,
+                      <p style={{ color:"#999", fontSize:15.5*s, lineHeight:1.35, margin:0,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden",
                       }}>{p.summary}</p>
-                      <span style={{ color:"#999", fontSize:10.5*s, fontWeight:600, marginTop:2*s,
+                      <span style={{ color:"#999", fontSize:12.6*s, fontWeight:600, marginTop:2*s,
                         textDecoration:"underline", textUnderlineOffset:2, flex:"0 0 auto" }}>
                         Read more
                       </span>
@@ -1404,12 +1404,12 @@ export default function App() {
                             fontFamily:"'Barlow',sans-serif", flex:"0 0 auto",
                           }}
                         >
-                          <svg width={10*s} height={10*s} viewBox="0 0 24 24" fill="none"
+                          <svg width={12*s} height={12*s} viewBox="0 0 24 24" fill="none"
                             stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="11" cy="11" r="7"/>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                           </svg>
-                          <span style={{ fontSize:9*s, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
+                          <span style={{ fontSize:10.8*s, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
                             FIND SIMILAR
                           </span>
                         </button>
@@ -1421,14 +1421,14 @@ export default function App() {
                           if (cats.length === 0) return <span/>;
                           const shown = cats.slice(0, 2);
                           const extra = cats.length - shown.length;
-                          const sz = Math.round(22 * s);
+                          const sz = Math.round(26.4 * s);
                           return (
                             <div style={{ display:"flex", gap:4, flex:"0 0 auto" }}>
                               {shown.map(c => (
                                 <div key={c.name} title={c.name} style={{
                                   background:"#fff", border:"1px solid #EEE", borderRadius:"50%",
                                   width:sz, height:sz, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:12*s, lineHeight:1,
+                                  justifyContent:"center", fontSize:14.4*s, lineHeight:1,
                                   boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>{c.emoji}</div>
                               ))}
@@ -1436,7 +1436,7 @@ export default function App() {
                                 <div style={{
                                   background:"#fff", border:"1px solid #EEE", borderRadius:sz/2,
                                   padding:`0 ${5*s}px`, height:sz, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:10*s, fontWeight:800, color:"#666",
+                                  justifyContent:"center", fontSize:12*s, fontWeight:800, color:"#666",
                                   boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>+{extra}</div>
                               )}
