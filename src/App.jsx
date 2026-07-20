@@ -8,7 +8,42 @@ const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "
 
 const Y = "#FFB300";
 const B = "#1668F5";
+const STAR = "#7A4E00";   // deep amber — reads on the yellow card bottom
 const AFFILIATE_TAG = "swipeandsho03-21";
+
+// ── THEMES ────────────────────────────────────────────────────────────────────
+const THEME_LIGHT = {
+  bg:          "#F4F1EA",   // warm off-white (not pure white)
+  card:        "#FFFFFF",   // image area
+  cardBottom:  "#FFC02E",   // yellow bottom half (matches cart button family)
+  text:        "#141414",
+  textOnYellow:"#3A2E05",   // body text sitting on the yellow bottom
+  textDim:     "#8A8A8A",
+  textFaint:   "#C4C4C4",
+  border:      "#EAE7E0",
+  panel:       "#EFECE4",
+  panelActive: "#FFF3D6",
+  headerBorder:"#EAE7E0",
+  star:        STAR,
+  drawer:      "#FFFFFF",
+  overlay:     "rgba(0,0,0,0.4)",
+};
+const THEME_DARK = {
+  bg:          "#141519",
+  card:        "#20222A",
+  cardBottom:  "#3A3016",   // muted warm-gold bottom half
+  text:        "#EDEDED",
+  textOnYellow:"#F0E4C0",
+  textDim:     "#9AA0A6",
+  textFaint:   "#5C6066",
+  border:      "#2E313A",
+  panel:       "#1C1E24",
+  panelActive: "#2B2716",
+  headerBorder:"#2A2C34",
+  star:        "#F0B93B",
+  drawer:      "#1C1E24",
+  overlay:     "rgba(0,0,0,0.6)",
+};
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 const shuffle = (arr) => {
@@ -100,16 +135,16 @@ const OVERLAYS = {
 
 const SWIPE_THRESHOLD = 50;  // px — lower = snappier, easier to trigger
 
-function Stars({ rating, size = 13 }) {
+function Stars({ rating, size = 13, color = STAR, emptyColor = "rgba(0,0,0,0.15)", labelColor = "#999" }) {
   return (
     <div style={{ display:"flex", alignItems:"center", gap:2 }}>
       {[1,2,3,4,5].map(i => (
         <svg key={i} width={size} height={size} viewBox="0 0 24 24"
-          fill={i <= Math.round(rating) ? Y : "#E8E8E8"}>
+          fill={i <= Math.round(rating) ? color : emptyColor}>
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
       ))}
-      <span style={{ color:"#999", fontSize:size * 0.92, marginLeft:4 }}>{rating}</span>
+      <span style={{ color:labelColor, fontSize:size * 0.92, marginLeft:4, fontWeight:700 }}>{rating}</span>
     </div>
   );
 }
@@ -242,46 +277,68 @@ function LegalModal({ kind, onClose }) {
   );
 }
 
-function SidebarMenu({ onClose, onSelect }) {
+function SidebarMenu({ onClose, onSelect, dark, setDark, T }) {
   const items = [
     { key: "contact", label: "Contact Us" },
     { key: "privacy", label: "Privacy Policy" },
     { key: "terms",   label: "Terms of Service" },
   ];
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.45)", zIndex:210,
+    <div style={{ position:"fixed", inset:0, background:T.overlay, zIndex:210,
         display:"flex" }}
       onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background:"#fff", width:"78%", maxWidth:300, height:"100%",
-        boxShadow:"4px 0 30px rgba(0,0,0,0.15)", display:"flex", flexDirection:"column",
+        background:T.drawer, width:"78%", maxWidth:300, height:"100%",
+        boxShadow:"4px 0 30px rgba(0,0,0,0.25)", display:"flex", flexDirection:"column",
         fontFamily:"'Barlow',sans-serif",
         animation:"ssSlideIn 0.22s ease-out",
       }}>
         <style>{`@keyframes ssSlideIn { from { transform:translateX(-100%);} to { transform:translateX(0);} }`}</style>
-        <div style={{ padding:"20px 20px 16px", borderBottom:"1px solid #F2F2F2",
+        <div style={{ padding:"20px 20px 16px", borderBottom:`1px solid ${T.border}`,
           display:"flex", justifyContent:"space-between", alignItems:"center" }}>
           <div style={{ display:"flex", alignItems:"baseline" }}>
             <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SWIPE</span>
-            <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SHOP</span>
+            <span style={{ color:T.text, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SHOP</span>
           </div>
           <button onClick={onClose} style={{
-            background:"#F5F5F5", border:"none", color:"#666", width:30, height:30,
+            background:T.panel, border:"none", color:T.textDim, width:30, height:30,
             borderRadius:"50%", cursor:"pointer", fontSize:13, fontWeight:700 }}>✕</button>
         </div>
         <div style={{ padding:"10px 0", flex:1 }}>
           {items.map(it => (
             <button key={it.key} onClick={() => onSelect(it.key)} style={{
               display:"block", width:"100%", textAlign:"left", background:"none",
-              border:"none", padding:"14px 22px", fontSize:15, color:"#222",
+              border:"none", padding:"14px 22px", fontSize:15, color:T.text,
               fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
             }}>{it.label}</button>
           ))}
+
+          {/* Dark mode toggle */}
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
+            padding:"14px 22px" }}>
+            <span style={{ fontSize:15, color:T.text, fontWeight:600 }}>
+              {dark ? "🌙 Dark mode" : "☀️ Dark mode"}
+            </span>
+            <button
+              role="switch" aria-checked={dark}
+              onClick={() => setDark(d => !d)}
+              style={{
+                width:46, height:26, borderRadius:13, border:"none", cursor:"pointer",
+                background: dark ? Y : T.border, position:"relative",
+                transition:"background 0.2s", flex:"0 0 auto", padding:0,
+              }}>
+              <span style={{
+                position:"absolute", top:3, left: dark ? 23 : 3,
+                width:20, height:20, borderRadius:"50%", background:"#fff",
+                boxShadow:"0 1px 3px rgba(0,0,0,0.3)", transition:"left 0.2s",
+              }}/>
+            </button>
+          </div>
         </div>
-        <div style={{ padding:"14px 22px", borderTop:"1px solid #F2F2F2",
-          fontSize:11, color:"#BBB", lineHeight:1.5 }}>
+        <div style={{ padding:"14px 22px", borderTop:`1px solid ${T.border}`,
+          fontSize:11, color:T.textDim, lineHeight:1.5 }}>
           As an Amazon Associate we earn from qualifying purchases.
-          <div style={{ marginTop:8, fontSize:9, color:"#D0D0D0", fontFamily:"monospace" }}>
+          <div style={{ marginTop:8, fontSize:9, color:T.textFaint, fontFamily:"monospace" }}>
             v{APP_VERSION}
           </div>
         </div>
@@ -624,6 +681,16 @@ export default function App() {
   const [detailProduct, setDetailProduct] = useState(null);
   const [showMenu,    setShowMenu]    = useState(false);
   const [reportProduct, setReportProduct] = useState(null);
+  const [dark, setDark] = useState(() => {
+    try { return localStorage.getItem("ss_theme") === "dark"; } catch { return false; }
+  });
+  const T = dark ? THEME_DARK : THEME_LIGHT;
+  const tMini = { ...miniBtn, border:`1px solid ${T.border}`, color:T.textDim };
+  useEffect(() => {
+    try { localStorage.setItem("ss_theme", dark ? "dark" : "light"); } catch {}
+    document.documentElement.style.background = T.bg;
+    document.body.style.background = T.bg;
+  }, [dark, T.bg]);
 
   // Apply filters → produce the actual stack
   const filteredProducts = useMemo(() => {
@@ -1029,15 +1096,16 @@ export default function App() {
 
   return (
     <div style={{
-      background:"#fff", height:"100dvh", maxWidth:430,
+      background:T.bg, height:"100dvh", maxWidth:430,
       margin:"0 auto", display:"flex", flexDirection:"column",
       fontFamily:"'Barlow',sans-serif", userSelect:"none",
       position:"relative", overflow:"hidden",
+      transition:"background 0.25s",
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap');
         *{box-sizing:border-box;margin:0;padding:0;}
-        html, body { background:#fff; height:100%; overflow:hidden; overscroll-behavior:none; touch-action:manipulation; }
+        html, body { background:${T.bg}; height:100%; overflow:hidden; overscroll-behavior:none; touch-action:manipulation; }
         button:focus{outline:none;}
         select{ -webkit-appearance:none; -moz-appearance:none; appearance:none;
                 background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23999' d='M6 8L0 0h12z'/></svg>");
@@ -1062,12 +1130,12 @@ export default function App() {
       {/* ── HEADER ── */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
         padding:"10px 18px 8px",
-        borderBottom:"1px solid #F2F2F2", gap:8 }}>
+        borderBottom:`1px solid ${T.headerBorder}`, gap:8 }}>
         <div style={{ display:"flex", alignItems:"center", gap:12, minWidth:0, overflow:"hidden" }}>
           <button onClick={() => setShowMenu(true)} aria-label="Menu"
             style={{ background:"none", border:"none", cursor:"pointer", padding:4, display:"flex" }}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="#111" strokeWidth="2.2" strokeLinecap="round">
+              stroke={T.text} strokeWidth="2.2" strokeLinecap="round">
               <line x1="3" y1="6"  x2="21" y2="6"/>
               <line x1="3" y1="12" x2="21" y2="12"/>
               <line x1="3" y1="18" x2="21" y2="18"/>
@@ -1075,14 +1143,14 @@ export default function App() {
           </button>
           <div style={{ display:"flex", alignItems:"baseline" }}>
             <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
-            <span style={{ color:"#111", fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
+            <span style={{ color:T.text, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
           </div>
         </div>
         <button onClick={() => setShowCart(true)}
           style={{ background:"none", border:"none", cursor:"pointer", position:"relative",
             padding:8, flex:"0 0 auto" }}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ display:"block" }}
-            stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            stroke={T.text} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="21" r="1"/>
             <circle cx="20" cy="21" r="1"/>
             <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
@@ -1091,7 +1159,7 @@ export default function App() {
             <div style={{ position:"absolute", top:3, right:3, background:Y, color:"#000",
               borderRadius:"50%", width:18, height:18, display:"flex",
               alignItems:"center", justifyContent:"center",
-              fontSize:10, fontWeight:800, border:"2px solid #fff"
+              fontSize:10, fontWeight:800, border:`2px solid ${T.bg}`
             }}>{cart.length}</div>
           )}
         </button>
@@ -1107,9 +1175,9 @@ export default function App() {
           onClick={() => setOpenFilter(v => v === "cat" ? null : "cat")}
           style={{
             flex:"1 1 120px", minWidth:120, padding:"5px 10px", borderRadius:9,
-            border:`1px solid ${openFilter === "cat" ? "#FFB300" : "#EEE"}`,
-            background: openFilter === "cat" ? "#FFF8E6" : "#F8F8F8",
-            fontSize:10, color:"#333", fontFamily:"'Barlow',sans-serif",
+            border:`1px solid ${openFilter === "cat" ? Y : T.border}`,
+            background: openFilter === "cat" ? T.panelActive : T.panel,
+            fontSize:10, color:T.text, fontFamily:"'Barlow',sans-serif",
             fontWeight:700, letterSpacing:0.3, cursor:"pointer",
             display:"flex", alignItems:"center", justifyContent:"space-between", gap:6,
             whiteSpace:"nowrap",
@@ -1117,15 +1185,15 @@ export default function App() {
           <span style={{ overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
             {selectedCatNames.length === 0 ? "ALL CATEGORIES" : `${selectedCatNames.length} CATEGORIES`}
           </span>
-          <span style={{ color:"#999", fontSize:8 }}>{openFilter === "cat" ? "▲" : "▼"}</span>
+          <span style={{ color:T.textDim, fontSize:8 }}>{openFilter === "cat" ? "▲" : "▼"}</span>
         </button>
         <button
           onClick={() => setOpenFilter(v => v === "price" ? null : "price")}
           style={{
             flex:"1 1 120px", minWidth:120, padding:"5px 10px", borderRadius:9,
-            border:`1px solid ${openFilter === "price" ? "#FFB300" : "#EEE"}`,
-            background: openFilter === "price" ? "#FFF8E6" : "#F8F8F8",
-            fontSize:10, color:"#333", fontFamily:"'Barlow',sans-serif",
+            border:`1px solid ${openFilter === "price" ? Y : T.border}`,
+            background: openFilter === "price" ? T.panelActive : T.panel,
+            fontSize:10, color:T.text, fontFamily:"'Barlow',sans-serif",
             fontWeight:700, letterSpacing:0.3, cursor:"pointer",
             display:"flex", alignItems:"center", justifyContent:"space-between", gap:6,
             whiteSpace:"nowrap",
@@ -1135,7 +1203,7 @@ export default function App() {
               ? "ANY PRICE"
               : `₹${priceRange[0]} – ₹${priceRange[1]}`}
           </span>
-          <span style={{ color:"#999", fontSize:8 }}>{openFilter === "price" ? "▲" : "▼"}</span>
+          <span style={{ color:T.textDim, fontSize:8 }}>{openFilter === "price" ? "▲" : "▼"}</span>
         </button>
 
       {openFilter && (
@@ -1152,8 +1220,8 @@ export default function App() {
             onTouchStart={e => e.stopPropagation()}
             style={{
               position:"absolute", left:12, right:12, zIndex:60,
-              background:"#fff", border:"1px solid #EEE",
-              borderRadius:14, boxShadow:"0 8px 24px rgba(0,0,0,0.10)",
+              background:T.card, border:`1px solid ${T.border}`,
+              borderRadius:14, boxShadow:"0 8px 24px rgba(0,0,0,0.18)",
               padding:"12px 14px", maxHeight:"55vh", overflowY:"auto",
               // Anchored to the filter row itself — adapts to any header height
               top:"calc(100% + 2px)",
@@ -1171,8 +1239,8 @@ export default function App() {
                         onClick={() => setSelectedCatNames(prev =>
                           prev.includes(c.name) ? prev.filter(n => n !== c.name) : [...prev, c.name])}
                         style={{
-                          background: on ? Y : "#fff", color: on ? "#000" : "#555",
-                          border:`1px solid ${on ? Y : "#E5E5E5"}`,
+                          background: on ? Y : T.panel, color: on ? "#000" : T.text,
+                          border:`1px solid ${on ? Y : T.border}`,
                           borderRadius:14, padding:"4px 9px", fontSize:11,
                           fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
                           display:"inline-flex", alignItems:"center", gap:4,
@@ -1271,12 +1339,12 @@ export default function App() {
         ) : stack.length === 0 ? (
           <div style={{ textAlign:"center", margin:"auto" }}>
             <div style={{ fontSize:48, marginBottom:12 }}>🎉</div>
-            <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, color:"#111", marginBottom:6 }}>
+            <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, color:T.text, marginBottom:6 }}>
               {selectedCatNames.length === 0 && priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL
                 ? "YOU'VE SEEN IT ALL"
                 : "NO PRODUCTS MATCH"}
             </div>
-            <div style={{ fontSize:13, color:"#AAA", marginBottom:18 }}>
+            <div style={{ fontSize:13, color:T.textDim, marginBottom:18 }}>
               {selectedCatNames.length === 0 && priceRange[0] === PRICE_FLOOR && priceRange[1] === PRICE_CEIL
                 ? "Check your cart for saved items"
                 : "Try adjusting your filters"}
@@ -1325,20 +1393,20 @@ export default function App() {
                   onTouchEnd={showDrag ? onTouchEnd : undefined}
                   style={{
                     position:"absolute", width:"100%", height:"100%",
-                    background:"#fff", borderRadius:20, overflow:"hidden",
+                    background:T.card, borderRadius:20, overflow:"hidden",
                     cursor: showDrag ? (drag ? "grabbing" : "grab") : "default",
                     boxShadow: isTop
-                      ? (drag ? "0 8px 24px rgba(0,0,0,0.12)" : "0 3px 14px rgba(0,0,0,0.08)")
-                      : "0 2px 8px rgba(0,0,0,0.06)",
-                    border:"1px solid #EBEBEB",
+                      ? (drag ? "0 8px 28px rgba(0,0,0,0.2)" : "0 3px 16px rgba(0,0,0,0.12)")
+                      : "0 2px 10px rgba(0,0,0,0.08)",
+                    border:`1px solid ${T.border}`,
                     willChange:"transform",
                     display:"flex", flexDirection:"column",
                     ...cardStyle,
                   }}
                 >
                   {/* Image — uses contain so square Amazon images aren't cropped */}
-                  <div style={{ flex:"0 0 47%", position:"relative", background:"#fff",
-                    overflow:"hidden", borderBottom:"1px solid #F4F4F4" }}>
+                  <div style={{ flex:"0 0 47%", position:"relative", background:T.card,
+                    overflow:"hidden", borderBottom:`1px solid ${T.border}` }}>
                     <img
                       src={p.img} alt={p.title} draggable={false}
                       style={{
@@ -1365,25 +1433,33 @@ export default function App() {
                     )}
                   </div>
 
-                  {/* Info section — scales with the card so it never overflows */}
+                  {/* Info section — yellow bottom half; scales with the card */}
                   {(isTop || isLeaving) ? (
                     <div style={{ flex:1, minHeight:0, padding:`${9*s}px ${13*s}px ${9*s}px`,
-                      display:"flex", flexDirection:"column", overflow:"hidden" }}>
+                      display:"flex", flexDirection:"column", overflow:"hidden",
+                      background:T.cardBottom }}>
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:21.6*s,
-                        color:"#111", lineHeight:1.1, marginBottom:2*s,
+                        color:T.textOnYellow, lineHeight:1.1, marginBottom:2*s,
                         whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
                       }}>{p.title}</div>
                       <div style={{ display:"flex", alignItems:"center", gap:6*s, marginBottom:2*s }}>
-                        <Stars rating={p.rating} size={15.6*s}/>
-                        <span style={{ color:"#C8C8C8", fontSize:13.2*s }}>({p.reviews.toLocaleString()})</span>
+                        <Stars rating={p.rating} size={15.6*s} color={T.star}
+                          emptyColor={dark ? "rgba(255,255,255,0.18)" : "rgba(0,0,0,0.18)"}
+                          labelColor={T.textOnYellow}/>
                       </div>
                       <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24*s,
-                        color:B, marginBottom:3*s, letterSpacing:-0.3 }}>₹{p.price.toLocaleString('en-IN')}</div>
-                      <p style={{ color:"#999", fontSize:15.5*s, lineHeight:1.35, margin:0,
+                        color: dark ? "#7FB2FF" : "#0B3E9E", marginBottom:3*s, letterSpacing:-0.3
+                      }}>₹{p.price.toLocaleString('en-IN')}
+                        <span style={{ fontFamily:"'Barlow',sans-serif", fontWeight:600,
+                          fontSize:11*s, color:T.textOnYellow, marginLeft:6*s, opacity:0.7 }}>
+                          ({p.reviews.toLocaleString()} reviews)
+                        </span>
+                      </div>
+                      <p style={{ color:T.textOnYellow, opacity:0.82, fontSize:15.5*s, lineHeight:1.35, margin:0,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden",
                       }}>{p.summary}</p>
-                      <span style={{ color:"#999", fontSize:12.6*s, fontWeight:600, marginTop:2*s,
+                      <span style={{ color:T.textOnYellow, opacity:0.7, fontSize:12.6*s, fontWeight:700, marginTop:2*s,
                         textDecoration:"underline", textUnderlineOffset:2, flex:"0 0 auto" }}>
                         Read more
                       </span>
@@ -1398,18 +1474,20 @@ export default function App() {
                           onTouchStart={e => e.stopPropagation()}
                           onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
                           style={{
-                            background:"none", border:"1px solid #EEE", borderRadius:10,
+                            background: dark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)",
+                            border:`1px solid ${dark ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.12)"}`,
+                            borderRadius:10,
                             cursor:"pointer", padding:`${3*s}px ${8*s}px`,
                             display:"flex", alignItems:"center", gap:4*s,
                             fontFamily:"'Barlow',sans-serif", flex:"0 0 auto",
                           }}
                         >
                           <svg width={12*s} height={12*s} viewBox="0 0 24 24" fill="none"
-                            stroke="#BBB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                            stroke={T.textOnYellow} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="11" cy="11" r="7"/>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                           </svg>
-                          <span style={{ fontSize:10.8*s, color:"#AAA", fontWeight:700, letterSpacing:0.3 }}>
+                          <span style={{ fontSize:10.8*s, color:T.textOnYellow, fontWeight:800, letterSpacing:0.3 }}>
                             FIND SIMILAR
                           </span>
                         </button>
@@ -1426,18 +1504,20 @@ export default function App() {
                             <div style={{ display:"flex", gap:4, flex:"0 0 auto" }}>
                               {shown.map(c => (
                                 <div key={c.name} title={c.name} style={{
-                                  background:"#fff", border:"1px solid #EEE", borderRadius:"50%",
+                                  background: dark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.85)",
+                                  border:`1px solid ${dark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.08)"}`,
+                                  borderRadius:"50%",
                                   width:sz, height:sz, display:"flex", alignItems:"center",
                                   justifyContent:"center", fontSize:14.4*s, lineHeight:1,
-                                  boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
                                 }}>{c.emoji}</div>
                               ))}
                               {extra > 0 && (
                                 <div style={{
-                                  background:"#fff", border:"1px solid #EEE", borderRadius:sz/2,
+                                  background: dark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.85)",
+                                  border:`1px solid ${dark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.08)"}`,
+                                  borderRadius:sz/2,
                                   padding:`0 ${5*s}px`, height:sz, display:"flex", alignItems:"center",
-                                  justifyContent:"center", fontSize:12*s, fontWeight:800, color:"#666",
-                                  boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
+                                  justifyContent:"center", fontSize:12*s, fontWeight:800, color:T.textOnYellow,
                                 }}>+{extra}</div>
                               )}
                             </div>
@@ -1446,9 +1526,9 @@ export default function App() {
                       </div>
                     </div>
                   ) : (
-                    <div style={{ padding:"14px 18px" }}>
-                      <div style={{ height:13, background:"#EBEBEB", borderRadius:4, marginBottom:9, width:"68%" }}/>
-                      <div style={{ height:10, background:"#F2F2F2", borderRadius:4, width:"40%" }}/>
+                    <div style={{ padding:"14px 18px", flex:1, background:T.cardBottom }}>
+                      <div style={{ height:13, background:"rgba(0,0,0,0.08)", borderRadius:4, marginBottom:9, width:"68%" }}/>
+                      <div style={{ height:10, background:"rgba(0,0,0,0.05)", borderRadius:4, width:"40%" }}/>
                     </div>
                   )}
                   {/* Report button temporarily disabled per user request */}
@@ -1496,8 +1576,8 @@ export default function App() {
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
       <div style={{ padding:"8px 16px 18px" }}>
         <button onClick={() => setShowCart(true)} style={{
-          background: cart.length > 0 ? Y : "#F5F5F5",
-          color: cart.length > 0 ? "#000" : "#C0C0C0",
+          background: cart.length > 0 ? Y : T.panel,
+          color: cart.length > 0 ? "#000" : T.textFaint,
           border:"none", borderRadius:12, padding:"12px 0", width:"100%",
           fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
@@ -1513,7 +1593,7 @@ export default function App() {
             display:"flex", justifyContent:"center", alignItems:"center",
             marginTop:10, gap:6, flexWrap:"wrap",
           }}>
-            <button onClick={() => setShowHowTo(true)} style={miniBtn}>
+            <button onClick={() => setShowHowTo(true)} style={tMini}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
                 stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"/>
@@ -1526,7 +1606,7 @@ export default function App() {
             <button onClick={() => {
                 if (cart.length === 0) { flash("Cart is already empty"); return; }
                 saveCart([]); flash("Cart cleared");
-              }} style={miniBtn}>
+              }} style={tMini}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
                 stroke="#AAA" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="5" x2="19" y2="19"/>
@@ -1535,7 +1615,7 @@ export default function App() {
               CLEAR CART
             </button>
 
-            <button onClick={() => window.location.reload()} style={miniBtn}>
+            <button onClick={() => window.location.reload()} style={tMini}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
                 stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 12a9 9 0 1 1-3-6.7"/>
@@ -1546,7 +1626,7 @@ export default function App() {
 
             <button onClick={doUndo}
               disabled={undoStack.length === 0}
-              style={{ ...miniBtn, opacity: undoStack.length > 0 ? 1 : 0.5 }}>
+              style={{ ...tMini, opacity: undoStack.length > 0 ? 1 : 0.5 }}>
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
                 stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 7v6h6"/>
@@ -1561,53 +1641,53 @@ export default function App() {
 
       {/* ── CART DRAWER ── */}
       {showCart && (
-        <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.4)", zIndex:100,
+        <div style={{ position:"fixed", inset:0, background:T.overlay, zIndex:100,
           display:"flex", flexDirection:"column", justifyContent:"flex-end" }}
           onClick={() => setShowCart(false)}>
-          <div style={{ background:"#fff", borderRadius:"22px 22px 0 0", maxHeight:"82vh",
-            overflow:"auto", padding:"24px 22px 36px", boxShadow:"0 -8px 40px rgba(0,0,0,0.12)" }}
+          <div style={{ background:T.drawer, borderRadius:"22px 22px 0 0", maxHeight:"82vh",
+            overflow:"auto", padding:"24px 22px 36px", boxShadow:"0 -8px 40px rgba(0,0,0,0.25)" }}
             onClick={e => e.stopPropagation()}>
 
             <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:22 }}>
               <div>
-                <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26, color:"#111" }}>YOUR CART</span>
+                <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26, color:T.text }}>YOUR CART</span>
                 {cart.length > 0 &&
                   <span style={{ color:Y, fontSize:14, marginLeft:10, fontWeight:700 }}>
                     {cart.length} item{cart.length!==1?"s":""}
                   </span>}
               </div>
               <button onClick={() => setShowCart(false)}
-                style={{ background:"#F5F5F5", border:"none", color:"#999", width:32, height:32,
+                style={{ background:T.panel, border:"none", color:T.textDim, width:32, height:32,
                   borderRadius:"50%", cursor:"pointer", fontSize:13, fontWeight:700 }}>✕</button>
             </div>
 
             {cart.length === 0 ? (
               <div style={{ textAlign:"center", padding:"44px 0" }}>
                 <div style={{ fontSize:46, marginBottom:14 }}>🛒</div>
-                <div style={{ color:"#BBB", fontSize:14 }}>Swipe right to add products here</div>
+                <div style={{ color:T.textDim, fontSize:14 }}>Swipe right to add products here</div>
               </div>
             ) : (
               <>
                 {cart.map(p => (
                   <div key={p.id} style={{ display:"flex", gap:14, padding:"14px 0",
-                    borderBottom:"1px solid #F5F5F5", alignItems:"center" }}>
+                    borderBottom:`1px solid ${T.border}`, alignItems:"center" }}>
                     <img src={p.img} alt={p.title} style={{ width:60, height:60, borderRadius:10,
-                      objectFit:"contain", background:"#FAFAFA", border:"1px solid #F0F0F0", padding:4 }}/>
+                      objectFit:"contain", background:T.panel, border:`1px solid ${T.border}`, padding:4 }}/>
                     <div style={{ flex:1 }}>
-                      <div style={{ color:"#111", fontSize:13, fontWeight:600, marginBottom:4, lineHeight:1.3 }}>{p.title}</div>
-                      <div style={{ color:B, fontWeight:800, fontSize:15 }}>₹{p.price.toLocaleString('en-IN')}</div>
+                      <div style={{ color:T.text, fontSize:13, fontWeight:600, marginBottom:4, lineHeight:1.3 }}>{p.title}</div>
+                      <div style={{ color: dark ? "#7FB2FF" : B, fontWeight:800, fontSize:15 }}>₹{p.price.toLocaleString('en-IN')}</div>
                     </div>
                     <button onClick={() => saveCart(cart.filter(x => x.id !== p.id))}
-                      style={{ background:"#F5F5F5", border:"none", color:"#BBB",
+                      style={{ background:T.panel, border:"none", color:T.textDim,
                         width:28, height:28, borderRadius:"50%", cursor:"pointer", fontSize:12 }}>✕</button>
                   </div>
                 ))}
 
                 <div style={{ marginTop:20 }}>
                   <div style={{ display:"flex", justifyContent:"space-between", padding:"14px 0",
-                    borderBottom:"1px solid #F0F0F0", marginBottom:18 }}>
-                    <span style={{ color:"#AAA", fontSize:14 }}>Estimated total</span>
-                    <span style={{ color:B, fontWeight:900, fontSize:22, fontFamily:"'Barlow Condensed'" }}>
+                    borderBottom:`1px solid ${T.border}`, marginBottom:18 }}>
+                    <span style={{ color:T.textDim, fontSize:14 }}>Estimated total</span>
+                    <span style={{ color: dark ? "#7FB2FF" : B, fontWeight:900, fontSize:22, fontFamily:"'Barlow Condensed'" }}>
                       ₹{cart.reduce((s,p) => s+p.price, 0).toLocaleString('en-IN')}
                     </span>
                   </div>
@@ -1629,6 +1709,7 @@ export default function App() {
 
       {showMenu && (
         <SidebarMenu
+          dark={dark} setDark={setDark} T={T}
           onClose={() => setShowMenu(false)}
           onSelect={(key) => { setShowMenu(false); setLegalModal(key); }}
         />
