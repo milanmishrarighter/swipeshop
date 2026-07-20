@@ -9700,7 +9700,11 @@
     "img": "/images/B0GGP6RZVC.jpg",
     "badge": "Amazon's Choice",
     "cat": "Bottles",
-    "categories": [],
+    "categories": [
+      "Kitchen Items",
+      "Travel",
+      "Sports and Fitness"
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GGP6RZVC/"
   },
   {
