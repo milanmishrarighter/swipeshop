@@ -1193,7 +1193,9 @@
     "badge": "Amazon's Choice",
     "cat": "Motivational",
     "amazonUrl": "https://www.amazon.in/dp/1847943063/",
-    "categories": []
+    "categories": [
+      "Books"
+    ]
   },
   {
     "id": 1779815175688,
