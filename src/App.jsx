@@ -1660,18 +1660,7 @@ export default function App() {
                 <path d="M21 12a9 9 0 1 1-3-6.7"/>
                 <polyline points="21 3 21 9 15 9"/>
               </svg>
-              RELOAD
-            </button>
-
-            <button onClick={doUndo}
-              disabled={undoStack.length === 0}
-              style={{ ...tMini, opacity: undoStack.length > 0 ? 1 : 0.5 }}>
-              <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
-                stroke="#AAA" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 7v6h6"/>
-                <path d="M3 13a9 9 0 1 0 3-6.7L3 9"/>
-              </svg>
-              UNDO{undoStack.length > 0 ? ` (${undoStack.length})` : ""}
+              RESHUFFLE
             </button>
           </div>
         )}
