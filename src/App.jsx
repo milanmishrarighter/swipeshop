@@ -37,7 +37,7 @@ const THEME_LIGHT = {
   overlay:     "rgba(0,0,0,0.4)",
   modal:       "#FFFFFF",
   modalText:   "#333333",
-  ctaShadow:   "0 3px 10px rgba(252,200,84,0.40)",
+  ctaShadow:   "0 2px 7px rgba(252,200,84,0.50)",   // subtle glow, tight enough not to bleed
 };
 const THEME_DARK = {
   isDark:      true,
@@ -59,7 +59,7 @@ const THEME_DARK = {
   modal:       "#20222A",
   modalText:   "#D8D8D8",
   // Tight, dark drop shadow — a wide glow bleeds onto the buttons below.
-  ctaShadow:   "0 2px 6px rgba(0,0,0,0.45)",
+  ctaShadow:   "0 2px 7px rgba(192,146,47,0.45)",   // gold glow, subtler than before (was bleeding)
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -1429,8 +1429,8 @@ export default function App() {
                     background:T.card, borderRadius:20, overflow:"hidden",
                     cursor: showDrag ? (drag ? "grabbing" : "grab") : "default",
                     boxShadow: isTop
-                      ? (drag ? "0 8px 28px rgba(0,0,0,0.2)" : "0 3px 16px rgba(0,0,0,0.12)")
-                      : "0 2px 10px rgba(0,0,0,0.08)",
+                      ? (drag ? "0 4px 12px rgba(0,0,0,0.18)" : "0 2px 8px rgba(0,0,0,0.10)")
+                      : "0 1px 5px rgba(0,0,0,0.07)",
                     border:`1px solid ${T.border}`,
                     willChange:"transform",
                     display:"flex", flexDirection:"column",
@@ -1543,8 +1543,8 @@ export default function App() {
                             <div style={{ display:"flex", gap:4, flex:"0 0 auto" }}>
                               {shown.map(c => (
                                 <div key={c.name} title={c.name} style={{
-                                  background: dark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.85)",
-                                  border:`1px solid ${dark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.08)"}`,
+                                  background: dark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.32)",
+                                  border:`1px solid ${dark ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.5)"}`,
                                   borderRadius:"50%",
                                   width:sz, height:sz, display:"flex", alignItems:"center",
                                   justifyContent:"center", fontSize:14.4*s, lineHeight:1,
@@ -1552,8 +1552,8 @@ export default function App() {
                               ))}
                               {extra > 0 && (
                                 <div style={{
-                                  background: dark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.85)",
-                                  border:`1px solid ${dark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.08)"}`,
+                                  background: dark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.32)",
+                                  border:`1px solid ${dark ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.5)"}`,
                                   borderRadius:sz/2,
                                   padding:`0 ${5*s}px`, height:sz, display:"flex", alignItems:"center",
                                   justifyContent:"center", fontSize:12*s, fontWeight:800, color:T.textOnYellow,
