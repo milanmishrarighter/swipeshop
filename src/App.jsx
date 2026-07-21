@@ -6,8 +6,8 @@ import categoriesData from "./categories.json";
 // eslint-disable-next-line no-undef
 const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
 
-const Y = "#FFC233";      // SwipeShop yellow, ~20% lighter than the original #FFB300
-const Y_LOGO = "#FFB300"; // full brand gold for the logo
+const Y = "#FCC854";      // SwipeShop yellow (rgb 252,200,84)
+const Y_LOGO = "#FCC854"; // logo matches the same yellow
 const B = "#1668F5";
 const STAR = "#8A5A00";   // deep amber — reads on the yellow card bottom
 const AFFILIATE_TAG = "swipeandsho03-21";
@@ -17,17 +17,17 @@ const CREAM_TEXT = "#3A2C05";   // dark text that sits on the yellow (both theme
 // ── THEMES ────────────────────────────────────────────────────────────────────
 const THEME_LIGHT = {
   isDark:      false,
-  bg:          "#FBF7EF",   // warm off-white, brighter than before
+  bg:          "#F4F4F4",   // neutral — exactly one shade darker than the card's white
   card:        "#FFFFFF",   // image area
   cardBottom:  Y,           // yellow bottom half
   text:        "#141414",
   textOnYellow:CREAM_TEXT,
   textDim:     "#8A8A8A",
   textFaint:   "#C4C4C4",
-  border:      "#ECE7DD",
-  panel:       "#F2EEE5",
-  panelActive: "#FFF3D6",
-  headerBorder:"#EFEAE0",
+  border:      "#E7E7E7",
+  panel:       "#EFEFEF",
+  panelActive: "#FEF3DC",
+  headerBorder:"#EAEAEA",
   star:        STAR,
   drawer:      "#FFFFFF",
   overlay:     "rgba(0,0,0,0.4)",
