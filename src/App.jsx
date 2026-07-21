@@ -6,19 +6,23 @@ import categoriesData from "./categories.json";
 // eslint-disable-next-line no-undef
 const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
 
-const Y = "#FCC854";      // SwipeShop yellow (rgb 252,200,84)
-const Y_LOGO = "#FCC854"; // logo matches the same yellow
+const Y = "#FCC854";        // SwipeShop yellow (rgb 252,200,84) — light mode only
+const Y_DARK = "#8A6B2E";   // muted, darker yellow for dark mode (much less vibrant)
+const Y_LOGO = Y;           // light-mode logo; dark mode overrides with T.accent below
 const B = "#1668F5";
-const STAR = "#8A5A00";   // deep amber — reads on the yellow card bottom
+const STAR = "#8A5A00";     // deep amber — reads on the light-mode yellow card bottom
+const STAR_DARK = "#E8C77A"; // lighter amber — reads on the darker dark-mode yellow
 const AFFILIATE_TAG = "swipeandsho03-21";
 
-const CREAM_TEXT = "#3A2C05";   // dark text that sits on the yellow (both themes)
+const CREAM_TEXT = "#3A2C05";       // dark text on the light-mode yellow
+const CREAM_TEXT_DARK = "#F5E6C8"; // light text on the darker dark-mode yellow
 
 // ── THEMES ────────────────────────────────────────────────────────────────────
 const THEME_LIGHT = {
   isDark:      false,
   bg:          "#F4F4F4",   // neutral — exactly one shade darker than the card's white
   card:        "#FFFFFF",   // image area
+  accent:      Y,           // the "yellow" — CTAs, logo, active chips
   cardBottom:  Y,           // yellow bottom half
   text:        "#141414",
   textOnYellow:CREAM_TEXT,
@@ -38,16 +42,17 @@ const THEME_DARK = {
   isDark:      true,
   bg:          "#141519",
   card:        "#20222A",
-  cardBottom:  Y,           // same yellow bottom — matches the yellow CTA buttons
+  accent:      Y_DARK,      // muted yellow — much less vibrant against the dark bg
+  cardBottom:  Y_DARK,
   text:        "#EDEDED",
-  textOnYellow:CREAM_TEXT,  // yellow is light, so text stays dark even in dark mode
+  textOnYellow:CREAM_TEXT_DARK,
   textDim:     "#9AA0A6",
   textFaint:   "#5C6066",
   border:      "#2E313A",
   panel:       "#1C1E24",
-  panelActive: "#2B2716",
+  panelActive: "#3A2E17",
   headerBorder:"#2A2C34",
-  star:        STAR,
+  star:        STAR_DARK,
   drawer:      "#1C1E24",
   overlay:     "rgba(0,0,0,0.6)",
   modal:       "#20222A",
@@ -306,7 +311,7 @@ function SidebarMenu({ onClose, onSelect, dark, setDark, T }) {
         <div style={{ padding:"20px 20px 16px", borderBottom:`1px solid ${T.border}`,
           display:"flex", justifyContent:"space-between", alignItems:"center" }}>
           <div style={{ display:"flex", alignItems:"baseline" }}>
-            <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SWIPE</span>
+            <span style={{ color:T.accent, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SWIPE</span>
             <span style={{ color:T.text, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24, letterSpacing:-1 }}>SHOP</span>
           </div>
           <button onClick={onClose} style={{
@@ -333,7 +338,7 @@ function SidebarMenu({ onClose, onSelect, dark, setDark, T }) {
               onClick={() => setDark(d => !d)}
               style={{
                 width:46, height:26, borderRadius:13, border:"none", cursor:"pointer",
-                background: dark ? Y : T.border, position:"relative",
+                background: dark ? T.accent : T.border, position:"relative",
                 transition:"background 0.2s", flex:"0 0 auto", padding:0,
               }}>
               <span style={{
@@ -492,7 +497,7 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart, T })
             marginBottom:10,
           }}>OPEN ON AMAZON →</button>
           <button onClick={onAddToCart} style={{
-            background: alreadyInCart ? T.panel : Y, color: alreadyInCart ? T.textDim : CREAM_TEXT,
+            background: alreadyInCart ? T.panel : T.accent, color: alreadyInCart ? T.textDim : T.textOnYellow,
             border:"none", borderRadius:12, padding:"12px 0", width:"100%",
             fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:15, cursor:"pointer",
             letterSpacing:0.6, display:"flex", alignItems:"center", justifyContent:"center", gap:8,
@@ -1126,13 +1131,13 @@ export default function App() {
         input.range-thumb::-moz-range-track             { background: transparent; border: none; height: 36px; }
         input.range-thumb::-webkit-slider-thumb {
           -webkit-appearance: none; appearance: none; width: 20px; height: 20px;
-          border-radius: 50%; background: #fff; border: 2px solid ${Y};
+          border-radius: 50%; background: #fff; border: 2px solid ${T.accent};
           box-shadow: 0 2px 6px rgba(0,0,0,0.15); cursor: grab;
           pointer-events: auto; margin-top: 8px;
         }
         input.range-thumb::-moz-range-thumb {
           width: 20px; height: 20px; border-radius: 50%; background: #fff;
-          border: 2px solid ${Y}; box-shadow: 0 2px 6px rgba(0,0,0,0.15); cursor: grab;
+          border: 2px solid ${T.accent}; box-shadow: 0 2px 6px rgba(0,0,0,0.15); cursor: grab;
           pointer-events: auto;
         }
       `}</style>
@@ -1152,7 +1157,7 @@ export default function App() {
             </svg>
           </button>
           <div style={{ display:"flex", alignItems:"baseline" }}>
-            <span style={{ color:Y_LOGO, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
+            <span style={{ color:T.accent, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
             <span style={{ color:T.text, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
           </div>
         </div>
@@ -1166,7 +1171,7 @@ export default function App() {
             <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
           </svg>
           {cart.length > 0 && (
-            <div style={{ position:"absolute", top:3, right:3, background:Y, color:"#000",
+            <div style={{ position:"absolute", top:3, right:3, background:T.accent, color:T.textOnYellow,
               borderRadius:"50%", width:18, height:18, display:"flex",
               alignItems:"center", justifyContent:"center",
               fontSize:10, fontWeight:800, border:`2px solid ${T.bg}`
@@ -1185,7 +1190,7 @@ export default function App() {
           onClick={() => setOpenFilter(v => v === "cat" ? null : "cat")}
           style={{
             flex:"1 1 120px", minWidth:120, padding:"5px 10px", borderRadius:9,
-            border:`1px solid ${openFilter === "cat" ? Y : T.border}`,
+            border:`1px solid ${openFilter === "cat" ? T.accent : T.border}`,
             background: openFilter === "cat" ? T.panelActive : T.panel,
             fontSize:10, color:T.text, fontFamily:"'Barlow',sans-serif",
             fontWeight:700, letterSpacing:0.3, cursor:"pointer",
@@ -1201,7 +1206,7 @@ export default function App() {
           onClick={() => setOpenFilter(v => v === "price" ? null : "price")}
           style={{
             flex:"1 1 120px", minWidth:120, padding:"5px 10px", borderRadius:9,
-            border:`1px solid ${openFilter === "price" ? Y : T.border}`,
+            border:`1px solid ${openFilter === "price" ? T.accent : T.border}`,
             background: openFilter === "price" ? T.panelActive : T.panel,
             fontSize:10, color:T.text, fontFamily:"'Barlow',sans-serif",
             fontWeight:700, letterSpacing:0.3, cursor:"pointer",
@@ -1249,8 +1254,8 @@ export default function App() {
                         onClick={() => setSelectedCatNames(prev =>
                           prev.includes(c.name) ? prev.filter(n => n !== c.name) : [...prev, c.name])}
                         style={{
-                          background: on ? Y : T.panel, color: on ? "#000" : T.text,
-                          border:`1px solid ${on ? Y : T.border}`,
+                          background: on ? T.accent : T.panel, color: on ? T.textOnYellow : T.text,
+                          border:`1px solid ${on ? T.accent : T.border}`,
                           borderRadius:14, padding:"4px 9px", fontSize:11,
                           fontWeight:600, cursor:"pointer", fontFamily:"'Barlow',sans-serif",
                           display:"inline-flex", alignItems:"center", gap:4,
@@ -1265,14 +1270,14 @@ export default function App() {
                 <div style={{ display:"flex", gap:8, marginTop:12 }}>
                   {selectedCatNames.length > 0 && (
                     <button onClick={() => setSelectedCatNames([])}
-                      style={{ flex:1, background:"none", border:"1px solid #EEE", color:"#666",
+                      style={{ flex:1, background:"none", border:`1px solid ${T.border}`, color:T.textDim,
                         borderRadius:8, padding:"7px 0", fontSize:11, fontWeight:700,
                         cursor:"pointer", fontFamily:"'Barlow',sans-serif" }}>
                       Clear
                     </button>
                   )}
                   <button onClick={() => setOpenFilter(null)}
-                    style={{ flex:2, background:Y, border:"none", color:"#000",
+                    style={{ flex:2, background:T.accent, border:"none", color:T.textOnYellow,
                       borderRadius:8, padding:"7px 0", fontSize:12, fontWeight:800,
                       cursor:"pointer", fontFamily:"'Barlow',sans-serif", letterSpacing:0.5 }}>
                     CONFIRM
@@ -1283,15 +1288,15 @@ export default function App() {
 
             {openFilter === "price" && (
               <>
-                <div style={{ fontSize:10, color:"#999", fontWeight:800, letterSpacing:0.5,
+                <div style={{ fontSize:10, color:T.textDim, fontWeight:800, letterSpacing:0.5,
                   marginBottom:6, textTransform:"uppercase", display:"flex", justifyContent:"space-between" }}>
                   <span>Range</span>
                   <span style={{ color:B, fontWeight:800 }}>₹{priceRange[0]} – ₹{priceRange[1]}</span>
                 </div>
                 <div style={{ position:"relative", height:34 }}>
                   <div style={{ position:"absolute", top:15, left:0, right:0, height:4,
-                    background:"#EEE", borderRadius:2 }} />
-                  <div style={{ position:"absolute", top:15, height:4, borderRadius:2, background:Y,
+                    background:T.border, borderRadius:2 }} />
+                  <div style={{ position:"absolute", top:15, height:4, borderRadius:2, background:T.accent,
                     left: `${((priceRange[0] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
                     right:`${100 - ((priceRange[1] - PRICE_FLOOR) / (PRICE_CEIL - PRICE_FLOOR)) * 100}%`,
                   }} />
@@ -1312,20 +1317,20 @@ export default function App() {
                       WebkitAppearance:"none", height:34, margin:0 }}
                     className="range-thumb" />
                 </div>
-                <div style={{ display:"flex", justifyContent:"space-between", fontSize:9, color:"#BBB" }}>
+                <div style={{ display:"flex", justifyContent:"space-between", fontSize:9, color:T.textFaint }}>
                   <span>₹{PRICE_FLOOR}</span><span>₹{PRICE_CEIL}</span>
                 </div>
                 <div style={{ display:"flex", gap:8, marginTop:12 }}>
                   {(priceRange[0] !== PRICE_FLOOR || priceRange[1] !== PRICE_CEIL) && (
                     <button onClick={() => setPriceRange([PRICE_FLOOR, PRICE_CEIL])}
-                      style={{ flex:1, background:"none", border:"1px solid #EEE", color:"#666",
+                      style={{ flex:1, background:"none", border:`1px solid ${T.border}`, color:T.textDim,
                         borderRadius:8, padding:"7px 0", fontSize:11, fontWeight:700,
                         cursor:"pointer", fontFamily:"'Barlow',sans-serif" }}>
                       Clear
                     </button>
                   )}
                   <button onClick={() => setOpenFilter(null)}
-                    style={{ flex:2, background:Y, border:"none", color:"#000",
+                    style={{ flex:2, background:T.accent, border:"none", color:T.textOnYellow,
                       borderRadius:8, padding:"7px 0", fontSize:12, fontWeight:800,
                       cursor:"pointer", fontFamily:"'Barlow',sans-serif", letterSpacing:0.5 }}>
                     CONFIRM
@@ -1363,7 +1368,7 @@ export default function App() {
                 setSelectedCatNames([]); setPriceRange([PRICE_FLOOR, PRICE_CEIL]);
                 setStack(shuffle(productsData));
               }} style={{
-              background:Y, color:"#000", border:"none", borderRadius:12,
+              background:T.accent, color:T.textOnYellow, border:"none", borderRadius:12,
               padding:"12px 32px", fontFamily:"'Barlow Condensed'",
               fontWeight:900, fontSize:18, cursor:"pointer", letterSpacing:1
             }}>RESET</button>
@@ -1584,8 +1589,8 @@ export default function App() {
       {/* ── CART BUTTON + INSTRUCTIONS + LEGAL ── */}
       <div style={{ padding:"8px 16px 18px" }}>
         <button onClick={() => setShowCart(true)} style={{
-          background: cart.length > 0 ? Y : T.panel,
-          color: cart.length > 0 ? "#000" : T.textFaint,
+          background: cart.length > 0 ? T.accent : T.panel,
+          color: cart.length > 0 ? T.textOnYellow : T.textFaint,
           border:"none", borderRadius:12, padding:"12px 0", width:"100%",
           fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
@@ -1660,7 +1665,7 @@ export default function App() {
               <div>
                 <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:26, color:T.text }}>YOUR CART</span>
                 {cart.length > 0 &&
-                  <span style={{ color:Y, fontSize:14, marginLeft:10, fontWeight:700 }}>
+                  <span style={{ color:T.accent, fontSize:14, marginLeft:10, fontWeight:700 }}>
                     {cart.length} item{cart.length!==1?"s":""}
                   </span>}
               </div>
@@ -1700,12 +1705,12 @@ export default function App() {
                     </span>
                   </div>
                   <button onClick={() => window.open(buildCartUrl(), "_blank")} style={{
-                    background:Y, color:"#000", border:"none", borderRadius:12,
+                    background:T.accent, color:T.textOnYellow, border:"none", borderRadius:12,
                     padding:"15px 0", width:"100%", fontFamily:"'Barlow Condensed'",
                     fontWeight:900, fontSize:20, cursor:"pointer", letterSpacing:1,
-                    marginBottom:10, boxShadow:"0 4px 20px rgba(255,222,173,0.5)"
+                    marginBottom:10, boxShadow: dark ? "none" : "0 4px 20px rgba(255,222,173,0.5)"
                   }}>CHECKOUT ON AMAZON →</button>
-                  <p style={{ color:"#CCC", fontSize:11, textAlign:"center" }}>
+                  <p style={{ color:T.textFaint, fontSize:11, textAlign:"center" }}>
                     All items added to your Amazon cart at once · Prices may vary
                   </p>
                 </div>
