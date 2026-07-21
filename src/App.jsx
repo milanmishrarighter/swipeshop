@@ -6,20 +6,20 @@ import categoriesData from "./categories.json";
 // eslint-disable-next-line no-undef
 const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
 
-const Y = "#FFDEAD";      // soft cream — the one yellow, used for card bottom + CTAs
-const Y_LOGO = "#FFB300"; // gold, only for the logo text (cream would be invisible)
+const Y = "#FFC233";      // SwipeShop yellow, ~20% lighter than the original #FFB300
+const Y_LOGO = "#FFB300"; // full brand gold for the logo
 const B = "#1668F5";
-const STAR = "#B0731A";   // amber — reads on the cream card bottom
+const STAR = "#8A5A00";   // deep amber — reads on the yellow card bottom
 const AFFILIATE_TAG = "swipeandsho03-21";
 
-const CREAM_TEXT = "#4A3A10";   // dark text that sits on the cream (both themes)
+const CREAM_TEXT = "#3A2C05";   // dark text that sits on the yellow (both themes)
 
 // ── THEMES ────────────────────────────────────────────────────────────────────
 const THEME_LIGHT = {
   isDark:      false,
   bg:          "#FBF7EF",   // warm off-white, brighter than before
   card:        "#FFFFFF",   // image area
-  cardBottom:  Y,           // cream bottom half
+  cardBottom:  Y,           // yellow bottom half
   text:        "#141414",
   textOnYellow:CREAM_TEXT,
   textDim:     "#8A8A8A",
@@ -38,9 +38,9 @@ const THEME_DARK = {
   isDark:      true,
   bg:          "#141519",
   card:        "#20222A",
-  cardBottom:  Y,           // same cream bottom — matches the cream CTA buttons
+  cardBottom:  Y,           // same yellow bottom — matches the yellow CTA buttons
   text:        "#EDEDED",
-  textOnYellow:CREAM_TEXT,  // cream is light, so text stays dark even in dark mode
+  textOnYellow:CREAM_TEXT,  // yellow is light, so text stays dark even in dark mode
   textDim:     "#9AA0A6",
   textFaint:   "#5C6066",
   border:      "#2E313A",
@@ -1454,17 +1454,15 @@ export default function App() {
                       }}>{p.title}</div>
                       <div style={{ display:"flex", alignItems:"center", gap:6*s, marginBottom:2*s }}>
                         <Stars rating={p.rating} size={15.6*s} color={T.star}
-                          emptyColor={dark ? "rgba(255,255,255,0.18)" : "rgba(0,0,0,0.18)"}
+                          emptyColor="rgba(0,0,0,0.18)"
                           labelColor={T.textOnYellow}/>
-                      </div>
-                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24*s,
-                        color: dark ? "#7FB2FF" : "#0B3E9E", marginBottom:3*s, letterSpacing:-0.3
-                      }}>₹{p.price.toLocaleString('en-IN')}
-                        <span style={{ fontFamily:"'Barlow',sans-serif", fontWeight:600,
-                          fontSize:11*s, color:T.textOnYellow, marginLeft:6*s, opacity:0.7 }}>
-                          ({p.reviews.toLocaleString()} reviews)
+                        <span style={{ color:T.textOnYellow, opacity:0.75, fontSize:13.2*s, fontWeight:600 }}>
+                          ({p.reviews.toLocaleString()})
                         </span>
                       </div>
+                      <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:24*s,
+                        color:"#0B3E9E", marginBottom:3*s, letterSpacing:-0.3
+                      }}>₹{p.price.toLocaleString('en-IN')}</div>
                       <p style={{ color:T.textOnYellow, opacity:0.82, fontSize:15.5*s, lineHeight:1.35, margin:0,
                         display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical",
                         overflow:"hidden",
