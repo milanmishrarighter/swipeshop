@@ -7,15 +7,15 @@ import categoriesData from "./categories.json";
 const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
 
 const Y = "#FCC854";        // SwipeShop yellow (rgb 252,200,84) — light mode only
-const Y_DARK = "#8A6B2E";   // muted, darker yellow for dark mode (much less vibrant)
+const Y_DARK = "#C0922F";   // richer gold for dark mode — dimmer than Y, not dull
 const Y_LOGO = Y;           // light-mode logo; dark mode overrides with T.accent below
 const B = "#1668F5";
 const STAR = "#8A5A00";     // deep amber — reads on the light-mode yellow card bottom
-const STAR_DARK = "#E8C77A"; // lighter amber — reads on the darker dark-mode yellow
+const STAR_DARK = "#6B4A00"; // deep amber — reads on the richer dark-mode gold
 const AFFILIATE_TAG = "swipeandsho03-21";
 
 const CREAM_TEXT = "#3A2C05";       // dark text on the light-mode yellow
-const CREAM_TEXT_DARK = "#F5E6C8"; // light text on the darker dark-mode yellow
+const CREAM_TEXT_DARK = "#2E2205"; // dark text — the dark-mode gold is light enough to need it
 
 // ── THEMES ────────────────────────────────────────────────────────────────────
 const THEME_LIGHT = {
@@ -37,6 +37,7 @@ const THEME_LIGHT = {
   overlay:     "rgba(0,0,0,0.4)",
   modal:       "#FFFFFF",
   modalText:   "#333333",
+  ctaShadow:   "0 3px 10px rgba(252,200,84,0.40)",
 };
 const THEME_DARK = {
   isDark:      true,
@@ -57,6 +58,8 @@ const THEME_DARK = {
   overlay:     "rgba(0,0,0,0.6)",
   modal:       "#20222A",
   modalText:   "#D8D8D8",
+  // Tight, dark drop shadow — a wide glow bleeds onto the buttons below.
+  ctaShadow:   "0 2px 6px rgba(0,0,0,0.45)",
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -736,6 +739,12 @@ export default function App() {
   const dragStartTime= useRef(0);
   const isDragging   = useRef(false);
   const isExiting    = useRef(false);
+  // True when the gesture began on an in-card button (e.g. FIND SIMILAR). The
+  // button must not swallow the drag, so instead of stopping propagation we
+  // flag it here and let the card decide what the gesture actually was.
+  const pressedInCardBtn = useRef(false);
+  // Whether the last completed gesture was a tap (vs. a drag/swipe).
+  const lastGestureWasTap = useRef(true);
 
   // When filters change, reshuffle into stack
   useEffect(() => {
@@ -968,15 +977,24 @@ export default function App() {
   const handlePointerUp = useCallback((dx, dy) => {
     const dist = Math.sqrt(dx*dx + dy*dy);
     const duration = Date.now() - dragStartTime.current;
-    if (dist < 8 && duration < 250) {
-      // Tap — open product detail
+    const isTap = dist < 8 && duration < 250;
+    lastGestureWasTap.current = isTap;
+    const startedOnBtn = pressedInCardBtn.current;
+    pressedInCardBtn.current = false;
+
+    if (isTap) {
       isDragging.current = false;
       setDraggingId(null);
       setOffset({ x: 0, y: 0 });
-      const product = stackRef.current[0];
-      if (product) setDetailProduct(product);
+      // If the tap landed on an in-card button, that button's onClick handles
+      // it — don't also open the detail modal.
+      if (!startedOnBtn) {
+        const product = stackRef.current[0];
+        if (product) setDetailProduct(product);
+      }
       return;
     }
+    // A drag that merely started on a button is still a swipe.
     trySwipe(dx, dy);
   }, [trySwipe]);
 
@@ -1483,9 +1501,17 @@ export default function App() {
                         <button
                           aria-label="Find similar products"
                           title="Find similar on Amazon"
-                          onMouseDown={e => e.stopPropagation()}
-                          onTouchStart={e => e.stopPropagation()}
-                          onClick={(e) => { e.stopPropagation(); window.open(similarUrl(p), "_blank"); }}
+                          // Don't stop propagation — the card still needs the drag,
+                          // otherwise resting a thumb here blocks swiping entirely.
+                          onMouseDown={() => { pressedInCardBtn.current = true; }}
+                          onTouchStart={() => { pressedInCardBtn.current = true; }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            // Only fire on a genuine tap; ignore the click that can
+                            // follow a swipe which happened to start on this button.
+                            if (!lastGestureWasTap.current) return;
+                            window.open(similarUrl(p), "_blank");
+                          }}
                           style={{
                             background: dark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)",
                             border:`1px solid ${dark ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.12)"}`,
@@ -1594,7 +1620,7 @@ export default function App() {
           border:"none", borderRadius:12, padding:"12px 0", width:"100%",
           fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
-          boxShadow: cart.length > 0 ? "0 4px 18px rgba(255,222,173,0.5)" : "none"
+          boxShadow: cart.length > 0 ? T.ctaShadow : "none"
         }}>
           {cart.length > 0
             ? `VIEW CART — ${cart.length} ITEM${cart.length!==1?"S":""}`
@@ -1708,7 +1734,7 @@ export default function App() {
                     background:T.accent, color:T.textOnYellow, border:"none", borderRadius:12,
                     padding:"15px 0", width:"100%", fontFamily:"'Barlow Condensed'",
                     fontWeight:900, fontSize:20, cursor:"pointer", letterSpacing:1,
-                    marginBottom:10, boxShadow: dark ? "none" : "0 4px 20px rgba(255,222,173,0.5)"
+                    marginBottom:10, boxShadow: T.ctaShadow
                   }}>CHECKOUT ON AMAZON →</button>
                   <p style={{ color:T.textFaint, fontSize:11, textAlign:"center" }}>
                     All items added to your Amazon cart at once · Prices may vary
