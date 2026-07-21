@@ -6,43 +6,52 @@ import categoriesData from "./categories.json";
 // eslint-disable-next-line no-undef
 const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
 
-const Y = "#FFB300";
+const Y = "#FFDEAD";      // soft cream — the one yellow, used for card bottom + CTAs
+const Y_LOGO = "#FFB300"; // gold, only for the logo text (cream would be invisible)
 const B = "#1668F5";
-const STAR = "#7A4E00";   // deep amber — reads on the yellow card bottom
+const STAR = "#B0731A";   // amber — reads on the cream card bottom
 const AFFILIATE_TAG = "swipeandsho03-21";
+
+const CREAM_TEXT = "#4A3A10";   // dark text that sits on the cream (both themes)
 
 // ── THEMES ────────────────────────────────────────────────────────────────────
 const THEME_LIGHT = {
-  bg:          "#F4F1EA",   // warm off-white (not pure white)
+  isDark:      false,
+  bg:          "#FBF7EF",   // warm off-white, brighter than before
   card:        "#FFFFFF",   // image area
-  cardBottom:  "#FFC02E",   // yellow bottom half (matches cart button family)
+  cardBottom:  Y,           // cream bottom half
   text:        "#141414",
-  textOnYellow:"#3A2E05",   // body text sitting on the yellow bottom
+  textOnYellow:CREAM_TEXT,
   textDim:     "#8A8A8A",
   textFaint:   "#C4C4C4",
-  border:      "#EAE7E0",
-  panel:       "#EFECE4",
+  border:      "#ECE7DD",
+  panel:       "#F2EEE5",
   panelActive: "#FFF3D6",
-  headerBorder:"#EAE7E0",
+  headerBorder:"#EFEAE0",
   star:        STAR,
   drawer:      "#FFFFFF",
   overlay:     "rgba(0,0,0,0.4)",
+  modal:       "#FFFFFF",
+  modalText:   "#333333",
 };
 const THEME_DARK = {
+  isDark:      true,
   bg:          "#141519",
   card:        "#20222A",
-  cardBottom:  "#3A3016",   // muted warm-gold bottom half
+  cardBottom:  Y,           // same cream bottom — matches the cream CTA buttons
   text:        "#EDEDED",
-  textOnYellow:"#F0E4C0",
+  textOnYellow:CREAM_TEXT,  // cream is light, so text stays dark even in dark mode
   textDim:     "#9AA0A6",
   textFaint:   "#5C6066",
   border:      "#2E313A",
   panel:       "#1C1E24",
   panelActive: "#2B2716",
   headerBorder:"#2A2C34",
-  star:        "#F0B93B",
+  star:        STAR,
   drawer:      "#1C1E24",
   overlay:     "rgba(0,0,0,0.6)",
+  modal:       "#20222A",
+  modalText:   "#D8D8D8",
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -245,24 +254,24 @@ const CONTACT_CONTENT = (
   </>
 );
 
-function LegalModal({ kind, onClose }) {
+function LegalModal({ kind, onClose, T }) {
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
+    <div style={{ position:"fixed", inset:0, background:T.overlay, zIndex:200,
         display:"flex", alignItems:"flex-end", justifyContent:"center" }}
       onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background:"#fff", borderRadius:"22px 22px 0 0", maxHeight:"85vh", width:"100%",
+        background:T.modal, borderRadius:"22px 22px 0 0", maxHeight:"85vh", width:"100%",
         maxWidth:430, overflow:"auto", padding:"24px 22px 32px",
-        boxShadow:"0 -8px 40px rgba(0,0,0,0.12)",
-        fontFamily:"'Barlow',sans-serif", lineHeight:1.55, color:"#333", fontSize:13.5,
+        boxShadow:"0 -8px 40px rgba(0,0,0,0.25)",
+        fontFamily:"'Barlow',sans-serif", lineHeight:1.55, color:T.modalText, fontSize:13.5,
       }}>
         <button onClick={onClose} style={{
-          float:"right", background:"#F5F5F5", border:"none", color:"#666",
+          float:"right", background:T.panel, border:"none", color:T.textDim,
           width:32, height:32, borderRadius:"50%", cursor:"pointer", fontSize:13, fontWeight:700,
         }}>✕</button>
         <style>{`
-          .legal h2 { font-family:'Barlow Condensed'; font-weight:900; font-size:26px; color:#111; margin-bottom:6px; letter-spacing:-0.5px; }
-          .legal h3 { font-family:'Barlow Condensed'; font-weight:800; font-size:17px; color:#111; margin:18px 0 6px; letter-spacing:-0.2px; }
+          .legal h2 { font-family:'Barlow Condensed'; font-weight:900; font-size:26px; color:${T.text}; margin-bottom:6px; letter-spacing:-0.5px; }
+          .legal h3 { font-family:'Barlow Condensed'; font-weight:800; font-size:17px; color:${T.text}; margin:18px 0 6px; letter-spacing:-0.2px; }
           .legal p  { margin-bottom:10px; }
           .legal ul { margin:8px 0 10px 22px; }
           .legal li { margin-bottom:4px; }
@@ -347,37 +356,37 @@ function SidebarMenu({ onClose, onSelect, dark, setDark, T }) {
   );
 }
 
-function ReportModal({ product, onClose, onSubmit }) {
+function ReportModal({ product, onClose, onSubmit, T }) {
   const [text, setText] = useState("");
   const reasons = ["Wrong price", "Broken link", "Inappropriate", "Out of stock", "Other"];
   const [reason, setReason] = useState("");
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:220,
+    <div style={{ position:"fixed", inset:0, background:T.overlay, zIndex:220,
         display:"flex", alignItems:"center", justifyContent:"center", padding:"16px" }}
       onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background:"#fff", borderRadius:18, width:"100%", maxWidth:340,
-        padding:"20px 20px 18px", boxShadow:"0 8px 40px rgba(0,0,0,0.18)",
+        background:T.modal, borderRadius:18, width:"100%", maxWidth:340,
+        padding:"20px 20px 18px", boxShadow:"0 8px 40px rgba(0,0,0,0.3)",
         fontFamily:"'Barlow',sans-serif",
       }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:6 }}>
-          <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20, color:"#111" }}>
+          <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:20, color:T.text }}>
             REPORT PRODUCT
           </span>
           <button onClick={onClose} style={{
-            background:"#F5F5F5", border:"none", color:"#666", width:28, height:28,
+            background:T.panel, border:"none", color:T.textDim, width:28, height:28,
             borderRadius:"50%", cursor:"pointer", fontSize:12, fontWeight:700 }}>✕</button>
         </div>
-        <p style={{ fontSize:12, color:"#999", marginBottom:14, lineHeight:1.4 }}>
+        <p style={{ fontSize:12, color:T.textDim, marginBottom:14, lineHeight:1.4 }}>
           {product.title}
         </p>
 
         <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:12 }}>
           {reasons.map(r => (
             <button key={r} onClick={() => setReason(r)} style={{
-              background: reason === r ? "#FFF4ED" : "#F5F5F5",
-              border: `1px solid ${reason === r ? "#FF6900" : "#EEE"}`,
-              color: reason === r ? "#FF6900" : "#666",
+              background: reason === r ? (T.isDark ? "#3A2A1A" : "#FFF4ED") : T.panel,
+              border: `1px solid ${reason === r ? "#FF6900" : T.border}`,
+              color: reason === r ? "#FF6900" : T.modalText,
               borderRadius:8, padding:"5px 10px", fontSize:11, fontWeight:700,
               cursor:"pointer", fontFamily:"'Barlow',sans-serif",
             }}>{r}</button>
@@ -389,9 +398,9 @@ function ReportModal({ product, onClose, onSubmit }) {
           onChange={e => setText(e.target.value)}
           placeholder="Tell us more (optional)..."
           style={{
-            width:"100%", minHeight:70, padding:"9px 11px", border:"1px solid #E0E0E0",
+            width:"100%", minHeight:70, padding:"9px 11px", border:`1px solid ${T.border}`,
             borderRadius:8, fontSize:13, fontFamily:"'Barlow',sans-serif", resize:"vertical",
-            marginBottom:12, color:"#222", lineHeight:1.4,
+            marginBottom:12, color:T.text, lineHeight:1.4, background:T.panel,
           }}
         />
 
@@ -406,29 +415,29 @@ function ReportModal({ product, onClose, onSubmit }) {
   );
 }
 
-function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
+function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart, T }) {
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
+    <div style={{ position:"fixed", inset:0, background:T.overlay, zIndex:200,
         display:"flex", alignItems:"flex-end", justifyContent:"center" }}
       onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background:"#fff", borderRadius:"22px 22px 0 0", maxHeight:"88vh", width:"100%",
-        maxWidth:430, overflow:"auto", boxShadow:"0 -8px 40px rgba(0,0,0,0.12)",
+        background:T.modal, borderRadius:"22px 22px 0 0", maxHeight:"88vh", width:"100%",
+        maxWidth:430, overflow:"auto", boxShadow:"0 -8px 40px rgba(0,0,0,0.25)",
         fontFamily:"'Barlow',sans-serif",
       }}>
         {/* Close button */}
-        <div style={{ position:"sticky", top:0, background:"#fff", zIndex:2,
+        <div style={{ position:"sticky", top:0, background:T.modal, zIndex:2,
           padding:"14px 18px 6px", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-          <span style={{ color:"#999", fontSize:11, fontWeight:600, letterSpacing:0.5 }}>
+          <span style={{ color:T.textDim, fontSize:11, fontWeight:600, letterSpacing:0.5 }}>
             {product.cat?.toUpperCase()}
           </span>
           <button onClick={onClose} style={{
-            background:"#F5F5F5", border:"none", color:"#666",
+            background:T.panel, border:"none", color:T.textDim,
             width:32, height:32, borderRadius:"50%", cursor:"pointer", fontSize:13, fontWeight:700,
           }}>✕</button>
         </div>
 
-        {/* Image */}
+        {/* Image — stays light so product photos read naturally */}
         <div style={{ background:"#FAFAFA", padding:"14px 24px 20px",
           display:"flex", alignItems:"center", justifyContent:"center" }}>
           <img src={product.img} alt={product.title}
@@ -438,11 +447,11 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
         {/* Title + meta */}
         <div style={{ padding:"18px 22px 24px" }}>
           <div style={{ fontFamily:"'Barlow Condensed'", fontWeight:800, fontSize:22,
-            color:"#111", lineHeight:1.2, marginBottom:10 }}>{product.title}</div>
+            color:T.text, lineHeight:1.2, marginBottom:10 }}>{product.title}</div>
 
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12 }}>
-            <Stars rating={product.rating}/>
-            <span style={{ color:"#C8C8C8", fontSize:13 }}>
+            <Stars rating={product.rating} color={T.star} labelColor={T.textDim}/>
+            <span style={{ color:T.textFaint, fontSize:13 }}>
               ({product.reviews?.toLocaleString() ?? 0} reviews)
             </span>
           </div>
@@ -460,9 +469,9 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
                 return (
                   <span key={name} style={{
                     display:"inline-flex", alignItems:"center", gap:5,
-                    background:"#F5F5F5", border:"1px solid #EEE",
+                    background:T.panel, border:`1px solid ${T.border}`,
                     borderRadius:14, padding:"4px 10px",
-                    fontSize:12, color:"#555", fontWeight:600,
+                    fontSize:12, color:T.modalText, fontWeight:600,
                   }}>
                     <span style={{ fontSize:14 }}>{cat.emoji}</span>
                     {cat.name}
@@ -472,7 +481,7 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
             </div>
           )}
 
-          <p style={{ color:"#666", fontSize:14, lineHeight:1.6, marginBottom:24,
+          <p style={{ color:T.modalText, fontSize:14, lineHeight:1.6, marginBottom:24,
             whiteSpace:"pre-line" }}>{product.summary}</p>
 
           {/* Action buttons */}
@@ -483,7 +492,7 @@ function ProductDetailModal({ product, onClose, onAddToCart, alreadyInCart }) {
             marginBottom:10,
           }}>OPEN ON AMAZON →</button>
           <button onClick={onAddToCart} style={{
-            background: alreadyInCart ? "#F5F5F5" : Y, color: alreadyInCart ? "#999" : "#000",
+            background: alreadyInCart ? T.panel : Y, color: alreadyInCart ? T.textDim : CREAM_TEXT,
             border:"none", borderRadius:12, padding:"12px 0", width:"100%",
             fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:15, cursor:"pointer",
             letterSpacing:0.6, display:"flex", alignItems:"center", justifyContent:"center", gap:8,
@@ -585,7 +594,7 @@ function TutorialOverlay({ onDismiss }) {
   );
 }
 
-function HowToModal({ onClose, onPreviewTutorial }) {
+function HowToModal({ onClose, onPreviewTutorial, T }) {
   const rows = [
     { color:"#D0021B", bg:"#FEF2F2", arrow:"↑", label:"NEXT PRODUCT",
       svg:(<svg width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -622,27 +631,28 @@ function HowToModal({ onClose, onPreviewTutorial }) {
         </svg>) },
   ];
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.5)", zIndex:200,
+    <div style={{ position:"fixed", inset:0, background:T.overlay, zIndex:200,
         display:"flex", alignItems:"center", justifyContent:"center", padding:"16px" }}
       onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background:"#fff", borderRadius:20, width:"100%", maxWidth:340,
-        padding:"22px 22px 18px", boxShadow:"0 8px 40px rgba(0,0,0,0.18)",
+        background:T.modal, borderRadius:20, width:"100%", maxWidth:340,
+        padding:"22px 22px 18px", boxShadow:"0 8px 40px rgba(0,0,0,0.3)",
         fontFamily:"'Barlow',sans-serif",
       }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:18 }}>
-          <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:22, color:"#111", letterSpacing:-0.5 }}>
+          <span style={{ fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:22, color:T.text, letterSpacing:-0.5 }}>
             HOW TO SWIPE
           </span>
           <button onClick={onClose} style={{
-            background:"#F5F5F5", border:"none", color:"#666", width:28, height:28,
+            background:T.panel, border:"none", color:T.textDim, width:28, height:28,
             borderRadius:"50%", cursor:"pointer", fontSize:12, fontWeight:700 }}>✕</button>
         </div>
 
         {rows.map((r, i) => (
           <div key={i} style={{
             display:"flex", alignItems:"center", gap:14,
-            padding:"10px 12px", marginBottom:8, background:r.bg, borderRadius:12,
+            padding:"10px 12px", marginBottom:8,
+            background: T.isDark ? T.panel : r.bg, borderRadius:12,
           }}>
             <div style={{ flex:"0 0 auto" }}>{r.svg}</div>
             <div style={{ flex:1 }}>
@@ -1142,7 +1152,7 @@ export default function App() {
             </svg>
           </button>
           <div style={{ display:"flex", alignItems:"baseline" }}>
-            <span style={{ color:Y, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
+            <span style={{ color:Y_LOGO, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SWIPE</span>
             <span style={{ color:T.text, fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:27, letterSpacing:-1 }}>SHOP</span>
           </div>
         </div>
@@ -1581,7 +1591,7 @@ export default function App() {
           border:"none", borderRadius:12, padding:"12px 0", width:"100%",
           fontFamily:"'Barlow Condensed'", fontWeight:900, fontSize:17,
           cursor:"pointer", letterSpacing:1, transition:"all 0.3s ease",
-          boxShadow: cart.length > 0 ? "0 4px 18px rgba(255,179,0,0.28)" : "none"
+          boxShadow: cart.length > 0 ? "0 4px 18px rgba(255,222,173,0.5)" : "none"
         }}>
           {cart.length > 0
             ? `VIEW CART — ${cart.length} ITEM${cart.length!==1?"S":""}`
@@ -1695,7 +1705,7 @@ export default function App() {
                     background:Y, color:"#000", border:"none", borderRadius:12,
                     padding:"15px 0", width:"100%", fontFamily:"'Barlow Condensed'",
                     fontWeight:900, fontSize:20, cursor:"pointer", letterSpacing:1,
-                    marginBottom:10, boxShadow:"0 4px 20px rgba(255,179,0,0.28)"
+                    marginBottom:10, boxShadow:"0 4px 20px rgba(255,222,173,0.5)"
                   }}>CHECKOUT ON AMAZON →</button>
                   <p style={{ color:"#CCC", fontSize:11, textAlign:"center" }}>
                     All items added to your Amazon cart at once · Prices may vary
@@ -1716,7 +1726,7 @@ export default function App() {
       )}
       {reportProduct && (
         <ReportModal
-          product={reportProduct}
+          product={reportProduct} T={T}
           onClose={() => setReportProduct(null)}
           onSubmit={(reason, text) => {
             // No backend yet — just acknowledge. (Could email/log later.)
@@ -1726,13 +1736,13 @@ export default function App() {
           }}
         />
       )}
-      {legalModal && <LegalModal kind={legalModal} onClose={() => setLegalModal(null)} />}
-      {showHowTo  && <HowToModal onClose={() => setShowHowTo(false)}
+      {legalModal && <LegalModal kind={legalModal} T={T} onClose={() => setLegalModal(null)} />}
+      {showHowTo  && <HowToModal T={T} onClose={() => setShowHowTo(false)}
         onPreviewTutorial={() => { setShowHowTo(false); setShowTutorial(true); }} />}
       {showTutorial && <TutorialOverlay onDismiss={() => setShowTutorial(false)} />}
       {detailProduct && (
         <ProductDetailModal
-          product={detailProduct}
+          product={detailProduct} T={T}
           alreadyInCart={cart.some(p => p.id === detailProduct.id)}
           onClose={() => setDetailProduct(null)}
           onAddToCart={() => {
